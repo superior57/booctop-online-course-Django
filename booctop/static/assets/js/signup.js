@@ -6,8 +6,10 @@
 Signup Process JS
 ========================================================================== */
 Dropzone.autoDiscover = false;
+
 $(document).ready(function () {
   "use strict";
+  
 
   $('.progress-wrap .dot').on('click', function () {
     var $this = $(this);
@@ -19,7 +21,7 @@ $(document).ready(function () {
     $this.nextAll('.dot').removeClass('is-active');
     $('.process-panel-wrap').removeClass('is-active');
     $('.step-title').removeClass('is-active');
-
+    
     if (stepValue == '0') {
       $('#signup-panel-1, #step-title-1').addClass('is-active');
     } else if (stepValue == '25') {

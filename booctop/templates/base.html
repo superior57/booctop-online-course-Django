@@ -43,12 +43,12 @@
    <script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
    <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
    <!-- Video Player And jQuery -->
-   
+
+    {% block head %}
+    {%  endblock %}
 </head>
 
 
-{% block head %}
-    {%  endblock %}
 <body>
 
     <!-- Pageloader -->
@@ -58,6 +58,7 @@
         
 
     <!-- Main Navbar -->
+    <input type="hidden" id="hd_csrf" value="{{ csrf_token }}">
     <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
         <div class="container ">
             <div class="navbar-brand">
@@ -437,8 +438,7 @@
     <script src="{% static 'assets/js/app.js' %}"></script>
     <!-- Video player js -->
 
-    {% block script %}
-    {%  endblock %}
+    
     
     <!-- Font Awesome -->
     <script src="{% static 'assets/js/all.js' %}"></script>
@@ -458,7 +458,12 @@
     <!-- Bootstrap -->
     <script src="{% static 'assets/vendor/popper.min.js' %}"></script>
     <script src="{% static 'assets/vendor/bootstrap.min.js' %}"></script>
-
-
+    <script type="text/javascript">
+        $.ajaxSetup({
+           headers: {'X-CSRFToken': $("#hd_csrf").val(),}
+         });
+   </script>
+    {% block script %}
+    {%  endblock %}
 </body>
 </html>
