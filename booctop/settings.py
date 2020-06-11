@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'parshotam.kumar32@gmail.com'
+EMAIL_HOST_PASSWORD = 'parshotam@g'
+EMAIL_PORT = 587
 
 # Application definition
 
@@ -136,3 +142,7 @@ STATICFILES_DIRS = (
 
 STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "booctop/static")
+
+AUTH_USER_MODEL = 'home.User'
+AUTHENTICATION_BACKENDS = ['home.backends.EmailAuthBackend',
+                            'django.contrib.auth.backends.ModelBackend']

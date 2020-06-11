@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from home.views import home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user
+from home.views import home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user, activation, ajaxlogin, logout_
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
@@ -30,6 +30,9 @@ urlpatterns = [
     path('become', become, name='become'),
     path('single_category', single_category, name='single_category'),
     path('single_course', single_course, name='single_course'),
+    path('activation', activation, name='activation'),
+    path('login', ajaxlogin, name='login'),
+    path('logout', logout_, name='logout'),
 
 ]
 urlpatterns += [

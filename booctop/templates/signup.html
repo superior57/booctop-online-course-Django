@@ -3,86 +3,6 @@
 {% block content %}
 {% load static %}
 
-    <nav class="navbar mobile-navbar is-hidden-desktop" aria-label="main navigation">
-        <!-- Brand -->
-        <div class="navbar-brand">
-            <a class="navbar-item2" href="/">
-                <img class="mobile-logo" src="{%static 'assets/img/favicon.png' %}" alt="">
-            </a>
-    
-    
-            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
-                <a class="icon-link is-primary">
-                    <i class="mdi mdi-apps"></i>
-                </a>
-            </div>
-    
-            <!-- Mobile menu toggler icon -->
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!-- Navbar mobile menu -->
-        <div class="navbar-menu">
-            <!-- Account -->
-            <div class="navbar-item has-dropdown ">
-                <div class="navbar-link">
-                    <img src="{%static 'assets/img/man.jpg' %}" data-demo-src="{%static 'assets/img/avatars/jenna.png' %}" alt="">
-                    <span class="is-heading">Elzubair Mohammed</span>
-                </div>
-    
-                <div class="navbar-item">
-                    <div id="global-search" class="control">
-                        <input id="tipue_drop_input" class="input " type="text" placeholder="Search" required>
-                        <span id="clear-search" class="reset-search">
-                            <i data-feather="x"></i>
-                        </span>
-                        <span class="search-icon">
-                            <i data-feather="search"></i>
-                        </span>
-                
-                
-                    </div>
-                
-                </div>
-                
-                <!-- Mobile Dropdown -->
-                <div class="navbar-dropdown">
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="user"></i>Profile</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="shopping-cart"></i>Cart</span>
-                        <span class="menu-badge">3</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="activity"></i>Feed</span>
-                        <span class="menu-badge">87</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="settings"></i>Settings</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="hexagon"></i>Logout</span>
-                    </a>
-                    
-                        <div class="buttons">
-                          <a class="button second-button">
-                            <p>Sign up</p>
-                          </a>
-                          <a class="button primary-button raised quickview-trigger process-button">
-                            <p>Log in</p>
-                          </a>
-                        </div>
-
-
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Mobile Navbar -->
     
 
   
@@ -197,7 +117,7 @@
                                 <div class="field">
                                     <label>Email</label>
                                     <div class="control">
-                                        <input type="text" class="input" id="email" name="email" placeholder="Enter your email address">
+                                        <input type="email" class="input" id="email" name="email" placeholder="Enter your email address">
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +440,13 @@
     {% block script %}
         <!-- Page and UI related js -->
         <script>
+            function isEmail(email) {
+                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                return regex.test(email);
+                }
             function Validate(){
+                console.log($("#email").val());
+                console.log(isEmail($("#email").val()));
                 $("#div_error").html("");
                 if($("#first_name").val()==""){
                     $("#div_error").html("Please enter the first name");
@@ -528,7 +454,7 @@
                 }else if($("#last_name").val()==""){
                     $("#div_error").html("Please enter the last name");
                     return false;
-                }else if($("#email").val()==""){
+                }else if(!isEmail($("#email").val()) || $("#email").val()==""){
                     $("#div_error").html("Please enter the valid email");
                     return false;
                 }
@@ -549,6 +475,10 @@
             // }
             function signup() {
                 $("#div_error").html("");
+                if($("#password").val().length >6){
+                    $("#div_error").html("password greater than 7");
+                    return false
+                }
                 if($("#password").val()==""){
                     $("#div_error").html("Please enter the password");
                     return false
