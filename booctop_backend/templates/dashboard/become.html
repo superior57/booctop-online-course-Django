@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+  {% block content %}
+    <div class="products-navigation" style="display: none;">
+    </div>
+        
+    <!-- Section -->       
+    <div id="shop-page" class="shop-wrapper">
+
+
+
+
+    
+
+    <div class="store-sections store-sections-2">
+
+            
+
+
+
+            <!-- Brands -->
+            <div id="brands-tab" class="store-tab-pane is-active">
+                   <!-- Timeline -->
+    
+                   <section class="hero is-small is-bold hero-become-2">
+                    <div class="hero-body">
+                      <div class="container">
+            
+                        <div class="hero-becom-flex">
+                        <h1 class="booctep-1" data-shadow='Booctep'>Become a teacher</h1>
+        
+                        
+                        
+             
+                        <h2 class="booctep-h2">Teach what you learn and earn money now, see this step for how to be a teacher than sign as a teacher.</h2>
+            
+                        <a href="signup.html" class="button is-light">Become a teacher</a>
+                    
+                    </div>
+                   
+                </div>
+                    </div>
+                  </section>
+
+   
+                    
+                  <div id="landing-start" class="section-m landing-wrapper">
+                    <div class="container">
+                        <div class="made-with" style="margin-top: -70px;">
+                            <div class="made-block-2">
+                                <div class="block-icon is-box-reveal">
+                                  <i class="fa fa-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                </div>
+
+    <section class="timeline">
+        <ul>
+          <li>
+            <div>
+              <time>Step 1</time>
+                <h2 style="font-weight: 500;">Sign up as a teacher.</h2>
+            </div>
+          </li>
+            <li>
+              <div>
+                <time>Step 2</time>
+                  <h2 style="font-weight: 500;">Set up your profile information.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 3</time>
+                  <h2 style="font-weight: 500;">Set up your payments methods to collect your income and manage your money.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 4</time>
+                  <h2 style="font-weight: 500;">Test your Videos and Audios Quality by sending your videos to our team via test course page.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 5</time>
+                  <h2 style="font-weight: 500;"> Be Spacific when you choose your target students when you set up your profile.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 6</time>
+                  <h2 style="font-weight: 500;">Read our Teacher's Terms and Privacy.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 7</time>
+                  <h2 style="font-weight: 500;"> Get help if you want in your dashboard.</h2>
+              </div>
+            </li>
+        </ul>
+      </section>
+      <!-- Timeline -->
+
+
+            </div>                        
+
+
+
+        </div>
+      
+        <section class="hero is-small is-bold hero-become-3" >
+            <div class="hero-body">
+                <div class="section side-feature">
+                    <div class="container">
+                      
+       
+                      
+                        <h3 style="font-size: xx-large;margin-bottom: 0px !important;color: #fff !important;text-align: center;">How it works!</h3>
+    
+    
+                     
+                    <div class="section side-feature" style="margin-top: 0px;">
+                        <div class="container">
+                            <div class="columns">
+                                <div class="column is-8 is-offset-2" style="border: 2px solid rgb(36, 2, 100);border-radius: 3px;
+                                -webkit-box-shadow: -1px 4px 9px 9px rgb(5, 5, 54,0,2);
+                                -moz-box-shadow: -1px 4px 9px 9px rgba(5, 5, 54,0,2);
+                                box-shadow: -1px 4px 9px 9px rgba(5, 5, 54,0,2);">
+                                  
+                                  <video poster="{%static 'assets/img/setting.jpg' %}" id="player" playsinline controls>
+                                    <source src="{%static 'assets/img/vid/fortnite.webm' %}" type="video/webm" />
+                                
+                                    <!-- Captions are optional -->
+                                    <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
+                                </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+                    </div>
+                </div>
+            </div>
+          </section>
+
+    </div>
+    {% endblock %}
+  
+
+    {% block js %} 
+      <script>
+        const player = new Plyr('#player'); 
+      </script>
+  
+      <!-- Concatenated js plugins and jQuery -->
+      <script src="{%static 'assets/js/timeline.js' %}"></script>
+      <script src="{%static 'assets/js/app.js' %}"></script>
+      <!-- Video player js -->
+      <!-- Font Awesome -->
+      <script src="{%static 'assets/js/all.js' %}"></script>
+      
+      <!-- Core js -->
+      <script src="{%static 'assets/js/global.js' %}"></script>
+      <script src="{%static 'assets/js/main.js' %}"></script>
+      
+      <script src="{%static 'assets/js/videos.js' %}"></script>
+      <script src="{%static 'assets/js/shop.js' %}"></script>
+      <script src="{%static 'assets/js/settings.js' %}"></script>
+    {% endblock %}
+
+  

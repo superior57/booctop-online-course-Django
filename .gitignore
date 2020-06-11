@@ -1,0 +1,4 @@
+env/
+*.pyc
+booctop_backend/db.sqlite3
+booctop_backend/media/
