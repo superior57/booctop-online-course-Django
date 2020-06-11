@@ -458,8 +458,44 @@
                     $("#div_error").html("Please enter the valid email");
                     return false;
                 }
-                $('#step-dot-3').trigger('click');
+                // Ajax start
+                var action = "/check-email";
+                        $.ajax({
+                            url: action,
+                            type: 'POST',
+                            dataType: 'json',
+                            // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+                            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                            data: {
+                                email: $("#email").val(),
+                            },
+
+                            beforeSend: function () {
+
+                                console.log("Beforesend")
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                if(data.msg == "already"){
+                                    $("#div_error").html("Email is already exist.");
+                                    return false;
+                                }else{
+                                    $('#step-dot-3').trigger('click');
+                                    return false
+                                }
+                            
+                            },
+                            error: function (err) {
+                                return false
+                            }
+                        })
+                        // Ajax end
+
+
+
                 return false
+                // $('#step-dot-3').trigger('click');
+                // return false
                 
                 
             }

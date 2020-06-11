@@ -9,7 +9,11 @@ from django.core.mail import EmailMultiAlternatives
 from django.contrib.auth import authenticate, login, logout
 
 def home_view(request):
-    return render(request, 'index.html', {})
+    print("request = ",request.user.id)
+    if request.user.id == None:
+        return render(request, 'index.html', {})
+    else:
+        return render(request, 'index-2.html', {})
 
 
 def signup(request):
@@ -38,6 +42,33 @@ def single_category(request):
 
 def single_course(request):
     return render(request, 'single_course.html', {})
+
+def check_email(request):
+    msg = ''
+    try:
+        
+        email = request.POST.get('email')
+        print ('email ===', email)
+        
+        lstUsers = User.objects.filter(email=email)
+        print ("len(lstUsers) =",len(lstUsers))
+        if len(lstUsers) > 0:
+            msg = 'already'
+        else:
+            
+            msg = 'success'
+            
+
+
+    except:
+        tb = sys.exc_info()[2]
+        tbinfo = traceback.format_tb(tb)[0]
+        msg = tbinfo + "\n" + str(sys.exc_type) + ": " + str(sys.exc_info())
+    
+    #
+    to_return = {'msg': msg}
+    serialized = json.dumps(to_return)
+    return HttpResponse(serialized, content_type="application/json")
 
 def register_user(request):
 

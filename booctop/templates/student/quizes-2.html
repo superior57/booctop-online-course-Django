@@ -1,0 +1,552 @@
+{% extends "student/base.html" %}
+{% block content %}
+    {% load static %}
+
+            <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">short_text</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+                    <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                        <span class="avatar-title rounded bg-primary"><img src="{%static 'student/assets/images/illustration/student/128/white.svg' %}" alt="logo" class="img-fluid" /></span>
+
+                    </span>
+
+                    <span class="d-none d-lg-block">Luma</span>
+                </a>
+
+
+
+
+
+
+
+            <h4 style="margin-top:15px;margin-left:5px">My Quizes</h4>
+
+
+
+
+
+
+            <a href="../../teacher.0/dist/dashboard.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Teacher
+                
+                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
+    </b></a>
+
+
+ 
+
+
+    <div class="flex"></div>
+
+
+
+
+
+    <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+
+
+        
+
+
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+
+                <span class="avatar avatar-sm mr-8pt2">
+
+                    <span class="avatar-title rounded-circle" style="background-color: gray;">
+                        <img src="{%static 'assets/img/man.jpg' %}" alt="" style="border-radius: 50%;">
+                    </span>
+
+                </span>
+
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
+                <a class="dropdown-item" href="courses.html">My courses</a>
+                <a class="dropdown-item" href="quizes.html">My quizes</a>
+                <a class="dropdown-item" style="color: red;" href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+                
+            </div>
+
+
+
+
+            <!-- // END Header -->
+
+
+
+            <div class="filter-head">
+                <div class="card-header card-header-2 card-header-tabs-basic nav px-0 mb-3" role="tablist">
+                    <a href="/quizes" class="" data-toggle="tab1" role="tab" aria-selected="true">All Quizes</a>
+                    <a href="/quizes2" class="active" data-toggle="tab" role="tab" aria-selected="false">Archiev</a>
+                </div>
+            </div>    
+
+
+
+            <div class=" page__container page-section">
+
+
+
+
+
+                <div class="row card-group-row mb-lg-8pt">
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                    <div class="col-sm-3 card-group-row__col">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex">
+                                        <strong>Learn Html5 and sass with css..</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center p-24pt">
+                                <div class="mb-24pt d-inline-flex flex-column text-center">
+                                    <i class="material-icons text-50 icon-32pt">face</i>
+                                    <div class="d-flex align-items-center">
+                                        <h2 class="m-0">22 / 31</h2>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <div>
+                                        <a href="" class="btn btn-accent mb-16pt">Reset</a>
+                                    </div>
+                                </div>
+                                <div class="d-inline-flex">
+                                    <p class="text-70 m-0"><strong>Questions: </strong></p>
+                                    <div class="lh-1"><small class="text-50">31</small></div>
+                                    <strong class="ml-1">-</strong>
+                                    <p class="text-70 ml-1"><strong>Correct: </strong></p>
+                                    <div class="lh-1"><small class="text-50">22</small></div>
+                                </div>
+                            </div>
+                        </div>   
+
+                    </div>
+                    
+
+                </div>
+
+                <div class="mb-32pt">
+
+                  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  <ul class="pagination-list">
+   <li><a class="pagination-previous">Previous</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page" style="color:white">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+    <li><a class="pagination-next">Next</a></li>
+  </ul>
+</nav>
+
+                </div>
+                
+
+               
+
+            </div>
+
+
+
+{%  endblock %}

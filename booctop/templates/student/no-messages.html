@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Student - Messages</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+
+
+    <!-- Preloader -->
+    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="layout-mini app-messages">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <!-- // END Header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div data-push data-responsive-width="768px" data-has-scrollable-region data-fullbleed class="mdk-drawer-layout js-mdk-drawer-layout">
+                <div class="mdk-drawer-layout__content" data-perfect-scrollbar>
+
+
+                    <div class="app-messages__container d-flex flex-column h-100 pb-4">
+                        <div class="navbar navbar-light bg-white navbar-expand-sm navbar-shadow z-1" id="messages-navbar">
+                            <div class="container-fluid flex-wrap px-sm-0">
+                                <div class="nav py-2">
+                                    <div class="nav-item d-flex align-items-center mr-3">
+                                        
+                                        <div class="" style="position: absolute;top: 15px;right: 25px;">
+                                            <a href="#" class="btn btn-sm btn-light ml-8pt" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false"><i class="material-icons icon--left">add</i> New Messages</a>
+                                      
+
+
+
+                                            <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Great!" data-swal-text="Your message has sent successfuly!"></div>
+
+                                            <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex pt-4" style="position: relative;" data-perfect-scrollbar>
+                            <div class="container page__container page__container">
+                               
+                                <img src="../../assets/img/no-messages.svg" style="width: 300px;margin-left: 300px;height: auto;" alt="">
+
+                                <h2 style="margin-top: 20px;margin-left:250px;font-size: medium;color: gray;">unfortunately, there are no Messages yet in your Page</h2>
+                
+                                <a style="margin-top: 20px;margin-left:380px !important;" href="#" class="btn btn-sm btn-light ml-8pt" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false"><i class="material-icons icon--left">add</i>Add New Message</a>
+
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mdk-drawer js-mdk-drawer" data-align="end" id="messages-drawer">
+                    <div class="mdk-drawer__content top-0">
+                        <div class="sidebar sidebar-right sidebar-light bg-white o-hidden">
+                            <div class="d-flex flex-column h-100">
+                              
+                                
+                                <div class="sidebar-heading" style="height: 40px;padding-top: 10px;">0 Messages</div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer layout-mini__drawer" id="default-drawer">
+            <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="mini">
+
+                <div class="sidebar sidebar-mini sidebar-light-dodger-blue sidebar-left d-flex flex-column">
+
+                    <!-- Brand -->
+                    <a href="index.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
+
+                        <span class="avatar avatar-sm ">
+
+                            <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg" class="img-fluid" alt="logo" /></span>
+
+                        </span>
+
+                    </a>
+
+                    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                            <li class="sidebar-menu-item active" data-toggle="tooltip" data-title="" data-placement="right" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#supervised_user_circle" data-toggle="tab" role="tab" aria-controls="supervised_user_circle" aria-selected="true">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">supervised_user_circle</i>
+                                    <span class="sidebar-menu-text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item " data-toggle="tooltip" data-title="" data-placement="right" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#sm_student" data-toggle="tab" role="tab" aria-controls="sm_student" aria-selected="true">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i>
+                                    <span class="sidebar-menu-text">My courses</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item " data-toggle="tooltip" data-title="" data-placement="right" data-container="body" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#sm_messaging" data-toggle="tab" role="tab" aria-controls="sm_messaging">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">message</i>
+                                    <span class="sidebar-menu-text">Communicate</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                    <ul class="nav flex-column sidebar-menu align-items-center mb-12pt " role="">
+                        <a class="" href="../../index.html"  data-title="Swip to Booctep">
+                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">swap_horiz</i>
+                            <span class="sidebar-menu-text">swap_horiz</span>
+                        </a>
+                    </ul>
+
+                </div>
+
+                <div class="sidebar sidebar-light sidebar-left flex sidebar-secondary pt-16pt" data-perfect-scrollbar>
+
+
+
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane" id="sm_account_1">
+                            <div class="sidebar-heading">Account</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-edit-account.html">
+                                        <span class="sidebar-menu-text">Edit Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing.html">Billing</a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing-history.html">Payments</a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-login.html">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane " id="sm_apps">
+                            <div class="sidebar-heading">Apps</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button js-sidebar-collapse" data-toggle="collapse" href="#enterprise_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                        Enterprise
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="enterprise_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-erp-dashboard.html">
+                                                <span class="sidebar-menu-text">ERP Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-crm-dashboard.html">
+                                                <span class="sidebar-menu-text">CRM Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-hr-dashboard.html">
+                                                <span class="sidebar-menu-text">HR Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-employees.html">
+                                                <span class="sidebar-menu-text">Employees</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-staff.html">
+                                                <span class="sidebar-menu-text">Staff</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-leaves.html">
+                                                <span class="sidebar-menu-text">Leaves</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="mini-departments.html">
+                                                <span class="sidebar-menu-text">Departments</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-documents.html">
+    <span class="sidebar-menu-text">Documents</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-attendance.html">
+    <span class="sidebar-menu-text">Attendance</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-recruitment.html">
+    <span class="sidebar-menu-text">Recruitment</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-payroll.html">
+    <span class="sidebar-menu-text">Payroll</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-training.html">
+    <span class="sidebar-menu-text">Training</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-employee-profile.html">
+    <span class="sidebar-menu-text">Employee Profile</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-accounting.html">
+    <span class="sidebar-menu-text">Accounting</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-inventory.html">
+    <span class="sidebar-menu-text">Inventory</span>
+  </a>
+</li> -->
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#community_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
+                                        Community
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-faq.html">
+                                                <span class="sidebar-menu-text">FAQ</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-discussions.html">
+                                                <span class="sidebar-menu-text">Discussions</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-discussion.html">
+                                                <span class="sidebar-menu-text">Discussion Details</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-discussions-ask.html">
+                                                <span class="sidebar-menu-text">Ask Question</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#productivity_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">access_time</span>
+                                        Productivity
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="productivity_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-projects.html">
+                                                <span class="sidebar-menu-text">Projects</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-tasks-board.html">
+                                                <span class="sidebar-menu-text">Tasks Board</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-tasks-list.html">
+                                                <span class="sidebar-menu-text">Tasks List</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="mini-kanban.html">
+                                                <span class="sidebar-menu-text">Kanban</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-task-details.html">
+    <span class="sidebar-menu-text">Task Details</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-team-members.html">
+    <span class="sidebar-menu-text">Team Members</span>
+  </a>
+</li> -->
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#cms_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
+                                        CMS
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="cms_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-cms-dashboard.html">
+                                                <span class="sidebar-menu-text">CMS Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-posts.html">
+                                                <span class="sidebar-menu-text">Posts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#ecommerce_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">shopping_cart</span>
+                                        eCommerce
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="ecommerce_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ecommerce.html">
+                                                <span class="sidebar-menu-text">Shop Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="mini-edit-product.html">
+                                                <span class="sidebar-menu-text">Edit Product</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="tab-pane  fade active show " id="supervised_user_circle">
+                            <div class="sidebar-heading">Profile </div>
+                            <ul class="sidebar-menu">
+
+
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="Account.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">contacts</span>
+                                        <span class="sidebar-menu-text">Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="Security.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">lock</span>
+                                        <span class="sidebar-menu-text">Security</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="payments.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">payment</span>
+                                        <span class="sidebar-menu-text">Payments Method</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="privacy.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">verified_user</span>
+                                        <span class="sidebar-menu-text">Privacy</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="tab-pane  fade  show " id="sm_student">
+                            <div class="sidebar-heading">My courses</div>
+                            <ul class="sidebar-menu">
+
+
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="courses.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">dvr</span>
+                                        <span class="sidebar-menu-text">Courses</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="quizes.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">assignment_turned_in</span>
+                                        <span class="sidebar-menu-text">Quizes</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="certificates.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">class</span>
+                                        <span class="sidebar-menu-text">Certificates</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="PurchaseHistory.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">timeline</span>
+                                        <span class="sidebar-menu-text">Purchase History</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                        <div class="tab-pane " id="sm_messaging">
+                            <div class="sidebar-heading">Communicate</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="messages.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">mail</span>
+                                        <span class="sidebar-menu-text">Messages</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="notifications.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">notifications_none</span>
+                                        <span class="sidebar-menu-text">Notifications</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- Fix Footer -->
+    <script src="assets/vendor/fix-footer.js"></script>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js"></script>
+
+
+
+    <script id="template-message" type="text/x-jsrender">
+        <li class="message d-inline-flex">
+    <div class="message__aside">
+      <a href="mini-profile.html" class="avatar avatar-sm">
+        <img src="{{:avatar}}" alt="people" class="avatar-img rounded-circle">
+      </a>
+    </div>
+    <div class="message__body card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex mr-3">
+            <a href="mini-profile.html" class="text-body"><strong>{{:name}}</strong></a>
+          </div>
+          <div>
+            <small class="text-muted">{{:date}}</small>
+          </div>
+        </div>
+        <span class="text-black-70">{{:message}}</span>
+        {{if file}}
+        <a href="#" class="media align-items-center mt-2 text-decoration-0 bg-white px-3">
+          <span class="avatar mr-2">
+            <span class="avatar-title rounded-circle">
+              <i class="material-icons font-size-24pt">attach_file</i>
+            </span>
+          </span>
+          <span class="media-body" style="line-height: 1.5">
+            <span class="text-primary">{{:file.name}}</span><br>
+            <span class="text-muted">{{:file.size}}</span>
+          </span>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+  </li>
+</script>
+
+    <!-- Messages App -->
+    <script src="assets/js/messages.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="assets/js/sidebar-mini.js"></script>
+
+
+
+       <!-- Bootstrap -->
+       <script src="assets/vendor/popper.min.js"></script>
+       <script src="assets/vendor/bootstrap.min.js"></script>
+   
+       <!-- Perfect Scrollbar -->
+       <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+   
+       <!-- DOM Factory -->
+       <script src="assets/vendor/dom-factory.js"></script>
+   
+       <!-- MDK -->
+       <script src="assets/vendor/material-design-kit.js"></script>
+   
+       <!-- Fix Footer -->
+       <script src="assets/vendor/fix-footer.js"></script>
+   
+       <!-- App JS -->
+       <script src="assets/js/app.js"></script>
+   
+   
+   
+       <!-- Global Settings -->
+       <script src="assets/js/settings.js"></script>
+   
+           <!-- Sweet Alert -->
+       <script src="assets/vendor/sweetalert.min.js"></script>
+       <script src="assets/js/sweetalert.js"></script>
+   
+       <!-- Highlight.js -->
+       <script src="assets/js/hljs.js"></script>
+
+
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function(e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function(e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+</body>
+
+</html>
