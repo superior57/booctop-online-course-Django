@@ -1,0 +1,390 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+    <div class="products-navigation" style="display: none;">
+    </div>
+        
+    <!-- Section -->       
+    <div id="shop-page" class="shop-wrapper">
+
+
+
+
+    
+
+    <div class="store-sections store-sections-2">
+
+            
+
+
+
+            <!-- Brands -->
+            <div id="brands-tab" class="store-tab-pane is-active">
+                   <!-- Timeline -->
+    
+                   <section class="hero is-small is-bold hero-become-2">
+                    <div class="hero-body">
+                      <div class="container">
+            
+                        <div class="hero-becom-flex">
+                        <h1 class="booctep-1" data-shadow='Booctep'>Become a teacher</h1>
+        
+                        
+                        
+             
+                        <h2 class="booctep-h2">Teach what you learn and earn money now, see this step for how to be a teacher than sign as a teacher.</h2>
+            
+                        <a href="signup.html" class="button is-light">Become a teacher</a>
+                    
+                    </div>
+                   
+                </div>
+                    </div>
+                  </section>
+
+   
+                    
+                  <div id="landing-start" class="section-m landing-wrapper">
+                    <div class="container">
+                        <div class="made-with" style="margin-top: -70px;">
+                            <div class="made-block-2">
+                                <div class="block-icon is-box-reveal">
+                                  <i class="fa fa-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                </div>
+
+    <section class="timeline">
+        <ul>
+          <li>
+            <div>
+              <time>Step 1</time>
+                <h2 style="font-weight: 500;">Sign up as a teacher.</h2>
+            </div>
+          </li>
+            <li>
+              <div>
+                <time>Step 2</time>
+                  <h2 style="font-weight: 500;">Set up your profile information.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 3</time>
+                  <h2 style="font-weight: 500;">Set up your payments methods to collect your income and manage your money.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 4</time>
+                  <h2 style="font-weight: 500;">Test your Videos and Audios Quality by sending your videos to our team via test course page.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 5</time>
+                  <h2 style="font-weight: 500;"> Be Spacific when you choose your target students when you set up your profile.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 6</time>
+                  <h2 style="font-weight: 500;">Read our Teacher's Terms and Privacy.</h2>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Step 7</time>
+                  <h2 style="font-weight: 500;"> Get help if you want in your dashboard.</h2>
+              </div>
+            </li>
+        </ul>
+      </section>
+      <!-- Timeline -->
+
+
+            </div>                        
+
+
+
+        </div>
+      
+        <section class="hero is-small is-bold hero-become-3" >
+            <div class="hero-body">
+                <div class="section side-feature">
+                    <div class="container">
+                      
+       
+                      
+                        <h3 style="font-size: xx-large;margin-bottom: 0px !important;color: #fff !important;text-align: center;">How it works!</h3>
+    
+    
+                     
+                    <div class="section side-feature" style="margin-top: 0px;">
+                        <div class="container">
+                            <div class="columns">
+                                <div class="column is-8 is-offset-2" style="border: 2px solid rgb(36, 2, 100);border-radius: 3px;
+                                -webkit-box-shadow: -1px 4px 9px 9px rgb(5, 5, 54,0,2);
+                                -moz-box-shadow: -1px 4px 9px 9px rgba(5, 5, 54,0,2);
+                                box-shadow: -1px 4px 9px 9px rgba(5, 5, 54,0,2);">
+                                  
+                                  <video poster="{% static 'assets/img/setting.jpg' %}" id="player" playsinline controls>
+                                    <source src="{% static 'assets/img/vid/fortnite.webm' %}" type="video/webm" />
+                                
+                                    <!-- Captions are optional -->
+                                    <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
+                                </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+                    </div>
+                </div>
+            </div>
+          </section>
+
+    </div>
+ 
+
+
+             
+    <!-- Login Modal Start -->    
+    <div id="product-quickview" class="modal product-quickview is-xsmall has-light-bg">
+        <div class="modal-background quickview-background"></div>
+          <div class="modal-content">
+          <div class="card">
+              <div class="quickview-loader is-active">
+                  <div class="loader is-loading"></div>
+              </div>
+              <div class="right">
+                  <span class="close-modal close-modal-2">
+                      <i data-feather="x"></i>
+                  </span>
+                  <div class="header">
+                      <div class="product-info">
+                          <img class="Loginmodal-img" src="{% static 'assets/img/favicon.png' %}" alt="">
+                          <h3 id="quickview-name">Login</h3>
+                          <p style="margin-bottom: 10px;">Welcome Back</p>
+                          <a href="#" class="button is-fullwidth" style="margin-bottom: 5px;background-color: rgb(218, 1, 1);color: #fff;">Login via Gmail
+                              &nbsp;<i class="mdi mdi-gmail"></i>
+                          </a>
+                          <a href="#" class="button is-fullwidth" style="background-color: rgb(61, 136, 206);color: #fff;">Login via Twitter
+                              &nbsp;<i class="mdi mdi-twitter"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div id="signup-panel-2" class="process-panel-wrap is-narrow">
+                      <div class="form-panel">
+                      <div class="search-filter" style="margin-bottom: 10px;">
+                          <div class="control has-icon">
+                              <input type="text" class="input is-fade" placeholder="Enter username or email">
+                              <div class="form-icon">
+                                  <i class="fa fa-user" style="font-size: x-small;"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="search-filter" style="margin-bottom: 10px;">
+                          <div class="control has-icon">
+                              <input type="password" class="input is-fade" placeholder="Enter your password">
+                              <div class="form-icon">
+                                  <i class="fa fa-key" style="font-size: x-small;"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="field">
+                          <div class="control">
+                              <p style="font-size: small;"><input type="checkbox"> Remember me</p>
+                          </div>
+                      </div>
+                      <div class="field">
+                          <div class="control">
+                              <button class="button primary-button raised is-fullwidth">
+                                  <p>Login</p>
+                              </button>
+                          </div>
+                      </div>
+                      <p> Already have an account ? <a href="signup.html">Sign up</a></p>
+                      <div class="has-text-centered" style="margin-top: 10px;">
+                          <a class=" modal-trigger " data-modal="albums-help-modal">Forget Password</a>
+  
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>   
+      <!-- Login Modal End -->    
+
+    <!-- Forget Password -->
+    <div id="albums-help-modal" class="modal albums-help-modal is-xsmall has-light-bg">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+
+            <div class="card">
+                <div class="card-heading">
+                    <h3>Forget Password</h3>
+                    <!-- Close X button -->
+                    <div class="close-wrap">
+                        <span class="close-modal">
+                            <i data-feather="x"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="content-block is-active" style="margin-left: -35px;text-align: center;align-items: center;">
+                        <img src="{% static 'assets/img/forget_email.svg' %}" alt="">
+                        <div class="help-text">
+                            <p style="margin-bottom: 10px;color: rgb(29, 29, 29);">Enter your Email address.</p>
+                            <input type="text" style="margin-bottom: 10px;" class="input is-fade" placeholder="Enter your Email">
+                            <a href="#" style="background-color:rgb(0, 81, 128);color: #fff;" class="button is-fullwidth">Send link</a>
+
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="content-block">
+                    </div>
+
+                    <div class="slide-dots">
+                            <div class="column is-12">
+
+
+                            </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <p style="font-size: small;margin-top: 10px;font-weight: 400;">Forgot which email address you signed up with? <a href="support.html">Get help!</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forget Password -->
+
+
+
+
+        
+    <!-- Categories -->
+    <div class="explorer-menu" >
+        <div class="explorer-inner">
+            <div class="container">
+                <!--Header-->
+                <div class="explorer-header">
+                    <h3>Explore</h3>
+                </div>
+                <!--List-->
+                <div class="explore-list">
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/coding.svg' %}" alt="">
+                        <h4>Web Development</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/business.svg' %}" alt="">
+                        <h4>Business</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/aviation.svg' %}" alt="">
+                        <h4>Aviation</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/controller.svg' %}" alt="">
+                        <h4>Games</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/math.svg' %}" alt="">
+                        <h4>Mathmatics</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/lifestyle.svg' %}" alt="">
+                        <h4>life Style</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/arts.svg' %}" alt="">
+                        <h4>Arts</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/It.svg' %}" alt="">
+                        <h4>Information Technology</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/drama.svg' %}" alt="">
+                        <h4>Cenima & Drama</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/software.svg' %}" alt="">
+                        <h4>Software Programming</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/languages.svg' %}" alt="">
+                        <h4>Languages</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/coock.svg' %}" alt="">
+                        <h4>Food & Cooking</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/maintanece.svg' %}" alt="">
+                        <h4>Repare & Maintaince</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/skills.svg' %}" alt="">
+                        <h4>Skills</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="{% static 'assets/img/icons/explore/other.svg' %}" alt="">
+                        <h4>Others</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+</div> 
+<!-- Categories -->   
+
+
+
+
+<!-- FAQs Modal -->
+
+
+
+<script>
+    const player = new Plyr('#player');
+  
+  </script>
+  
+  
+  
+      <!-- Concatenated js plugins and jQuery -->
+      <script src="{% static 'assets/js/timeline.js' %}"></script>
+      
+      <script src="{% static 'assets/js/videos.js' %}"></script>
+      <script src="{% static 'assets/js/shop.js' %}"></script>
+      <script src="{% static 'assets/js/settings.js' %}"></script>
+   
+  
+  
+{% endblock %}

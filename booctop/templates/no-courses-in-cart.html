@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+   <!-- UTF-8 For MultiLanguages -->
+   <meta charset="utf-8">
+
+   <!-- For Flixable -->
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+   <!-- Title of website -->
+   <title>Booctep | Cart</title>
+
+   <!-- Tab Logo -->
+   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+   <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/sideb.css" rel="stylesheet">
+
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800,900" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+
+   <!-- CSS Style -->
+   <link rel="stylesheet" href="assets/css/bulma.css">
+   <link rel="stylesheet" href="assets/css/app.css">
+   <link rel="stylesheet" href="assets/css/core.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/media.css">
+
+   <!-- Video Player And jQuery -->
+   <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />   
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>   
+   <script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
+   <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
+   <!-- Video Player And jQuery -->
+   
+</head>
+<body>
+
+        <!-- Pageloader -->
+        <!-- <div class="pageloader"></div>
+        <div class="infraloader is-active"></div>
+        <div class="app-overlay"></div> -->
+        
+        <!-- Main Navbar -->
+        <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
+            <div class="container ">
+            <div class="navbar-brand">
+                <a href="index.html" class="navbar-item logo">
+                   <img src="assets/img/logo/booctep-tran.png" alt=""  />
+                </a>
+            </div>
+             
+                
+            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
+                <a class="icon-link is-primary">
+                    <i class="mdi mdi-apps"></i>
+                </a>
+            </div>
+                  
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start"> 
+                        
+    
+                           <div class="navbar-item">
+                                <div id="global-search" class="control">
+                                    <input id="tipue_drop_input" class="input " type="text" placeholder="Search" required>
+                                    <span id="clear-search" class="reset-search">
+                                        <i data-feather="x"></i>
+                                    </span>
+                                    <span class="search-icon">
+                                        <i data-feather="search"></i>
+                                    </span>
+                            
+                            
+                                </div>
+                            
+                            </div>
+    
+    
+                      
+                           
+                        <div class="navbar-item"> 
+                            <a href="become.html" class="button-become-a-teacher button is-light" data-lang="about">Become a teacher</a>
+                       </div>
+
+
+                        <label class="animated-toggle">
+                            <input type="checkbox">
+                            <span class="toggler">
+                                <span class="dark">
+                                    <i data-feather="moon"></i>
+                                </span>
+                                <span class="light">
+                                    <i data-feather="sun"></i>
+                                </span>
+                            </span>
+                        </label>
+
+
+                        </div>
+              
+                  
+                      <div class="navbar-end">
+                          
+                      
+                        <div class="navbar-item is-cart" style="margin-left: -20px;">
+                            <div class="cart-button">
+                                <i class="fa fa-bell"></i>
+                            </div>
+                        
+                            <!-- Cart dropdown -->
+                            <div class="shopping-cart">
+                                <div class="cart-inner">
+                        
+                    
+                                    <!--Loader-->
+                                    <div class="navbar-cart-loader is-active">
+                                        <div class="loader is-loading"></div>
+                                    </div>
+                                    
+
+
+                                    <div class="shopping-cart-header">
+                                        <u style="color: grey; cursor: not-allowed;" disabled>Mark all as read</u>
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text">0 Notifications</span>
+                                        </div>
+                                    </div>
+                                    
+
+          
+                                    
+                                    
+                       
+                                    <ul class="shopping-cart-items-2">
+                                        <li class="cart-row-2">
+                                            <img src="assets/img/illstrators/no-not.svg" alt="" />
+                                            <span class="item-name" style="color: grey;">Sorry there are no notifications yet..</span>
+                                            
+                                        </li>
+                        
+                                    </ul>
+                            
+                                    <a href="student.0/dist/notifications.html" class="button primary-button is-raised">See Notifications Page</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="navbar-item is-cart" style="margin-left: -20px;">
+                            <div class="cart-button">
+                                <i class="fa fa-comment-alt"></i>
+                            </div>
+                        
+                            <!-- Cart dropdown -->
+                            <div class="shopping-cart">
+                                <div class="cart-inner">
+                        
+                        
+                                    <!--Loader-->
+                                    <div class="navbar-cart-loader is-active">
+                                        <div class="loader is-loading"></div>
+                                    </div>
+                                    
+
+
+                                    <div class="shopping-cart-header">
+                                        <u style="color: grey;cursor: not-allowed;">Mark all as read</u>
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text">0 Messages</span>
+                                        </div>
+                                    </div>
+                                    
+                               
+                                    <ul class="shopping-cart-items-2">
+                                        <li class="cart-row-2">
+                                            <img src="assets/img/illstrators/no-msg.svg" alt="" />
+                                            <span class="item-name" style="color: grey;">Sorry there are no Messages yet..</span>
+                                            
+                                        </li>
+                        
+                                    </ul>
+                                    <a href="student.0/dist/messages.html" class="button primary-button is-raised">See Messages Page</a>
+                
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="navbar-item is-cart" style="margin-left: -20px;">
+                            <div class="cart-button">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        
+                            <!-- Cart dropdown -->
+                            <div class="shopping-cart">
+                                <div class="cart-inner">
+                        
+                                    <!--Loader-->
+                                    <div class="navbar-cart-loader is-active">
+                                        <div class="loader is-loading"></div>
+                                    </div>
+                        
+                                    <div class="shopping-cart-header">
+                                        <a href="#"><u style="color: grey;cursor: not-allowed;" disabled>Delete items</u></a>
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text">0 courses</span>
+                                        </div>
+                                    </div>
+                                    <!--end shopping-cart-header -->
+                            
+                                    
+                                 
+                                    <ul class="shopping-cart-items-2">
+                                        <li class="cart-row-2">
+                                            <img src="assets/img/illstrators/no-fave.svg" alt="" />
+                                            <span class="item-name" style="color: grey;">Sorry there are no Fav courses yet..</span>
+                                            
+                                        </li>
+                        
+                                    </ul>
+                                    <a href="wishlist.html" class="button primary-button is-raised">See Favourite Page</a>
+
+                                
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                      
+
+                        
+                        <div class="navbar-item is-cart" style="margin-left: -20px;margin-right: 50px;">
+                            <div class="cart-button">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        
+                            <!-- Cart dropdown -->
+                            <div class="shopping-cart">
+                                <div class="cart-inner">
+                        
+                                    <!--Loader-->
+                                    <div class="navbar-cart-loader is-active">
+                                        <div class="loader is-loading"></div>
+                                    </div>
+                        
+                                    <div class="shopping-cart-header">
+                                        <a href="cart.html"><u disabled style="cursor: not-allowed;color: gray;">View Cart</u></a>
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text">$00.00</span>
+                                        </div>
+                                    </div>
+                                    <!--end shopping-cart-header -->
+                            
+                                    <ul class="shopping-cart-items-2">
+                                        <li class="cart-row-2">
+                                            <img src="assets/img/illstrators/Ez.svg" alt="" />
+                                            <span class="item-name" style="color: grey;">Sorry there are no courses yet..</span>
+                                            
+                                        </li>
+                        
+                                    </ul>
+                            
+                                    <a href="cart.html" class="button primary-button is-raised">View Cart Page</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="account-dropdown" class="navbar-item is-account drop-trigger has-caret">
+                              
+                            <div class="small-avatar">
+                                <img class="avatar" src="assets/img/manPro.jpg" style="border: 2px solid #ccc;" data-demo-src="assets/img/avatars/jenna.png" data-user-popover="0" alt="">
+                            </div>
+                        
+                            <div class="nav-drop is-account-dropdown">
+                                <div class="inner">
+                                    <div class="nav-drop-header">
+                                        <span class="username">Elzubair Mohammed</span>
+                                    </div>
+                                    <div class="nav-drop-body account-items">
+                                        <a href="student.0/dist/account.html" class="account-item">
+                                            <div class="media">
+                                                <div class="icon-wrap">
+                                                    <i data-feather="settings"></i>
+                                                </div>
+                                                <div class="media-content">
+                                                    <h3>Settings</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="support.html" class="account-item">
+                                            <div class="media">
+                                                <div class="icon-wrap">
+                                                    <i data-feather="life-buoy"></i>
+                                                </div>
+                                                <div class="media-content">
+                                                    <h3>Help</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="student.0/dist/courses.html" class="account-item">
+                                            <div class="media">
+                                                <div class="icon-wrap">
+                                                    <i data-feather="life-buoy"></i>
+                                                </div>
+                                                <div href="student.0/dist/courses.html" class="media-content">
+                                                    <h3>My courses</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="student.0/dist/messages.html" class="account-item">
+                                            <div class="media">
+                                                <div class="icon-wrap">
+                                                    <i data-feather="life-buoy"></i>
+                                                </div>
+                                                <div class="media-content">
+                                                    <h3>messages</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="account-item">
+                                            <div class="media media1">
+                                                <div class="icon-wrap">
+                                                    <i data-feather="power" style="color:rgb(236, 11, 11) !important;"></i>
+                                                </div>
+                                                <div class="media-content">
+                                                    <h3 style="color: rgb(236, 11, 11);">Log out</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>   
+        <!-- Main Navbar -->
+   
+
+    <!-- Mobile Navbar -->
+    <nav class="navbar mobile-navbar is-hidden-desktop" aria-label="main navigation">
+        <!-- Brand -->
+        <div class="navbar-brand">
+            <a class="navbar-item2" href="/">
+                <img class="mobile-logo" src="assets/img/favicon.png" alt="">
+            </a>
+    
+    
+            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
+                <a class="icon-link is-primary">
+                    <i class="mdi mdi-apps"></i>
+                </a>
+            </div>
+    
+            <!-- Mobile menu toggler icon -->
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- Navbar mobile menu -->
+        <div class="navbar-menu">
+            <!-- Account -->
+            <div class="navbar-item has-dropdown ">
+                <div class="navbar-link">
+                    <img src="assets/img/man.jpg" data-demo-src="assets/img/avatars/jenna.png" alt="">
+                    <span class="is-heading">Elzubair Mohammed</span>
+                </div>
+    
+                <div class="navbar-item">
+                    <div id="global-search" class="control">
+                        <input id="tipue_drop_input" class="input " type="text" placeholder="Search" required>
+                        <span id="clear-search" class="reset-search">
+                            <i data-feather="x"></i>
+                        </span>
+                        <span class="search-icon">
+                            <i data-feather="search"></i>
+                        </span>
+                
+                
+                    </div>
+                
+                </div>
+                
+                <!-- Mobile Dropdown -->
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item is-flex is-mobile-icon">
+                        <span><i data-feather="user"></i>Profile</span>
+                    </a>
+                    <a href="#" class="navbar-item is-flex is-mobile-icon">
+                        <span><i data-feather="shopping-cart"></i>Cart</span>
+                        <span class="menu-badge">3</span>
+                    </a>
+                    <a href="#" class="navbar-item is-flex is-mobile-icon">
+                        <span><i data-feather="activity"></i>Feed</span>
+                        <span class="menu-badge">87</span>
+                    </a>
+                    <a href="#" class="navbar-item is-flex is-mobile-icon">
+                        <span><i data-feather="settings"></i>Settings</span>
+                    </a>
+                    <a href="#" class="navbar-item is-flex is-mobile-icon">
+                        <span><i data-feather="hexagon"></i>Logout</span>
+                    </a>
+                    
+                        <div class="buttons">
+                          <a class="button second-button">
+                            <p>Sign up</p>
+                          </a>
+                          <a class="button primary-button raised quickview-trigger process-button">
+                            <p>Log in</p>
+                          </a>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Navbar -->
+            
+
+
+
+
+       
+
+
+  
+
+    <div class="products-navigation" style="display: none;">
+    </div>
+         
+
+    <!-- Cart content -->
+
+        <div class="view-wrapper" style="padding-top: 80px;">
+           <div class="container">
+            <div class="shop-wrapper">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <div class="header-inner">
+                            <div class="categories-header">
+                            </div>
+                            
+                            <div class="header-actions">
+                                <a href="#" class="button is-fullwidth primary-button is-raised" disabled>Save for later</a>
+
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="cart-content">
+                        <div class="columns">
+                            <div class="column is-8">
+
+                                <div class="wrapper">
+                                    <div class="categories-header">
+                                        <h2>My orders</h2>
+                                    </div>
+                                    <div class="store-sections-6">
+                                    
+                                    
+                                    <img src="assets/img/no-cart.svg" style="width: 350px;height: auto;" alt="">
+
+                                    <h2 style="margin-top: -40px;color: gray;">unfortunately, there are no courses yet in your cart</h2>
+
+
+                                    <input style="margin-bottom: 15px;" id="tipue_drop_input" class="input c-input" type="text" placeholder="Search" required>
+                                    
+                                    <h3 style="">
+                                        <a href="index.html" class="button">Search  &nbsp;<span class="fa fa-search"></span></a>
+                                    </h3>
+
+                                    </div>
+                                    
+                                  </div>
+
+ 
+                                  
+ 
+
+                            </div>
+                            <div class="column is-4">
+                                <div class="cart-summary">
+                                    <div class="summary-header">
+                                        <h3>Order Summary</h3>
+                                    </div>
+                                    <!--card-->
+                                    <div class="summary-card">
+                                        <div class="order-line">
+                                            <span>Subtotal</span>
+                                            <span>00.00</span>
+                                        </div>
+                                        <div class="order-line">
+                                            <span>Shipping</span>
+                                            <span class="is-text">Not courses</span>
+                                        </div>
+                                        <div class="order-line">
+                                            <span>Taxes</span>
+                                            <span>00.00</span>
+                                        </div>
+                                        <div class="order-line">
+                                            <span>Promo code?</span>
+                                            <br>
+                                            
+                                        </div>
+
+                                        <div class="order-line">
+                                        <div class="field">
+                                            <div class="control has-validation ">
+                                                <input type="text" class="input " placeholder="write your code here" disabled style="width: 300px;" />
+                                                <div class="error-icon">
+                                                    <i data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <hr>
+                                        <div class="order-line">
+                                            <span class="is-total">Total</span>
+                                            <span class="is-total">00.00</span class="is-total">
+                                        </div>
+                                        <a class="button is-fullwidth primary-button is-raised" style="background-color: skyblue;color: rgb(13, 38, 71);" disabled>Checkout</a>
+                                    </div>
+                                    <!--card-->
+                                    <div class="summary-card">
+                                        <img src="assets/img/icons/questions/help.svg" alt="">
+                                        <h4>Help center</h4>
+                                        <p>Having trouble? Please search our <a href="support.html" class="standard-link">Help Center</a> for a quick
+                                            answer to your problem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <!-- Cart content -->
+    
+
+
+
+        
+    <!-- Categories -->
+    <div class="explorer-menu" >
+        <div class="explorer-inner">
+            <div class="container">
+                <!--Header-->
+                <div class="explorer-header">
+                    <h3>Explore</h3>
+                </div>
+                <!--List-->
+                <div class="explore-list">
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/coding.svg" alt="">
+                        <h4>Web Development</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/business.svg" alt="">
+                        <h4>Business</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/aviation.svg" alt="">
+                        <h4>Aviation</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/controller.svg" alt="">
+                        <h4>Games</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/math.svg" alt="">
+                        <h4>Mathmatics</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/lifestyle.svg" alt="">
+                        <h4>life Style</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/arts.svg" alt="">
+                        <h4>Arts</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/It.svg" alt="">
+                        <h4>Information Technology</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/drama.svg" alt="">
+                        <h4>Cenima & Drama</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/software.svg" alt="">
+                        <h4>Software Programming</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/languages.svg" alt="">
+                        <h4>Languages</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/coock.svg" alt="">
+                        <h4>Food & Cooking</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/maintanece.svg" alt="">
+                        <h4>Repare & Maintaince</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/skills.svg" alt="">
+                        <h4>Skills</h4>
+                    </a>
+                    <!--item-->
+                    <a href="index.html" class="explore-item">
+                        <img src="assets/img/icons/explore/other.svg" alt="">
+                        <h4>Others</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+</div> 
+<!-- Categories -->   
+    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <!-- Column -->
+                <div class="column is-2">
+                    <div class="logo-footer">
+                        <img src="assets/img/logo/booctep.png" alt="" >
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class="column is-6 is-offset-1">
+                    <div class="footer-columns columns" style="border-bottom: 1px solid rgb(226, 226, 226);">
+                        <!-- Column -->
+                        <div class="column">
+                            <ul class="footer-column">
+                                <div class="column" >
+                                    <a href="about.html" style="font-weight: 400;">About us</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- Column -->
+                        <div class="column">
+                            <ul class="footer-column">
+                                <div class="column" >
+                                    <a href="faqs.html" style="font-weight: 400;">FAQs</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- Column -->
+                        <div class="column">
+                            <ul class="footer-column">
+                                <div class="column" >
+                                    <a href="support.html" style="font-weight: 400;">Help</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- Column -->
+                        <div class="column">
+                            <ul class="footer-column">
+                                <div class="column" >
+                                    <a href="terms.html" style="font-weight: 400;">Terms</a>
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="footer-columns columns">
+                        <!-- Column -->
+                        <div class="column is-offset-2">
+                            <ul class="footer-column " >
+                                <div class="column" >
+                                    <a href="become.html" style="font-weight: 400;margin: 0 auto;">Become a teacher</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <!-- Column -->
+                        <div class="column">
+                            <ul class="footer-column">
+                                <div class="column" >
+                                    <a href="signup.html" style="font-weight: 400;">My courses</a>
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="column is-2 is-offset-1">
+                    
+
+                    <div class="control-language-parent">
+
+                    <div class="control-language is-combo">
+                        <div class="combo-box">
+                            <div class="box-inner">
+                                <div class="combo-item">
+                                    <i class="combo-item-i fa fa-language"></i>
+                                    <span class="combo-item-span selected-item" selected="selected">English</span>
+                                </div>
+                            </div>
+                            <div class="box-chevron">
+                                <i data-feather="chevron-down" class="box-chevron-i"></i>
+                            </div>
+                            <div class="box-dropdown" id="directionSwitch">
+                                <div class="dropdown-inner has-slimscroll">
+                                    <ul>
+                                        <li >
+                                            <span class="item-icon">
+                                            </span>
+                                            <span class="item-name translate"  class="" id="en">English</span>
+                                            <span class="checkmark">
+                                                <i data-feather="check"></i>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="item-icon">
+                                            </span>
+                                            <span class="item-name translate" class="" id="ar">Arabic</span>
+                                            <span class="checkmark">
+                                                <i data-feather="check"></i>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+</footer>
+<div class="copyright">
+        <div class="container">
+            <p> Made with <span class="fa fa-heart" style="color: red;"></span>&nbsp; By Booctep's Designers.</p>
+        </div>
+</div> 
+<!-- Footer --> 
+
+
+
+      
+
+
+
+        <script src="assets/js/delete-cart-items.js"></script>
+
+
+
+        <!-- Concatenated js plugins and jQuery -->
+        <script src="assets/js/app.js"></script>
+
+        <!-- Font Awesome -->
+
+        
+        <!-- Components js -->
+        <script src="assets/js/widgets.js"></script>
+
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.js"></script>
+    
+    <!-- Core js -->
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/explorer.js"></script>
+    <script src="assets/js/shop.js"></script>
+    
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+
+</body>
+</html>
