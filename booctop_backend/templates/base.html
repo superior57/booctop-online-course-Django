@@ -11,7 +11,7 @@
    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
    <!-- Title of website -->
-   <title>Booctep | Homepage</title>
+   <title>{%block title%} {% endblock %}</title>
 
    <!-- Tab Logo -->
    <link rel="icon" type="image/png" href="{%static 'assets4/css/material-icons.css' %}" />
@@ -28,7 +28,6 @@
 
 
    <!-- CSS Style -->
-   <link rel="stylesheet" href="{%static 'assets/css/sideb.css' %}">
    <link rel="stylesheet" href="{%static 'assets/css/bulma.css' %}">
    <link rel="stylesheet" href="{%static 'assets/css/app.css' %}">
    <link rel="stylesheet" href="{%static 'assets/css/core.css' %}">
@@ -54,142 +53,8 @@
     <div class="app-overlay"></div> -->
         
 
-    <!-- Main Navbar -->
-    <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
-        <div class="container ">
-            <div class="navbar-brand">
-                <a href="{%url 'index' %}" class="navbar-item logo">
-                   <img src="{%static 'assets/img/logo/booctep-tran.png' %}" alt=""  />
-                </a>
-            </div>
-             
-                
-            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
-                <a class="icon-link is-primary">
-                    <i class="mdi mdi-apps"></i>
-                </a>
-            </div>
-            
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start"> 
-                     <div class="navbar-item">
-                            <div id="global-search" class="control">
-                                <input id="tipue_drop_input" class="input" type="text" placeholder="Search course" required>
-                                <span id="clear-search" class="reset-search">
-                                    <i data-feather="x"></i>
-                                </span>
-                                <span class="search-icon">
-                                    <i data-feather="search"></i>
-                                </span>      
-                        
-                            </div>
-                        
-                        </div>
-
-
-                  
-                        <div class="navbar-item"> 
-                            <a href="{%url 'become_teacher' %}" class="button-become-a-teacher button is-light" data-lang="about">Become a teacher</a>
-                       </div>
-
-
-                        <label class="animated-toggle">
-                            <input type="checkbox">
-                            <span class="toggler">
-                                <span class="dark">
-                                    <i data-feather="moon"></i>
-                                </span>
-                                <span class="light">
-                                    <i data-feather="sun"></i>
-                                </span>
-                            </span>
-                        </label>
-                  
-                  </div>
-            </div>
-              
-            <div class="navbar-end">
-
-
-                  
-                  <div class="navbar-item is-cart">
-                      <div class="cart-button">
-                          <i class="fa fa-shopping-cart"></i>
-                          <div class="cart-count">
-                              <span style="font-weight: 600;">3</span>
-                          </div>
-                      </div>
-                  
-                      <!-- Cart dropdown -->
-                      <div class="shopping-cart">
-                          <div class="cart-inner">
-                  
-                              <!--Loader-->
-                              <div class="navbar-cart-loader is-active">
-                                  <div class="loader is-loading"></div>
-                              </div>
-                  
-                              <div class="shopping-cart-header">
-                                  <a href="cart.html"><u >View Cart</u></a>
-                                  <div class="shopping-cart-total">
-                                      <span class="lighter-text">Total:</span>
-                                      <span class="main-color-text">$193.00</span>
-                                  </div>
-                              </div>
-                              <!--end shopping-cart-header -->
-                      
-                              <ul class="shopping-cart-items">
-                                  <li class="cart-row">
-                                      <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                      <span class="item-meta">
-                                          <span class="item-name"><a href="{%url 'signle_course' %}">Html5 Full course learn no..</a></span>
-                                          <span class="meta-info">
-                                              <span class="item-price">$29.00</span>
-                                          </span>
-                                      </span>
-                                  </li>
-                      
-                                  <li class="cart-row">
-                                      <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                      <span class="item-meta">
-                                          <span class="item-name"><a href="{%url 'signle_course' %}">Html5 Full course learn no..</a></span>
-                                          <span class="meta-info">
-                                              <span class="item-price">$39.00</span>
-                                          </span>
-                                      </span>
-                                  </li>
-                      
-                                  <li class="cart-row">
-                                      <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                      <span class="item-meta">
-                                          <span class="item-name"><a href="{%url 'signle_course' %}">Html5 Full course learn no..</a></span>
-                                          <span class="meta-info">
-                                              <span class="item-price">$125.00</span>
-                                          </span>
-                                      </span>
-                                  </li>
-                              </ul>
-                      
-                              <a href="checkout.html" class="button primary-button is-raised">Checkout</a>
-                          </div>
-                      </div>
-                  </div>
-
-
-                  <div class="navbar-item" >
-                    <div class="buttons sign-up-in">
-                      <a href="{%url 'user_signup' %}" class="button second-button">
-                        <p>Sign up</p>
-                      </a>
-                      <a class="button primary-button raised quickview-trigger process-button">
-                        <p>Log in</p>
-                      </a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-    </div>        
-    <!-- Main Navbar -->
+   {% block navbar %}
+   {% endblock %}
 
     <!-- Mobile Navbar -->
     <nav class="navbar mobile-navbar is-hidden-desktop" aria-label="main navigation">
@@ -396,18 +261,20 @@
                   <div class="form-panel">
                   <div class="search-filter" style="margin-bottom: 10px;">
                       <div class="control has-icon">
-                          <input type="text" class="input is-fade" placeholder="Enter username or email">
+                          <input type="text" id="login_email" class="input is-fade" placeholder="Enter username or email">
                           <div class="form-icon">
                               <i class="fa fa-user" style="font-size: x-small;"></i>
                           </div>
+                          <span id="login_email_error" class="error"></span>
                       </div>
                   </div>
                   <div class="search-filter" style="margin-bottom: 10px;">
                       <div class="control has-icon">
-                          <input type="password" class="input is-fade" placeholder="Enter your password">
+                          <input type="password" id="login_password" class="input is-fade" placeholder="Enter your password">
                           <div class="form-icon">
                               <i class="fa fa-key" style="font-size: x-small;"></i>
                           </div>
+                          <span id="login_password_error" class="error"></span>
                       </div>
                   </div>
                   <div class="field">
@@ -417,7 +284,7 @@
                   </div>
                   <div class="field">
                       <div class="control">
-                          <button class="button primary-button raised is-fullwidth">
+                          <button class="button primary-button raised is-fullwidth login_btn">
                               <p>Login</p>
                           </button>
                       </div>
@@ -594,6 +461,53 @@
          </div>
     </div> 
     <!-- Footer -->
+
+    <script>
+      $(".login_btn").on('click', function(){
+        var email = $("#login_email").val();
+        var password = $("#login_password").val();
+        var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+        var csrf_token = "{{ csrf_token }}";
+        
+        if(email == '' || !email_regex.test(email)){
+          $("#login_email_error").html("Please enter valid email");
+          return false
+        }else{
+          $("#login_email_error").html("");
+        }
+        
+        if(password == ''){
+          $("#login_password_error").html("Please enter password");
+          return false
+        }else{
+          $("#login_password_error").html("");
+        }
+
+        $.ajax({
+          type : 'POST',
+          url : "{%url 'user_login' %}",
+          data : {
+            'csrfmiddlewaretoken' : csrf_token,
+            'email' : email,
+            'password' : password,
+          },
+          success : function(data){
+            if(data['email_error']){
+              $("#login_email_error").html("Email not registered");
+              return false
+            }
+            if(data['password_error']){
+              $("#login_password_error").html("Wrong password");
+              return false
+            }
+            console.log('run')
+          },
+          error : function(data){
+            console.log(data)
+          }
+        })
+      });
+    </script>
 
     {% block js %}
     {% endblock %}

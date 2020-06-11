@@ -10184,3 +10184,9 @@ box-sizing: border-box;
 .noti-cart small{
   color: blue;
 }
+
+.error{
+  text-align: center;
+  font-size: 13px;
+  color: red;
+}

@@ -1,7 +1,151 @@
 {% extends 'base.html' %}
 {% load static %}
+
+    {% block title %} Booctep | Signup {% endblock %}
+
+    {% block navbar %}
+        <!-- Main Navbar -->
+    <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
+        <div class="container ">
+            <div class="navbar-brand">
+                <a href="{%url 'index' %}" class="navbar-item logo">
+                   <img src="{%static 'assets/img/logo/booctep-tran.png' %}" alt=""  />
+                </a>
+            </div>
+             
+                
+            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
+                <a class="icon-link is-primary">
+                    <i class="mdi mdi-apps"></i>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start"> 
+                     <div class="navbar-item">
+                            <div id="global-search" class="control">
+                                <input id="tipue_drop_input" class="input" type="text" placeholder="Search course" required>
+                                <span id="clear-search" class="reset-search">
+                                    <i data-feather="x"></i>
+                                </span>
+                                <span class="search-icon">
+                                    <i data-feather="search"></i>
+                                </span>
+
+
+                        
+                        
+                            </div>
+                        
+                        </div>
+
+
+                  
+                        <div class="navbar-item"> 
+                            <a href="{%url 'become_teacher' %}" class="button-become-a-teacher button is-light" data-lang="about">Become a teacher</a>
+                       </div>
+
+
+                        <label class="animated-toggle">
+                            <input type="checkbox">
+                            <span class="toggler">
+                                <span class="dark">
+                                    <i data-feather="moon"></i>
+                                </span>
+                                <span class="light">
+                                    <i data-feather="sun"></i>
+                                </span>
+                            </span>
+                        </label>
+                  
+                  </div>
+              
+                  <div class="navbar-end">
+
+
+                        
+                        <div class="navbar-item is-cart">
+                            <div class="cart-button">
+                                <i class="fa fa-shopping-cart"></i>
+                                <div class="cart-count">
+                                    <span style="font-weight: 600;">3</span>
+                                </div>
+                            </div>
+                        
+                            <!-- Cart dropdown -->
+                            <div class="shopping-cart">
+                                <div class="cart-inner">
+                        
+                                    <!--Loader-->
+                                    <div class="navbar-cart-loader is-active">
+                                        <div class="loader is-loading"></div>
+                                    </div>
+                        
+                                    <div class="shopping-cart-header">
+                                        <a href="cart.html"><u >View Cart</u></a>
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text">$193.00</span>
+                                        </div>
+                                    </div>
+                                    <!--end shopping-cart-header -->
+                            
+                                    <ul class="shopping-cart-items">
+                                        <li class="cart-row">
+                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                            <span class="item-meta">
+                                                <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
+                                                <span class="meta-info">
+                                                    <span class="item-price">$29.00</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                            
+                                        <li class="cart-row">
+                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                            <span class="item-meta">
+                                                <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
+                                                <span class="meta-info">
+                                                    <span class="item-price">$39.00</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                            
+                                        <li class="cart-row">
+                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                            <span class="item-meta">
+                                                <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
+                                                <span class="meta-info">
+                                                    <span class="item-price">$125.00</span>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                            
+                                    <a href="checkout.html" class="button primary-button is-raised">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="navbar-item" >
+                          <div class="buttons sign-up-in">
+                            <a href="{%url 'user_signup' %}" class="button second-button">
+                              <p>Sign up</p>
+                            </a>
+                            <a class="button primary-button raised quickview-trigger process-button">
+                              <p>Log in</p>
+                            </a>
+                          </div>
+                        </div>
+                  </div>
+            </div>
+        </div>
+    </div>        
+    <!-- Main Navbar -->
+    {% endblock %}
     
-  {% block content %}
+    {% block content %}
     <div class="products-navigation" style="display: none;">
     </div>
         
@@ -55,7 +199,7 @@
                                     <div class="account-type">
                                         <img src="{%static 'assets/img/student.svg' %}" style="width: 142px; height:auto;" alt="">
                                         <h3>Student </h3>
-                                        <a class="button is-fullwidth process-button" data-step="step-dot-2">
+                                        <a class="button is-fullwidth process-button" data-step="step-dot-2" id="student">
                                             Continue
                                         </a>
                                     </div>
@@ -64,7 +208,7 @@
                                     <div class="account-type">
                                         <img src="{%static 'assets/img/teach.svg' %}" alt="">
                                         <h3>Teacher </h3>
-                                        <a class="button is-fullwidth process-button" data-step="step-dot-2">
+                                        <a class="button is-fullwidth process-button" data-step="step-dot-2" id="teacher">
                                             Continue
                                         </a>
                                     </div>
@@ -93,32 +237,35 @@
                             </div>
                             </div>
                         </div>
-                        
+
                         <div id="signup-panel-2" class="process-panel-wrap is-narrow">
                             <div class="form-panel">
                                 <div class="field">
                                     <label>First Name</label>
                                     <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your first name">
+                                        <input type="text" id="first_name" class="input" placeholder="Enter your first name">
+                                        <span id="f_name_error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label>Last Name</label>
                                     <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your last name">
+                                        <input type="text" id="last_name" class="input" placeholder="Enter your last name">
+                                        <span id="l_name_error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label>Email</label>
                                     <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your email address">
+                                        <input type="type" id="signup_email" class="input" placeholder="Enter your email address">
+                                        <span id="signup_email_error" class="error"></span>
                                     </div>
                                 </div>
                             </div>
                         
                             <div class="buttons">
                                 <a class="button process-button" data-step="step-dot-1">Back</a>
-                                <a class="button process-button is-next" data-step="step-dot-3">Next</a>
+                                <a class="button is-next" data-step="step-dot-3" id="panel2_next_btn">Next</a>
                             </div>
                         </div>
                         
@@ -151,35 +298,40 @@
                                 <div class="field">
                                     <label>Password</label>
                                     <div class="control">
-                                        <input type="password" class="input" placeholder="Choose a password">
+                                        <input type="password" id="password" class="input" placeholder="Choose a password">
+                                        <span id="password_error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label>Repeat Password</label>
                                     <div class="control">
-                                        <input type="password" class="input" placeholder="Repeat your password">
+                                        <input type="password" id="repeat_password" class="input" placeholder="Repeat your password">
+                                        <span id="r_password_error" class="error"></span>
                                     </div>
                                 </div>
                                 <div class="field">
                                     <label>Phone Number</label>
                                     <div class="control">
-                                        <input type="text" class="input" placeholder="Enter your phone number">
+                                        <input type="text" id="phone_number" class="input" placeholder="Enter your phone number">
+                                        <span id="phone_number_error" class="error"></span>
                                     </div>
                                 </div>
                             </div>
-                        
+                            
+                            <input type="hidden" name="user_type" value="" id="user_type">
+
                             <div class="buttons">
                                 <a class="button process-button" data-step="step-dot-3">Back</a>
-                                <a class="button process-button is-next" data-step="step-dot-5">Next</a>
+                                <a class="button is-next" data-step="step-dot-5" id="panel4_next_btn">Next</a>
                             </div>
                         </div>
-                        
+
                         <div id="signup-panel-5" class="process-panel-wrap is-narrow">
                             <div class="form-panel">
                                 <img class="success-image" src="{%static 'assets/img/mailsent.svg' %}" alt="">
                                 <div class="success-text">
                                     <h3>Congratz, you successfully created your account.</h3>
-                                    <p> We just sent you a confirmation email. PLease confirm your account within 24 hours.</p>
+                                    <p> We just sent you a confirmation email. Please confirm your account within 24 hours.</p>
                                 </div>
                             </div>
                         </div>
@@ -214,6 +366,111 @@
     {% endblock %}
 
     {% block js %}
+
+        <script>
+            $('#student').on('click', function(){
+                $('#user_type').val('student');
+            });
+            $('#teacher').on('click', function(){
+                $('#user_type').val('teacher');
+            });
+
+            $('#panel2_next_btn').on('click', function(){
+                var first_name = $("#first_name").val();
+                var last_name = $("#last_name").val();
+                var email = $("#signup_email").val();
+                var email_regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                
+                if(first_name == ''){
+                    $('#f_name_error').html('Please enter first name');
+                    return false
+                }else{
+                    $('#f_name_error').html('');
+                }
+
+                if(last_name == ''){
+                    $('#l_name_error').html('Please enter last name');
+                    return false
+                }else{
+                    $('#l_name_error').html('');
+                }
+                
+                if(email == '' || !email_regex.test(email)){
+                    $('#signup_email_error').html('Please enter valid email');
+                    return false
+                }else{
+                    $('#signup_email_error').html('');
+                }
+
+                $.ajax({
+                    url : "{%url 'check_email' %}",
+                    data : {'email':email},
+                    success : function(data){
+                        if(data['valid']){
+                            $('#signup_email_error').html('');
+                            $("#step-dot-3").click();
+                        }else{
+                            $('#signup_email_error').html('Email already exists');
+                        }
+                    }
+                });
+            });
+
+            $("#panel4_next_btn").on('click', function(){
+                var csrf_token = "{{ csrf_token }}";
+                var first_name = $("#first_name").val();
+                var last_name = $("#last_name").val();
+                var email = $("#signup_email").val();
+                var password = $("#password").val();
+                var repeat_password = $("#repeat_password").val();
+                var phone_number = $("#phone_number").val();
+                var user_type = $('#user_type').val();
+                
+                if(password.length < 8){
+                    $('#password_error').html('Password must be length of 8');
+                    return false
+                }else{
+                    $('#password_error').html('');
+                }
+
+                if(repeat_password == '' || password != repeat_password){
+                    $('#r_password_error').html('Password not match');
+                    return false
+                }else{
+                    $('#r_password_error').html('');
+                }
+
+                if(phone_number.length != 10){
+                    $('#phone_number_error').html('Please enter valid phone number');
+                    return false
+                }else{
+                    $('#phone_number_error').html('');
+                }
+
+                $.ajax({
+                    type : "POST",
+                    url : "{%url 'user_signup' %}",
+                    data : {
+                        'csrfmiddlewaretoken' : csrf_token,
+                        'first_name'          : first_name,
+                        'last_name'           : last_name,
+                        'email'               : email,
+                        'password'            : password,
+                        'phone_number'        : phone_number,
+                        'user_type'           : user_type,
+                    },
+                    success : function(data){
+                        if(data['success']){
+                            $('#step-dot-5').click();
+                        }
+                    },
+                    error : function(data){
+                        console.log(data);
+                    }
+                });
+            });
+        </script>
+
         <!-- Concatenated js plugins and jQuery -->
         <script src="{%static 'assets/js/app.js' %}"></script>
         
