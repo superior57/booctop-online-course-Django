@@ -1,0 +1,903 @@
+{% extends "student/base.html" %}
+{% block content %}
+    {% load static %}
+    
+    <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+
+        <!-- Navbar Brand -->
+        <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                <span class="avatar-title rounded bg-primary"><img src="{%static 'student/assets/images/illustration/student/128/white.svg' %}" alt="logo" class="img-fluid" /></span>
+
+            </span>
+
+            <span class="d-none d-lg-block">Luma</span>
+        </a>
+
+
+
+
+
+
+
+    <h4 style="margin-top:15px;margin-left:5px">My courses</h4>
+
+
+
+        <a href="../../teacher.0/dist/dashboard.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Teacher
+        
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
+        </b></a>
+
+
+        
+
+
+        <div class="flex"></div>
+
+
+
+
+
+        <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+
+
+            
+
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+
+                    <span class="avatar avatar-sm mr-8pt2">
+
+                        <span class="avatar-title rounded-circle" style="background-color: gray;">
+                            <img src="{%static 'assets/img/man.jpg' %}" alt="" style="border-radius: 50%;">
+                        </span>
+
+                    </span>
+
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
+                    <a class="dropdown-item" href="courses.html">My courses</a>
+                    <a class="dropdown-item" href="quizes.html">My quizes</a>
+                    <a class="dropdown-item" style="color: red;" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="filter-head">
+        <div class="card-header card-header-2 card-header-tabs-basic nav px-0 mb-3" role="tablist">
+            <a href="#" class="active" data-toggle="tab1" role="tab" aria-selected="true">All courses</a>
+            <a href="#" data-toggle="tab" role="tab" aria-selected="false">Free</a>
+            <a href="#" data-toggle="tab" role="tab" aria-selected="false">Paid</a>
+            <a href="#" data-toggle="tab" role="tab" aria-selected="false">Archiev</a>
+        </div>
+    </div>    
+
+
+
+    <div class=" page__container ">
+
+
+
+    <div class="row card-group-row mb-lg-8pt">
+            
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;background-color:green !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 74%;background-color: teal !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 56%;background-color: orange !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 6%;background-color: red !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;background-color:green !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 74%;background-color: teal !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 56%;background-color: orange !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+        
+        <div class="col-sm-3 card-group-row__col">
+
+            <div class="card overlay--show card-lg overlay--primary-dodger-blue stack stack--1 card-group-row__card">
+
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center">
+                        
+                        <div class="flex">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="rounded mr-12pt z-0 o-hidden">
+                                    <div class="overlay">
+                                        <img src="{%static 'student/assets/images/paths/angular_40x40@2x.png' %}" width="40" height="40" alt="Angular" class="rounded">
+                                        
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="card-title">Learn HTML5 and sass with css</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="d-flex align-items-center mt-8pt">
+                        <a href="#" class="" data-toggle="swal" data-swal-title="Edit your ratings!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Edit rating</a>
+                        <div class="rating mr-8pt">
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star</span></span>
+                            <span class="rating__item"><span class="material-icons ">star_border</span></span>
+                        </div>
+                        <small class="text-black-50">4/5</small>
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+
+                    </div>
+
+
+                    <p class="mt-16pt text-black-70 flex">Angular is a platform for building mobile and desktop web applications.</p>
+
+                    <div class="mb-16pt d-none">
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-8pt">check</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex align-items-center mb-8pt justify-content-center">
+                        <div class="d-flex align-items-center mr-8pt">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
+                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="../../video.0/dist/playground.html" class="btn btn-primary">continue learning</a>
+                    </div>
+
+
+                </div>
+                <div class="progress rounded-0" style="height: 4px;border-radius: 0 4px 0 4px !important;">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 6%;background-color: red !important;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+    <div class=" page__container page-section">
+
+
+
+
+
+        <div class="mb-32pt">
+
+            <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+<ul class="pagination-list">
+<li><a class="pagination-previous">Previous</a></li>
+<li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+<li><span class="pagination-ellipsis">&hellip;</span></li>
+<li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+<li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page" style="color:white">46</a></li>
+<li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+<li><span class="pagination-ellipsis">&hellip;</span></li>
+<li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+<li><a class="pagination-next">Next</a></li>
+</ul>
+</nav>
+
+        </div>
+        
+
+        
+
+    </div>
+{%  endblock %}

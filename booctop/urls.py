@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from home.views import home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user
+from home.views import home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user, activation, ajaxlogin, logout_, check_email
+from student.views import account, courses, options_settings, security, payments, privacy, quizes, quizes2, certificates, PurchaseHistory, messages, notifications
+from teacher.views import teacher_account, teacher_security, teacher_payments, teacher_messages, teacher_faqs, teacher_help, course_engagement, student_performance, dashboard, dashboard1, guideline, help2, newcourse2, newcourse3, newcourse4, newcourse5, newcourse, nocourseengagement, nocourse
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
@@ -30,6 +32,49 @@ urlpatterns = [
     path('become', become, name='become'),
     path('single_category', single_category, name='single_category'),
     path('single_course', single_course, name='single_course'),
+    path('activation', activation, name='activation'),
+    path('options-settings', options_settings, name='options settings'),
+    path('check-email', check_email, name='check email'),
+    path('login', ajaxlogin, name='login'),
+    path('logout', logout_, name='logout'),
+    
+    # Student Urls
+    path('account', account, name='student account'),
+    path('courses', courses, name='student courses'),
+    path('security', security, name='student security'),
+    path('payments', payments, name='student payments'),
+    path('privacy', privacy, name='student privacy'),
+    path('quizes', quizes, name='student quizes'),
+    path('quizes2', quizes2, name='student quizes2'),
+    path('certificates', certificates, name='student certificates'),
+    path('PurchaseHistory', PurchaseHistory, name='student PurchaseHistory'),
+    path('messages', messages, name='student messages'),
+    path('notifications', notifications, name='student notifications'),
+
+    #Teacher Urls  
+    path('teacher/account', teacher_account, name='teacher dashboard'),
+    path('teacher/security', teacher_security, name='teacher security'),
+    path('teacher/payments', teacher_payments, name='teacher payments'),
+    path('course-engagement', course_engagement, name='teacher course-engagement'),
+    path('student-performance', student_performance, name='teacher student-performance'),
+    path('teacher/messages', teacher_messages, name='teacher messages'),
+    path('teacher/faqs', teacher_faqs, name='teacher faqs'),
+    path('teacher/help', teacher_help, name='teacher help'),
+    
+    path('dashboard-1', dashboard1, name='teacher dashboard-1'),
+    path('teacher/dashboard', dashboard, name='teacher dashboard'),
+    path('guideline', guideline, name='teacher guideline'),
+    path('help2', dashboard, name='teacher help2'),
+    path('new-course-2', newcourse2, name='teacher new-course-2'),
+    path('new-course-3', newcourse3, name='teacher new-course-3'),
+    path('new-course-4', newcourse4, name='teacher new-course-4'),
+    path('new-course-5', newcourse5, name='teacher new-course-5'),
+    path('new-course', newcourse, name='teacher new-course'),
+    path('no-course-engagement', nocourseengagement, name='teacher no-course-engagement'),
+    path('no-course', nocourse, name='teacher no-course'),
+
+
+    
 
 ]
 urlpatterns += [

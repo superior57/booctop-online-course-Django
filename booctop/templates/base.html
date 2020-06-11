@@ -111,86 +111,426 @@
                   
                   </div>
             </div>
-              
+
+            {% if user.is_authenticated %}
+            <div class="navbar-end">
+                          
+                      
+                <div class="navbar-item is-cart" style="margin-left: -20px;">
+                    <div class="cart-button">
+                        <i class="fa fa-bell"></i>
+                        <div class="cart-count">
+                            <span>6</span>
+                        </div>
+                    </div>
+                
+                    <!-- Cart dropdown -->
+                    <div class="shopping-cart">
+                        <div class="cart-inner">
+                
+                
+                            <!--Loader-->
+                            <div class="navbar-cart-loader is-active">
+                                <div class="loader is-loading"></div>
+                            </div>
+                            
+
+
+                            <div class="shopping-cart-header">
+                                <a href="#"><u style="color: rgb(204, 0, 61);">Mark all as read</u></a>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">4 Notifications</span>
+                                </div>
+                            </div>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+                            
+                    
+                            <a href="#" class="button primary-button is-raised">view all Notifications</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="navbar-item is-cart" style="margin-left: -20px;">
+                    <div class="cart-button">
+                        <i class="fa fa-comment-alt"></i>
+                        <div class="cart-count">
+                            <span>6</span>
+                        </div>
+                    </div>
+                
+                    <!-- Cart dropdown -->
+                    <div class="shopping-cart">
+                        <div class="cart-inner">
+                
+                
+                            <!--Loader-->
+                            <div class="navbar-cart-loader is-active">
+                                <div class="loader is-loading"></div>
+                            </div>
+                            
+
+
+                            <div class="shopping-cart-header">
+                                <a href="#"><u style="color: rgb(204, 0, 61);">Mark all as read</u></a>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">4 Messages</span>
+                                </div>
+                            </div>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);position: relative;">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+
+                            <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
+                                <div class="noti-cart">
+                                <img src="{%static 'assets/img/man.jpg' %}" alt="" />
+                                <p >Hello Bandar How are you?</p>
+                                <small >3 mins</small>
+                               </div>
+                            </a>
+                            
+                    
+                            <a href="#" class="button primary-button is-raised">view all Notifications</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="navbar-item is-cart" style="margin-left: -20px;">
+                    <div class="cart-button">
+                        <i class="fa fa-heart"></i>
+                        <div class="cart-count">
+                            <span>3</span>
+                        </div>
+                    </div>
+                
+                   
+                    <!-- Cart dropdown -->
+                    <div class="shopping-cart">
+                        <div class="cart-inner">
+                
+                            <!--Loader-->
+                            <div class="navbar-cart-loader is-active">
+                                <div class="loader is-loading"></div>
+                            </div>
+                
+                            <div class="shopping-cart-header">
+                                <a href="wishlist.html"><u style="color: rgb(255, 0, 200);">View Fav Page</u></a>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">4 courses</span>
+                                </div>
+                            </div>
+                            <!--end shopping-cart-header -->
+                    
+                            <ul class="shopping-cart-items">
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="#">Html5 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$29.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                    
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="#">Css3 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$39.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                    
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="#">Sass Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$125.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                    
+                            <a href="#" class="button primary-button is-raised">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="navbar-item is-cart" style="margin-left: -20px;margin-right: 50px;">
+                    <div class="cart-button">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div class="cart-count">
+                            <span>3</span>
+                        </div>
+                    </div>
+                
+                    <!-- Cart dropdown -->
+                    <div class="shopping-cart">
+                        <div class="cart-inner">
+                
+                            <!--Loader-->
+                            <div class="navbar-cart-loader is-active">
+                                <div class="loader is-loading"></div>
+                            </div>
+                
+                            <div class="shopping-cart-header">
+                                <a href="#"><u style="color: blue;">View Cart</u></a>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">$193.00</span>
+                                </div>
+                            </div>
+                            <!--end shopping-cart-header -->
+                    
+                            <ul class="shopping-cart-items">
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="#">Html5 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$29.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                    
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="#">Css3 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$39.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                    
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="#">Sass Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$125.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                    
+                            <a href="#" class="button primary-button is-raised">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="account-dropdown" class="navbar-item is-account drop-trigger has-caret">
+                      
+                    <div class="small-avatar">
+                        <img class="avatar" src="{%static 'assets/img/manPro.jpg' %}" style="border: 2px solid #ccc;" data-demo-src="{%static 'assets/img/avatars/jenna.png' %}" data-user-popover="0" alt="">
+                    </div>
+                
+                    <div class="nav-drop is-account-dropdown">
+                        <div class="inner">
+                            <div class="nav-drop-header">
+                                <span class="username">{{user.first_name}} {{user.last_name}}</span>
+                            </div>
+                            <div class="nav-drop-body account-items">
+                                <a href="/" class="account-item">
+                                    <div class="media">
+                                        <div class="icon-wrap">
+                                            <i data-feather="settings"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h3>Settings</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="account-item">
+                                    <div class="media">
+                                        <div class="icon-wrap">
+                                            <i data-feather="life-buoy"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h3>Help</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="account-item">
+                                    <div class="media">
+                                        <div class="icon-wrap">
+                                            <i data-feather="life-buoy"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h3>My courses</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="account-item">
+                                    <div class="media">
+                                        <div class="icon-wrap">
+                                            <i data-feather="life-buoy"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h3>messages</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="account-item" href="/logout">
+                                    <div class="media media1">
+                                        
+                                        <div class="icon-wrap">
+                                            <i data-feather="power" style="color:rgb(236, 11, 11) !important;"></i>
+                                        </div>
+                                        <div class="media-content">
+                                            <h3 style="color: rgb(236, 11, 11);">Log out</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            {% else %}
+
             <div class="navbar-end">
 
-
-                  
-                  <div class="navbar-item is-cart">
-                      <div class="cart-button">
-                          <i class="fa fa-shopping-cart"></i>
-                          <div class="cart-count">
-                              <span style="font-weight: 600;">3</span>
-                          </div>
-                      </div>
-                  
-                      <!-- Cart dropdown -->
-                      <div class="shopping-cart">
-                          <div class="cart-inner">
-                  
-                              <!--Loader-->
-                              <div class="navbar-cart-loader is-active">
-                                  <div class="loader is-loading"></div>
-                              </div>
-                  
-                              <div class="shopping-cart-header">
-                                  <a href="cart.html"><u >View Cart</u></a>
-                                  <div class="shopping-cart-total">
-                                      <span class="lighter-text">Total:</span>
-                                      <span class="main-color-text">$193.00</span>
-                                  </div>
-                              </div>
-                              <!--end shopping-cart-header -->
-                      
-                              <ul class="shopping-cart-items">
-                                  <li class="cart-row">
-                                      <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                      <span class="item-meta">
-                                          <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
-                                          <span class="meta-info">
-                                              <span class="item-price">$29.00</span>
-                                          </span>
-                                      </span>
-                                  </li>
-                      
-                                  <li class="cart-row">
-                                      <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                      <span class="item-meta">
-                                          <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
-                                          <span class="meta-info">
-                                              <span class="item-price">$39.00</span>
-                                          </span>
-                                      </span>
-                                  </li>
-                      
-                                  <li class="cart-row">
-                                      <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                      <span class="item-meta">
-                                          <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
-                                          <span class="meta-info">
-                                              <span class="item-price">$125.00</span>
-                                          </span>
-                                      </span>
-                                  </li>
-                              </ul>
-                      
-                              <a href="checkout.html" class="button primary-button is-raised">Checkout</a>
-                          </div>
-                      </div>
-                  </div>
-
-
-                  <div class="navbar-item" >
-                    <div class="buttons sign-up-in">
-                      <a href="/signup" class="button second-button">
-                        <p>Sign up</p>
-                      </a>
-                      <a class="button primary-button raised quickview-trigger process-button">
-                        <p>Log in</p>
-                      </a>
+                <div class="navbar-item is-cart">
+                    <div class="cart-button">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div class="cart-count">
+                            <span style="font-weight: 600;">3</span>
+                        </div>
                     </div>
-                  </div>
+                
+                    <!-- Cart dropdown -->
+                    <div class="shopping-cart">
+                        <div class="cart-inner">
+                
+                            <!--Loader-->
+                            <div class="navbar-cart-loader is-active">
+                                <div class="loader is-loading"></div>
+                            </div>
+                
+                            <div class="shopping-cart-header">
+                                <a href="cart.html"><u >View Cart</u></a>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">$193.00</span>
+                                </div>
+                            </div>
+                            <!--end shopping-cart-header -->
+                    
+                            <ul class="shopping-cart-items">
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$29.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                    
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$39.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                    
+                                <li class="cart-row">
+                                    <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
+                                    <span class="item-meta">
+                                        <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
+                                        <span class="meta-info">
+                                            <span class="item-price">$125.00</span>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                    
+                            <a href="checkout.html" class="button primary-button is-raised">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div class="navbar-item" >
+                    <div class="buttons sign-up-in">
+                    <a href="/signup" class="button second-button">
+                        <p>Sign up</p>
+                    </a>
+                    <a class="button primary-button raised quickview-trigger process-button">
+                        <p>Log in</p>
+                    </a>
+                    </div>
+                </div>                  
             </div>
+            
+            {% endif %}
+              
+            
         </div>
     </div>        
     <!-- Main Navbar -->
@@ -303,7 +643,74 @@
 
 
 
-
+    <!-- Login Modal Start -->    
+    <div id="product-quickview" class="modal product-quickview is-xsmall has-light-bg">
+        <div class="modal-background quickview-background"></div>
+          <div class="modal-content">
+          <div class="card">
+              <div class="quickview-loader is-active">
+                  <div class="loader is-loading"></div>
+              </div>
+              <div class="right">
+                  <span class="close-modal close-modal-2">
+                      <i data-feather="x"></i>
+                  </span>
+                  <div class="header">
+                      <div class="product-info">
+                          <img class="Loginmodal-img" src="{% static 'assets/img/favicon.png' %}" alt="">
+                          <h3 id="quickview-name">Login</h3>
+                          <p style="margin-bottom: 10px;">Welcome Back</p>
+                          <a href="#" class="button is-fullwidth" style="margin-bottom: 5px;background-color: rgb(218, 1, 1);color: #fff;">Login via Gmail
+                              &nbsp;<i class="mdi mdi-gmail"></i>
+                          </a>
+                          <a href="#" class="button is-fullwidth" style="background-color: rgb(61, 136, 206);color: #fff;">Login via Twitter
+                              &nbsp;<i class="mdi mdi-twitter"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="text-align-center" style="text-align:center; color :  rgb(218, 1, 1);" id="div_error"></div>
+                  <div id="signup-panel-2" class="process-panel-wrap is-narrow">
+                      <div class="form-panel">
+                      <div class="search-filter" style="margin-bottom: 10px;">
+                          <div class="control has-icon">
+                              <input type="email" class="input is-fade" placeholder="Enter email" id="email" name="email">
+                              <div class="form-icon">
+                                  <i class="fa fa-user" style="font-size: x-small;"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="search-filter" style="margin-bottom: 10px;">
+                          <div class="control has-icon">
+                              <input type="password" class="input is-fade" placeholder="Enter your password" id="password" name="password">
+                              <div class="form-icon">
+                                  <i class="fa fa-key" style="font-size: x-small;"></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="field">
+                          <div class="control">
+                              <p style="font-size: small;"><input type="checkbox"> Remember me</p>
+                          </div>
+                      </div>
+                      <div class="field">
+                          <div class="control">
+                              <button class="button primary-button raised is-fullwidth" onclick="return login()">
+                                  <p>Login</p>
+                              </button>
+                          </div>
+                      </div>
+                      <p> Already have an account ? <a href="/signup">Sign up</a></p>
+                      <div class="has-text-centered" style="margin-top: 10px;">
+                          <a class=" modal-trigger " data-modal="albums-help-modal">Forget Password</a>
+  
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>   
+      <!-- Login Modal End -->   
 
     
     <!-- Footer -->
@@ -462,6 +869,50 @@
         $.ajaxSetup({
            headers: {'X-CSRFToken': $("#hd_csrf").val(),}
          });
+
+
+         function login() {
+                $("#div_error").html("");
+                if($("#email").val()==""){
+                    $("#div_error").html("Please enter the valid email");
+                    return false
+                }else if($("#password").val()==""){
+                    $("#div_error").html("Please enter the password");
+                    return false
+                }
+                
+                
+                // Ajax start
+                        var action = "/login";
+                        $.ajax({
+                            url: action,
+                            type: 'POST',
+                            dataType: 'json',
+                            // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+                            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                            data: {
+                                email: $("#email").val(),
+                                password: $("#password").val(),
+                            },
+
+                            beforeSend: function () {
+
+                                console.log("Beforesend")
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                if(data.msg=="success"){
+                                    window.location.href="/"
+                                }
+                                return false
+                            },
+                            error: function (err) {
+                                return false
+                            }
+                        })
+                        // Ajax end
+                return false
+            }
    </script>
     {% block script %}
     {%  endblock %}

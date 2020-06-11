@@ -1,557 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
+{% extends "base.html" %}
 
-   <!-- UTF-8 For MultiLanguages -->
-   <meta charset="utf-8">
-
-   <!-- For Flixable -->
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-   <!-- Title of website -->
-   <title>Booctep | Homepage</title>
-
-   <!-- Tab Logo -->
-   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-
-   <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
-
-    <!-- App CSS -->
-    <link type="text/css" href="assets/css/sideb.css" rel="stylesheet">
-
-   <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800,900" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto-brands.min.css" rel="stylesheet">
-   <!-- Core CSS -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-   
-
-   <!-- CSS Style -->
-   <link rel="stylesheet" href="assets/css/bulma.css">
-   <link rel="stylesheet" href="assets/css/app.css">
-   <link rel="stylesheet" href="assets/css/core.css">
-   <link rel="stylesheet" href="assets/css/style.css">
-   <link rel="stylesheet" href="assets/css/media.css">
-
-   <!-- Video Player And jQuery -->
-   <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />   
-   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>   
-   <script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
-   <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
-   <!-- Video Player And jQuery -->
-   
-</head>
-<body>
-
-
-        <!-- Pageloader -->
-        <!-- <div class="pageloader"></div>
-        <div class="infraloader is-active"></div>
-        <div class="app-overlay"></div> -->
-        
-        <!-- Main Navbar -->
-        <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
-            <div class="container ">
-            <div class="navbar-brand">
-                <a href="index.html" class="navbar-item logo">
-                   <img src="assets/img/logo/booctep-tran.png" alt=""  />
-                </a>
-            </div>
-             
-                
-            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
-                <a class="icon-link is-primary">
-                    <i class="mdi mdi-apps"></i>
-                </a>
-            </div>
-                  
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start"> 
-                        
-    
-                           <div class="navbar-item">
-                                <div id="global-search" class="control">
-                                    <input id="tipue_drop_input" class="input " type="text" placeholder="Search" required>
-                                    <span id="clear-search" class="reset-search">
-                                        <i data-feather="x"></i>
-                                    </span>
-                                    <span class="search-icon">
-                                        <i data-feather="search"></i>
-                                    </span>
-                            
-                            
-                                </div>
-                            
-                            </div>
-    
-    
-                      
-                           
-                        <div class="navbar-item"> 
-                            <a href="become.html" class="button-become-a-teacher button is-light" data-lang="about">Become a teacher</a>
-                       </div>
-
-
-                        <label class="animated-toggle">
-                            <input type="checkbox">
-                            <span class="toggler">
-                                <span class="dark">
-                                    <i data-feather="moon"></i>
-                                </span>
-                                <span class="light">
-                                    <i data-feather="sun"></i>
-                                </span>
-                            </span>
-                        </label>
-
-
-                        </div>
-              
-                  
-                      <div class="navbar-end">
-                          
-                      
-                        <div class="navbar-item is-cart" style="margin-left: -20px;">
-                            <div class="cart-button">
-                                <i class="fa fa-bell"></i>
-                                <div class="cart-count">
-                                    <span>6</span>
-                                </div>
-                            </div>
-                        
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                                    
-
-
-                                    <div class="shopping-cart-header">
-                                        <a href="#"><u style="color: rgb(204, 0, 61);">Mark all as read</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">4 Notifications</span>
-                                        </div>
-                                    </div>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-                                    
-                            
-                                    <a href="#" class="button primary-button is-raised">view all Notifications</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="navbar-item is-cart" style="margin-left: -20px;">
-                            <div class="cart-button">
-                                <i class="fa fa-comment-alt"></i>
-                                <div class="cart-count">
-                                    <span>6</span>
-                                </div>
-                            </div>
-                        
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                                    
-
-
-                                    <div class="shopping-cart-header">
-                                        <a href="#"><u style="color: rgb(204, 0, 61);">Mark all as read</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">4 Messages</span>
-                                        </div>
-                                    </div>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);position: relative;">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="assets/img/man.jpg" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-                                    
-                            
-                                    <a href="#" class="button primary-button is-raised">view all Notifications</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="navbar-item is-cart" style="margin-left: -20px;">
-                            <div class="cart-button">
-                                <i class="fa fa-heart"></i>
-                                <div class="cart-count">
-                                    <span>3</span>
-                                </div>
-                            </div>
-                        
-                           
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                        
-                                    <div class="shopping-cart-header">
-                                        <a href="wishlist.html"><u style="color: rgb(255, 0, 200);">View Fav Page</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">4 courses</span>
-                                        </div>
-                                    </div>
-                                    <!--end shopping-cart-header -->
-                            
-                                    <ul class="shopping-cart-items">
-                                        <li class="cart-row">
-                                            <img src="assets/img/products/pg.jpg" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Html5 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$29.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="assets/img/products/pg.jpg" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Css3 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$39.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="assets/img/products/pg.jpg" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Sass Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$125.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                            
-                                    <a href="#" class="button primary-button is-raised">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="navbar-item is-cart" style="margin-left: -20px;margin-right: 50px;">
-                            <div class="cart-button">
-                                <i class="fa fa-shopping-cart"></i>
-                                <div class="cart-count">
-                                    <span>3</span>
-                                </div>
-                            </div>
-                        
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                        
-                                    <div class="shopping-cart-header">
-                                        <a href="#"><u style="color: blue;">View Cart</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">$193.00</span>
-                                        </div>
-                                    </div>
-                                    <!--end shopping-cart-header -->
-                            
-                                    <ul class="shopping-cart-items">
-                                        <li class="cart-row">
-                                            <img src="assets/img/products/pg.jpg" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Html5 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$29.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="assets/img/products/pg.jpg" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Css3 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$39.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="assets/img/products/pg.jpg" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Sass Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$125.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                            
-                                    <a href="#" class="button primary-button is-raised">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div id="account-dropdown" class="navbar-item is-account drop-trigger has-caret">
-                              
-                            <div class="small-avatar">
-                                <img class="avatar" src="assets/img/manPro.jpg" style="border: 2px solid #ccc;" data-demo-src="assets/img/avatars/jenna.png" data-user-popover="0" alt="">
-                            </div>
-                        
-                            <div class="nav-drop is-account-dropdown">
-                                <div class="inner">
-                                    <div class="nav-drop-header">
-                                        <span class="username">Elzubair Mohammed Saleh</span>
-                                    </div>
-                                    <div class="nav-drop-body account-items">
-                                        <a href="/options-settings.html" class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="settings"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>Settings</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="life-buoy"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>Help</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="life-buoy"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>My courses</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="life-buoy"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>messages</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media media1">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="power" style="color:rgb(236, 11, 11) !important;"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3 style="color: rgb(236, 11, 11);">Log out</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>   
-        <!-- Main Navbar -->
-   
-
-    <!-- Mobile Navbar -->
-    <nav class="navbar mobile-navbar is-hidden-desktop" aria-label="main navigation">
-        <!-- Brand -->
-        <div class="navbar-brand">
-            <a class="navbar-item2" href="/">
-                <img class="mobile-logo" src="assets/img/favicon.png" alt="">
-            </a>
-    
-    
-            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
-                <a class="icon-link is-primary">
-                    <i class="mdi mdi-apps"></i>
-                </a>
-            </div>
-    
-            <!-- Mobile menu toggler icon -->
-            <div class="navbar-burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <!-- Navbar mobile menu -->
-        <div class="navbar-menu">
-            <!-- Account -->
-            <div class="navbar-item has-dropdown ">
-                <div class="navbar-link">
-                    <img src="assets/img/man.jpg" data-demo-src="assets/img/avatars/jenna.png" alt="">
-                    <span class="is-heading">Elzubair Mohammed</span>
-                </div>
-    
-                <div class="navbar-item">
-                    <div id="global-search" class="control">
-                        <input id="tipue_drop_input" class="input " type="text" placeholder="Search" required>
-                        <span id="clear-search" class="reset-search">
-                            <i data-feather="x"></i>
-                        </span>
-                        <span class="search-icon">
-                            <i data-feather="search"></i>
-                        </span>
-                
-                
-                    </div>
-                
-                </div>
-                
-                <!-- Mobile Dropdown -->
-                <div class="navbar-dropdown">
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="user"></i>Profile</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="shopping-cart"></i>Cart</span>
-                        <span class="menu-badge">3</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="activity"></i>Feed</span>
-                        <span class="menu-badge">87</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="settings"></i>Settings</span>
-                    </a>
-                    <a href="#" class="navbar-item is-flex is-mobile-icon">
-                        <span><i data-feather="hexagon"></i>Logout</span>
-                    </a>
-                    
-                        <div class="buttons">
-                          <a class="button second-button">
-                            <p>Sign up</p>
-                          </a>
-                          <a class="button primary-button raised quickview-trigger process-button">
-                            <p>Log in</p>
-                          </a>
-                        </div>
-
-
-                </div>
-            </div>
-        </div>
-    </nav>
-    <!-- Mobile Navbar -->
-            
-
+{% block content %}
+{% load static %}
         
                 <!-- Start Carousel -->
                 <div class="top">
                 <div class="container">
 
                     <h2>Welcome Back Elzubair Mohammed,</h2>
-                    <a href="student.0/dist/courses.html"><strong>My courses</strong></a>
+                    <a href="/courses"><strong>My courses</strong></a>
                     <p>Continue learning now..</p>
                     <div id="slider" class="slider">
                         <div class="wrapper-1">
                           <div id="slides" class="slides">
                             <span class="slide">
-                                <img src="assets/img/become.jpg"  alt="">
+                                <img src="{%static 'assets/img/become.jpg' %}"  alt="">
 
                                 <div class="slide-footer">
                                     <span class="survey-progress">
@@ -576,7 +39,7 @@
                                 </div>
                             </span>
                             <span class="slide">
-                                <img src="assets/img/watch.svg" alt="">
+                                <img src="{%static 'assets/img/watch.svg' %}" alt="">
 
                                 <div class="slide-footer">
                                     <span class="survey-progress">
@@ -601,7 +64,7 @@
                                 </div>
                             </span>
                             <span class="slide">
-                                <img src="assets/img/watch.svg" alt="">
+                                <img src="{%static 'assets/img/watch.svg' %}" alt="">
 
                                 <div class="slide-footer">
                                     <span class="survey-progress">
@@ -626,7 +89,7 @@
                                 </div>
                             </span>
                             <span class="slide">
-                                <img src="assets/img/watch.svg" alt="">
+                                <img src="{%static 'assets/img/watch.svg' %}" alt="">
 
                                 <div class="slide-footer">
                                     <span class="survey-progress">
@@ -737,9 +200,9 @@
                                             <!-- /partials/commerce/products/products-list.html -->
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -747,8 +210,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -806,9 +269,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -816,8 +279,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -875,9 +338,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -885,8 +348,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -944,9 +407,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -954,8 +417,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1013,9 +476,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1023,8 +486,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1082,9 +545,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1092,8 +555,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1151,9 +614,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1161,8 +624,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1220,9 +683,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1230,8 +693,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1289,9 +752,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1299,8 +762,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1358,9 +821,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1368,8 +831,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1427,9 +890,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1437,8 +900,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1496,9 +959,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1506,8 +969,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1565,9 +1028,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1575,8 +1038,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1634,9 +1097,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1644,8 +1107,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1703,9 +1166,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1713,8 +1176,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1772,9 +1235,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1782,8 +1245,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1879,9 +1342,9 @@
                                             <!-- /partials/commerce/products/products-list.html -->
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1889,8 +1352,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -1948,9 +1411,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -1958,8 +1421,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2017,9 +1480,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2027,8 +1490,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2086,9 +1549,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2096,8 +1559,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2155,9 +1618,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2165,8 +1628,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2224,9 +1687,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2234,8 +1697,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2293,9 +1756,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2303,8 +1766,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2362,9 +1825,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2372,8 +1835,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2431,9 +1894,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2441,8 +1904,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2500,9 +1963,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2510,8 +1973,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2569,9 +2032,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2579,8 +2042,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2638,9 +2101,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2648,8 +2111,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2707,9 +2170,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2717,8 +2180,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2776,9 +2239,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2786,8 +2249,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2845,9 +2308,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2855,8 +2318,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -2914,9 +2377,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -2924,8 +2387,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3020,9 +2483,9 @@
                                             <!-- /partials/commerce/products/products-list.html -->
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3030,8 +2493,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3089,9 +2552,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3099,8 +2562,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3158,9 +2621,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3168,8 +2631,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3227,9 +2690,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3237,8 +2700,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3296,9 +2759,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3306,8 +2769,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3365,9 +2828,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3375,8 +2838,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3434,9 +2897,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3444,8 +2907,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3503,9 +2966,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3513,8 +2976,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3572,9 +3035,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3582,8 +3045,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3641,9 +3104,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3651,8 +3114,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3710,9 +3173,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3720,8 +3183,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3779,9 +3242,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3789,8 +3252,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3848,9 +3311,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3858,8 +3321,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3917,9 +3380,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3927,8 +3390,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -3986,9 +3449,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -3996,8 +3459,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -4055,9 +3518,9 @@
                                             </div>
                                             <!--Product-->
                                             <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
-                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="assets/img/products/1">
+                                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1">
                                                    
-                                                    <a href="single_course.html" class="product-image"> 
+                                                    <a href="/single_course" class="product-image"> 
             
                                                         <div class="image-grid-wrap">
                                                             <div class="image-grid">
@@ -4065,8 +3528,8 @@
                                                                 <!--Grid Row-->
                                                                 <div class="image-row">
                                                                     <!--Photo-->
-                                                                    <div class="flex-1 has-background-image" data-background="assets/img/courses/pc.jpg"
-                                                                        data-demo-background="assets/img/courses/pc.jpg">
+                                                                    <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                                        data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
                                                                         <div class="overlay"></div>
                                                                         <div class="image-owner">
                                                                             <div class="name">                
@@ -4176,78 +3639,78 @@
                 <!--List-->
                 <div class="explore-list">
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/coding.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/coding.svg' %}" alt="">
                         <h4>Web Development</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/business.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/business.svg' %}" alt="">
                         <h4>Business</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/aviation.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/aviation.svg' %}" alt="">
                         <h4>Aviation</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/controller.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/controller.svg' %}" alt="">
                         <h4>Games</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/math.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/math.svg' %}" alt="">
                         <h4>Mathmatics</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/lifestyle.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/lifestyle.svg' %}" alt="">
                         <h4>life Style</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/arts.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/arts.svg' %}" alt="">
                         <h4>Arts</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/It.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/It.svg' %}" alt="">
                         <h4>Information Technology</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/drama.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/drama.svg' %}" alt="">
                         <h4>Cenima & Drama</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/software.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/software.svg' %}" alt="">
                         <h4>Software Programming</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/languages.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/languages.svg' %}" alt="">
                         <h4>Languages</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/coock.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/coock.svg' %}" alt="">
                         <h4>Food & Cooking</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/maintanece.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/maintanece.svg' %}" alt="">
                         <h4>Repare & Maintaince</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/skills.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/skills.svg' %}" alt="">
                         <h4>Skills</h4>
                     </a>
                     <!--item-->
-                    <a href="index.html" class="explore-item">
-                        <img src="assets/img/icons/explore/other.svg" alt="">
+                    <a href="/" class="explore-item">
+                        <img src="{%static 'assets/img/icons/explore/other.svg' %}" alt="">
                         <h4>Others</h4>
                     </a>
                 </div>
@@ -4277,14 +3740,14 @@
                             <div class="tile is-ancestor">
                                 <div class="tile is-parent is-vertical">
                                     <a href="single_category.html" class="tile is-child category-box is-accent">
-                                        <img src="assets/img/categories/p-language.svg" alt="">
+                                        <img src="{%static 'assets/img/categories/p-language.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6"> Web Development</h3>
                                             <p>#HTML, #Css, #Js, #PHP, #Python, #Java, #Ruby, #C++, #R, #SQl, #C, #swift, #Swift, #kotlin, #etc.</p>
                                         </div>
                                     </a>
                                     <a href="single_category.html" class="tile is-child category-box is-accent">
-                                        <img src="assets/img/categories/aviation.svg" alt="">
+                                        <img src="{%static 'assets/img/categories/aviation.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Aviation</h3>
                                             <p>#AirCraft_Maintenance, #Professional_Pilot, #Flight_instructure, #Airport_security, #Airline_managment, #etc..</p>
@@ -4295,14 +3758,14 @@
                                     <div class="tile">
                                         <div class="tile is-parent is-vertical">
                                             <a class="tile is-child category-box is-accent">
-                                                <img src="assets/img/categories/business.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/business.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Business</h3>
                                                     <p>#Human_resource, #Markting, #international_business_managment, #business_managment, #Finance, #Accounting, #Audit, #Analysis_of_business ,#etc..</p>
                                                 </div>
                                             </a>
                                             <a href="single_category.html" class="tile is-child category-box is-primary">
-                                                <img src="assets/img/categories/physical.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/physical.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Physical & Chemistry</h3>
                                                     <p>#General_chemistry, #Medical_chemistry, #Biochemistry, #General_physical, #Engineering_physical, #Physical_science, #Laser_physic, #Optics, #Mevhanics, #Cosmology, #etc..</p>
@@ -4311,7 +3774,7 @@
                                         </div>
                                         <div class="tile is-parent is-vertical">
                                             <a href="single_category.html" class="tile is-child category-box is-primary is-taller">
-                                                <img src="assets/img/categories/gaming.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/gaming.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Gaming</h3>
                                                     <p>#Furtnite, #Pes, #Fifa, #Pubg, #COD, #etc..</p>
@@ -4319,7 +3782,7 @@
                                             </a>
     
                                             <a href="single_category.html" class="tile is-child category-box is-accent is-taller">
-                                                <img src="assets/img/categories/Engineer.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/Engineer.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Engineering</h3>
                                                     <p>#Civil_engineering, #Architecter_engineering, #electronic_engineering, #etc..</p>
@@ -4329,7 +3792,7 @@
                                     </div>
                                     <div class="tile is-parent">
                                             <a href="single_category.html" class="tile is-child category-box is-accent is-row">
-                                                <img src="assets/img/categories/math.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/math.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Mathmatics</h3>
                                                     <p>#Analysis, #Calculate, #algebra, #algorithm, #statics, #etc..</p>
@@ -4345,7 +3808,7 @@
                             <div class="tile is-ancestor">
                                 <div class="tile is-parent is-vertical">
                                     <a href="single_category.html" class="tile is-child category-box is-accent is-taller">
-                                        <img src="assets/img/categories/skills.svg" alt="">
+                                        <img src="{%static 'assets/img/categories/skills.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Skills</h3>
                                             <p>#Eyes_Connect, #Insurance_market, #Communication, #Content_industry, #Costumers_needs, #the_Secretary, #etc..
@@ -4353,7 +3816,7 @@
                                         </div>
                                     </a>
                                     <a href="single_category.html" class="tile is-child category-box is-primary is-taller">
-                                        <img src="assets/img/categories/repare.svg" alt="">
+                                        <img src="{%static 'assets/img/categories/repare.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Maintaince & Reparing</h3>
                                             <p>#Cars, #Motorocycle, #PC, #Aircone, #Plumbing, #etc..
@@ -4365,14 +3828,14 @@
                                     <div class="tile">
                                         <div class="tile is-parent is-vertical">
                                             <a href="single_category.html" class="tile is-child category-box is-primary">
-                                                <img src="assets/img/categories/hospitality.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/hospitality.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Hospitality & Tourism</h3>
                                                     <p>#Management, #Kitchen, #Leader, #jerson, #Tourism_industry , #etc..</p>
                                                 </div>
                                             </a>
                                             <a href="single_category.html" class="tile is-child category-box is-accent">
-                                                <img src="assets/img/categories/robot.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/robot.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Information Technology</h3>
                                                     <p>#Cyber_security, #Virtual_environment, #Networking, #Data_analysis, #Data_base, #Robots, #Haking, #etc..</p>
@@ -4381,14 +3844,14 @@
                                         </div>
                                         <div class="tile is-parent is-vertical">
                                             <a href="single_category.html" class="tile is-child category-box is-accent">
-                                                <img src="assets/img/categories/fitness.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/fitness.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Life style</h3>
                                                     <p>#Fitness, #sports, #Diet, #resistance_trainging, #healthy_life_style, #athletics, #Physical_therapy , #Dance ,#etc..</p>
                                                 </div>
                                             </a>
                                             <a href="single_category.html" class="tile is-child category-box is-primary">
-                                                <img src="assets/img/categories/self-dev.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/self-dev.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Self development</h3>
                                                     <p>#Entrepreneurship, #Confidence, #Communicate, #persuasion, #team_work, #time_managment, #etc..</p>
@@ -4398,7 +3861,7 @@
                                     </div>
                                     <div class="tile is-parent">
                                         <a href="single_category.html" class="tile is-child category-box is-accent is-row">
-                                            <img src="assets/img/categories/art.svg" alt="">
+                                            <img src="{%static 'assets/img/categories/art.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Arts</h3>
                                                 <p>#Sketch, #Faces, #places, #Softwares, #etc..</p>
@@ -4415,7 +3878,7 @@
                             <div class="tile is-ancestor">
                                 <div class="tile is-parent is-vertical">
                                     <a href="single_category.html" class="tile is-child category-box is-accent is-taller">
-                                        <img src="assets/img/categories/laguage.svg" alt="">
+                                        <img src="{%static 'assets/img/categories/laguage.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Languages</h3>
                                             <p>#Arabic, #English, #chinese, #Spanish, #France, #Turkiesh, #Malay.
@@ -4423,7 +3886,7 @@
                                         </div>
                                     </a>
                                     <a href="single_category.html" class="tile is-child category-box is-primary is-taller">
-                                        <img src="assets/img/categories/other.svg" alt="">
+                                        <img src="{%static 'assets/img/categories/other.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Others</h3>
                                             <p>General courses in differents subjects are here..
@@ -4435,14 +3898,14 @@
                                     <div class="tile">
                                         <div class="tile is-parent is-vertical">
                                             <a href="single_category.html" class="tile is-child category-box is-primary">
-                                                <img src="assets/img/categories/dramaa.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/dramaa.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Drama</h3>
                                                     <p>#Cinematography, #Documentaries, #Photographing, #Acting, #Director, #etc..</p>
                                                 </div>
                                             </a>
                                             <a href="single_category.html" class="tile is-child category-box is-accent">
-                                                <img src="assets/img/categories/sewiing.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/sewiing.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Sewing design</h3>
                                                     <p>#Pants, #T-shirt, #Kids, #Fashion, #dress , #etc..</p>
@@ -4451,14 +3914,14 @@
                                         </div>
                                         <div class="tile is-parent is-vertical">
                                             <a href="single_category.html" class="tile is-child category-box is-accent">
-                                                <img src="assets/img/categories/food.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/food.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Food and coocking</h3>
                                                     <p>#Arabic_food, #Amirecan_food, #Indian_food, #Pasta, #Pizza, #spaghetti, #Burger, #Rice, #Chicken, #Fries ,#etc..</p>
                                                 </div>
                                             </a>
                                             <a href="single_category.html" class="tile is-child category-box is-primary">
-                                                <img src="assets/img/categories/design.svg" alt="">
+                                                <img src="{%static 'assets/img/categories/design.svg' %}" alt="">
                                                 <div class="box-content">
                                                     <h3 class="title is-6">Design</h3>
                                                     <p>#T-shirt, #Building, #Studiom, #Gardens, #Educationals_building, #Museum, #etc..</p>
@@ -4468,7 +3931,7 @@
                                     </div>
                                     <div class="tile is-parent">
                                         <a href="single_category.html" class="tile is-child category-box is-accent is-row">
-                                            <img src="assets/img/categories/softwares.svg" alt="">
+                                            <img src="{%static 'assets/img/categories/softwares.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Software Programs</h3>
                                                 <p>#Adobe_photoshop, #illustrator, #Maya, #Adobe_XD, #Excel, #Word, #Visual_studio, #Adobe_after_effect, #Filmora, #Terminal, #CMD ,#etc..</p>
@@ -4498,8 +3961,8 @@
             <div class="card">
                 <div class="card-heading">
                     <div class="user-meta">
-                        <img src="assets/img/man.jpg"
-                            data-demo-src="assets2/images/avatars/jenna.png" alt="">
+                        <img src="{%static 'assets/img/man.jpg' %}"
+                            data-demo-src="{%static 'assets2/images/avatars/jenna.png' %}" alt="">
                        
                     </div>
     
@@ -4520,8 +3983,8 @@
                 <div class="card-body">
                     <div class="inner">
                         <div class="left-section">
-                            <video poster="assets/img/setting.jpg" style="" id="player" playsinline controls>
-                                <source src="assets/img/vid/html.mp4" type="video/webm" />
+                            <video poster="{%static 'assets/img/setting.jpg' %}" style="" id="player" playsinline controls>
+                                <source src="{%static 'assets/img/vid/html.mp4" type="video/webm" />
                             
                                 <!-- Captions are optional -->
                                 <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
@@ -4605,133 +4068,7 @@
     <!-- Course Detail -->
 
 
-    
 
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="columns">
-                <!-- Column -->
-                <div class="column is-2">
-                    <div class="logo-footer">
-                        <img src="assets/img/logo/booctep.png" alt="" >
-                    </div>
-                </div>
-                <!-- Column -->
-                <div class="column is-6 is-offset-1">
-                    <div class="footer-columns columns" style="border-bottom: 1px solid rgb(226, 226, 226);">
-                        <!-- Column -->
-                        <div class="column">
-                            <ul class="footer-column">
-                                <div class="column" >
-                                    <a href="about.html" style="font-weight: 400;">About us</a>
-                                </div>
-                            </ul>
-                        </div>
-                        <!-- Column -->
-                        <div class="column">
-                            <ul class="footer-column">
-                                <div class="column" >
-                                    <a href="faqs.html" style="font-weight: 400;">FAQs</a>
-                                </div>
-                            </ul>
-                        </div>
-                        <!-- Column -->
-                        <div class="column">
-                            <ul class="footer-column">
-                                <div class="column" >
-                                    <a href="support.html" style="font-weight: 400;">Help</a>
-                                </div>
-                            </ul>
-                        </div>
-                        <!-- Column -->
-                        <div class="column">
-                            <ul class="footer-column">
-                                <div class="column" >
-                                    <a href="terms.html" style="font-weight: 400;">Terms</a>
-                                </div>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="footer-columns columns">
-                        <!-- Column -->
-                        <div class="column is-offset-2">
-                            <ul class="footer-column " >
-                                <div class="column" >
-                                    <a href="become.html" style="font-weight: 400;margin: 0 auto;">Become a teacher</a>
-                                </div>
-                            </ul>
-                        </div>
-                        <!-- Column -->
-                        <div class="column">
-                            <ul class="footer-column">
-                                <div class="column" >
-                                    <a href="signup.html" style="font-weight: 400;">My courses</a>
-                                </div>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="column is-2 is-offset-1">
-                    
-
-                    <div class="control-language-parent">
-
-                    <div class="control-language is-combo">
-                        <div class="combo-box">
-                            <div class="box-inner">
-                                <div class="combo-item">
-                                    <i class="combo-item-i fa fa-language"></i>
-                                    <span class="combo-item-span selected-item" selected="selected">English</span>
-                                </div>
-                            </div>
-                            <div class="box-chevron">
-                                <i data-feather="chevron-down" class="box-chevron-i"></i>
-                            </div>
-                            <div class="box-dropdown" id="directionSwitch">
-                                <div class="dropdown-inner has-slimscroll">
-                                    <ul>
-                                        <li >
-                                            <span class="item-icon">
-                                            </span>
-                                            <span class="item-name translate"  class="" id="en">English</span>
-                                            <span class="checkmark">
-                                                <i data-feather="check"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="item-icon">
-                                            </span>
-                                            <span class="item-name translate" class="" id="ar">Arabic</span>
-                                            <span class="checkmark">
-                                                <i data-feather="check"></i>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
-</footer>
-<div class="copyright">
-        <div class="container">
-            <p> Made with <span class="fa fa-heart" style="color: red;"></span>&nbsp; By Booctep's Designers.</p>
-        </div>
-</div> 
-<!-- Footer --> 
 
 <script>
 
@@ -4888,31 +4225,4 @@
 </script>
 
 
-
-
-    <!-- Concatenated js plugins and jQuery -->
-    <script src="assets/js/app.js"></script>
-    <!-- Video player js -->
-    
-    <!-- Font Awesome -->
-    <script src="assets/js/all.js"></script>
-    
-    <!-- Core js -->
-    <script src="assets/js/global.js"></script>
-    <script src="assets/js/main.js"></script>
-    
-    <script src="assets/js/profile.js"></script>
-    <script src="assets/js/explorer.js"></script>
-    <script src="assets/js/shop.js"></script>
-    
-
-    <!-- jQuery -->
-    <script src="assets/vendor/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="assets/vendor/popper.min.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
-
-
-</body>
-</html>
+{%  endblock %}

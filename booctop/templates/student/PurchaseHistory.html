@@ -1,0 +1,291 @@
+{% extends "student/base.html" %}
+    {% block content %}
+    {% load static %}
+
+
+            <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">short_text</span>
+                </button>
+
+                <!-- Navbar Brand -->
+                <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+                    <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                        <span class="avatar-title rounded bg-primary"><img src="{%static 'student/assets/images/illustration/student/128/white.svg' %}" alt="logo" class="img-fluid" /></span>
+
+                    </span>
+
+                    <span class="d-none d-lg-block">Luma</span>
+                </a>
+
+
+
+
+
+
+
+            <h4 style="margin-top:15px;margin-left:5px">Purchase History</h4>
+
+            <a href="../../teacher.0/dist/dashboard.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Teacher
+                
+                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
+    </b></a>
+
+
+ 
+
+
+    <div class="flex"></div>
+
+
+
+
+
+    <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+
+
+        
+
+
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+
+                <span class="avatar avatar-sm mr-8pt2">
+
+                    <span class="avatar-title rounded-circle" style="background-color: gray;">
+                        <img src="{%static 'assets/img/man.jpg' %}" alt="" style="border-radius: 50%;">
+                    </span>
+
+                </span>
+
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
+                <a class="dropdown-item" href="courses.html">My courses</a>
+                <a class="dropdown-item" href="quizes.html">My quizes</a>
+                <a class="dropdown-item" style="color: red;" href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+            </div>
+
+
+            <div class=" page__container page-section">
+
+
+
+
+
+
+                <div class="card mb-0">
+                    <div class="card-header d-flex align-items-center">
+                        <strong class="card-title">Orders</strong>
+                        <div class="flatpickr-wrapper flatpickr-calendar-right d-flex ml-auto">
+                          
+                            <div class="field">
+  <div class="control " >
+    <div class="select">
+      <select>
+        <option>all</option>
+        <option>This week</option>
+        <option>Last month</option>
+        <option>Last year</option>
+        <option>Last years</option>
+      </select>
+    </div>
+  </div>
+</div>
+                        </div>
+                    </div>
+
+                    <div data-toggle="lists" data-lists-values='[
+      "js-lists-values-course", 
+      "js-lists-values-document",
+      "js-lists-values-amount",
+      "js-lists-values-date"
+    ]' data-lists-sort-by="js-lists-values-date" data-lists-sort-desc="true" class="table-responsive">
+                        <table class="table table-flush table-nowrap">
+            
+                            <tbody class="list">
+
+
+
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-nowrap align-items-center">
+                                            <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                                <img src="{%static 'student/assets/images/paths/angular_routing_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title js-lists-values-course" href="mini-instructor-edit-course.html">Angular Routing In-Depth</a>
+                                                <div class="card-subtitle text-muted mr-1">
+                                                    Invoice
+                                                    <a href="mini-invoice.html" style="color: inherit;" class="js-lists-values-document">#8734</a> -
+                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <small class="text-muted text-uppercase js-lists-values-date">12 Nov 2018</small>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-nowrap align-items-center">
+                                            <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                                <img src="{%static 'student/assets/images/paths/angular_testing_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title js-lists-values-course" href="mini-instructor-edit-course.html">Angular Unit Testing</a>
+                                                <div class="card-subtitle text-muted mr-1">
+                                                    Invoice
+                                                    <a href="mini-invoice.html" style="color: inherit;" class="js-lists-values-document">#8735</a> -
+                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <small class="text-muted text-uppercase js-lists-values-date">13 Nov 2018</small>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-nowrap align-items-center">
+                                            <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                                <img src="{%static 'student/assets/images/paths/typescript_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title js-lists-values-course" href="mini-instructor-edit-course.html">Introduction to TypeScript</a>
+                                                <div class="card-subtitle text-muted mr-1">
+                                                    Invoice
+                                                    <a href="mini-invoice.html" style="color: inherit;" class="js-lists-values-document">#8736</a> -
+                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <small class="text-muted text-uppercase js-lists-values-date">14 Nov 2018</small>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-nowrap align-items-center">
+                                            <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                                <img src="{%static 'student/assets/images/paths/typescript_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title js-lists-values-course" href="mini-instructor-edit-course.html">Introduction to TypeScript</a>
+                                                <div class="card-subtitle text-muted mr-1">
+                                                    Invoice
+                                                    <a href="mini-invoice.html" style="color: inherit;" class="js-lists-values-document">#8736</a> -
+                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <small class="text-muted text-uppercase js-lists-values-date">14 Nov 2018</small>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-nowrap align-items-center">
+                                            <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                                <img src="{%static 'student/assets/images/paths/angular_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                                <span class="overlay__content"></span>
+                                            </a>
+                                            <div class="flex">
+                                                <a class="card-title js-lists-values-course" href="mini-instructor-edit-course.html">Learn Angular Fundamentals</a>
+                                                <div class="card-subtitle text-muted mr-1">
+                                                    Invoice
+                                                    <a href="mini-invoice.html" style="color: inherit;" class="js-lists-values-document">#8737</a> -
+                                                    &dollar;<span class="js-lists-values-amount">89</span> USD
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right">
+                                        <small class="text-muted text-uppercase js-lists-values-date">15 Nov 2018</small>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">
+
+
+                                                        <div class="mt-20pt">
+
+                  <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  <ul class="pagination-list">
+   <li><a class="pagination-previous">Previous</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page" style="color:white">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+    <li><a class="pagination-next">Next</a></li>
+  </ul>
+</nav>
+
+                </div>
+
+
+                                        <!-- <ul class="pagination justify-content-center pagination-sm">
+  <li class="page-item disabled">
+    <a class="page-link" href="#" aria-label="Previous">
+      <span aria-hidden="true" class="material-icons">chevron_left</span>
+      <span>Prev</span>
+    </a>
+  </li>
+  <li class="page-item active">
+    <a class="page-link" href="#" aria-label="1">
+      <span>1</span>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="#" aria-label="1">
+      <span>2</span>
+    </a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="#" aria-label="Next">
+      <span>Next</span>
+      <span aria-hidden="true" class="material-icons">chevron_right</span>
+    </a>
+  </li>
+</ul> -->
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                
+
+               
+
+            </div>
+
+
+
+{%  endblock %}

@@ -1,0 +1,426 @@
+{% extends "teacher/base.html" %}
+{% block content %}
+    {% load static %}
+
+    <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+            <span class="material-icons">short_text</span>
+        </button>
+
+        <!-- Navbar Brand -->
+        <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg" alt="logo" class="img-fluid" /></span>
+
+            </span>
+
+            <span class="d-none d-lg-block">Luma</span>
+        </a>
+
+
+
+
+
+
+        <a href="../../student.0/dist/courses.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Student
+        
+            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
+</b></a>
+
+
+
+        <div class="flex"></div>
+
+
+
+
+
+
+        <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+
+                <span class="avatar avatar-sm mr-8pt2">
+
+                    <span class="avatar-title rounded-circle" style="background-color: gray;">
+                        <img src="../../assets/img/man.jpg" alt="" style="border-radius: 50%;">
+                    </span>
+
+                </span>
+
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-header"><strong>Elzubair Mohammed</strong></div>
+                <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
+                <a class="dropdown-item" href="dashboard.html">dashboard</a>
+                <a class="dropdown-item" href="courses.html">My courses</a>
+                <a class="dropdown-item" href="messages.html">Messages</a>
+                <a class="dropdown-item" href="notifications.html">Notifications</a>
+                <a class="dropdown-item" style="color: red;" href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class=" page__container page-section">
+
+
+
+
+<div class="field">
+<div class="control" >
+<div class="select">
+<select>
+<option>Course: Learn HTML5 and css with sass</option>
+<option>Course: Learn android studio</option>
+<option>Course: stack overflow right now</option>
+</select>
+</div>
+</div>
+</div>
+        
+
+
+
+
+<div class="row card-group-row mb-lg-8pt">
+<div class="col-lg-4 col-md-6 card-group-row__col">
+<div class="card card-group-row__card p-relative o-hidden">
+    <div class="card-body d-flex flex-row align-items-center">
+        <div class="flex">
+            <p class="card-title d-flex align-items-center">
+                <strong>Total revenue</strong>
+            </p>
+            <span class="h2 m-0" style="color: green;">&dollar;225.10</span>
+        </div>
+        <i class="material-icons icon-32pt text-20 ml-8pt">monetization_on</i>
+    </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 card-group-row__col">
+<div class="card card-group-row__card p-relative o-hidden">
+    <div class="card-body d-flex flex-row align-items-center">
+        <div class="flex">
+            <p class="card-title d-flex align-items-center">
+                <strong>total students</strong>
+            </p>
+            <span class="h2 m-0">13,110</span>
+        </div>
+        <i class="material-icons icon-32pt text-20 ml-8pt">people_outline</i>
+    </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 card-group-row__col">
+<div class="card card-group-row__card">
+    <div class="card-body d-flex flex-row align-items-center">
+        <div class="card-title flex">
+            <strong>course rating</strong>
+            <div class="h2 m-0">4.3</div>
+        </div>
+        <i class="material-icons icon-32pt text-20">star</i>
+    </div>
+</div>
+</div>
+</div>
+
+
+        
+
+<div class="page-separator">
+<div class="page-separator__text">Course Enrolments</div>
+</div>
+
+<div class="card">
+<div class="card-header p-0 nav">
+<div class="row no-gutters flex" role="tablist">
+    <div class="col-auto">
+        <div class="p-card-header d-flex align-items-center">
+            <div class="h2 mb-0 mr-3">$4.1k</div>
+            <div class="flex">
+                <p class="card-title">Cash</p>
+                <p class="card-subtitle text-50">This month</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-auto border-left">
+        <div class="p-card-header d-flex align-items-center">
+            <div class="h2 mb-0 mr-3">$67k</div>
+            <div class="flex">
+                <p class="card-title">Cash</p>
+                <p class="card-subtitle text-50">Last months</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="card-body">
+<div id="legend" class="chart-legend mt-0 mb-24pt justify-content-start"></div>
+<div class="chart" style="height: 182px;">
+    <canvas id="earningsChart" class="chart-canvas js-update-chart-bar" data-chart-legend="#legend" data-chart-line-background-color="primary,gray" data-chart-prefix="$" data-chart-suffix="k">
+        <span style="font-size: 1rem;"><strong>Views</strong> area chart goes here.</span>
+    </canvas>
+</div>
+</div>
+</div>
+
+
+<div class="columns">
+<div class="column is-6">
+<div class="page-separator">
+    <div class="page-separator__text">Reviews</div>
+</div>
+
+
+
+
+<div class="card">
+
+    <div class="list-group list-group-flush">
+
+        <div class="card-body ">
+            <div class="media border rounded p-3 bg-light d-inline-flex measure-paragraph-max">
+                <div class="media-left mr-12pt">
+                    <a href="#" class="avatar avatar-sm">
+                        <!-- <img src="assets/images/people/110/guy-6.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
+                        <span class="avatar-title rounded-circle">FM</span>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <div class="d-flex align-items-center">
+                        <a href="mini-profile.html" class="card-title">FrontendMatter</a>
+                        <b><i class="fa fa-star" style="color: orange;"></i> 3.9 </b>
+                        <small class="ml-auto text-muted">just now</small>
+                    </div>
+                    <p class="mt-1 mb-0 text-70">Thank you for purchasing our course! Please have a look at the charts library documentation <a href="#" class="text-underline">here</a> and follow the instructions.</p>
+                    
+                    <div class="columns">
+                        <div class="column is-6 mt-3">
+                            <form action="#" id="message-reply">
+                                <div class="input-group input-group-merge">
+                                    <input type="text"  class="form-control form-control-appended" required="" placeholder="Quick Reply">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text pr-2">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">tag_faces</i></button>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <div class="custom-file custom-file-naked d-flex" style="width: 24px; overflow: hidden;">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" style="color: inherit;" for="customFile">
+                                                    <i class="material-icons">attach_file</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">send</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="column is-6">
+                            <a href="#" class="btn btn-primary mt-3 " style="">Add to course review</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body ">
+            <div class="media border rounded p-3 bg-light d-inline-flex measure-paragraph-max">
+                <div class="media-left mr-12pt">
+                    <a href="#" class="avatar avatar-sm">
+                        <!-- <img src="assets/images/people/110/guy-6.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
+                        <span class="avatar-title rounded-circle">FM</span>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <div class="d-flex align-items-center">
+                        <a href="mini-profile.html" class="card-title">FrontendMatter</a>
+                        <b><i class="fa fa-star" style="color: orange;"></i> 3.9 </b>
+                        <small class="ml-auto text-muted">just now</small>
+                    </div>
+                    <p class="mt-1 mb-0 text-70">Thank you for purchasing our course! Please have a look at the charts library documentation <a href="#" class="text-underline">here</a> and follow the instructions.</p>
+                    <div class="columns">
+                        <div class="column is-6 mt-3">
+                            <form action="#" id="message-reply">
+                                <div class="input-group input-group-merge">
+                                    <input type="text" class="form-control form-control-appended" required="" placeholder="Quick Reply">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text pr-2">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">tag_faces</i></button>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <div class="custom-file custom-file-naked d-flex" style="width: 24px; overflow: hidden;">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" style="color: inherit;" for="customFile">
+                                                    <i class="material-icons">attach_file</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">send</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="column is-6">
+                            <a href="#" class="btn btn-primary mt-3 " style="">Add to course review</a>
+
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body ">
+            <div class="media border rounded p-3 bg-light d-inline-flex measure-paragraph-max">
+                <div class="media-left mr-12pt">
+                    <a href="#" class="avatar avatar-sm">
+                        <!-- <img src="assets/images/people/110/guy-6.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
+                        <span class="avatar-title rounded-circle">FM</span>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <div class="d-flex align-items-center">
+                        <a href="mini-profile.html" class="card-title">FrontendMatter</a>
+                        <b><i class="fa fa-star" style="color: orange;"></i> 3.9 </b>
+                        <small class="ml-auto text-muted">just now</small>
+                    </div>
+                    <p class="mt-1 mb-0 text-70">Thank you for purchasing our course! Please have a look at the charts library documentation <a href="#" class="text-underline">here</a> and follow the instructions.</p>
+                
+                    <div class="columns">
+                        <div class="column is-6 mt-3">
+                            <form action="#" id="message-reply">
+                                <div class="input-group input-group-merge">
+                                    <input type="text" class="form-control form-control-appended" required="" placeholder="Quick Reply">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text pr-2">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">tag_faces</i></button>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <div class="custom-file custom-file-naked d-flex" style="width: 24px; overflow: hidden;">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" style="color: inherit;" for="customFile">
+                                                    <i class="material-icons">attach_file</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">send</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="column is-6">
+                            <a href="#" class="btn btn-primary mt-3 " style="">Add to course review</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="card-footer">
+
+        <center>
+        
+            <ul class="pagination-list " style="font-size:small;margin-top: 15px !important;">
+                <li><a class="pagination-previous">Previous</a></li>
+                    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page" style="color:white">46</a></li>
+                    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+                    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                    <li><a class="pagination-next">Next</a></li>
+                </ul>
+
+        </center>
+
+
+    </div>
+
+
+</div>
+</div>
+
+<div class="column is-6">
+<div class="page-separator">
+    <div class="page-separator__text">Quick Reply</div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="media">
+            <div class="media-left mr-12pt">
+                <a href="#" class="avatar avatar-sm">
+                    <!-- <img src="assets/images/people/110/guy-9.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
+                    <span class="avatar-title rounded-circle">LB</span>
+                </a>
+            </div>
+            <div class="media-body d-flex flex-column">
+                <div class="d-flex align-items-center">
+                    <a href="mini-profile.html" class="card-title">Laza Bogdan</a>
+                    <small class="ml-auto text-muted">27 min ago</small><br>
+                </div>
+                <span class="text-muted">on <a href="mini-instructor-edit-course.html" class="text-50" style="text-decoration: underline;">Data Visualization With Chart.js</a></span>
+                <p class="mt-1 mb-0 text-70">How can I load Charts on a page?</p>
+            </div>
+        </div>
+        <div class="media ml-sm-32pt mt-3 border rounded p-3 bg-light d-inline-flex measure-paragraph-max">
+            <div class="media-left mr-12pt">
+                <a href="#" class="avatar avatar-sm">
+                    <!-- <img src="assets/images/people/110/guy-6.jpg" alt="Guy" class="avatar-img rounded-circle"> -->
+                    <span class="avatar-title rounded-circle">FM</span>
+                </a>
+            </div>
+            <div class="media-body">
+                <div class="d-flex align-items-center">
+                    <a href="mini-profile.html" class="card-title">FrontendMatter</a>
+                    <small class="ml-auto text-muted">just now</small>
+                </div>
+                <p class="mt-1 mb-0 text-70">Hi Bogdan,<br> Thank you for purchasing our course! <br><br>Please have a look at the charts library documentation <a href="#" class="text-underline">here</a> and follow the instructions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <form action="#" id="message-reply">
+            <div class="input-group input-group-merge">
+                <input type="text" class="form-control form-control-appended" style="width: 435px !important;" required="" placeholder="Quick Reply">
+                <div class="input-group-append">
+                    <div class="input-group-text pr-2">
+                        <button class="btn btn-flush" type="button"><i class="material-icons">tag_faces</i></button>
+                    </div>
+                    <div class="input-group-text pl-0">
+                        <div class="custom-file custom-file-naked d-flex" style="width: 24px; overflow: hidden;">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" style="color: inherit;" for="customFile">
+                                <i class="material-icons">attach_file</i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group-text pl-0">
+                        <button class="btn btn-flush" type="button"><i class="material-icons">send</i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+
+{%  endblock %}
+
