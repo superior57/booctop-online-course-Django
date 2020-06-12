@@ -178,7 +178,7 @@
                         
                             <div class="buttons">
                                 <a class="button process-button" data-step="step-dot-3">Back</a>
-                                <a class="button process-button is-next" onclick="return signup()" >Next</a>
+                                <a class="button is-next" id="registernext" onclick="return signup()" >Next</a>
                             </div>
                         </div>
                         
@@ -509,6 +509,8 @@
             
             function signup() {
                 
+                    $('#registernext').addClass(' is-loading');
+                    $('#registernext').removeClass(' is-loading');
                 $("#div_error").html("");
                 if($("#password").val().trim().length < 6){
                     $("#div_error").html("Password must be greater than 5 digit");
@@ -528,8 +530,9 @@
                     return false
                 }
                 
-                
+                $('#registernext').addClass(' is-loading');
                 var formData = new FormData();
+                
                 formData.append('file', uploadImg);
                 formData.append('first_name', $("#first_name").val());
                 formData.append('last_name', $("#last_name").val());
@@ -537,8 +540,8 @@
                 formData.append('password', $("#password").val());
                 formData.append('phone_number', $("#phone_number").val());
                 formData.append('type', $("#type").val());
-                
-                
+                console.log($("#first_name").val())
+                $('#registernext').addClass(' is-loading');
                 // Ajax start
                         var action = "/register-user";
                         $.ajax({
@@ -553,15 +556,22 @@
                             data: formData,
 
                             beforeSend: function () {
-
+                                
                             },
                             success: function (data) {
+                                console.log('sucess---',data.msg)
                                 if(data.msg == "success"){
+                                    $('#registernext').removeClass(' is-loading');
                                     $('#step-dot-5').trigger('click');
                                     return false
                                     
-                                }else{
-                                    $("#div_error").html("Some error occur. please contact with admin.");
+                                }else if(data.msg == 'already'){
+                                    
+                                    $("#div_error").html("Email is already exist.");
+                                    return false;
+                                }
+                                else{
+                                    // $("#div_error").html("Some error occur. please contact with admin.");
                                     return false;
                                 }
                                 

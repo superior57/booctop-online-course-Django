@@ -6,10 +6,8 @@
 Signup Process JS
 ========================================================================== */
 Dropzone.autoDiscover = false;
-
 $(document).ready(function () {
   "use strict";
-  
 
   $('.progress-wrap .dot').on('click', function () {
     var $this = $(this);
@@ -21,7 +19,7 @@ $(document).ready(function () {
     $this.nextAll('.dot').removeClass('is-active');
     $('.process-panel-wrap').removeClass('is-active');
     $('.step-title').removeClass('is-active');
-    
+
     if (stepValue == '0') {
       $('#signup-panel-1, #step-title-1').addClass('is-active');
     } else if (stepValue == '25') {
@@ -41,7 +39,7 @@ $(document).ready(function () {
     setTimeout(function () {
       $this.removeClass('is-loading');
       $('#' + targetStepDot).trigger('click');
-    }, 800);
+    }, 800); 
   });
   var myDropzone = new Dropzone("#profile-pic-dz", {
     maxFilesize: 8,
@@ -82,24 +80,23 @@ $(document).ready(function () {
       buttonConfirm.textContent = 'Crop';
       buttonConfirm.classList.add('button');
       editor.appendChild(buttonConfirm);
+      uploadImg=file;
       buttonConfirm.addEventListener('click', function () {
         // Get the canvas with image data from Cropper.js
         var canvas = cropper.getCroppedCanvas({
           width: 256,
           height: 256
         }); // Turn the canvas into a Blob (file object without a name)
-        console.log("file = ",file)
-        uploadImg = file
+
         canvas.toBlob(function (blob) {
           // Create a new Dropzone file thumbnail
-          console.log("myDropzone.options - ",myDropzone.options)
           myDropzone.createThumbnail(blob, myDropzone.options.thumbnailWidth, myDropzone.options.thumbnailHeight, myDropzone.options.thumbnailMethod, false, function (dataURL) {
             // Update the Dropzone file thumbnail
             myDropzone.emit('thumbnail', file, dataURL); // Return the file to Dropzone
-            
+
             done(blob); //console.log(blob);
             //Display image preview
-            blobImg=blob
+
             var previewReader = new FileReader();
 
             previewReader.onload = function (event) {

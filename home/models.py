@@ -1,10 +1,12 @@
 # from __future__ import unicode_literals
 from django.db import models
-from django.contrib.auth.models import Group, AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import Group, AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-
-
+from django.conf import settings
+# from django.contrib.auth import get_user_model
+# test=get_user_model()
+# print("JJJJJJJJ = ",test)
 
 class UserManager(BaseUserManager):
 
@@ -29,6 +31,7 @@ class UserManager(BaseUserManager):
                                 is_active=True)
 
 class User(AbstractBaseUser):
+    
     email = models.EmailField(_('email address'), unique=True)
     is_staff = models.BooleanField(_("staf status"), default=False)
     is_active = models.BooleanField(_("active"), default=True)
@@ -43,10 +46,14 @@ class User(AbstractBaseUser):
     USERNAME_FIELD ="email"
 
     objects = UserManager()
-
+    
     class Meta():
         verbose_name = _("User")
         verbose_name_plural = _("Users")
+    
+    
+
+
 
 
 class user_activation(models.Model):
@@ -55,9 +62,5 @@ class user_activation(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-# class user_groups(models.Model):
-#     id = models.AutoField(primary_key=True)
-#     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-#     group = models.ForeignKey(Group, on_delete=models.DO_NOTHING)
 
 
