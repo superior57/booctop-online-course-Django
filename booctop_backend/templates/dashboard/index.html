@@ -2,480 +2,6 @@
 {% load static %}
 
     {% block title %} Booctep | Homepage {% endblock %}
-
-    {% block navbar %}
-        <!-- Main Navbar -->
-    <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
-        <div class="container ">
-            <div class="navbar-brand">
-                <a href="{%url 'index' %}" class="navbar-item logo">
-                   <img src="{%static 'assets/img/logo/booctep-tran.png' %}" alt=""  />
-                </a>
-            </div>
-             
-                
-            <div id="mobile-explorer-trigger" class="navbar-item is-icon">
-                <a class="icon-link is-primary">
-                    <i class="mdi mdi-apps"></i>
-                </a>
-            </div>
-            
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start"> 
-                     <div class="navbar-item">
-                            <div id="global-search" class="control">
-                                <input id="tipue_drop_input" class="input" type="text" placeholder="Search course" required>
-                                <span id="clear-search" class="reset-search">
-                                    <i data-feather="x"></i>
-                                </span>
-                                <span class="search-icon">
-                                    <i data-feather="search"></i>
-                                </span>      
-                        
-                            </div>
-                        
-                        </div>
-
-
-                  
-                        <div class="navbar-item"> 
-                            <a href="{%url 'become_teacher' %}" class="button-become-a-teacher button is-light" data-lang="about">Become a teacher</a>
-                       </div>
-
-
-                        <label class="animated-toggle">
-                            <input type="checkbox">
-                            <span class="toggler">
-                                <span class="dark">
-                                    <i data-feather="moon"></i>
-                                </span>
-                                <span class="light">
-                                    <i data-feather="sun"></i>
-                                </span>
-                            </span>
-                        </label>
-                  
-                  </div>
-            </div>
-
-            {% if user.is_authenticated %}
-              <div class="navbar-end">
-                          
-                      
-                        <div class="navbar-item is-cart" style="margin-left: -20px;">
-                            <div class="cart-button">
-                                <i class="fa fa-bell"></i>
-                                <div class="cart-count">
-                                    <span>6</span>
-                                </div>
-                            </div>
-                        
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                                    
-
-
-                                    <div class="shopping-cart-header">
-                                        <a href="#"><u style="color: rgb(204, 0, 61);">Mark all as read</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">4 Notifications</span>
-                                        </div>
-                                    </div>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-                                    
-                            
-                                    <a href="#" class="button primary-button is-raised">view all Notifications</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="navbar-item is-cart" style="margin-left: -20px;">
-                            <div class="cart-button">
-                                <i class="fa fa-comment-alt"></i>
-                                <div class="cart-count">
-                                    <span>6</span>
-                                </div>
-                            </div>
-                        
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                                    
-
-
-                                    <div class="shopping-cart-header">
-                                        <a href="#"><u style="color: rgb(204, 0, 61);">Mark all as read</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">4 Messages</span>
-                                        </div>
-                                    </div>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);position: relative;">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-
-                                    <a class="dropdown-item" style="border-bottom: 1px solid rgb(240, 240, 240);">
-                                        <div class="noti-cart">
-                                        <img src="{%static 'assets/img/man.jpg' %}" alt="" />
-                                        <p >Hello Bandar How are you?</p>
-                                        <small >3 mins</small>
-                                       </div>
-                                    </a>
-                                    
-                            
-                                    <a href="#" class="button primary-button is-raised">view all Notifications</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="navbar-item is-cart" style="margin-left: -20px;">
-                            <div class="cart-button">
-                                <i class="fa fa-heart"></i>
-                                <div class="cart-count">
-                                    <span>3</span>
-                                </div>
-                            </div>
-                        
-                           
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                        
-                                    <div class="shopping-cart-header">
-                                        <a href="wishlist.html"><u style="color: rgb(255, 0, 200);">View Fav Page</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">4 courses</span>
-                                        </div>
-                                    </div>
-                                    <!--end shopping-cart-header -->
-                            
-                                    <ul class="shopping-cart-items">
-                                        <li class="cart-row">
-                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Html5 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$29.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Css3 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$39.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Sass Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$125.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                            
-                                    <a href="#" class="button primary-button is-raised">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="navbar-item is-cart" style="margin-left: -20px;margin-right: 50px;">
-                            <div class="cart-button">
-                                <i class="fa fa-shopping-cart"></i>
-                                <div class="cart-count">
-                                    <span>3</span>
-                                </div>
-                            </div>
-                        
-                            <!-- Cart dropdown -->
-                            <div class="shopping-cart">
-                                <div class="cart-inner">
-                        
-                                    <!--Loader-->
-                                    <div class="navbar-cart-loader is-active">
-                                        <div class="loader is-loading"></div>
-                                    </div>
-                        
-                                    <div class="shopping-cart-header">
-                                        <a href="#"><u style="color: blue;">View Cart</u></a>
-                                        <div class="shopping-cart-total">
-                                            <span class="lighter-text">Total:</span>
-                                            <span class="main-color-text">$193.00</span>
-                                        </div>
-                                    </div>
-                                    <!--end shopping-cart-header -->
-                            
-                                    <ul class="shopping-cart-items">
-                                        <li class="cart-row">
-                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Html5 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$29.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Css3 Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$39.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                            
-                                        <li class="cart-row">
-                                            <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                                            <span class="item-meta">
-                                                <span class="item-name"><a href="#">Sass Full course learn no..</a></span>
-                                                <span class="meta-info">
-                                                    <span class="item-price">$125.00</span>
-                                                </span>
-                                            </span>
-                                        </li>
-                                    </ul>
-                            
-                                    <a href="#" class="button primary-button is-raised">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div id="account-dropdown" class="navbar-item is-account drop-trigger has-caret">
-                              
-                            <div class="small-avatar">
-                                <img class="avatar" src="{%static 'assets/img/manPro.jpg' %}" style="border: 2px solid #ccc;" data-demo-src="{%static 'assets/img/avatars/jenna.png' %}" data-user-popover="0" alt="">
-                            </div>
-                        
-                            <div class="nav-drop is-account-dropdown">
-                                <div class="inner">
-                                    <div class="nav-drop-header">
-                                        <span class="username">Elzubair Mohammed Saleh</span>
-                                    </div>
-                                    <div class="nav-drop-body account-items">
-                                        <a href="/options-settings.html" class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="settings"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>Settings</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="life-buoy"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>Help</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="life-buoy"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>My courses</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="life-buoy"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3>messages</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="account-item">
-                                            <div class="media media1">
-                                                <div class="icon-wrap">
-                                                    <i data-feather="power" style="color:rgb(236, 11, 11) !important;"></i>
-                                                </div>
-                                                <div class="media-content">
-                                                    <h3 style="color: rgb(236, 11, 11);">Log out</h3>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>   
-        <!-- Main Navbar -->
-
-            {% else %}           
-              <div class="navbar-end">
-                <div class="navbar-item is-cart">
-                  <div class="cart-button">
-                    <i class="fa fa-shopping-cart"></i>
-                      <div class="cart-count">
-                        <span style="font-weight: 600;">3</span>
-                      </div>
-                  </div>  
-                  <!-- Cart dropdown -->
-                  <div class="shopping-cart">
-                    <div class="cart-inner">
-                      <!--Loader-->
-                      <div class="navbar-cart-loader is-active">
-                          <div class="loader is-loading"></div>
-                      </div>                  
-                      <div class="shopping-cart-header">
-                        <a href="cart.html"><u >View Cart</u></a>
-                        <div class="shopping-cart-total">
-                          <span class="lighter-text">Total:</span>
-                          <span class="main-color-text">$193.00</span>
-                        </div>
-                      </div>
-                      <!--end shopping-cart-header -->
-                      <ul class="shopping-cart-items">
-                        <li class="cart-row">
-                          <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                          <span class="item-meta">
-                            <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
-                            <span class="meta-info">
-                              <span class="item-price">$29.00</span>
-                            </span>
-                          </span>
-                        </li>
-            
-                        <li class="cart-row">
-                          <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                          <span class="item-meta">
-                            <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
-                            <span class="meta-info">
-                              <span class="item-price">$39.00</span>
-                            </span>
-                          </span>
-                        </li>
-              
-                        <li class="cart-row">
-                          <img src="{%static 'assets/img/products/pg.jpg' %}" alt="" />
-                          <span class="item-meta">
-                            <span class="item-name"><a href="single_course.html">Html5 Full course learn no..</a></span>
-                            <span class="meta-info">
-                              <span class="item-price">$125.00</span>
-                            </span>
-                          </span>
-                        </li>
-                      </ul>
-                      
-                      <a href="checkout.html" class="button primary-button is-raised">Checkout</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="navbar-item" >
-                  <div class="buttons sign-up-in">
-                    <a href="{%url 'user_signup' %}" class="button second-button">
-                      <p>Sign up</p>
-                    </a>
-                    <a class="button primary-button raised quickview-trigger process-button">
-                      <p>Log in</p>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>        
-        <!-- Main Navbar -->
-      {% endif %}
-    {% endblock %}
     
     {% block content %}
     <!-- Section Up -->
@@ -580,7 +106,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -649,7 +175,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -717,7 +243,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image">
+                                        <a href="{%url 'single_course' %}" class="product-image">
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -786,7 +312,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -855,7 +381,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -923,7 +449,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -991,7 +517,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1060,7 +586,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1129,7 +655,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1197,7 +723,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1266,7 +792,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1334,7 +860,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1402,7 +928,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1470,7 +996,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/css/material-icons.css' %}assets/img/products/1">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1539,7 +1065,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1607,7 +1133,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1713,7 +1239,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1782,7 +1308,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1851,7 +1377,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1920,7 +1446,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -1989,7 +1515,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2058,7 +1584,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2127,7 +1653,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2196,7 +1722,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2265,7 +1791,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2334,7 +1860,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2403,7 +1929,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2472,7 +1998,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2541,7 +2067,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2610,7 +2136,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2679,7 +2205,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2748,7 +2274,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2854,7 +2380,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2923,7 +2449,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -2992,7 +2518,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3061,7 +2587,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3130,7 +2656,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3199,7 +2725,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3268,7 +2794,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3337,7 +2863,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3406,7 +2932,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3475,7 +3001,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3544,7 +3070,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3613,7 +3139,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3682,7 +3208,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3751,7 +3277,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3820,7 +3346,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -3889,7 +3415,7 @@
                                 <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
                                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
                                        
-                                        <a href="{%url 'signle_course' %}" class="product-image"> 
+                                        <a href="{%url 'single_course' %}" class="product-image"> 
 
                                             <div class="image-grid-wrap">
                                                 <div class="image-grid">
@@ -4004,14 +3530,14 @@
     
                         <div class="tile is-ancestor">
                             <div class="tile is-parent is-vertical">
-                                <a href="single_category.html" class="tile is-child category-box is-accent">
+                                <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent">
                                     <img src="{%static 'assets/img/categories/p-language.svg' %}" alt="">
                                     <div class="box-content">
                                         <h3 class="title is-6"> Web Development</h3>
                                         <p>#HTML, #Css, #Js, #PHP, #Python, #Java, #Ruby, #C++, #R, #SQl, #C, #swift, #Swift, #kotlin, #etc.</p>
                                     </div>
                                 </a>
-                                <a href="single_category.html" class="tile is-child category-box is-accent">
+                                <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent">
                                     <img src="{%static 'assets/img/categories/aviation.svg' %}" alt="">
                                     <div class="box-content">
                                         <h3 class="title is-6">Aviation</h3>
@@ -4029,7 +3555,7 @@
                                                 <p>#Human_resource, #Markting, #international_business_managment, #business_managment, #Finance, #Accounting, #Audit, #Analysis_of_business ,#etc..</p>
                                             </div>
                                         </a>
-                                        <a href="single_category.html" class="tile is-child category-box is-primary">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary">
                                             <img src="{%static 'assets/img/categories/physical.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Physical & Chemistry</h3>
@@ -4038,7 +3564,7 @@
                                         </a>
                                     </div>
                                     <div class="tile is-parent is-vertical">
-                                        <a href="single_category.html" class="tile is-child category-box is-primary is-taller">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary is-taller">
                                             <img src="{%static 'assets/img/categories/gaming.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Gaming</h3>
@@ -4046,7 +3572,7 @@
                                             </div>
                                         </a>
 
-                                        <a href="single_category.html" class="tile is-child category-box is-accent is-taller">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent is-taller">
                                             <img src="{%static 'assets/img/categories/Engineer.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Engineering</h3>
@@ -4056,7 +3582,7 @@
                                     </div>
                                 </div>
                                 <div class="tile is-parent">
-                                        <a href="single_category.html" class="tile is-child category-box is-accent is-row">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent is-row">
                                             <img src="{%static 'assets/img/categories/math.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Mathmatics</h3>
@@ -4072,7 +3598,7 @@
     
                         <div class="tile is-ancestor">
                             <div class="tile is-parent is-vertical">
-                                <a href="single_category.html" class="tile is-child category-box is-accent is-taller">
+                                <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent is-taller">
                                     <img src="{%static 'assets/img/categories/skills.svg' %}" alt="">
                                     <div class="box-content">
                                         <h3 class="title is-6">Skills</h3>
@@ -4080,7 +3606,7 @@
                                         </p>
                                     </div>
                                 </a>
-                                <a href="single_category.html" class="tile is-child category-box is-primary is-taller">
+                                <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary is-taller">
                                     <img src="{%static 'assets/img/categories/repare.svg' %}" alt="">
                                     <div class="box-content">
                                         <h3 class="title is-6">Maintaince & Reparing</h3>
@@ -4092,14 +3618,14 @@
                             <div class="tile is-vertical is-8">
                                 <div class="tile">
                                     <div class="tile is-parent is-vertical">
-                                        <a href="single_category.html" class="tile is-child category-box is-primary">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary">
                                             <img src="{%static 'assets/img/categories/hospitality.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Hospitality & Tourism</h3>
                                                 <p>#Management, #Kitchen, #Leader, #jerson, #Tourism_industry , #etc..</p>
                                             </div>
                                         </a>
-                                        <a href="single_category.html" class="tile is-child category-box is-accent">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent">
                                             <img src="{%static 'assets/img/categories/robot.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Information Technology</h3>
@@ -4108,14 +3634,14 @@
                                         </a>
                                     </div>
                                     <div class="tile is-parent is-vertical">
-                                        <a href="single_category.html" class="tile is-child category-box is-accent">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent">
                                             <img src="{%static 'assets/img/categories/fitness.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Life style</h3>
                                                 <p>#Fitness, #sports, #Diet, #resistance_trainging, #healthy_life_style, #athletics, #Physical_therapy , #Dance ,#etc..</p>
                                             </div>
                                         </a>
-                                        <a href="single_category.html" class="tile is-child category-box is-primary">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary">
                                             <img src="{%static 'assets/img/categories/self-dev.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Self development</h3>
@@ -4125,7 +3651,7 @@
                                     </div>
                                 </div>
                                 <div class="tile is-parent">
-                                    <a href="single_category.html" class="tile is-child category-box is-accent is-row">
+                                    <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent is-row">
                                         <img src="{%static 'assets/img/categories/art.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Arts</h3>
@@ -4142,7 +3668,7 @@
     
                         <div class="tile is-ancestor">
                             <div class="tile is-parent is-vertical">
-                                <a href="single_category.html" class="tile is-child category-box is-accent is-taller">
+                                <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent is-taller">
                                     <img src="{%static 'assets/img/categories/laguage.svg' %}" alt="">
                                     <div class="box-content">
                                         <h3 class="title is-6">Languages</h3>
@@ -4150,7 +3676,7 @@
                                         </p>
                                     </div>
                                 </a>
-                                <a href="single_category.html" class="tile is-child category-box is-primary is-taller">
+                                <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary is-taller">
                                     <img src="{%static 'assets/img/categories/other.svg' %}" alt="">
                                     <div class="box-content">
                                         <h3 class="title is-6">Others</h3>
@@ -4162,14 +3688,14 @@
                             <div class="tile is-vertical is-8">
                                 <div class="tile">
                                     <div class="tile is-parent is-vertical">
-                                        <a href="single_category.html" class="tile is-child category-box is-primary">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary">
                                             <img src="{%static 'assets/img/categories/dramaa.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Drama</h3>
                                                 <p>#Cinematography, #Documentaries, #Photographing, #Acting, #Director, #etc..</p>
                                             </div>
                                         </a>
-                                        <a href="single_category.html" class="tile is-child category-box is-accent">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent">
                                             <img src="{%static 'assets/img/categories/sewiing.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Sewing design</h3>
@@ -4178,14 +3704,14 @@
                                         </a>
                                     </div>
                                     <div class="tile is-parent is-vertical">
-                                        <a href="single_category.html" class="tile is-child category-box is-accent">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent">
                                             <img src="{%static 'assets/img/categories/food.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Food and coocking</h3>
                                                 <p>#Arabic_food, #Amirecan_food, #Indian_food, #Pasta, #Pizza, #spaghetti, #Burger, #Rice, #Chicken, #Fries ,#etc..</p>
                                             </div>
                                         </a>
-                                        <a href="single_category.html" class="tile is-child category-box is-primary">
+                                        <a href="{%url 'single_category' %}" class="tile is-child category-box is-primary">
                                             <img src="{%static 'assets/img/categories/design.svg' %}" alt="">
                                             <div class="box-content">
                                                 <h3 class="title is-6">Design</h3>
@@ -4195,7 +3721,7 @@
                                     </div>
                                 </div>
                                 <div class="tile is-parent">
-                                    <a href="single_category.html" class="tile is-child category-box is-accent is-row">
+                                    <a href="{%url 'single_category' %}" class="tile is-child category-box is-accent is-row">
                                         <img src="{%static 'assets/img/categories/softwares.svg' %}" alt="">
                                         <div class="box-content">
                                             <h3 class="title is-6">Software Programs</h3>
@@ -4328,9 +3854,9 @@
         </div>
     </div>
     <!-- Course Detail -->
-  {% endblock %}
+{% endblock %}
 
-  {% block js %}
+{% block js %}
     <script src="{%static 'assets/js/writter.js' %}"></script>
 
     <!-- Concatenated js plugins and jQuery -->
@@ -4355,4 +3881,4 @@
     <!-- Bootstrap -->
     <script src="{%static 'assets/vendor/popper.min.js' %}"></script>
     <script src="{%static 'assets/vendor/bootstrap.min.js' %}"></script>
-  {% endblock %}
+{% endblock %}

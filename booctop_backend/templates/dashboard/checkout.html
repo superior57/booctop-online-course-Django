@@ -1,0 +1,585 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Booctep | Checkout {% endblock %}
+    
+{% block content %}
+
+
+        <div class="view-wrapper" style="padding-top: 80px;">
+           <div class="container">
+            <div class="shop-wrapper">
+                <div class="cart-container">
+            
+                    <div class="cart-content">
+                        <div class="columns">
+                            <div class="column is-8">
+
+                                <section>
+                                    <div class="store-sections sectionstore" style="margin-top: -5px;">
+                                    <div class="container ">
+                                        <div class="categories-header">
+                                            <h2>Checkout</h2>
+                                        </div>
+                                                            
+                                    </div>
+                                    </div>   
+                                </section>
+
+                                
+                            <!-- html/partials/widgets/schedule/schedule-widget.html -->
+                            <div class="schedule">
+                                <div class="schedule-day-container hidden">
+                                    <div class="day-header day-header--large">
+                                        <div class="day-header-bg"></div>
+                                        <div class="day-header-close">
+                                            <i data-feather="x"></i>
+                                        </div>
+                                        <div class="day-header-content">
+                                            <div class="day-header-title">
+                                                <div class="day-header-title-day">24</div>
+                                                <div class="day-header-title-month">October</div>
+                                            </div>
+                                            <div class="day-header-event">Workout Session</div>
+                                        </div>
+                                    </div>
+                                    <div class="day-content has-slimscroll">
+                            
+                                        <!-- Event 1 details -->
+                                        <!-- html/partials/widgets/schedule/event-details/event-1.html -->
+                                        <div id="event-1" class="event-details-wrap">
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-lock"></i>
+                                                <div class="meta">
+                                                    <span>Private</span>
+                                                    <span>This is a private event</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                <div class="meta">
+                                                    <span>Where</span>
+                                                    <span>@ Mom and Dad's house</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-progress-clock"></i>
+                                                <div class="meta">
+                                                    <span>When</span>
+                                                    <span>02:00pm - 03:30pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="participants-wrap">
+                                                <label>4 Participants</label>
+                                                <div class="participants">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/jenna.png' %}" alt="" data-user-popover="0">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/nelly.png' %}" alt="" data-user-popover="9">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/stella.jpg' %}" alt="" data-user-popover="2">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/milly.jpg' %}" alt="" data-user-popover="7">
+                                                </div>
+                                            </div>
+                                            <div class="event-description">
+                                                <label>Description</label>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi accusamus dolores itaque repudiandae.</p>
+                                            </div>
+                                            <hr>
+                                            <div class="button-wrap">
+                                                <a class="button is-bold">Participating</a>
+                                                <a class="button is-bold">Details</a>
+                                            </div>
+                                        </div>
+                                        <!-- Event 2 details -->
+                                        <!-- html/partials/widgets/schedule/event-details/event-2.html -->
+                                        <div id="event-2" class="event-details-wrap">
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-lock"></i>
+                                                <div class="meta">
+                                                    <span>Private</span>
+                                                    <span>This is a private event</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                <div class="meta">
+                                                    <span>Where</span>
+                                                    <span>@ <a class="is-inverted">Wayne's Coffeeshop</a>, LA</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-progress-clock"></i>
+                                                <div class="meta">
+                                                    <span>When</span>
+                                                    <span>11:00am - 12:30pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="participants-wrap">
+                                                <label>3 Participants</label>
+                                                <div class="participants">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/jenna.png' %}" alt="" data-user-popover="0">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/edward.jpeg' %}" alt="" data-user-popover="4">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/rolf.jpg' %}" alt="" data-user-popover="13">
+                                                </div>
+                                            </div>
+                                            <div class="event-description">
+                                                <label>Description</label>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi accusamus dolores itaque repudiandae.</p>
+                                            </div>
+                                            <hr>
+                                            <div class="button-wrap">
+                                                <a class="button is-bold">Participating</a>
+                                                <a class="button is-bold">Details</a>
+                                            </div>
+                                        </div>
+                                        <!-- Event 3 details -->
+                                        <!-- html/partials/widgets/schedule/event-details/event-3.html -->
+                                        <div id="event-3" class="event-details-wrap">
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-earth"></i>
+                                                <div class="meta">
+                                                    <span>Public</span>
+                                                    <span>This is a public event</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                <div class="meta">
+                                                    <span>Where</span>
+                                                    <span>@ Frank's appartment</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-progress-clock"></i>
+                                                <div class="meta">
+                                                    <span>When</span>
+                                                    <span>08:00pm - 02:00am</span>
+                                                </div>
+                                            </div>
+                                            <div class="participants-wrap">
+                                                <label>29 Participants</label>
+                                                <div class="participants">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/jenna.png' %}" alt="" data-user-popover="0">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/elise.jpg' %}" alt="" data-user-popover="6">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/daniel.jpg' %}" alt="" data-user-popover="3">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/rolf.jpg' %}" alt="" data-user-popover="13">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/milly.jpg' %}" alt="" data-user-popover="7">
+                                                    <div class="is-more">+24</div>
+                                                </div>
+                                            </div>
+                                            <div class="event-description">
+                                                <label>Description</label>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi accusamus dolores itaque repudiandae.</p>
+                                            </div>
+                                            <hr>
+                                            <div class="button-wrap">
+                                                <a class="button is-bold">Participating</a>
+                                                <a class="button is-bold">Details</a>
+                                            </div>
+                                        </div>
+                                        <!-- Event 4 details -->
+                                        <!-- html/partials/widgets/schedule/event-details/event-4.html -->
+                                        <div id="event-4" class="event-details-wrap">
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-lock"></i>
+                                                <div class="meta">
+                                                    <span>Private</span>
+                                                    <span>This is a private event</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                <div class="meta">
+                                                    <span>Where</span>
+                                                    <span>@ <a class="is-inverted">Gold Gym</a>, LA</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-progress-clock"></i>
+                                                <div class="meta">
+                                                    <span>When</span>
+                                                    <span>05:00pm - 07:00pm</span>
+                                                </div>
+                                            </div>
+                                            <div class="participants-wrap">
+                                                <label>2 Participants</label>
+                                                <div class="participants">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/jenna.png' %}" alt="" data-user-popover="0">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/lana.jpeg' %}" alt="" data-user-popover="10">
+                                                </div>
+                                            </div>
+                                            <div class="event-description">
+                                                <label>Description</label>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi accusamus dolores itaque repudiandae.</p>
+                                            </div>
+                                            <hr>
+                                            <div class="button-wrap">
+                                                <a class="button is-bold">Participating</a>
+                                                <a class="button is-bold">Details</a>
+                                            </div>
+                                        </div>
+                                        <!-- Event 5 details -->
+                                        <!-- html/partials/widgets/schedule/event-details/event-5.html -->
+                                        <div id="event-5" class="event-details-wrap">
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-lock"></i>
+                                                <div class="meta">
+                                                    <span>Private</span>
+                                                    <span>This is a private event</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-map-marker"></i>
+                                                <div class="meta">
+                                                    <span>Where</span>
+                                                    <span>@ <a class="is-inverted">Massive Dynamics Office</a>, LA</span>
+                                                </div>
+                                            </div>
+                                            <div class="meta-block">
+                                                <i class="mdi mdi-progress-clock"></i>
+                                                <div class="meta">
+                                                    <span>When</span>
+                                                    <span>08:30am - 10:00am</span>
+                                                </div>
+                                            </div>
+                                            <div class="participants-wrap">
+                                                <label>29 Participants</label>
+                                                <div class="participants">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/jenna.png' %}" alt="" data-user-popover="0">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/dan.jpg' %}" alt="" data-user-popover="1">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/edward.jpeg' %}" alt="" data-user-popover="5">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/mike.jpg' %}" alt="" data-user-popover="12">
+                                                    <img src="https://via.placeholder.com/300x300" data-demo-src="{% static 'assets/img/avatars/gaelle.jpeg' %}" alt="" data-user-popover="11">
+                                                    <div class="is-more">+4</div>
+                                                </div>
+                                            </div>
+                                            <div class="event-description">
+                                                <label>Description</label>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci blanditiis commodi accusamus dolores itaque repudiandae.</p>
+                                            </div>
+                                            <hr>
+                                            <div class="button-wrap">
+                                                <a class="button is-bold">Participating</a>
+                                                <a class="button is-bold">Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="schedule-header" style="margin-bottom: 10px;">
+                                    
+                                    <h2 style="color: black;font-weight: 400;border-bottom: 1px solid #000;">Billing info</h2>
+                                    
+                                </div>
+                                <div class="schedule-header">
+                                    
+                                    <h3 style="color: rgb(116, 116, 116);margin-right: 0px;">Billing Name:</h3>
+                                    <p style="float: left;">Elzubair Mohammed</p>
+
+
+
+                                </div>
+                                <div class="schedule-header">
+                                    
+                                    <h3 style="color: rgb(116, 116, 116);margin-right: 0px;">Billing Address:</h3>
+                                    
+                                    <div class="field">
+                                        <div class="control">
+                                          <div class="select">
+                                            <select>
+                                              <option>Malaysia</option>
+                                              <option>Sudan</option>
+                                              <option>Saudi</option>
+                                              <option>Egypt</option>
+                                              <option>Oman</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                </div>
+
+                                <div class="schedule-header">
+                                    <!--Basic Checkbox-->
+                                    <div class="basic-checkbox is-accent">
+                                        <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked>
+                                        <label for="styled-checkbox-3"></label>
+                                        <span>Visa end with *** - 450</span>
+                                        <span class="fas fa-credit-card"></span>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="schedule-header">
+                                    <!--Basic Checkbox-->
+                                    <div class="basic-checkbox is-accent">
+                                        <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked>
+                                        <label for="styled-checkbox-3"></label>
+                                        <span>Paypal</span>
+                                        <span class="fas fa-smile"></span>
+                                    </div>
+
+
+
+                                </div>
+
+
+                                
+
+                                <div class="schedule-calendar">
+                                    
+                                    <div class="next-fab">
+                                        <p style="font-weight: 500;">Add new card +</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-divider"></div>
+                                <div class="schedule-events">
+                                    <label style="font-weight: 600;">Add card</label>
+                                    <div class="schedule-event">
+                                        
+                                        
+                                        
+                                        
+                                        <div class="outer-panel">
+            <div class="outer-panel-inner">
+                <div class="process-title">
+                    <div id="signup-panel-2" class="process-panel-wrap is-narrow">
+                        <div class="form-panel">
+                            
+                            <div class="search-filter" style="margin-bottom: 10px;">
+                                <label style="font-size: small;font-weight: 500;margin-bottom: 5px;" >Card Name</label>
+                                <div class="control has-icon">
+                                    <input type="text" class="input is-fade" placeholder="Enter Card Name" >
+                                    <div class="form-icon">
+                                        <i class="fa fa-id-card" style="font-size: x-small;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="search-filter" style="margin-bottom: 10px;">
+                                <label style="font-size: small;font-weight: 500;margin-bottom: 5px;" >Card Number</label>
+                                <div class="control has-icon">
+                                    <input type="text" class="input is-fade" placeholder="Enter Card Number">
+                                    <div class="form-icon">
+                                        <i class="fa fa-credit-card" style="font-size: x-small;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="search-filter" style="margin-bottom: 10px;">
+                                <label style="font-size: small;font-weight: 500;margin-bottom: 5px;" >CVV</label>
+                                <div class="control has-icon">
+                                    <input type="text" class="input is-fade" placeholder="CVV" style="width: 100px;">
+                                    <div class="form-icon">
+                                        <i class="fa fa-money-check-alt" style="font-size: x-small;"></i>
+                                    </div>
+                                    <img src="{% static 'assets/img/icon_ccv.gif' %}" alt="" style="height: 35px;margin-left: 5px;margin-top: 2px;">
+                                </div>
+                            </div>
+
+                            <div class="search-filter" style="margin-bottom: 10px;">
+                                <label style="font-size: small;font-weight: 500;margin-bottom: 5px;" >Expiration date</label>
+                                <div class="control has-icon">
+                                    <input type="text" class="input is-fade" placeholder="1 / 1" style="width: 100px;">
+                                    <div class="form-icon">
+                                        <i class="fa fa-calendar-alt" style="font-size: x-small;"></i>
+                                    </div>
+                                    <input type="text" class="input is-fade" placeholder="2020" style="width: 100px;">
+                                    <div class="form-icon">
+                                        <i class="fa fa-calendar-alt" style="font-size: x-small;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="basic-checkbox is-accent" style="margin-top: 15px;">
+                                <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked>
+                                <label for="styled-checkbox-3"></label>
+                                <span>save this card</span>
+                            </div>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>           
+
+                                    </div>
+                                </div>
+                            </div>
+
+                                
+                            
+                            <div class="wrapper" style="margin-top: 80px;">
+                                <div class="categories-header">
+                                    <h2>My orders</h2>
+                                </div>
+                                <div class="notifications">
+                              
+                                  <div class="notifications__item">
+                                    <div class="notifications__item__avatar">
+                                      <img src="{% static 'assets/img/courses/pc.jpg' %}" />
+                                    </div>
+                              
+                                    <div class="notifications__item__content">
+                                        <p style="color: teal;float: right;font-weight: 500;">$12</p>
+                                      <span class="notifications__item__title">Learn Html with sass and css</span>
+                                      <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                      
+                                    </div>
+                              
+                                    <div>
+                                      <div class="notifications__item__option archive js-option" style="">
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                  <div class="notifications__item">
+                                    <div class="notifications__item__avatar">
+                                      <img src="{% static 'assets/img/courses/pc.jpg' %}" />
+                                    </div>
+                              
+                                    <div class="notifications__item__content">
+                                        <p style="color: teal;float: right;font-weight: 500;">$12</p>
+                                      <span class="notifications__item__title">Learn Html with sass and css</span>
+                                      <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                      
+                                    </div>
+                              
+                                    <div>
+                                      <div class="notifications__item__option archive js-option" style="">
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                  <div class="notifications__item">
+                                    <div class="notifications__item__avatar">
+                                      <img src="{% static 'assets/img/courses/pc.jpg' %}" />
+                                    </div>
+                              
+                                    <div class="notifications__item__content">
+                                        <p style="color: teal;float: right;font-weight: 500;">$12</p>
+                                      <span class="notifications__item__title">Learn Html with sass and css</span>
+                                      <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                      
+                                    </div>
+                              
+                                    <div>
+                                      <div class="notifications__item__option archive js-option" style="">
+                                      </div>
+                                    </div>
+                                  </div>
+                              
+                                  <div class="notifications__item">
+                                    <div class="notifications__item__avatar">
+                                      <img src="{% static 'assets/img/courses/pc.jpg' %}" />
+                                    </div>
+                              
+                                    <div class="notifications__item__content">
+                                        <p style="color: teal;float: right;font-weight: 500;">$12</p>
+                                      <span class="notifications__item__title">Learn Html with sass and css</span>
+                                      <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                      
+                                    </div>
+                              
+                                    <div>
+                                      <div class="notifications__item__option archive js-option" style="">
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                </div>
+                              </div>
+
+
+                                <section>
+                                    <div class="store-sections sectionstore">
+                                    <div class="container ">
+                                        <div class="categories-header">
+                                            <h2>Quick Access</h2>
+                                        </div>
+                                        
+                                        <a class="button process-button" href="{%url 'index' %}" style="background-color: teal;color: white;">
+                                            Continue shopping &nbsp;<span class="fa fa-shopping-cart"></span>
+                                        </a>
+                        
+                                        <a class="button process-button" data-step="step-dot-2">
+                                            Go to Fav courses &nbsp;<span class="fa fa-heart"></span>
+                                        </a>
+                                                            
+                                    </div>
+                                    </div>   
+                                </section>
+                            </div>
+                            <div class="column is-4">
+                                <div class="cart-summary">
+                                    <div class="summary-header" style="margin-top: 25px;">
+                                        <h3>Summary</h3>
+                                    </div>
+                                    <!--card-->
+                                    <div class="summary-card">
+                                        <div class="order-line">
+                                            <span class="is-total">Original price</span>
+                                            <span class="is-total">201.92</span class="is-total">
+                                        </div>
+                                        <div class="order-line">
+                                            <span class="is-total"> price after discount</span>
+                                            <span class="is-total">201.92</span class="is-total">
+                                        </div>
+
+                                        <hr>
+                                        <div class="order-line">
+                                            <span class="is-total">Total</span>
+                                            <span class="is-total">201.92</span class="is-total">
+                                        </div>
+                                        <a href="#" class="button is-fullwidth primary-button is-raised"><p style="color: #FFF;">Make Payment</p></a>
+                                    </div>
+                                    <!--card-->
+                                    <div class="summary-card">
+                                        <img src="{% static 'assets/img/icons/questions/help.svg' %}" alt="">
+                                        <h4>Help center</h4>
+                                        <p>Having trouble? Please search our <a href="{%url 'support' %}" class="standard-link">Help Center</a> for a quick
+                                            answer to your problem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+
+     {% endblock %}
+
+
+    {% block js %}
+        <!-- Concatenated js plugins and jQuery -->
+        <script src="{% static 'assets/js/app.js' %}"></script>
+      
+        <!-- Components js -->
+        <script src="{% static 'assets/js/widgets.js' %}"></script>
+
+        <!-- Font Awesome -->
+        <script src="{% static 'assets/js/all.js' %}"></script>
+        
+        <!-- Core js -->
+        <script src="{% static 'assets/js/global.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        
+        <script src="{% static 'assets/js/profile.js' %}"></script>
+        <script src="{% static 'assets/js/explorer.js' %}"></script>
+        <script src="{% static 'assets/js/shop.js' %}"></script>
+        
+
+        <!-- jQuery -->
+        <script src="{% static 'assets/vendor/jquery.min.js' %}"></script>
+
+        <!-- Bootstrap -->
+        <script src="{% static 'assets/vendor/popper.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/bootstrap.min.js' %}"></script>
+    {% endblock %}
+
+</body>
+</html>

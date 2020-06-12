@@ -1,0 +1,458 @@
+{%extends 'base.html' %}
+{% load static %}
+
+   {% block title %}Booctep | Cart{% endblock %}
+
+   {% block content %}
+    <div class="products-navigation" style="display: none;">
+    </div>
+         
+
+    <!-- Cart content -->
+
+        <div class="view-wrapper" style="padding-top: 80px;">
+           <div class="container">
+            <div class="shop-wrapper">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <div class="header-inner">
+                            <div class="categories-header">
+                            </div>
+                            
+                            <div class="header-actions">
+                                <a href="#" class="button is-fullwidth primary-button is-raised"><p style="color: #fff;">Save for later</p></a>
+
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="cart-content">
+                        <div class="columns">
+                            <div class="column is-8">
+
+                                <div class="wrapper">
+                                    <div class="categories-header">
+                                        <h2>My orders</h2>
+                                    </div>
+                                    <div class="notifications">
+                                  
+                                        <div class="notifications__item">
+                                          <div class="notifications__item__avatar">
+                                            <img src="{%static 'assets/img/courses/fitness.jpg' %}" />
+                                          </div>
+                                    
+                                          <div class="notifications__item__content">
+                                              <p >$12</p>
+                                            <span class="notifications__item__title">Learn Html with sass and css</span>
+                                            <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                            
+                                          </div>
+                                    
+                                          <div>
+                                            <div class="notifications__item__option archive js-option">
+  
+                                              <p class="notifications__item__option-i"><i class="fas fa-trash" style="font-size: large;color: rgb(66, 87, 110) "></i></p>
+                                              <p class="notifications__item__option-i"><i class="fas fa-heart" style="font-size: large;color: red ;"></i></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                  
+                                  
+                                        <div class="notifications__item">
+                                            <div class="notifications__item__avatar">
+                                              <img src="{%static 'assets/img/courses/art.jpg' %}" />
+                                            </div>
+                                      
+                                            <div class="notifications__item__content">
+                                                <p >$12</p>
+                                              <span class="notifications__item__title">Learn Html with sass and css</span>
+                                              <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                              
+                                            </div>
+                                      
+                                            <div>
+                                              <div class="notifications__item__option archive js-option">
+    
+                                                <p class="notifications__item__option-i"><i class="fas fa-trash" style="font-size: large;color: rgb(66, 87, 110) "></i></p>
+                                                <p class="notifications__item__option-i"><i class="fas fa-heart" style="font-size: large;color: red ;"></i></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                  
+                                  
+                                          <div class="notifications__item">
+                                            <div class="notifications__item__avatar">
+                                              <img src="{%static 'assets/img/courses/pc.jpg' %}" />
+                                            </div>
+                                      
+                                            <div class="notifications__item__content">
+                                                <p >$12</p>
+                                              <span class="notifications__item__title">Learn Html with sass and css</span>
+                                              <span class="notifications__item__message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, in! Pariatur est dignissimos excepturi ipsum dolor fugiat quos...</span>
+                                              
+                                            </div>
+                                      
+                                            <div>
+                                              <div class="notifications__item__option archive js-option">
+    
+                                                <p class="notifications__item__option-i"><i class="fas fa-trash" style="font-size: large;color: rgb(66, 87, 110) "></i></p>
+                                                <p class="notifications__item__option-i"><i class="fas fa-heart" style="font-size: large;color: red ;"></i></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                            
+
+                                    </div>
+                                  </div>
+
+ 
+                                  
+                 
+
+                                  <section>
+                                    <div class="store-sections sectionstore">
+                                    <div class="container ">
+                                        <div class="categories-header">
+                                            <h2>Quick Access</h2>
+                                        </div>
+                                        
+                                        <a class="button process-button" href="{%url 'index' %}" style="background-color: teal;color: white;">
+                                            Continue shopping &nbsp;<span class="fa fa-shopping-cart"></span>
+                                        </a>
+                        
+                                        <a class="button process-button" href="{%url 'wishlist' %}">
+                                            Go to Fav courses &nbsp;<span class="fa fa-heart"></span>
+                                        </a>
+                                                            
+                                    </div>
+                                    </div>   
+                                </section>
+
+
+
+
+                                <section>
+                                    <div class="store-sections sectionstore">
+                                    <div class="container ">
+                                        <div class="categories-header">
+                                            <h2>Smilar courses</h2>
+                                        </div>
+                                        
+                                                    <!--Products-->
+                                                    <div id="products-tab" class="store-tab-pane is-active">
+                                                        <div class="columns is-multiline">
+                                                            <!-- /partials/commerce/products/products-list.html -->
+                                                               <!--Product-->
+                                                               <div class="column is-one-fifth-fullhd is-one-third-widescreen is-one-third-desktop is-one-third-tablet is-half-mobile" >
+                                                                
+                    <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
+                       
+                        <a href="{%url 'single_course' %}" class="product-image"> 
+
+                            <div class="image-grid-wrap">
+                                <div class="image-grid">
+                            
+                                    <!--Grid Row-->
+                                    <div class="image-row">
+                                        <!--Photo-->
+                                        <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/fitness.jpg' %}"
+                                            data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
+                                            <div class="overlay"></div>
+                                            <div class="image-owner">
+                                                <div class="name">                
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                  <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                </div>
+                                            </div>
+                                            <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                <a href="#" class="inner">
+                                                    <i class="inactive-icon" data-feather="heart"></i>
+                                                </a>
+                                            </div>
+                                            <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                            </a>
+                            
+                                        </div>
+                
+                                    </div>
+                                </div>    
+                        </div>   
+                        
+                    </a>
+
+                        <div class="product-info">
+                            
+                            <h3>
+                                <a href="#">Spring Red Dress</a>
+                            </h3>
+                            <p>A beautiful dress for you best evenings and important dates...</p>
+
+                            
+                            <i class="fa fa-users"></i>
+                            <span style="font-size: small;">147,122 &nbsp;</span>
+                            <i class="fa fa-video"></i>
+                            <span style="font-size: small;">127 Videos</span>
+                            <div class="product-actions">
+                                <div class="left">
+                                    <del>$12</del>
+                                    <span >Free</span>
+                                </div>
+                                <div class="right"> 
+                                    <a class="button primary-button is-solid raised " data-modal="videos-modal">
+                                        <i class="fa fa-play"></i>
+                                       Promo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                                </div>
+                                                               <!--Product-->
+                                                               <div class="column is-one-fifth-fullhd is-one-third-widescreen is-one-third-desktop is-one-third-tablet is-half-mobile" >
+                                                                
+                    <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
+                       
+                        <a href="{%url 'single_course' %}" class="product-image"> 
+
+                            <div class="image-grid-wrap">
+                                <div class="image-grid">
+                            
+                                    <!--Grid Row-->
+                                    <div class="image-row">
+                                        <!--Photo-->
+                                        <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/art.jpg' %}"
+                                            data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
+                                            <div class="overlay"></div>
+                                            <div class="image-owner">
+                                                <div class="name">                
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                  <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                  <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                </div>
+                                            </div>
+                                            <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                <a href="#" class="inner">
+                                                    <i class="inactive-icon" data-feather="heart"></i>
+                                                </a>
+                                            </div>
+                                            <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                            </a>
+                            
+                                        </div>
+                
+                                    </div>
+                                </div>    
+                        </div>   
+                        
+                    </a>
+
+                        <div class="product-info">
+                            
+                            <h3>
+                                <a href="#">Spring Red Dress</a>
+                            </h3>
+                            <p>A beautiful dress for you best evenings and important dates...</p>
+
+                            
+                            <i class="fa fa-users"></i>
+                            <span style="font-size: small;">147,122 &nbsp;</span>
+                            <i class="fa fa-video"></i>
+                            <span style="font-size: small;">127 Videos</span>
+                            <div class="product-actions">
+                                <div class="left">
+                                    <del>$12</del>
+                                    <span >Free</span>
+                                </div>
+                                <div class="right"> 
+                                    <a class="button primary-button is-solid raised " data-modal="videos-modal">
+                                        <i class="fa fa-play"></i>
+                                       Promo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                                                                </div>
+                                                                <!--Product-->
+                                                                <div class="column is-one-fifth-fullhd is-one-third-widescreen is-one-third-desktop is-one-third-tablet is-half-mobile" >
+                                                                 
+                     <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{%static 'assets/img/products/1' %}">
+                        
+                         <a href="{%url 'single_course' %}" class="product-image"> 
+
+                             <div class="image-grid-wrap">
+                                 <div class="image-grid">
+                             
+                                     <!--Grid Row-->
+                                     <div class="image-row">
+                                         <!--Photo-->
+                                         <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                             data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
+                                             <div class="overlay"></div>
+                                             <div class="image-owner">
+                                                 <div class="name">                
+                                                   <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                   <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                   <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                   <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                   <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                   <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                 </div>
+                                             </div>
+                                             <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                 <a href="#" class="inner">
+                                                     <i class="inactive-icon" data-feather="heart"></i>
+                                                 </a>
+                                             </div>
+                                             <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                 <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                             </a>
+                             
+                                         </div>
+                 
+                                     </div>
+                                 </div>    
+                         </div>   
+                         
+                     </a>
+
+                         <div class="product-info">
+                             
+                             <h3>
+                                 <a href="#">Spring Red Dress</a>
+                             </h3>
+                             <p>A beautiful dress for you best evenings and important dates...</p>
+
+                             
+                             <i class="fa fa-users"></i>
+                             <span style="font-size: small;">147,122 &nbsp;</span>
+                             <i class="fa fa-video"></i>
+                             <span style="font-size: small;">127 Videos</span>
+                             <div class="product-actions">
+                                 <div class="left">
+                                     <del>$12</del>
+                                     <span >Free</span>
+                                 </div>
+                                 <div class="right"> 
+                                     <a class="button primary-button is-solid raised " data-modal="videos-modal">
+                                         <i class="fa fa-play"></i>
+                                        Promo
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     
+                                                                 </div>
+                                                            <!--Product-->
+                                                            </div>
+                                                            </div>
+                                                            </div>
+                                    </div>   
+                                </section>
+            
+
+
+                            </div>
+                            <div class="column is-4">
+                                <div class="cart-summary">
+                                    <div class="summary-header">
+                                        <h3>Order Summary</h3>
+                                    </div>
+                                    <!--card-->
+                                    <div class="summary-card">
+                                        <div class="order-line">
+                                            <span>Subtotal</span>
+                                            <span>193.00</span>
+                                        </div>
+                                        <div class="order-line">
+                                            <span>Shipping</span>
+                                            <span class="is-text">Not calculated</span>
+                                        </div>
+                                        <div class="order-line">
+                                            <span>Taxes</span>
+                                            <span>8.92</span>
+                                        </div>
+                                        <div class="order-line">
+                                            <span>Promo code?</span>
+                                            <br>
+                                            
+                                        </div>
+
+                                        <div class="order-line"> 
+                                        <div class="field">
+                                            <div class="control has-validation ">
+                                                <input type="text" class="input " placeholder="write your code here" style="width: 300px;" />
+                                                <div class="error-icon">
+                                                    <i data-feather="x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <hr>
+                                        <div class="order-line">
+                                            <span class="is-total">Total</span>
+                                            <span class="is-total">201.92</span class="is-total">
+                                        </div>
+                                        <a href="{%url 'checkout' %}" class="button is-fullwidth primary-button is-raised"><p style="color: #fff;">Checkout</p></a>
+                                    </div>
+                                    <!--card-->
+                                    <div class="summary-card">
+                                        <img src="{%static 'assets/img/icons/questions/help.svg' %}" alt="">
+                                        <h4>Help center</h4>
+                                        <p>Having trouble? Please search our <a href="{%url 'support' %}" class="standard-link">Help Center</a> for a quick
+                                            answer to your problem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <!-- Cart content -->
+    
+    {% endblock %}
+
+
+    {% block js %}
+        <script src="{%static 'assets/js/delete-cart-items.js' %}"></script>
+
+        <!-- Concatenated js plugins and jQuery -->
+        <script src="{%static 'assets/js/app.js' %}"></script>
+
+        <!-- Components js -->
+        <script src="{%static 'assets/js/widgets.js' %}"></script>
+
+        <!-- Font Awesome -->
+        <script src="{%static 'assets/js/all.js' %}"></script>
+        
+        <!-- Core js -->
+        <script src="{%static 'assets/js/global.js' %}"></script>
+        <script src="{%static 'assets/js/main.js' %}"></script>
+        
+        <script src="{%static 'assets/js/profile.js' %}"></script>
+        <script src="{%static 'assets/js/explorer.js' %}"></script>
+        <script src="{%static 'assets/js/shop.js' %}"></script>
+        
+
+        <!-- jQuery -->
+        <script src="{%static 'assets/vendor/jquery.min.js' %}"></script>
+
+        <!-- Bootstrap -->
+        <script src="{%static 'assets/vendor/popper.min.js' %}"></script>
+        <script src="{%static 'assets/vendor/bootstrap.min.js' %}"></script>
+    {% endblock %}

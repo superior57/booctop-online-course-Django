@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Booctep | Page Not Found {% endblock %}
+
+{% block content %}
+    <div class="products-navigation" style="display: none;"></div>
+                    
+    <!-- 404 page -->       
+    <div class="container">
+        <div class="c404">
+            <img src="{% static 'assets/img/404.svg' %}" alt="">
+            <h2>Opps!, No Page Found '404', Be More specific..</h2>
+            <input id="tipue_drop_input" class="input c404-input" type="text" placeholder="Search" required>
+            <h3>
+                <a href="{%url 'index' %}" class="button">Search  &nbsp;<span class="fa fa-search"></span></a>
+            </h3>
+        </div>
+    </div>    
+    <!-- 404 page -->
+{% endblock %}
+                
+{% block js %}
+    <script src="{% static 'assets/js/writter.js' %}"></script>
+
+    <!-- Concatenated js plugins and jQuery -->
+    <script src="{% static 'assets/js/app.js' %}"></script>
+    
+    <!-- Font Awesome -->
+    <script src="{% static 'assets/js/all.js' %}"></script>
+    
+    <!-- Core js -->
+    <script src="{% static 'assets/js/global.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+    <script src="{% static 'assets/js/profile.js' %}"></script>
+    <script src="{% static 'assets/js/explorer.js' %}"></script>
+    <script src="{% static 'assets/js/shop.js' %}"></script>
+                
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+{% endblock %}

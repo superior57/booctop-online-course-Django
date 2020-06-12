@@ -2,59 +2,6 @@
 {% load static %}
 
   {% block title %} Booctep | Become a teacher {% endblock %}
-
-  {% block navbar %}
-    <!-- Main Navbar -->
-    <div id="main-navbar" class="navbar is-inline-flex no-shadow is-hidden-mobile">
-        <div class="container ">
-            <div class="navbar-brand">
-                <a href="{%url 'index' %}" class="navbar-item logo">
-                   <img src="{%static 'assets/img/logo/booctep-tran.png' %}" alt=""  />
-                </a>
-            </div>
-             
-
-            
-            <div id="navbarBasicExample" class="navbar-menu">
-
-              
-                  <div class="navbar-end">
-
-                    <div class="navbar-item"> 
-                        <a href="{%url 'become_teacher' %}" class="button-become-a-teacher button is-light" data-lang="about">Become a teacher</a>
-                   </div>
-
-
-                    <label class="animated-toggle">
-                        <input type="checkbox">
-                        <span class="toggler">
-                            <span class="dark">
-                                <i data-feather="moon"></i>
-                            </span>
-                            <span class="light">
-                                <i data-feather="sun"></i>
-                            </span>
-                        </span>
-                    </label>
-                        
-                 
-
-                        <div class="navbar-item">
-                          <div class="buttons">
-                            <a href="{%url 'user_signup' %}" class="button second-button">
-                              <p>Sign up</p>
-                            </a>
-                            <a class="button primary-button raised quickview-trigger process-button">
-                              <p>Log in</p>
-                            </a>
-                          </div>
-                        </div>
-                  </div>
-            </div>
-        </div>
-    </div>        
-    <!-- Main Navbar -->
-  {% endblock %}
     
   {% block content %}
     <div class="products-navigation" style="display: none;">
@@ -90,7 +37,7 @@
              
                         <h2 class="booctep-h2">Teach what you learn and earn money now, see this step for how to be a teacher than sign as a teacher.</h2>
             
-                        <a href="signup.html" class="button is-light">Become a teacher</a>
+                        <a href="{%url 'user_signup' %}" class="button is-light">Become a teacher</a>
                     
                     </div>
                    
@@ -225,6 +172,7 @@
       <!-- Core js -->
       <script src="{%static 'assets/js/global.js' %}"></script>
       <script src="{%static 'assets/js/main.js' %}"></script>
+      <script src="{%static 'assets/js/explorer.js' %}"></script>
       
       <script src="{%static 'assets/js/videos.js' %}"></script>
       <script src="{%static 'assets/js/shop.js' %}"></script>
