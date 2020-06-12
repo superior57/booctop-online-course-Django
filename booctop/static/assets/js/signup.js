@@ -88,16 +88,18 @@ $(document).ready(function () {
           width: 256,
           height: 256
         }); // Turn the canvas into a Blob (file object without a name)
-
+        console.log("file = ",file)
+        uploadImg = file
         canvas.toBlob(function (blob) {
           // Create a new Dropzone file thumbnail
+          console.log("myDropzone.options - ",myDropzone.options)
           myDropzone.createThumbnail(blob, myDropzone.options.thumbnailWidth, myDropzone.options.thumbnailHeight, myDropzone.options.thumbnailMethod, false, function (dataURL) {
             // Update the Dropzone file thumbnail
             myDropzone.emit('thumbnail', file, dataURL); // Return the file to Dropzone
-
+            
             done(blob); //console.log(blob);
             //Display image preview
-
+            blobImg=blob
             var previewReader = new FileReader();
 
             previewReader.onload = function (event) {

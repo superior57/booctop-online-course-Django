@@ -1,6 +1,6 @@
 # from __future__ import unicode_literals
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import Group, AbstractBaseUser, BaseUserManager
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 
@@ -38,8 +38,8 @@ class User(AbstractBaseUser):
     first_name = models.CharField(max_length=75)
     last_name = models.CharField(max_length=75, null=True, blank=True)
     phone_number = models.CharField(max_length=15, null=True, blank=True)
-    image = models.CharField(max_length=400, null=True, blank=True)
-
+    image = models.TextField(null=True, blank=True)
+    group = models.ForeignKey(Group, on_delete=models.DO_NOTHING)
     USERNAME_FIELD ="email"
 
     objects = UserManager()
@@ -55,5 +55,9 @@ class user_activation(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
+# class user_groups(models.Model):
+#     id = models.AutoField(primary_key=True)
+#     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+#     group = models.ForeignKey(Group, on_delete=models.DO_NOTHING)
 
 
