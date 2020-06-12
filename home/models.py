@@ -4,9 +4,7 @@ from django.contrib.auth.models import Group, AbstractBaseUser, BaseUserManager,
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
-# from django.contrib.auth import get_user_model
-# test=get_user_model()
-# print("JJJJJJJJ = ",test)
+
 
 class UserManager(BaseUserManager):
 
@@ -51,7 +49,11 @@ class User(AbstractBaseUser):
         verbose_name = _("User")
         verbose_name_plural = _("Users")
     
-    
+    def has_perm(self, perm, obj=None): 
+        return self.is_superuser
+
+    def has_module_perms(self, app_label): 
+        return self.is_superuser
 
 
 
@@ -61,6 +63,7 @@ class user_activation(models.Model):
     code = models.CharField(max_length=70)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
 
 
 
