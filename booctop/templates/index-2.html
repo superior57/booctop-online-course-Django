@@ -8,7 +8,12 @@
                 <div class="container">
 
                     <h2>Welcome Back Elzubair Mohammed,</h2>
-                    <a href="/courses"><strong>My courses</strong></a>
+                    {% if user.group_id == 3 %}
+                        <a href="/teacher/courses"><strong>My courses</strong></a>
+                    {% else %}
+                        <a href="/courses"><strong>My courses</strong></a>
+                    {% endif %}
+                    
                     <p>Continue learning now..</p>
                     <div id="slider" class="slider">
                         <div class="wrapper-1">

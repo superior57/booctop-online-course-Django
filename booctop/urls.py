@@ -19,7 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from home.views import saveimg, home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user, activation, ajaxlogin, logout_, check_email
 from student.views import account, courses, options_settings, security, payments, privacy, quizes, quizes2, certificates, PurchaseHistory, messages, notifications
-from teacher.views import teacher_account, teacher_security, teacher_payments, teacher_messages, teacher_faqs, teacher_help, course_engagement, student_performance, dashboard, dashboard1, guideline, help2, newcourse2, newcourse3, newcourse4, newcourse5, newcourse, nocourseengagement, nocourse
+from teacher.views import teacher_account, teacher_privacy, teacher_notifications, teacher_courses, teacher_security, teacher_payments, teacher_messages, teacher_faqs, teacher_help, course_engagement, student_performance, dashboard, dashboard1, guideline, help2, newcourse2, newcourse3, newcourse4, newcourse5, newcourse, nocourseengagement, nocourse
+from video.views import playground, video_quiz, video_quiz2, video_quiz3
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
@@ -56,7 +59,10 @@ urlpatterns = [
     #Teacher Urls  
     path('teacher/account', teacher_account, name='teacher dashboard'),
     path('teacher/security', teacher_security, name='teacher security'),
+    path('teacher/courses', teacher_courses, name='teacher courses'),
     path('teacher/payments', teacher_payments, name='teacher payments'),
+    path('teacher/privacy', teacher_privacy, name='teacher privacy'),
+    path('teacher/notifications', teacher_notifications, name='teacher notifications'),
     path('course-engagement', course_engagement, name='teacher course-engagement'),
     path('student-performance', student_performance, name='teacher student-performance'),
     path('teacher/messages', teacher_messages, name='teacher messages'),
@@ -74,6 +80,14 @@ urlpatterns = [
     path('new-course', newcourse, name='teacher new-course'),
     path('no-course-engagement', nocourseengagement, name='teacher no-course-engagement'),
     path('no-course', nocourse, name='teacher no-course'),
+
+    #Video url
+    path('video/playground', playground, name='video playground'),
+    path('video/quiz', video_quiz, name='video quiz'),
+    path('video/quiz2', video_quiz2, name='teacher quiz2'),
+    path('video/quiz3', video_quiz3, name='teacher quiz3'),
+
+
 
 
     

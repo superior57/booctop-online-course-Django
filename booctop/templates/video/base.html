@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Messages</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'video/assets/vendor/perfect-scrollbar.css'%}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'video/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'video/assets/css/material-icons.css' %}" rel="stylesheet">
+
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'video/assets/css/fontawesome.css' %}" rel="stylesheet">
+
+
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'video/assets/css/preloader.css' %}" rel="stylesheet">
+
+
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'video/assets/css/app.css' %}" rel="stylesheet">
+
+
+
+    <!-- Toastr -->
+    <link type="text/css" href="{% static 'video/assets/vendor/toastr.min.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'video/assets/css/toastr.css' %}" rel="stylesheet">
+
+
+    <!-- Dragula -->
+    <link type="text/css" href="{% static 'video/assets/vendor/dragula/dragula.min.css' %}" rel="stylesheet">
+
+
+   <!-- Video Player And jQuery -->
+   <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+   <script src="https://cdn.plyr.io/3.5.10/plyr.js"></script>
+   <script src="https://cdn.plyr.io/3.5.10/plyr.polyfilled.js"></script>
+   <!-- Video Player And jQuery -->
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{% static 'video/assets/css/sweetalert.css' %}">
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="layout-mini app-messages">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <!-- // END Header -->
+
+
+
+            {% block content %}
+            
+            {% endblock %}
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+
+
+
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- jQuery -->
+    <script src="{% static 'video/assets/vendor/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'video/assets/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'video/assets/vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="{% static 'video/assets/vendor/perfect-scrollbar.min.js' %}"></script>
+
+    <!-- DOM Factory -->
+    <script src="{% static 'video/assets/vendor/dom-factory.js' %}"></script>
+
+    <!-- MDK -->
+    <script src="{% static 'video/assets/vendor/material-design-kit.js' %}"></script>
+
+    <!-- Fix Footer -->
+    <script src="{% static 'video/assets/vendor/fix-footer.js' %}"></script>
+
+    <!-- App JS -->
+    <script src="{% static 'video/assets/js/app.js' %}"></script>
+
+
+
+    <script id="template-message" type="text/x-jsrender">
+        <li class="message d-inline-flex">
+    <div class="message__aside">
+      <a href="mini-profile.html" class="avatar avatar-sm">
+        <img src="" alt="people" class="avatar-img rounded-circle">
+      </a>
+    </div>
+    <div class="message__body card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex mr-3">
+            <a href="mini-profile.html" class="text-body"><strong>name</strong></a>
+          </div>
+          <div>
+            <small class="text-muted">date</small>
+          </div>
+        </div>
+        <span class="text-black-70">message</span>
+{#        {{if file}}#}
+        <a href="#" class="media align-items-center mt-2 text-decoration-0 bg-white px-3">
+          <span class="avatar mr-2">
+            <span class="avatar-title rounded-circle">
+              <i class="material-icons font-size-24pt">attach_file</i>
+            </span>
+          </span>
+          <span class="media-body" style="line-height: 1.5">
+            <span class="text-primary">file name</span><br>
+            <span class="text-muted">file size</span>
+          </span>
+        </a>
+{#        {{/if}}#}
+      </div>
+    </div>
+  </li>
+</script>
+
+
+
+
+       <!-- Global Settings -->
+       <script src="{% static 'video/assets/js/settings.js' %}"></script>
+
+           <!-- Sweet Alert -->
+       <script src="{% static 'video/assets/vendor/sweetalert.min.js' %}"></script>
+       <script src="{% static 'video/assets/js/sweetalert.js' %}"></script>
+
+       <!-- Highlight.js -->
+       <script src="{% static 'video/assets/js/hljs.js' %}"></script>
+
+       <!-- Moment.js -->
+    <script src="{% static 'video/assets/vendor/moment.min.js' %}"></script>
+    <script src="{% static 'video/assets/vendor/moment-range.min.js' %}"></script>
+
+    <!-- Flatpickr -->
+    <script src="{% static 'video/assets/vendor/flatpickr/flatpickr.min.js' %}"></script>
+    <script src="{% static 'video/assets/js/flatpickr.js' %}"></script>
+
+    <!-- Chart.js -->
+    <script src="{% static 'video/assets/vendor/Chart.min.js' %}"></script>
+    <script src="{% static 'video/assets/js/chartjs.js' %}"></script>
+
+    <!-- Chart.js Samples -->
+    <script src="{% static 'video/assets/js/page.hr-dashboard.js' %}"></script>
+
+    <!-- List.js -->
+    <script src="{% static 'video/assets/vendor/list.min.js' %}"></script>
+    <script src="{% static 'video/assets/js/list.js' %}"></script>
+
+
+    <!-- Sidebar Mini JS -->
+    <script src="{% static 'video/assets/js/sidebar-mini.js' %}"></script>
+
+    <script>
+
+        const player = new Plyr('#player');
+
+
+    </script>
+
+</body>
+
+</html>

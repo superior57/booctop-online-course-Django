@@ -5,12 +5,21 @@ def teacher_account(request):
 
 def teacher_security(request):
     return render(request, 'teacher/security.html', {})
+
+def teacher_notifications(request):
+    return render(request, 'teacher/notifications.html', {})
     
 def teacher_payments(request):
     return render(request, 'teacher/payments.html', {})
 
+def teacher_privacy(request):
+    return render(request, 'teacher/privacy.html', {})
+
 def dashboard(request):
     return render(request, 'teacher/dashboard.html', {}) 
+
+def teacher_courses(request):
+    return render(request, 'teacher/courses.html', {}) 
 
 def teacher_faqs(request):
     return render(request, 'teacher/faqs.html', {}) 

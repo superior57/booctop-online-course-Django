@@ -1,84 +1,35 @@
 {% extends "student/base.html" %}
+
+{% block headercontent %}
+    {% load static %}
+    <!-- Navbar toggler -->
+    <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+        <span class="material-icons">short_text</span>
+    </button>
+
+    <!-- Navbar Brand -->
+    <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+        <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+            <span class="avatar-title rounded bg-primary"><img src="{%static 'student/assets/images/illustration/student/128/white.svg' %}" alt="logo" class="img-fluid" /></span>
+
+        </span>
+
+        <span class="d-none d-lg-block">Luma</span>
+    </a>
+
+
+
+
+
+
+
+    <h4 style="margin-top:15px;margin-left:5px">My Quizes</h4>
+{%  endblock %}
+
 {% block content %}
     {% load static %}
-
-
-            <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-                <!-- Navbar toggler -->
-                <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-                    <span class="material-icons">short_text</span>
-                </button>
-
-                <!-- Navbar Brand -->
-                <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
-
-                    <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-
-                        <span class="avatar-title rounded bg-primary"><img src="{%static 'student/assets/images/illustration/student/128/white.svg' %}" alt="logo" class="img-fluid" /></span>
-
-                    </span>
-
-                    <span class="d-none d-lg-block">Luma</span>
-                </a>
-
-
-
-
-
-
-
-            <h4 style="margin-top:15px;margin-left:5px">My Quizes</h4>
-
-
-
-
-
-            <a href="../../teacher.0/dist/dashboard.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Teacher
-                
-                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
-    </b></a>
-
-
- 
-
-
-    <div class="flex"></div>
-
-
-
-
-
-    <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
-
-
-
-        
-
-
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-
-                <span class="avatar avatar-sm mr-8pt2">
-
-                    <span class="avatar-title rounded-circle" style="background-color: gray;">
-                        <img src="/static/{{user.image}}" alt="" style="border-radius: 50%;">
-                    </span>
-
-                </span>
-
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
-                <a class="dropdown-item" href="courses.html">My courses</a>
-                <a class="dropdown-item" href="quizes.html">My quizes</a>
-                <a class="dropdown-item" style="color: red;" href="#">Logout</a>
-            </div>
-        </div>
-    </div>
-            </div>
-
-
-
             <div class="filter-head">
                 <div class="card-header card-header-2 card-header-tabs-basic nav px-0 mb-3" role="tablist">
                     <a href="/quizes" class="active" data-toggle="tab" role="tab" aria-selected="true">All Quizes</a>

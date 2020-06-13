@@ -42,7 +42,8 @@
    <link type="text/css" href="{%static 'teacher/assets/css/flatpickr.css' %}" rel="stylesheet">
 
    <link type="text/css" href="{%static 'teacher/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
-
+   {% block head %}
+   {% endblock %}
 
   <style>
 
@@ -410,6 +411,61 @@
         <div class="mdk-drawer-layout__content page-content">
 
             <!-- Header -->
+
+            <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+                
+                {% block headercontent %}
+
+                {% endblock %}
+
+
+
+
+
+               
+
+
+
+                <a href="../../student.0/dist/courses.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Student
+                
+                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
+                </b></a>
+    
+             
+
+
+                <div class="flex"></div>
+
+
+ 
+
+
+                    
+
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+            
+                            <span class="avatar avatar-sm mr-8pt2">
+            
+                                <span class="avatar-title rounded-circle" style="background-color: gray;">
+                                    <img src="/static/{{user.image}}" alt="" style="border-radius: 50%;">
+                                </span>
+            
+                            </span>
+            
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>{{user.first_name}} {{user.last_name}}</strong></div>
+                            <a class="dropdown-item" href="/">Back to Booctep</a>
+                            <a class="dropdown-item" href="/teacher/dashboard">dashboard</a>
+                            <a class="dropdown-item" href="/teacher/courses">My courses</a>
+                            <a class="dropdown-item" href="/teacher/messages">Messages</a>
+                            <a class="dropdown-item" href="/teacher/notifications">Notifications</a>
+                            <a class="dropdown-item" style="color: red;" href="/logout">Logout</a>
+                        </div>
+                    </div>
+            </div>
             {% block content %}
 
             {%  endblock %}
@@ -705,13 +761,13 @@
 
 
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="teacher/dashboard">
+                                    <a class="sidebar-menu-button" href="/teacher/dashboard">
                                         <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">home</span>
                                         <span class="sidebar-menu-text">Teacher Dashboard</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="/courses">
+                                    <a class="sidebar-menu-button" href="/teacher/courses">
                                         <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">dvr</span>
                                         <span class="sidebar-menu-text">Courses </span>
                                     </a>
@@ -914,7 +970,7 @@
                                     </a>
                                 </li>
                                 <li class="sidebar-menu-item">
-                                    <a class="sidebar-menu-button" href="/notifications">
+                                    <a class="sidebar-menu-button" href="/teacher/notifications">
                                         <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">notifications_none</span>
                                         <span class="sidebar-menu-text">Notifications</span>
                                     </a>
@@ -1331,6 +1387,9 @@
 
     <!-- Sidebar Mini JS -->
     <script src="{%static 'teacher/assets/js/sidebar-mini.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+
     <script>
         (function() {
             'use strict';

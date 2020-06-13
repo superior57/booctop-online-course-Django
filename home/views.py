@@ -142,7 +142,6 @@ def register_user(request):
             group = Group.objects.get(id=group_id)
             objUser.group = group
             objUser.save()
-
             objUA = user_activation()
             objUA.user = objUser
             objUA.code = str(uuid.uuid4())
