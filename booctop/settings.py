@@ -37,13 +37,15 @@ EMAIL_PORT = 587
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
     'django.contrib.admin',
+    # 'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home',
+    # 'home',
 ]
 
 MIDDLEWARE = [

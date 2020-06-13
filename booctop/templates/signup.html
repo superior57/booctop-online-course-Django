@@ -53,14 +53,14 @@
                             <h2 id="step-title-4" class="step-title" style="font-size: 25px;">Secure your account.</h2>
                             <h2 id="step-title-5" class="step-title" style="font-size: 25px;">we sent you an email to activate your account.</h2>
                         </div>
-                        
+                        <input type="hidden" id="type" name="type" />
                         <div id="signup-panel-1" class="process-panel-wrap is-active">
                             <div class="columns">
                                 <div class="column is-3 is-offset-3">
                                     <div class="account-type">
                                         <img src="{%static 'assets/img/student.svg' %}" style="width: 142px; height:auto;" alt="">
                                         <h3>Student </h3>
-                                        <a class="button is-fullwidth process-button" data-step="step-dot-2">
+                                        <a class="button is-fullwidth process-button" onclick="setUerType('student')" data-step="step-dot-2">
                                             Continue
                                         </a>
                                     </div>
@@ -69,7 +69,7 @@
                                     <div class="account-type">
                                         <img src="{%static 'assets/img/teach.svg'%}" alt="">
                                         <h3>Teacher </h3>
-                                        <a class="button is-fullwidth process-button" data-step="step-dot-2">
+                                        <a class="button is-fullwidth process-button" onclick="setUerType('teacher')" data-step="step-dot-2">
                                             Continue
                                         </a>
                                     </div>
@@ -139,7 +139,7 @@
                                             <i data-feather="plus"></i>
                                         </a>
                                         <img id="upload-preview" src="https://via.placeholder.com/150x150"
-                                            data-demo-src="assets2/images/avatars/avatar-w.png" alt="">
+                                            data-demo-src="{% static 'assets2/images/avatars/avatar-w.png' %}" alt="">
                                         <form id="profile-pic-dz" class="dropzone is-hidden" action="/"></form>
                                     </div>
                                     <div class="limitation">
@@ -178,7 +178,7 @@
                         
                             <div class="buttons">
                                 <a class="button process-button" data-step="step-dot-3">Back</a>
-                                <a class="button process-button is-next" onclick="return signup()" >Next</a>
+                                <a class="button is-next" id="registernext" onclick="return signup()" >Next</a>
                             </div>
                         </div>
                         
@@ -198,7 +198,7 @@
                 <div id="crop-modal" class="modal mdl-modal is-small crop-modal is-animated">
                     <div class="modal-background"></div>
                     <div class="modal-content">
-                        <div class="modal-card">
+                        <div class="modal-card" style="width: 100%;">
                             <header class="modal-card-head">
                                 <div class="modal-card-title">
                                     <span>Crop your picture</span>
@@ -440,13 +440,20 @@
     {% block script %}
         <!-- Page and UI related js -->
         <script>
+            var blobImg='';
+            var uploadImg='';
+            function setUerType(type){
+                $("#type").val(type);
+            }
+
+            
+
             function isEmail(email) {
                 var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                 return regex.test(email);
                 }
             function Validate(){
-                console.log($("#email").val());
-                console.log(isEmail($("#email").val()));
+                
                 $("#div_error").html("");
                 if($("#first_name").val()==""){
                     $("#div_error").html("Please enter the first name");
@@ -499,20 +506,14 @@
                 
                 
             }
-            // function signup(){
-            //     alert("SSSSS");
-            //     console.log($("#first_name").val())
-            //     console.log($("#last_name").val())
-            //     console.log($("#email").val())
-            //     console.log($("#password").val())
-            //     console.log($("#confirm_password").val())
-            //     console.log($("#phone_number").val())
-            //     return false
-            // }
+            
             function signup() {
+                
+                    $('#registernext').addClass(' is-loading');
+                    $('#registernext').removeClass(' is-loading');
                 $("#div_error").html("");
-                if($("#password").val().length >6){
-                    $("#div_error").html("password greater than 7");
+                if($("#password").val().trim().length < 6){
+                    $("#div_error").html("Password must be greater than 5 digit");
                     return false
                 }
                 if($("#password").val()==""){
@@ -529,31 +530,51 @@
                     return false
                 }
                 
+                $('#registernext').addClass(' is-loading');
+                var formData = new FormData();
                 
+                formData.append('file', uploadImg);
+                formData.append('first_name', $("#first_name").val());
+                formData.append('last_name', $("#last_name").val());
+                formData.append('email', $("#email").val());
+                formData.append('password', $("#password").val());
+                formData.append('phone_number', $("#phone_number").val());
+                formData.append('type', $("#type").val());
+                console.log($("#first_name").val())
+                $('#registernext').addClass(' is-loading');
                 // Ajax start
                         var action = "/register-user";
                         $.ajax({
                             url: action,
                             type: 'POST',
                             dataType: 'json',
+                            async: false,
+                            contentType: false,
+                            processData: false,
                             // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
-                            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-                            data: {
-                                first_name: $("#first_name").val(),
-                                last_name: $("#last_name").val(),
-                                email: $("#email").val(),
-                                password: $("#password").val(),
-                                phone_number: $("#phone_number").val()
-                            },
+                            // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                            data: formData,
 
                             beforeSend: function () {
-
-                                console.log("Beforesend")
+                                
                             },
                             success: function (data) {
-                                console.log(data)
-                                $('#step-dot-5').trigger('click');
-                                return false
+                                console.log('sucess---',data.msg)
+                                if(data.msg == "success"){
+                                    $('#registernext').removeClass(' is-loading');
+                                    $('#step-dot-5').trigger('click');
+                                    return false
+                                    
+                                }else if(data.msg == 'already'){
+                                    
+                                    $("#div_error").html("Email is already exist.");
+                                    return false;
+                                }
+                                else{
+                                    // $("#div_error").html("Some error occur. please contact with admin.");
+                                    return false;
+                                }
+                                
                             },
                             error: function (err) {
                                 return false

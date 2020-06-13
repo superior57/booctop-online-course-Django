@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from home.models import User, user_activation
+
 import json
 import os, sys
 import traceback
@@ -7,9 +8,15 @@ import uuid
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import EmailMultiAlternatives
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import Group
+from django.conf import settings
+import os
 
+from django.core.wsgi import get_wsgi_application
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'booctop.settings'
+application = get_wsgi_application()
 def home_view(request):
-    print("request = ",request.user.id)
     if request.user.id == None:
         return render(request, 'index.html', {})
     else:
@@ -48,10 +55,8 @@ def check_email(request):
     try:
         
         email = request.POST.get('email')
-        print ('email ===', email)
         
         lstUsers = User.objects.filter(email=email)
-        print ("len(lstUsers) =",len(lstUsers))
         if len(lstUsers) > 0:
             msg = 'already'
         else:
@@ -63,7 +68,35 @@ def check_email(request):
     except:
         tb = sys.exc_info()[2]
         tbinfo = traceback.format_tb(tb)[0]
-        msg = tbinfo + "\n" + str(sys.exc_type) + ": " + str(sys.exc_info())
+        msg = tbinfo + "\n"  + ": " + str(sys.exc_info())
+    
+    #
+    to_return = {'msg': msg}
+    serialized = json.dumps(to_return)
+    return HttpResponse(serialized, content_type="application/json")
+
+def saveimg(request):
+    msg = ''
+    try:
+        myfile = request.FILES['file']
+        filename = myfile._get_name()
+
+        ext = filename[filename.rfind('.'):]
+        file_name = str(uuid.uuid4())+ext
+        path = '/user_images/'
+        full_path= str(path) + str(file_name)
+        fd = open('%s/%s' % (settings.STATICFILES_DIRS[0],str(path) + str(file_name)), 'wb')
+        for chunk in myfile.chunks():
+            fd.write(chunk)
+        fd.close()
+        msg = 'success'
+            
+
+
+    except:
+        tb = sys.exc_info()[2]
+        tbinfo = traceback.format_tb(tb)[0]
+        msg = tbinfo + "\n"  + ": " + str(sys.exc_info())
     
     #
     to_return = {'msg': msg}
@@ -75,35 +108,52 @@ def register_user(request):
     msg = ''
     try:
         firstname = request.POST.get('first_name')
-        print ('firstname ===',firstname)
         lastname = request.POST.get('last_name')
-        print ('lastname ===', lastname)
         email = request.POST.get('email')
-        print ('email ===', email)
         password = request.POST.get('password')
-        print ('password ===', password)
         phone_number = request.POST.get('phone_number')
-        print ('phone_number ===', phone_number)
-
-
+        type = request.POST.get('type')
+        group_id=2
         lstUsers = User.objects.filter(email=email)
-        print ("len(lstUsers) =",len(lstUsers))
         if len(lstUsers) > 0:
             msg = 'already'
         else:
+            try:
+                myfile = request.FILES['file']
+                print(myfile)
+                filename = myfile._get_name()
+
+                ext = filename[filename.rfind('.'):]
+                file_name = str(uuid.uuid4())+ext
+                path = '/user_images/'
+                full_path= str(path) + str(file_name)
+                fd = open('%s/%s' % (settings.STATICFILES_DIRS[0],str(path) + str(file_name)), 'wb')
+                for chunk in myfile.chunks():
+                    fd.write(chunk)
+                fd.close()
+            except:
+                full_path = '/assets/img/man.jpg'
+
+
             objUser = User(email=email, first_name=firstname, last_name=lastname, phone_number=phone_number, password=password, is_staff=False,
-                           is_active=False, is_superuser=False)
+                           is_active=False,image=full_path, is_superuser=False)
             objUser.set_password(password)
+            print('------------')
+            if type == "teacher":
+                group_id=3
+            group = Group.objects.get(id=group_id)            
+            print(group)
+            objUser.group = group
             objUser.save()
 
             objUA = user_activation()
             objUA.user = objUser
             objUA.code = str(uuid.uuid4())
             objUA.save()
-            domain = request.META['HTTP_HOST']
-            print ('domain ====',domain)
-            print ('objua ====',objUA.code)
 
+            
+            domain = request.META['HTTP_HOST']
+            
             msg = 'success'
             sendConfirmationMail(objUA, domain)
 
@@ -111,9 +161,8 @@ def register_user(request):
     except:
         tb = sys.exc_info()[2]
         tbinfo = traceback.format_tb(tb)[0]
-        msg = tbinfo + "\n" + str(sys.exc_type) + ": " + str(sys.exc_info())
-        print ("Register msg = ",msg)
-    #
+        msg = tbinfo + "\n"  ": " + str(sys.exc_info())
+        
     to_return = {'msg': msg}
     serialized = json.dumps(to_return)
     return HttpResponse(serialized, content_type="application/json")
@@ -125,7 +174,6 @@ def sendConfirmationMail(objUA, domain):
 
     try:
         link = 'http://' + domain + '/activation?code=' + objUA.code
-        print ('link-----',link)
         txt = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
         txt += '<html xmlns="http://www.w3.org/1999/xhtml">'
         txt += '<head>'
@@ -145,13 +193,11 @@ def sendConfirmationMail(objUA, domain):
         msg.attach_alternative(txt, "text/html")
         msg.send()
     except:
-        print ('error-----')
         tb = sys.exc_info()[2]
         tbinfo = traceback.format_tb(tb)[0]
         msg = tbinfo + "\n" + ": " + str(sys.exc_info())
         msg = tbinfo + "\n" + ": " + str(sys.exc_info())
-        print(msg)
-
+        
 def activation(request):
     cod = request.GET.get('code')
     lenobj = user_activation.objects.get(code=cod)
@@ -170,11 +216,9 @@ def ajaxlogin(request):
     msg = ''
     try:
         email = request.POST.get('email')
-        print('email ===', email)
+        
         password = request.POST.get('password')
-        print('password ===', password)
         objU = authenticate(email=email, password=password)
-        print(objU)
         if objU is not None:
             if objU.is_active == True:
                 login(request, objU)

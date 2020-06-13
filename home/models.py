@@ -1,9 +1,9 @@
 # from __future__ import unicode_literals
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import Group, AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-
+from django.conf import settings
 
 
 class UserManager(BaseUserManager):
@@ -29,6 +29,7 @@ class UserManager(BaseUserManager):
                                 is_active=True)
 
 class User(AbstractBaseUser):
+    
     email = models.EmailField(_('email address'), unique=True)
     is_staff = models.BooleanField(_("staf status"), default=False)
     is_active = models.BooleanField(_("active"), default=True)
@@ -38,15 +39,23 @@ class User(AbstractBaseUser):
     first_name = models.CharField(max_length=75)
     last_name = models.CharField(max_length=75, null=True, blank=True)
     phone_number = models.CharField(max_length=15, null=True, blank=True)
-    image = models.CharField(max_length=400, null=True, blank=True)
-
+    image = models.TextField(null=True, blank=True)
+    group = models.ForeignKey(Group, on_delete=models.DO_NOTHING)
     USERNAME_FIELD ="email"
 
     objects = UserManager()
-
+    
     class Meta():
         verbose_name = _("User")
         verbose_name_plural = _("Users")
+    
+    def has_perm(self, perm, obj=None): 
+        return self.is_superuser
+
+    def has_module_perms(self, app_label): 
+        return self.is_superuser
+
+
 
 
 class user_activation(models.Model):
@@ -54,6 +63,7 @@ class user_activation(models.Model):
     code = models.CharField(max_length=70)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
 
 
 

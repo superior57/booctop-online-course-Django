@@ -872,6 +872,8 @@ hr{
 .navbar .navbar-item.is-account img {
   height: 38px;
   width: 38px;
+  min-height: 38px;
+  min-width: 38px;
   max-height: 38px;
   border-radius: 50%
 }

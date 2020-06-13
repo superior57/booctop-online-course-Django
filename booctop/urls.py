@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from home.views import home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user, activation, ajaxlogin, logout_, check_email
+from home.views import saveimg, home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user, activation, ajaxlogin, logout_, check_email
 from student.views import account, courses, options_settings, security, payments, privacy, quizes, quizes2, certificates, PurchaseHistory, messages, notifications
 from teacher.views import teacher_account, teacher_security, teacher_payments, teacher_messages, teacher_faqs, teacher_help, course_engagement, student_performance, dashboard, dashboard1, guideline, help2, newcourse2, newcourse3, newcourse4, newcourse5, newcourse, nocourseengagement, nocourse
 urlpatterns = [
@@ -37,6 +37,8 @@ urlpatterns = [
     path('check-email', check_email, name='check email'),
     path('login', ajaxlogin, name='login'),
     path('logout', logout_, name='logout'),
+    path('saveimg', saveimg, name='saveimg'),
+    
     
     # Student Urls
     path('account', account, name='student account'),

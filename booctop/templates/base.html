@@ -18,7 +18,7 @@
    <link rel="icon" type="image/png" href="{%static 'assets/img/favicon.png' %}" />
 
    <!-- Material Design Icons -->
-    <link type="text/css" href="{%static 'assets/css/material-icons.css' %}" rel="stylesheet">
+    <link type="text/css" href="{%static 'assets4/css/material-icons.css' %}" rel="stylesheet">
 
     <!-- App CSS -->
     <link type="text/css" href="{%static 'assets/css/sideb.css' %}" rel="stylesheet">
@@ -384,7 +384,7 @@
                 <div id="account-dropdown" class="navbar-item is-account drop-trigger has-caret">
                       
                     <div class="small-avatar">
-                        <img class="avatar" src="{%static 'assets/img/manPro.jpg' %}" style="border: 2px solid #ccc;" data-demo-src="{%static 'assets/img/avatars/jenna.png' %}" data-user-popover="0" alt="">
+                        <img class="avatar" src="/static{{user.image}}" style="border: 2px solid #ccc;" data-demo-src="{%static 'assets/img/avatars/jenna.png' %}" data-user-popover="0" alt="">
                     </div>
                 
                     <div class="nav-drop is-account-dropdown">
@@ -393,7 +393,8 @@
                                 <span class="username">{{user.first_name}} {{user.last_name}}</span>
                             </div>
                             <div class="nav-drop-body account-items">
-                                <a href="/" class="account-item">
+                                {% if user.group_id == 2 %}
+                                <a href="/account" class="account-item">
                                     <div class="media">
                                         <div class="icon-wrap">
                                             <i data-feather="settings"></i>
@@ -403,6 +404,19 @@
                                         </div>
                                     </div>
                                 </a>
+                                {% elif user.group_id == 3 %}
+                                    <a href="/teacher/account" class="account-item">
+                                        <div class="media">
+                                            <div class="icon-wrap">
+                                                <i data-feather="settings"></i>
+                                            </div>
+                                            <div class="media-content">
+                                                <h3>Settings</h3>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+
                                 <a class="account-item">
                                     <div class="media">
                                         <div class="icon-wrap">
@@ -839,7 +853,7 @@
     
     
     
-    <script src="{% static 'assets/js/writter.js' %}"></script>
+    <!-- <script src="{% static 'assets/js/writter.js' %}"></script> -->
 
     <!-- Concatenated js plugins and jQuery -->
     <script src="{% static 'assets/js/app.js' %}"></script>
@@ -847,6 +861,9 @@
 
     
     
+    <!-- jQuery -->
+    <script src="{% static 'assets/vendor/jquery.min.js' %}"></script>
+
     <!-- Font Awesome -->
     <script src="{% static 'assets/js/all.js' %}"></script>
     
@@ -859,8 +876,6 @@
     <script src="{% static 'assets/js/shop.js' %}"></script>
     
 
-    <!-- jQuery -->
-    <script src="{% static 'assets/vendor/jquery.min.js' %}"></script>
 
     <!-- Bootstrap -->
     <script src="{% static 'assets/vendor/popper.min.js' %}"></script>
