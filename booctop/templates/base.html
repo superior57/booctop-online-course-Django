@@ -34,6 +34,7 @@
    <link rel="stylesheet" href="{% static 'assets/css/core.css' %}">
    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
    <link rel="stylesheet" href="{%static 'assets/css/media.css' %}">
+   <link rel="stylesheet" href="{%static 'assets/css/dark.css' %}">
 
    <!-- Video Player And jQuery -->
    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.10/plyr.css" />   
@@ -63,7 +64,7 @@
         <div class="container ">
             <div class="navbar-brand">
                 <a href="/" class="navbar-item logo">
-                   <img src="{%static 'assets/img/logo/booctep-tran.png' %}" alt=""  />
+                   <img class="mode_images" src="{%static 'assets/img/logo/booctep-tran.png' %}" alt=""  />
                 </a>
             </div>
              
@@ -928,6 +929,65 @@
                         // Ajax end
                 return false
             }
+        
+        if(localStorage.getItem('mode') != "") {
+            localStorage.setItem('mode', 'light');
+        }
+
+        $('.toggler').on('click', function(){
+            if(localStorage.getItem('mode') == 'light'){
+                localStorage.setItem('mode', 'dark');
+                $("body").addClass('body_bg');
+                $(".navbar").addClass('navbar-dark');
+                $(".is-icon").addClass('is-dark-icon');
+                $(".control").addClass('control-is-dark');
+                $(".button-become-a-teacher").addClass('button-become-a-teacher-dark');
+                $(".is-cart").addClass('is-dark-cart');
+                $(".second-button").addClass('signup-button-is-dark');
+                $(".primary-button").addClass('login-button-is-dark');
+                $(".shop-header").addClass('shop-header-is-dark');
+                $(".is-combo").addClass('is-combo-dark');
+                $(".product-card").addClass('product-card-dark');
+                $(".explorer-menu").addClass('explorer-menu-dark');
+                $(".categories-bg").addClass('categories-dark-bg');
+                $(".categories-header").addClass('categories-dark-header');
+                $(".category-box").addClass('category-dark-box');
+                $(".product-quickview").addClass('product-quickview-dark');
+                $(".card").addClass('card-dark');
+                $(".Loginmodal-img").addClass('Loginmodal-img-dark');
+                $(".user-meta-span").addClass('user-meta-span-dark');
+                $(".footer-column").addClass('footer-column-dark');
+                $(".hero-homepage").addClass('dark-homepage');
+                $(".footer").addClass('dark-footer');
+                $(".mode_images").attr('src', "{%static 'assets/img/dark-logo.png' %}");
+            }else{
+                localStorage.setItem('mode', 'light');
+                $("body").removeClass('body_bg');
+                $("body").css('background', 'white');
+                $(".navbar").removeClass('navbar-dark');
+                $(".is-icon").removeClass('is-dark-icon');
+                $(".control").removeClass('control-is-dark');
+                $(".button-become-a-teacher").removeClass('button-become-a-teacher-dark');
+                $(".is-cart").removeClass('is-dark-cart');
+                $(".second-button").removeClass('signup-button-is-dark');
+                $(".primary-button").removeClass('login-button-is-dark');
+                $(".shop-header").removeClass('shop-header-is-dark');
+                $(".is-combo").removeClass('is-combo-dark');
+                $(".product-card").removeClass('product-card-dark');
+                $(".explorer-menu").removeClass('explorer-menu-dark');
+                $(".categories-bg").removeClass('categories-dark-bg');
+                $(".categories-header").removeClass('categories-dark-header');
+                $(".category-box").removeClass('category-dark-box');
+                $(".product-quickview").removeClass('product-quickview-dark');
+                $(".card").removeClass('card-dark');
+                $(".Loginmodal-img").removeClass('Loginmodal-img-dark');
+                $(".user-meta-span").removeClass('user-meta-span-dark');
+                $(".footer-column").removeClass('footer-column-dark');
+                $(".hero-homepage").removeClass('dark-homepage');
+                $(".footer").removeClass('dark-footer');
+                $(".mode_images").attr('src', "{%static 'assets/img/logo/booctep-tran.png' %}");
+            }
+        });
    </script>
     {% block script %}
     {%  endblock %}
