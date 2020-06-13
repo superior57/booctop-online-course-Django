@@ -918,6 +918,9 @@
                                 console.log(data)
                                 if(data.msg=="success"){
                                     window.location.href="/"
+                                }else{
+                                    $("#div_error").html("Please enter the correct email and password.");
+                                    return false
                                 }
                                 return false
                             },
