@@ -42,6 +42,7 @@ $(document).ready(function () {
     }); //Product quickview
 
     $('.quickview-trigger').on('click', function () {
+      console.log('123123123');
       var $this = $(this);
       var path = $this.closest('.product-card').attr('data-path');
       var productName = $this.closest('.product-card').attr('data-name');

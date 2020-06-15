@@ -47,14 +47,18 @@
                 <div class="outer-panel">
                     <div class="outer-panel-inner">
                         <div class="process-title" style="margin-top: 40px;">
-                            <h2 id="step-title-1" class="step-title is-active" style="font-size: 25px;">Sign up as</h2>
+                            <h2 id="step-title-1" class="step-title mainpanel is-active" style="font-size: 25px;">Sign up as</h2>
+                            <h2 id="step-title-1" class="step-title teacherpanel is-active"  style="display:none; font-size: 25px;margin-top: -220px;margin-bottom: 35px;">What are you going to teach?</h2>
                             <h2 id="step-title-2" class="step-title" style="font-size: 25px;">Tell us more about you.</h2>
                             <h2 id="step-title-3" class="step-title" style="font-size: 25px;">Upload a profile picture.</h2>
                             <h2 id="step-title-4" class="step-title" style="font-size: 25px;">Secure your account.</h2>
                             <h2 id="step-title-5" class="step-title" style="font-size: 25px;">we sent you an email to activate your account.</h2>
                         </div>
                         <input type="hidden" id="type" name="type" />
-                        <div id="signup-panel-1" class="process-panel-wrap is-active">
+                        <input type="hidden" id="subcategory" name="subcategory" />
+
+
+                        <div id="signup-panel-1" class="process-panel-wrap mainpanel is-active">
                             <div class="columns">
                                 <div class="column is-3 is-offset-3">
                                     <div class="account-type">
@@ -99,6 +103,20 @@
                             </div>
                         </div>
                         
+                        <div id="signup-panel-1" style="display: none;" class="process-panel-wrap teacherpanel is-active">
+                            
+                            <a class="cover-edit modal-trigger" style="margin-left: 43%;background-color: rgb(71, 70, 70);color: #fff;padding:10px;border-radius: 3px;" data-modal="user-photos-modal">
+                                <i class="mdi mdi-plus"></i>
+                                <span>Add Categories</span>
+                            </a>
+                            <div class="buttons">
+                                <a class="button process-button" data-step="step-dot-1">Back</a>
+                                <a class="button process-button is-next" data-step="step-dot-2">Next</a>
+                            </div>
+
+
+                        </div>
+
                         <div class="text-align-center" style="text-align:center; color :  rgb(218, 1, 1);" id="div_error"></div>
                         <div id="signup-panel-2" class="process-panel-wrap is-narrow">
                             
@@ -322,6 +340,71 @@
 </div> 
 <!-- Categories -->   
 
+<!--- Categories Modal start-->
+<div id="user-photos-modal" class="modal user-photos-modal is-medium has-light-bg">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <!-- Card -->
+        <div class="card">
+            <div class="card-heading">
+                <h3>What will you teach?</h3>
+                <!-- Close X button -->
+                <div class="close-wrap">
+                    <span class="close-modal">
+                        <i data-feather="x"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- Card body -->
+            <div class="card-body">
+                <!-- Tabs -->
+                <div class="nav-tabs-wrapper">
+
+                    <!-- Recent Photos -->
+                    <div id="recent-photos" class="tab-content has-slimscroll-md is-active">
+                        <!-- Grid -->
+                        <div class="albums-grid">
+                            <div class="columns is-multiline">
+                                <!-- Album item -->
+                                {% for c in objC %}
+                                <div class="column is-4" onclick="return subCategory('{{c.id}}')">
+                                    <div class="album-wrapper" data-album="album-photos-{{c.id}}">
+                                        <div class="album-image">
+                                            <img src="/static/{{c.image}}" data-demo-src="{%static 'assets5/img/demo/unsplash/35.jpg' %}" alt="">
+                                        </div>
+                                        <div class="album-meta">
+                                            <div class="album-title">
+                                                <span>{{c.name}}</span>
+                                            </div>
+                                            <div class="image-count">
+                                                <i data-feather="grid"></i>
+                                                <span>8</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+
+                        <!-- Hidden Grid | Design and colors -->
+                        <div id="album-photos-1" class="album-image-grid is-hidden">
+                            <div class="album-info"><h4 id="album_header"></h4><a class="close-nested-photos">Go Back</a></div>
+                            <div class="columns is-multiline" id="album_content"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="button is-solid accent-button replace-button is-disabled" onclick="return addSubCategory()" >Add</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--- Categories Modal end-->
 
 <!-- Login Modal Start -->    
 <div id="product-quickview" class="modal product-quickview is-xsmall has-light-bg">
@@ -439,20 +522,98 @@
 
     {%  endblock %}
     {% block script %}
+
+    
+    
         <!-- Page and UI related js -->
         <script>
             var blobImg='';
             var uploadImg='';
             function setUerType(type){
+                if (type == 'teacher'){
+                    $('.mainpanel').hide();
+                    $('.teacherpanel').show();
+                }
                 $("#type").val(type);
             }
 
-            
+            function addSubCategory(){
+                $('#user-photos-modal').removeClass('is-active');
+                $('#step-dot-2').trigger('click');
+                
+            }
 
             function isEmail(email) {
                 var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
                 return regex.test(email);
-                }
+            }
+
+            function addUserCategory(obj){
+                
+                $("#subcategory").val($(obj).attr('subId'));
+
+            }
+
+            function subCategory(cat_id){
+                console.log("cat_id - ",cat_id)
+                // Ajax start
+                var action = "/getsubcategory";
+                        $.ajax({
+                            url: action,
+                            type: 'POST',
+                            dataType: 'json',
+                            // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+                            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                            data: {
+                                category_id : cat_id
+                            },
+
+                            beforeSend: function () {
+
+                                console.log("Beforesend")
+                            },
+                            success: function (data) {
+                                console.log(data)
+                                var htmlheader =  data.subcat_list[0].category_name +' | <small>'+ data.subcat_list.length +' Categories</small>'
+                                $("#album_header").append(htmlheader)
+                                
+                                for (var c=0; c<data.subcat_list.length; c++){
+                                    console.log(data.subcat_list[c])
+                                    var html=''    
+                                    html += '<div class="column is-4" onclick="return addUserCategory(this)" subId="'+ data.subcat_list[c].id.toString() +'"><div class="grid-image"><input type="radio" name="selected_photos">'
+                                    html += '<div class="inner"><img src="/static/'+ data.subcat_list[c].image +'" data-demo-src="" alt="">'
+                                    html += '<div class="" style="width: 100%;position: absolute;bottom: 0;left: 0;padding:10px;background-color: black;opacity: 0.8;">'
+                                    html += '<b style="color: #fff;">'+ data.subcat_list[c].name +'</b></div><div class="inner-overlay"></div><div class="indicator gelatine"><i data-feather="check"></i></div></div>'
+                                    html += '</div></div>'
+                                    $("#album_content").append(html);
+                                }
+                                
+
+                                if(data.msg == "already"){
+                                    $("#div_error").html("Email is already exist.");
+                                    return false;
+                                }else{
+                                    $('#step-dot-3').trigger('click');
+                                    return false
+                                }
+                            
+                            },
+                            error: function (err) {
+                                return false
+                            }
+                        })
+                        // Ajax end
+
+
+
+                return false
+                // $('#step-dot-3').trigger('click');
+                // return false
+                
+                
+            
+            }
+
             function Validate(){
                 
                 $("#div_error").html("");
@@ -531,6 +692,7 @@
                     return false
                 }
                 
+                console.log('$("#subcategory").val() = ',$("#subcategory").val())
                 $('#registernext').addClass(' is-loading');
                 var formData = new FormData();
                 
@@ -541,6 +703,8 @@
                 formData.append('password', $("#password").val());
                 formData.append('phone_number', $("#phone_number").val());
                 formData.append('type', $("#type").val());
+                formData.append('subcategory', $("#subcategory").val());
+                
                 console.log($("#first_name").val())
                 $('#registernext').addClass(' is-loading');
                 // Ajax start
@@ -589,6 +753,12 @@
 
 
             }
+
+
+            // $('.album-wrapper').on('click', function () {
+            //     var $this = $(this);
+            //     console.log("$this = ",$(this).find(".album-title span").text())
+            // });
         </script>
         <script src="{%static 'assets/js/signup.js' %}"></script>
     {%  endblock %}

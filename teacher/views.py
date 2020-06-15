@@ -1,7 +1,13 @@
 from django.shortcuts import render
-
+from teacher.models import categories
+from home.models import User
 def teacher_account(request):
-    return render(request, 'teacher/account.html', {})
+    # print("category = ",request.user.id)
+    # objU = User.objects.get(email=request.user.email)
+    # print(objU.email)
+    # print(objU.categories)
+    objC = categories.objects.all()
+    return render(request, 'teacher/account.html', {'objC':objC})
 
 def teacher_security(request):
     return render(request, 'teacher/security.html', {})

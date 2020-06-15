@@ -4,6 +4,7 @@ from django.contrib.auth.models import Group, AbstractBaseUser, BaseUserManager,
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
+from teacher.models import subcategories
 
 
 class UserManager(BaseUserManager):
@@ -40,7 +41,7 @@ class User(AbstractBaseUser):
     last_name = models.CharField(max_length=75, null=True, blank=True)
     phone_number = models.CharField(max_length=15, null=True, blank=True)
     image = models.TextField(null=True, blank=True)
-    group = models.ForeignKey(Group, on_delete=models.DO_NOTHING)
+    group = models.ForeignKey(Group, on_delete=models.DO_NOTHING,default=3)
     USERNAME_FIELD ="email"
 
     objects = UserManager()
@@ -63,6 +64,13 @@ class user_activation(models.Model):
     code = models.CharField(max_length=70)
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class user_categories(models.Model):
+    id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING,  related_name='categories')
+    category = models.ForeignKey(subcategories, on_delete=models.DO_NOTHING)
+    
 
 
 
