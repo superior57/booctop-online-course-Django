@@ -68,7 +68,7 @@ class user_activation(models.Model):
 
 class user_categories(models.Model):
     id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING,  related_name='categories')
     category = models.ForeignKey(subcategories, on_delete=models.DO_NOTHING)
     
 

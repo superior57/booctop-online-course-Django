@@ -76,9 +76,9 @@
                     <div class="form-group">
                         <label class="form-label" for="select05">Main category</label>
                         <select id="select05" data-toggle="select" class="form-control form-control">
-                            <option>Web development</option>
-                            <option>Another option</option>
-                            <option>Third option is here</option>
+                            {% for c in objC %}
+                                <option value="{{c.id}}">{{c.name}}</option>
+                            {% endfor %}
                         </select>
                     </div>
 
