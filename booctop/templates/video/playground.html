@@ -1,0 +1,212 @@
+{% extends "video/base.html" %}
+{% block content %}
+    {% load static %}
+
+
+    <div data-push data-responsive-width="768px" data-has-scrollable-region data-fullbleed class="mdk-drawer-layout js-mdk-drawer-layout">
+        <div class="mdk-drawer-layout__content" data-perfect-scrollbar>
+
+
+
+
+            <div class="app-messages__container d-flex flex-column h-100 pb-4">
+                <div class="navbar navbar-light bg-white navbar-expand-sm navbar-shadow z-1" id="messages-navbar">
+                    <div class="container-fluid flex-wrap px-sm-0">
+                        <div class="nav py-2">
+                            <div class="nav-item d-flex align-items-center mr-3">
+                                <div class="d-flex flex-column" style=" font-size: 21px">
+
+
+            <nav class="nav navbar-nav">
+                <div class="nav-item navbar-list__item">
+                    <a href="/courses" class="nav-link h-auto"><i class="material-icons icon--left">keyboard_backspace</i> Back to Dashboard</a>
+                </div>
+                <div class="nav-item navbar-list__item">
+                    <div class="d-flex align-items-center flex-nowrap">
+                        <div class="mr-16pt">
+                            <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">dvr</span>
+                        </div>
+                        <div class="flex">
+                            <a href="mini-student-take-course.html" class="card-title text-body mb-0">Learn HTML5 and sass with css</a>
+                            <p class="lh-1 d-flex align-items-center mb-0">
+                                <span class="text-50 small font-weight-bold mr-8pt">Video number 2 : </span>
+                                <span class="text-50 small">Intro to HTML5</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+                                    <a class="troph-2" href="#" style="margin-left: 45px !important;" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false">Leave your ratings <i class="fa fa-star troph-i"></i></a>
+
+
+
+
+                                    <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                    <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+
+
+
+                                    <p class="troph">Get your certificate <i class="fa fa-trophy troph-i"></i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-2 flex d-flex align-items-center">
+                            <button data-target="#messages-drawer" class="navbar-toggler d-block d-md-none ml-3 p-0" data-toggle="sidebar" type="button">
+                                <i class="material-icons">people_outline</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="app-video">
+
+                    <video poster="{% static 'video/assets/img/setting.jpg' %}" id="player" playsinline controls>
+                        <source src="{% static 'video/assets/img/vid/html.mp4' %}" type="video/webm" />
+
+                        <!-- Captions are optional -->
+                        <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default />
+                    </video>
+
+                </div>
+
+
+
+                <div class=" page__container page__container page__container-2" style="width: 100%;">
+
+
+                    <form action="#" id="message-reply" class="form-down-2">
+
+
+
+                        <div class="progress" style="height: 10px;margin-top: 25px; width: 50%;border-radius: 10px;">
+                            <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 75%;height: 10px;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span style="font-weight: 500;margin-left: 30px;margin-top: 20px;">2 / 30</span> <i class="fa fa-trophy" style="margin-right: 10px;margin-left: 5px;font-size: large;margin-top: 20px;"></i>
+
+                        <i class="fa fa-ellipsis-v" style="margin-right: 10px;margin-left: 5px;font-size: large;margin-top: 20px;"></i>
+
+
+
+                        <button type="submit" class="btn flex" style="background: rgb(37, 108, 156);color: #fff; width: 40%;margin:0 auto;margin-top: 30px;">Previous</button>
+
+
+                        <button type="submit" class="btn flex" style="background:  rgb(37, 108, 156);color: #fff; width: 40%;margin:0 auto;margin-top: 30px;">Next</button>
+
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="mdk-drawer js-mdk-drawer" data-align="end" id="messages-drawer">
+            <div class="mdk-drawer__content top-0">
+                <div class="sidebar sidebar-right sidebar-light bg-white o-hidden">
+                    <div class="d-flex flex-column h-100">
+
+
+
+
+
+
+
+
+                        <div style="margin-top: 30px;" class="flex" data-perfect-scrollbar>
+                            <div class="sidebar-headig" style="width: 100%;position: fixed;top: 0;right: 0;height: 50px !important; z-index: 99999;;background-color: rgb(255, 255, 255);border: 1px solid rgb(223, 223, 223);"><b style="top:12px;position:absolute;left:20px">Course curriculum</b></div>
+                            <hr>
+                            <ul class="list-group mb-3" style="border-bottom: 1px solid #f8f8f8;">
+
+
+                                <div class="accordion js-accordion accordion--boxed list-group-flush" id="parent">
+                                    <div class="accordion__item">
+                                        <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#course-toc-1" data-parent="#parent">
+                                            <span class="flex">Course Overview</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse" id="course-toc-1">
+                                            <div class="accordion__menu-link">
+                                                <!-- <span class="material-icons icon-16pt icon--left text-primary">play_circle_outline</span> -->
+                                                <i class="material-icons icon-16pt" style="font-weight: 500;margin-right: 5px;color: rgb(1, 100, 192);">check_circle</i>
+
+                                                <a class="flex" href="mini-student-lesson.html" style="color: rgb(1, 100, 192);">Watch Trailer</a>
+                                                <span class="text-muted" style="color: rgb(1, 100, 192) !important;">1m 10s</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item ">
+                                        <a href="#" class="accordion__toggle" data-toggle="collapse" data-target="#course-toc-2" data-parent="#parent">
+                                            <span class="flex">Getting Started with Angular</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse show" id="course-toc-2">
+                                            <div class="accordion__menu-link">
+                                                <!-- <span class="material-icons icon-16pt icon--left text-muted">lock</span> -->
+                                                <i class="material-icons icon-16pt" style="font-weight: 500;margin-right: 5px;">check_circle</i>
+
+                                                <a class="flex" href="mini-student-lesson.html">Introduction</a>
+                                                <span class="text-muted">8m 42s</span>
+                                            </div>
+                                            <div class="accordion__menu-link active">
+                                                <!-- <span class="material-icons icon-16pt icon--left text-muted">lock</span> -->
+                                                <i class="material-icons icon-16pt" style="font-weight: 500;margin-right: 5px;">play_circle_outline</i>
+
+                                                <a class="flex" href="mini-student-lesson.html">Introduction to TypeScript</a>
+                                                <span class="text-muted">50m 13s</span>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <!-- <span class="material-icons icon-16pt icon--left text-muted">lock</span> -->
+
+                                                <i class="material-icons icon-16pt" style="font-weight: 500;margin-right: 5px;">lock</i>
+
+                                                <a class="flex" href="mini-student-lesson.html" title="Comparing Angular to Angular">Comparing Angular to An..</a>
+                                                <span class="text-muted">12m 10s</span>
+                                            </div>
+                                            <div class="accordion__menu-link">
+                                                <!-- <span class="material-icons icon-16pt icon--left text-50">hourglass_empty</span> -->
+                                                <i class="material-icons icon-16pt" style="font-weight: 500;margin-right: 5px;">hourglass_empty</i>
+
+                                                <a class="flex" href="mini-student-take-quiz.html">Quiz: Getting Started With Angular</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion__item">
+                                        <a href="#" class="accordion__toggle collapsed" data-toggle="collapse" data-target="#course-toc-3" data-parent="#parent">
+                                            <span class="flex">Creating and Communicating..</span>
+                                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                        </a>
+                                        <div class="accordion__menu collapse" id="course-toc-3">
+                                            <div class="accordion__menu-link">
+                                                <!-- <span class="material-icons icon-16pt icon--left text-muted">lock</span> -->
+                                                <i class="material-icons icon-16pt" style="font-weight: 500;margin-right: 5px;">hourglass_empty</i>
+
+                                                <a class="flex" href="mini-student-lesson.html">Angular Components</a>
+                                                <span class="text-muted">04:23</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

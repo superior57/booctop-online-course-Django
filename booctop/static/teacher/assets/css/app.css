@@ -25761,8 +25761,6 @@ html {
 }
 [dir="ltr"] .avatar-title img {
   padding: 0.25rem;
-  min-height: 40px;
-  min-width: 40px;
 }
 [dir="ltr"] .avatar-title {
   color: #fff;

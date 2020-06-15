@@ -1,92 +1,46 @@
 {% extends "teacher/base.html" %}
+
+{% block headercontent %}
+    {% load static %}
+    <!-- Navbar toggler -->
+    <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+        <span class="material-icons">short_text</span>
+    </button>
+
+    <!-- Navbar Brand -->
+    <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+        <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+            <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg" alt="logo" class="img-fluid" /></span>
+
+        </span>
+
+        <span class="d-none d-lg-block">Luma</span>
+    </a>
+
+
+
+
+
+
+
+    <h4 style="margin-top:15px;margin-left:5px">Account</h4>
+
+{% endblock %}
 {% block content %}
     {% load static %}
-
-
-
-            <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-                <!-- Navbar toggler -->
-                <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-                    <span class="material-icons">short_text</span>
-                </button>
-
-                <!-- Navbar Brand -->
-                <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
-
-                    <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-
-                        <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg" alt="logo" class="img-fluid" /></span>
-
-                    </span>
-
-                    <span class="d-none d-lg-block">Luma</span>
-                </a>
-
-
-
-
-
-
-
-            <h4 style="margin-top:15px;margin-left:5px">Account</h4>
-
-
-
-            <a href="../../student.0/dist/courses.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Student
-                
-                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
-    </b></a>
-
-
-             
-
-
-                <div class="flex"></div>
-
-
- 
-
-
-                <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
-
-
-
-                    
-
-
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-
-                            <span class="avatar avatar-sm mr-8pt2">
-
-                                <span class="avatar-title rounded-circle" style="background-color: gray;">
-                                    <img src="/static{{user.image}}" alt="" style="border-radius: 50%;">
-                                </span>
-
-                            </span>
-
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
-                            <a class="dropdown-item" href="courses.html">My courses</a>
-                            <a class="dropdown-item" href="quizes.html">My quizes</a>
-                            <a class="dropdown-item" style="color: red;" href="#">Logout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
 
 
             <div class=" page__container " style="margin-bottom: 35px;">
 
                 <div class="col-md-6 pt-3">
+                    <div class="text-align-center" style="text-align:center; color :  rgb(218, 1, 1);" id="div_error"></div>
                     <div class="form-group">
                         <label class="form-label">Your photo</label>
                         <div class="media align-items-center">
                             <a href="" class="media-left mr-16pt">
-                                <img src="{%static 'teacher/assets/images/people/110/guy-3.jpg' %}" style="border: 2px solid grey;" alt="people" width="56" class="rounded-circle" />
+                                <img src="/static/{{user.image}}" style="border: 2px solid grey;     height: 56px;" alt="people" width="56" class="rounded-circle" />
                             </a>
                             <div class="media-body">
                                 <div class="custom-file">
@@ -99,17 +53,17 @@
 
                     <div class="form-group " style="margin-top: 25px !important;">
                         <label class="form-label">First name</label>
-                        <input type="text" class="form-control" value="Elzubair" placeholder="write your first name...">
+                        <input type="text" class="form-control" value="{{user.first_name}}" id="first_name" name="first_name"  placeholder="write your first name...">
                         <small class="form-text text-muted">write your first name.</small>
                     </div>
                     <div class="form-group " style="margin-top: 15px !important;margin-bottom: 15px;">
                         <label class="form-label">Last name</label>
-                        <input type="text" class="form-control" value="Mohammed" placeholder="write your last name...">
+                        <input type="text" class="form-control" value="{{user.last_name}}" id="last_name" name="last_name" placeholder="write your last name...">
                         <small class="form-text text-muted">write your last name.</small>
                     </div>
                     <div class="form-group " style="margin-top: 5px !important;margin-bottom: 25px;">
                         <label class="form-label">Email</label>
-                        <input type="text" class="form-control" value="alzober1414@gmail.com" placeholder="write your last name...">
+                        <input type="text" class="form-control" value="{{user.email}}" id="email" name="email" readonly placeholder="write your last name...">
                         <small class="form-text text-muted">Enter your Email.</small>
                     </div>
 
@@ -177,10 +131,78 @@
                             <small class="form-text text-muted">send Emails to my email</small>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary" onclick="return updateUser()">Save changes</button>
                 </div>
 
 
         </div>
 
 {%  endblock %}
+
+{% block script %}
+<script>
+    function updateUser(){
+        $("#div_error").html("");
+    
+        if($("#first_name").val()==""){
+            $("#div_error").html("Please enter the first name");
+            return false
+        }else if($("#last_name").val()==""){
+            $("#div_error").html("Please enter the last name");
+            return false
+        }else if($("#email").val()==""){
+            $("#div_error").html("Please enter the correct email");
+            return false
+        }
+        var formData = new FormData();
+        
+        formData.append('file', $("#inputGroupFile01")[0].files[0]);
+        formData.append('first_name', $("#first_name").val());
+        formData.append('last_name', $("#last_name").val());
+        formData.append('email', $("#email").val());
+        
+        // Ajax start
+        var action = "/update-user";
+        $.ajax({
+            url: action,
+            type: 'POST',
+            dataType: 'json',
+            async: false,
+            contentType: false,
+            processData: false,
+            // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+            // contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: formData,
+
+            beforeSend: function () {
+                
+            },
+            success: function (data) {
+                if(data.msg == "success"){
+                    window.location.reload();
+                    return false
+                    
+                }else if(data.msg == 'already'){
+                    
+                    $("#div_error").html("Email is already exist.");
+                    return false;
+                }
+                else{
+                    $("#div_error").html(data.msg);
+                    return false;
+                }
+                
+            },
+            error: function (err) {
+                return false
+            }
+        })
+        // Ajax end
+
+
+
+        return false
+    }
+</script>
+
+{% endblock %}

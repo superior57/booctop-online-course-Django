@@ -1,67 +1,28 @@
 {% extends "teacher/base.html" %}
+
+{% block headercontent %}
+    {% load static %}
+    <!-- Navbar toggler -->
+    <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+        <span class="material-icons">short_text</span>
+    </button>
+
+    <!-- Navbar Brand -->
+    <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
+
+        <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+            <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg" alt="logo" class="img-fluid" /></span>
+
+        </span>
+
+        <span class="d-none d-lg-block">Luma</span>
+    </a>
+{% endblock %}
+
 {% block content %}
     {% load static %}
 
-    <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-        <!-- Navbar toggler -->
-        <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
-            <span class="material-icons">short_text</span>
-        </button>
-
-        <!-- Navbar Brand -->
-        <a href="mini-index.html" class="navbar-brand mr-16pt d-lg-none">
-
-            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-
-                <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg" alt="logo" class="img-fluid" /></span>
-
-            </span>
-
-            <span class="d-none d-lg-block">Luma</span>
-        </a>
-
-
-
-
-
-
-        <a href="../../student.0/dist/courses.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Student
-        
-            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
-</b></a>
-
-
-
-        <div class="flex"></div>
-
-
-
-
-
-
-        <div class="nav-item dropdown">
-            <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-
-                <span class="avatar avatar-sm mr-8pt2">
-
-                    <span class="avatar-title rounded-circle" style="background-color: gray;">
-                        <img src="../../assets/img/man.jpg" alt="" style="border-radius: 50%;">
-                    </span>
-
-                </span>
-
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header"><strong>Elzubair Mohammed</strong></div>
-                <a class="dropdown-item" href="../../index.html">Back to Booctep</a>
-                <a class="dropdown-item" href="dashboard.html">dashboard</a>
-                <a class="dropdown-item" href="courses.html">My courses</a>
-                <a class="dropdown-item" href="messages.html">Messages</a>
-                <a class="dropdown-item" href="notifications.html">Notifications</a>
-                <a class="dropdown-item" style="color: red;" href="#">Logout</a>
-            </div>
-        </div>
-    </div>
 
     <div class=" page__container page-section">
 

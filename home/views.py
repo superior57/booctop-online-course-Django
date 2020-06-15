@@ -120,7 +120,6 @@ def register_user(request):
         else:
             try:
                 myfile = request.FILES['file']
-                print(myfile)
                 filename = myfile._get_name()
 
                 ext = filename[filename.rfind('.'):]
@@ -138,14 +137,11 @@ def register_user(request):
             objUser = User(email=email, first_name=firstname, last_name=lastname, phone_number=phone_number, password=password, is_staff=False,
                            is_active=False,image=full_path, is_superuser=False)
             objUser.set_password(password)
-            print('------------')
             if type == "teacher":
                 group_id=3
-            group = Group.objects.get(id=group_id)            
-            print(group)
+            group = Group.objects.get(id=group_id)
             objUser.group = group
             objUser.save()
-
             objUA = user_activation()
             objUA.user = objUser
             objUA.code = str(uuid.uuid4())
@@ -168,6 +164,45 @@ def register_user(request):
     return HttpResponse(serialized, content_type="application/json")
 
 
+def update_user(request):
+    msg = ''
+    try:
+        firstname = request.POST.get('first_name')
+        lastname = request.POST.get('last_name')
+        email = request.POST.get('email')
+
+        objU = User.objects.get(email=email, id=request.user.id)
+
+        try:
+            myfile = request.FILES['file']
+            filename = myfile._get_name()
+
+            ext = filename[filename.rfind('.'):]
+            file_name = str(uuid.uuid4())+ext
+            path = '/user_images/'
+            full_path= str(path) + str(file_name)
+            fd = open('%s/%s' % (settings.STATICFILES_DIRS[0],str(path) + str(file_name)), 'wb')
+            for chunk in myfile.chunks():
+                fd.write(chunk)
+            fd.close()
+        except:
+            full_path = objU.image
+        
+        objU.first_name = firstname
+        objU.last_name = lastname
+        objU.image = full_path
+        objU.save()
+        
+        msg = 'success'
+            
+    except:
+        tb = sys.exc_info()[2]
+        tbinfo = traceback.format_tb(tb)[0]
+        msg = tbinfo + "\n"  ": " + str(sys.exc_info())
+        
+    to_return = {'msg': msg}
+    serialized = json.dumps(to_return)
+    return HttpResponse(serialized, content_type="application/json")
 
 
 def sendConfirmationMail(objUA, domain):
