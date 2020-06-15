@@ -10184,3 +10184,674 @@ box-sizing: border-box;
 .noti-cart small{
   color: blue;
 }
+
+
+/* line 1635, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-heading,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-heading {
+    padding: 20px;
+} /* line 1638, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-heading h3,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading h3,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-heading h3 {
+    font-size: 1rem;
+} /* line 1643, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body {
+    padding: 0 20px;
+} /* line 1646, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tabs,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tabs,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tabs {
+    margin-bottom: 0;
+} /* line 1649, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tabs ul,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tabs ul,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tabs ul {
+    border-color: transparent;
+} /* line 1653, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tabs ul li.is-active,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tabs ul li.is-active,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tabs ul li.is-active {
+    background: #f5f5f5;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+} /* line 1658, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tabs ul li.is-active a,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tabs ul li.is-active a,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tabs ul li.is-active a {
+    color: #393a4f;
+    font-weight: 500;
+} /* line 1664, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tabs ul li a,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tabs ul li a,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tabs ul li a {
+    font-size: 0.8rem;
+    border-bottom-color: transparent !important;
+} /* line 1672, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tab-content,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tab-content,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tab-content {
+    padding: 20px 0;
+    max-height: 395px;
+    overflow-y: auto;
+} /* line 1677, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tab-content .album-info,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tab-content .album-info,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tab-content .album-info {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+} /* line 1683, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tab-content .album-info h4,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tab-content .album-info h4,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tab-content .album-info h4 {
+    font-weight: 600;
+    color: #393a4f;
+} /* line 1687, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tab-content .album-info h4 small,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tab-content .album-info h4 small,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tab-content .album-info h4 small {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 400;
+} /* line 1694, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .tab-content .album-info .close-nested-photos,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .tab-content .album-info .close-nested-photos,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .tab-content .album-info .close-nested-photos {
+    font-size: 0.9rem;
+    font-weight: 500;
+} /* line 1701, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid,
+.user-photos-modal .card .card-body .album-image-grid,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid {
+    -webkit-animation: fadeInLeft 0.5s;
+    animation: fadeInLeft 0.5s;
+} /* line 1704, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .column,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .column,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .column,
+.user-photos-modal .card .card-body .album-image-grid .column,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .column,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .column {
+    padding: 0.5rem;
+} /* line 1708, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image,
+.user-photos-modal .card .card-body .album-image-grid .grid-image,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image {
+    position: relative;
+} /* line 1712, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image:hover img,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image:hover img,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image:hover img,
+.user-photos-modal .card .card-body .album-image-grid .grid-image:hover img,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image:hover img,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image:hover img {
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+} /* line 1716, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image:hover .inner-overlay,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image:hover .inner-overlay,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image:hover .inner-overlay,
+.user-photos-modal .card .card-body .album-image-grid .grid-image:hover .inner-overlay,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image:hover .inner-overlay,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image:hover .inner-overlay {
+    background: rgba(57, 58, 79, 0.2) !important;
+} /* line 1721, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image input,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image input,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image input,
+.user-photos-modal .card .card-body .album-image-grid .grid-image input,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image input,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+} /* line 1732, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image input:checked + .inner .inner-overlay,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image input:checked + .inner .inner-overlay,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image input:checked + .inner .inner-overlay,
+.user-photos-modal .card .card-body .album-image-grid .grid-image input:checked + .inner .inner-overlay,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image input:checked + .inner .inner-overlay,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image input:checked + .inner .inner-overlay {
+    background: rgba(57, 58, 79, 0.5);
+} /* line 1736, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image input:checked + .inner .indicator,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image input:checked + .inner .indicator,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image input:checked + .inner .indicator,
+.user-photos-modal .card .card-body .album-image-grid .grid-image input:checked + .inner .indicator,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image input:checked + .inner .indicator,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image input:checked + .inner .indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+} /* line 1742, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image .inner,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image .inner,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image .inner,
+.user-photos-modal .card .card-body .album-image-grid .grid-image .inner,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image .inner,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image .inner {
+    position: relative;
+} /* line 1745, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image .inner img,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image .inner img,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image .inner img,
+.user-photos-modal .card .card-body .album-image-grid .grid-image .inner img,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image .inner img,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image .inner img {
+    display: block;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+} /* line 1751, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image .inner .inner-overlay,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image .inner .inner-overlay,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image .inner .inner-overlay,
+.user-photos-modal .card .card-body .album-image-grid .grid-image .inner .inner-overlay,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image .inner .inner-overlay,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image .inner .inner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 58, 79, 0.1);
+    border-radius: 4px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 0;
+} /* line 1763, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image .inner .indicator,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image .inner .indicator,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image .inner .indicator,
+.user-photos-modal .card .card-body .album-image-grid .grid-image .inner .indicator,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image .inner .indicator,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image .inner .indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: #0062ff;
+    border: 2px solid #fff;
+    z-index: 0;
+} /* line 1777, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .image-grid .grid-image .inner .indicator svg,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .image-grid .grid-image .inner .indicator svg,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .image-grid .grid-image .inner .indicator svg,
+.user-photos-modal .card .card-body .album-image-grid .grid-image .inner .indicator svg,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-image-grid .grid-image .inner .indicator svg,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-image-grid .grid-image .inner .indicator svg {
+    height: 12px;
+    width: 12px;
+    stroke: #fafafa;
+    stroke-width: 3px;
+} /* line 1788, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    padding: 12px;
+    background: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+} /* line 1797, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper:hover,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper:hover,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+} /* line 1802, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper:hover .image-count svg,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper:hover .image-count svg,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper:hover .image-count svg {
+    stroke: #0062ff !important;
+} /* line 1806, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper:hover .image-count span,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper:hover .image-count span,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper:hover .image-count span {
+    color: #0062ff !important;
+} /* line 1813, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-image img,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-image img,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-image img {
+    display: block;
+    border: 4px;
+} /* line 1819, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+} /* line 1824, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .album-title,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .album-title,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .album-title {
+    margin-top: 6px;
+} /* line 1827, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .album-title span,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .album-title span,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .album-title span {
+    display: block;
+} /* line 1830, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .album-title span:first-child,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .album-title span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .album-title span:first-child {
+    min-width: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #393a4f;
+} /* line 1837, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .album-title span:nth-child(2),
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .album-title span:nth-child(2),
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .album-title span:nth-child(2) {
+    font-size: 0.8rem;
+    color: #999;
+} /* line 1844, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .image-count,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .image-count,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .image-count {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 6px;
+} /* line 1849, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .image-count svg,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .image-count svg,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .image-count svg {
+    height: 20px;
+    width: 20px;
+    stroke: #cecece;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+} /* line 1856, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-body .album-wrapper .album-meta .image-count span,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .album-wrapper .album-meta .image-count span,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-body .album-wrapper .album-meta .image-count span {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #999;
+    margin: 0 4px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+} /* line 1869, src/assets/scss/components/_components-modals.scss */
+.user-photos-modal .card .card-footer,
+.user-photos-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-footer,
+.shop-wrapper .cart-container .cart-content .cart-summary .user-photos-modal .summary-card .card-footer {
+    padding: 20px;
+    margin: 0;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+} /* line 1886, src/assets/scss/components/_components-modals.scss */
+
+
+
+
+
+
+
+
+
+
+/* line 1528, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-heading,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-heading,
+.change-profile-pic-modal .card .card-heading,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-heading,
+.new-story-modal .card .card-heading,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-heading {
+    padding: 16px 28px;
+} /* line 1531, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-heading h3,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading h3,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-heading h3,
+.change-profile-pic-modal .card .card-heading h3,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading h3,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-heading h3,
+.new-story-modal .card .card-heading h3,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading h3,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-heading h3 {
+    font-size: 1rem;
+} /* line 1535, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-heading .small-avatar,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading .small-avatar,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-heading .small-avatar,
+.change-profile-pic-modal .card .card-heading .small-avatar,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading .small-avatar,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-heading .small-avatar,
+.new-story-modal .card .card-heading .small-avatar,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading .small-avatar,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-heading .small-avatar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 8px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: 1px solid #cecece;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+} /* line 1547, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-heading .small-avatar img,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading .small-avatar img,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-heading .small-avatar img,
+.change-profile-pic-modal .card .card-heading .small-avatar img,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading .small-avatar img,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-heading .small-avatar img,
+.new-story-modal .card .card-heading .small-avatar img,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-heading .small-avatar img,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-heading .small-avatar img {
+    display: block;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+} /* line 1558, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder,
+.change-profile-pic-modal .card .card-body .selection-placeholder,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder,
+.new-story-modal .card .card-body .selection-placeholder,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder {
+    padding: 0 20px 30px 20px;
+} /* line 1561, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box,
+.new-story-modal .card .card-body .selection-placeholder .selection-box,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box {
+    padding: 40px;
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+} /* line 1573, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box:hover,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box:hover,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box:hover,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box:hover,
+.new-story-modal .card .card-body .selection-placeholder .selection-box:hover,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box:hover {
+    -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, 0.06);
+} /* line 1577, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.new-story-modal .card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover .box-content img,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box:hover .box-content img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
+} /* line 1584, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.new-story-modal .card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box:hover .box-content .box-text span:first-child {
+    color: #0062ff;
+} /* line 1591, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box .box-content,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box .box-content,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box .box-content,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box .box-content,
+.new-story-modal .card .card-body .selection-placeholder .selection-box .box-content,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box .box-content {
+    text-align: center;
+} /* line 1594, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box .box-content img,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content img,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box .box-content img,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box .box-content img,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content img,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box .box-content img,
+.new-story-modal .card .card-body .selection-placeholder .selection-box .box-content img,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content img,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box .box-content img {
+    display: block;
+    max-height: 120px;
+    margin: 0 auto;
+    opacity: 0.5;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+} /* line 1604, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.new-story-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text {
+    margin: 10px 0;
+} /* line 1607, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.new-story-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span {
+    display: block;
+} /* line 1610, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.new-story-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child,
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:first-child {
+    font-weight: 500;
+    color: #393a4f;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+} /* line 1616, src/assets/scss/components/_components-modals.scss */
+.change-cover-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.change-cover-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.shop-wrapper .cart-container .cart-content .cart-summary .change-cover-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.change-profile-pic-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.change-profile-pic-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.shop-wrapper .cart-container .cart-content .cart-summary .change-profile-pic-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.new-story-modal .card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.new-story-modal .shop-wrapper .cart-container .cart-content .cart-summary .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2),
+.shop-wrapper .cart-container .cart-content .cart-summary .new-story-modal .summary-card .card-body .selection-placeholder .selection-box .box-content .box-text span:nth-child(2) {
+    font-size: 0.9rem;
+    color: #999;
+} 
+
+
+
+
+.cover-bg:hover .cover-edit {
+  border-color: #fcfcfc;
+  background: rgba(252, 252, 252, 0.1);
+} /* line 38, src/assets/scss/pages/_app-profile.scss */
+.cover-bg:hover .cover-edit i {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+} /* line 42, src/assets/scss/pages/_app-profile.scss */
+.cover-bg:hover .cover-edit span {
+  opacity: 1;
+}
+
+
+.cover-bg .cover-edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 10px;
+  padding: 2px 8px;
+  border: 1.4px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+} /* line 243, src/assets/scss/pages/_app-profile.scss */
+.cover-bg .cover-edit i {
+  font-size: 20px;
+  color: #fcfcfc;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+} /* line 250, src/assets/scss/pages/_app-profile.scss */
+.cover-bg .cover-edit span {
+  opacity: 0;
+  display: block;
+  color: #fcfcfc;
+  font-weight: 400;
+  font-size: 0.85rem;
+  margin: 0 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+
+.nav-tabs-wrapper .tabs ul.is-faded {
+  border-bottom-color: transparent !important;
+} /* line 24, src/assets/scss/components/_components-tabs.scss */
+.nav-tabs-wrapper .tabs ul li a {
+  color: #cecece;
+  border-image-width: 2px;
+} /* line 29, src/assets/scss/components/_components-tabs.scss */
+.nav-tabs-wrapper .tabs ul li:hover a {
+  border-bottom-color: inherit;
+} /* line 33, src/assets/scss/components/_components-tabs.scss */
+.nav-tabs-wrapper .tabs ul li.is-active a {
+  color: #0062ff;
+  border-bottom-color: #0062ff;
+} /* line 40, src/assets/scss/components/_components-tabs.scss */
+.nav-tabs-wrapper .tab-content {
+  display: none;
+  overflow: hidden;
+  padding: 0 10px 10px 10px;
+  -webkit-animation: fadeInLeft 0.5s;
+  animation: fadeInLeft 0.5s;
+} /* line 46, src/assets/scss/components/_components-tabs.scss */
+.nav-tabs-wrapper .tab-content.is-active {
+  display: block;
+} 
+
+
+
+
+
+.flex-chose{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
