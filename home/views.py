@@ -19,7 +19,8 @@ from django.core.wsgi import get_wsgi_application
 os.environ['DJANGO_SETTINGS_MODULE'] = 'booctop.settings'
 application = get_wsgi_application()
 def home_view(request):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    print(BASE_DIR)
     dt = datetime.datetime.now()
     date_time_str = '2020-06-21 08:15:27.243860'
     date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
