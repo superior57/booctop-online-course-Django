@@ -1,5 +1,4 @@
-
-{% load static %}
+ {% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -38,327 +37,326 @@
 
 
 
-   <!-- Flatpickr -->
-   <link type="text/css" href="{%static 'teacher/assets/css/flatpickr.css' %}" rel="stylesheet">
+    <!-- Flatpickr -->
+    <link type="text/css" href="{%static 'teacher/assets/css/flatpickr.css' %}" rel="stylesheet">
 
-   <link type="text/css" href="{%static 'teacher/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
-   {% block head %}
-   {% endblock %}
+    <link type="text/css" href="{%static 'teacher/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet"> {% block head %} {% endblock %}
 
-  <style>
-
-.chatbot {
-  position: fixed !important;
-  top: 0 ;
-  bottom: 0 !important;
-  right: 0 !important;
-  width: 380px !important;
-  box-shadow: 0 -6px 99px -17px rgba(0, 0, 0, 0.68);
-  z-index: 9999;
-}
-
-@media screen and (min-width: 640px) {
-  .chatbot {
-    max-width: 420px;
-    right: 80px;
-    top: auto;
-  }
-}
-.chatbot.chatbot--closed {
-  top: auto;
-  width: 100%;
-}
-
-.chatbot__header {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #0089e4;
-  height: 54px;
-  padding: 0 20px;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.chatbot__header:hover {
-  background-color: #0180d4;
-}
-
-.chatbot__header p {
-  margin-right: 20px;
-  padding-top: 15px !important;
-}
-
-.chatbot__close-button {
-  fill: #fff;
-}
-
-.chatbot__close-button.icon-speech {
-  width: 20px;
-  display: none;
-}
-
-.chatbot--closed .chatbot__close-button.icon-speech {
-  display: block;
-}
-
-.chatbot__close-button.icon-close {
-  width: 14px;
-}
-
-.chatbot--closed .chatbot__close-button.icon-close {
-  display: none;
-}
-
-.chatbot__message-window {
-  height: calc(100% - (54px + 60px));
-  padding: 40px 20px 20px;
-  background-color: #fff;
-  overflow-x: none;
-  overflow-y: auto;
-}
-
-@media screen and (min-width: 640px) {
-  .chatbot__message-window {
-    height: 480px;
-  }
-}
-.chatbot__message-window::-webkit-scrollbar {
-  display: none;
-}
-
-.chatbot--closed .chatbot__message-window {
-  display: none;
-}
-
-.chatbot__messages {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  width: auto;
-}
-
-.chatbot__messages li {
-}
-
-.chatbot__messages li.is-ai {
-  display: inline-flex;
-  align-items: flex-start;
-}
-
-.chatbot__messages li.is-user {
-  text-align: right;
-  display: inline-flex;
-  align-self: flex-end;
-}
-
-.chatbot__messages li .is-ai__profile-picture {
-  width: 55px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #f1f1f1;
-  margin-right: 10px;
-}
-
-.chatbot__messages li .is-ai__profile-picture img{
-    margin-top: 2px;
-}
-
-.chatbot__messages li .is-ai__profile-picture .icon-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.chatbot__message {
-  display: inline-block;
-  padding: 12px 20px;
-  word-break: break-word;
-  margin: 0;
-  width: 380px;
-  border-radius: 6px;
-  letter-spacing: -0.01em;
-  line-height: 1.45;
-  overflow: hidden;
-}
-
-.is-ai .chatbot__message {
-  background-color: #f0f0f0;
-  margin-right: 30px;
-}
-
-.is-user .chatbot__message {
-  background-color: #0876dd;
-  color: white;
-  width: 100%;
-  margin-left: 30px;
-}
-
-.chatbot__message a {
-  color: #7226e0;
-  word-break: break-all;
-  display: inline-block;
-}
-
-.chatbot__message p:first-child {
-  margin-top: 0;
-}
-
-.chatbot__message p:last-child {
-  margin-bottom: 0;
-}
-
-.chatbot__message button {
-  background-color: #fff;
-  font-weight: 300;
-  border: 2px solid #267de0;
-  border-radius: 50px;
-  padding: 8px 20px;
-  margin: -8px 10px 18px 0;
-  transition: background-color 0.2s ease;
-  cursor: pointer;
-}
-
-.chatbot__message button:hover {
-  background-color: #f2f2f2;
-}
-
-.chatbot__message button:focus {
-  outline: none;
-}
-
-.chatbot__message img {
-  max-width: 100%;
-}
-
-.animation:last-child {
-  animation: fadein .25s;
-  animation-timing-function: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.chatbot__arrow {
-  width: 0;
-  height: 0;
-  margin-top: 18px;
-}
-
-.chatbot__arrow--right {
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 6px solid #015db4;
-}
-
-.chatbot__arrow--left {
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-right: 6px solid #f0f0f0;
-}
-
-.chatbot__entry {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 20px;
-  border-top: 1px solid #e6eaee;
-  background-color: #fff;
-}
-
-.chatbot--closed .chatbot__entry {
-  display: none;
-}
-
-.chatbot__input {
-  height: 100%;
-  width: 80%;
-  border: 0;
-}
-
-.chatbot__input:focus {
-  outline: none;
-}
-
-.chatbot__input::-webkit-input-placeholder {
-  color: #7f7f7f;
-}
-
-.chatbot__input::-moz-placeholder {
-  color: #7f7f7f;
-}
-
-.chatbot__input::-ms-input-placeholder {
-  color: #7f7f7f;
-}
-
-.chatbot__input::-moz-placeholder {
-  color: #7f7f7f;
-}
-
-.chatbot__submit {
-  fill: #267de0;
-  height: 22px;
-  width: 22px;
-  transition: fill 0.2s ease;
-  cursor: pointer;
-}
-
-.chatbot__submit:hover {
-  fill: #45148c;
-}
-
-.u-text-highlight {
-  color: #7ee0d2;
-}
-
-.loader {
-  margin-bottom: -2px;
-  text-align: center;
-  opacity: .3;
-}
-
-.loader__dot {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 1px;
-  background: black;
-  border-radius: 50px;
-  animation: loader 0.45s infinite alternate;
-}
-
-.loader__dot:nth-of-type(2) {
-  animation-delay: .15s;
-}
-
-.loader__dot:nth-of-type(3) {
-  animation-delay: .35s;
-}
-
-@keyframes loader {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  to {
-    opacity: 1;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-}
-  </style>
+    <style>
+        .chatbot {
+            position: fixed !important;
+            top: 0;
+            bottom: 0 !important;
+            right: 0 !important;
+            width: 380px !important;
+            box-shadow: 0 -6px 99px -17px rgba(0, 0, 0, 0.68);
+            z-index: 9999;
+        }
+        
+        @media screen and (min-width: 640px) {
+            .chatbot {
+                max-width: 420px;
+                right: 80px;
+                top: auto;
+            }
+        }
+        
+        .chatbot.chatbot--closed {
+            top: auto;
+            width: 100%;
+        }
+        
+        .chatbot__header {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0089e4;
+            height: 54px;
+            padding: 0 20px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .chatbot__header:hover {
+            background-color: #0180d4;
+        }
+        
+        .chatbot__header p {
+            margin-right: 20px;
+            padding-top: 15px !important;
+        }
+        
+        .chatbot__close-button {
+            fill: #fff;
+        }
+        
+        .chatbot__close-button.icon-speech {
+            width: 20px;
+            display: none;
+        }
+        
+        .chatbot--closed .chatbot__close-button.icon-speech {
+            display: block;
+        }
+        
+        .chatbot__close-button.icon-close {
+            width: 14px;
+        }
+        
+        .chatbot--closed .chatbot__close-button.icon-close {
+            display: none;
+        }
+        
+        .chatbot__message-window {
+            height: calc(100% - (54px + 60px));
+            padding: 40px 20px 20px;
+            background-color: #fff;
+            overflow-x: none;
+            overflow-y: auto;
+        }
+        
+        @media screen and (min-width: 640px) {
+            .chatbot__message-window {
+                height: 480px;
+            }
+        }
+        
+        .chatbot__message-window::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .chatbot--closed .chatbot__message-window {
+            display: none;
+        }
+        
+        .chatbot__messages {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+        }
+        
+        .chatbot__messages li {}
+        
+        .chatbot__messages li.is-ai {
+            display: inline-flex;
+            align-items: flex-start;
+        }
+        
+        .chatbot__messages li.is-user {
+            text-align: right;
+            display: inline-flex;
+            align-self: flex-end;
+        }
+        
+        .chatbot__messages li .is-ai__profile-picture {
+            width: 55px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #f1f1f1;
+            margin-right: 10px;
+        }
+        
+        .chatbot__messages li .is-ai__profile-picture img {
+            margin-top: 2px;
+        }
+        
+        .chatbot__messages li .is-ai__profile-picture .icon-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .chatbot__message {
+            display: inline-block;
+            padding: 12px 20px;
+            word-break: break-word;
+            margin: 0;
+            width: 380px;
+            border-radius: 6px;
+            letter-spacing: -0.01em;
+            line-height: 1.45;
+            overflow: hidden;
+        }
+        
+        .is-ai .chatbot__message {
+            background-color: #f0f0f0;
+            margin-right: 30px;
+        }
+        
+        .is-user .chatbot__message {
+            background-color: #0876dd;
+            color: white;
+            width: 100%;
+            margin-left: 30px;
+        }
+        
+        .chatbot__message a {
+            color: #7226e0;
+            word-break: break-all;
+            display: inline-block;
+        }
+        
+        .chatbot__message p:first-child {
+            margin-top: 0;
+        }
+        
+        .chatbot__message p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .chatbot__message button {
+            background-color: #fff;
+            font-weight: 300;
+            border: 2px solid #267de0;
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin: -8px 10px 18px 0;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .chatbot__message button:hover {
+            background-color: #f2f2f2;
+        }
+        
+        .chatbot__message button:focus {
+            outline: none;
+        }
+        
+        .chatbot__message img {
+            max-width: 100%;
+        }
+        
+        .animation:last-child {
+            animation: fadein .25s;
+            animation-timing-function: all 200ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        
+        .chatbot__arrow {
+            width: 0;
+            height: 0;
+            margin-top: 18px;
+        }
+        
+        .chatbot__arrow--right {
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid #015db4;
+        }
+        
+        .chatbot__arrow--left {
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-right: 6px solid #f0f0f0;
+        }
+        
+        .chatbot__entry {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0 20px;
+            border-top: 1px solid #e6eaee;
+            background-color: #fff;
+        }
+        
+        .chatbot--closed .chatbot__entry {
+            display: none;
+        }
+        
+        .chatbot__input {
+            height: 100%;
+            width: 80%;
+            border: 0;
+        }
+        
+        .chatbot__input:focus {
+            outline: none;
+        }
+        
+        .chatbot__input::-webkit-input-placeholder {
+            color: #7f7f7f;
+        }
+        
+        .chatbot__input::-moz-placeholder {
+            color: #7f7f7f;
+        }
+        
+        .chatbot__input::-ms-input-placeholder {
+            color: #7f7f7f;
+        }
+        
+        .chatbot__input::-moz-placeholder {
+            color: #7f7f7f;
+        }
+        
+        .chatbot__submit {
+            fill: #267de0;
+            height: 22px;
+            width: 22px;
+            transition: fill 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .chatbot__submit:hover {
+            fill: #45148c;
+        }
+        
+        .u-text-highlight {
+            color: #7ee0d2;
+        }
+        
+        .loader {
+            margin-bottom: -2px;
+            text-align: center;
+            opacity: .3;
+        }
+        
+        .loader__dot {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 1px;
+            background: black;
+            border-radius: 50px;
+            animation: loader 0.45s infinite alternate;
+        }
+        
+        .loader__dot:nth-of-type(2) {
+            animation-delay: .15s;
+        }
+        
+        .loader__dot:nth-of-type(3) {
+            animation-delay: .35s;
+        }
+        
+        @keyframes loader {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+            to {
+                opacity: 1;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -380,16 +378,14 @@
             <!-- Header -->
 
             <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-                
-                {% block headercontent %}
 
-                {% endblock %}
+                {% block headercontent %} {% endblock %}
 
 
 
 
 
-               
+
 
 
 
@@ -397,45 +393,43 @@
                 
                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
                 </b></a>
-    
-             
+
+
 
 
                 <div class="flex"></div>
 
 
- 
 
 
-                    
 
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
-            
-                            <span class="avatar avatar-sm mr-8pt2">
+
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+
+                        <span class="avatar avatar-sm mr-8pt2">
             
                                 <span class="avatar-title rounded-circle" style="background-color: gray;">
-                                    <img src="/static/{{user.image}}" alt="" style="border-radius: 50%; height: 42px;">
+                                    <img src="/static{{user.image}}" alt="" style="border-radius: 50%; height: 43px; width: 43px;">
                                 </span>
-            
-                            </span>
-            
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <div class="dropdown-header"><strong>{{user.first_name}} {{user.last_name}}</strong></div>
-                            <a class="dropdown-item" href="/">Back to Booctep</a>
-                            <a class="dropdown-item" href="/teacher/dashboard">dashboard</a>
-                            <a class="dropdown-item" href="/teacher/courses">My courses</a>
-                            <a class="dropdown-item" href="/teacher/messages">Messages</a>
-                            <a class="dropdown-item" href="/teacher/notifications">Notifications</a>
-                            <a class="dropdown-item" style="color: red;" href="/logout">Logout</a>
-                        </div>
-                    </div>
-            </div>
-            {% block content %}
 
-            {%  endblock %}
+                        </span>
+
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header"><strong>{{user.first_name}} {{user.last_name}}</strong></div>
+                        <a class="dropdown-item" href="/">Back to Booctep</a>
+                        <a class="dropdown-item" href="/teacher/dashboard">dashboard</a>
+                        <a class="dropdown-item" href="/teacher/courses">My courses</a>
+                        <a class="dropdown-item" href="/teacher/messages">Messages</a>
+                        <a class="dropdown-item" href="/teacher/notifications">Notifications</a>
+                        <a class="dropdown-item" style="color: red;" href="/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+            {% block content %} {% endblock %}
 
         </div>
         <!-- // END drawer-layout__content -->
@@ -489,9 +483,9 @@
                         </ul>
                     </div>
 
-                    
+
                     <ul class="nav flex-column sidebar-menu align-items-center mb-12pt js-sidebar-mini-tabs" role="tablist">
-                        <a class="sidebar-menu-button" href="../..//"  data-toggle="tooltip" data-title="Swip to Booctep" role="tab" aria-controls="sm_student" aria-selected="true">
+                        <a class="sidebar-menu-button" href="../..//" data-toggle="tooltip" data-title="Swip to Booctep" role="tab" aria-controls="sm_student" aria-selected="true">
                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">swap_horiz</i>
                             <span class="sidebar-menu-text">swap_horiz</span>
                         </a>
@@ -531,8 +525,7 @@
                             <ul class="sidebar-menu">
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button js-sidebar-collapse" data-toggle="collapse" href="#enterprise_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
-                                        Enterprise
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span> Enterprise
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="enterprise_menu">
@@ -615,8 +608,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#community_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
-                                        Community
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span> Community
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
@@ -644,8 +636,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#productivity_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">access_time</span>
-                                        Productivity
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">access_time</span> Productivity
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="productivity_menu">
@@ -683,8 +674,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#cms_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
-                                        CMS
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span> CMS
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="cms_menu">
@@ -702,8 +692,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#ecommerce_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">shopping_cart</span>
-                                        eCommerce
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">shopping_cart</span> eCommerce
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="ecommerce_menu">
@@ -972,8 +961,7 @@
                             <ul class="sidebar-menu">
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
-                                        Components
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span> Components
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
@@ -1076,8 +1064,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
-                                        Plugins
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span> Plugins
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
@@ -1210,7 +1197,7 @@
 
     <div class="chatbot chatbot--closed">
         <div class="chatbot__header">
-            <p ><strong style="color: white;">Do you need any help?</strong></p>
+            <p><strong style="color: white;">Do you need any help?</strong></p>
             <svg class="chatbot__close-button icon-speech" viewBox="0 0 32 32">
                 <use xlink:href="#icon-speech" />
             </svg>
@@ -1228,7 +1215,7 @@
                     <p class='chatbot__message'>Hello there 🙌, How we can help you?
 
                     </p>
-                    
+
                 </li>
                 <!-- Message here -->
             </ul>
@@ -1240,7 +1227,7 @@
             </svg>
         </div>
     </div>
-    
+
     <!-- Symbols -->
     <svg>
         <!-- Close icon -->
@@ -1354,8 +1341,7 @@
 
     <!-- Sidebar Mini JS -->
     <script src="{%static 'teacher/assets/js/sidebar-mini.js' %}"></script>
-    {% block script %}
-    {% endblock %}
+    {% block script %} {% endblock %}
 
     <script>
         (function() {
@@ -1376,55 +1362,57 @@
 
 
 
-<script>
-    $.ajaxSetup({
-           headers: {'X-CSRFToken': $("#hd_csrf").val(),}
-         });
-         
-    const accessToken = "2af13bcd195349aba75a1c003d0dd75b";
-const baseUrl = "https://api.api.ai/api/query?v=20150910";
-const sessionId = "1234567890";
-const loadingMarkups = "<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>";
-const errorMessage = "Stay around while we repling..";
-const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
-const loadingDelay = 700;
-const aiReplyDelay = 1800;
-const $document = document;
-const $chatbot = $document.querySelector( ".chatbot" );
-const $chatbotMessageWindow = $document.querySelector( ".chatbot__message-window" );
-const $chatbotHeader = $document.querySelector( ".chatbot__header" );
-const $chatbotMessages = $document.querySelector( ".chatbot__messages" );
-const $chatbotInput = $document.querySelector( ".chatbot__input" );
-const $chatbotSubmit = $document.querySelector( ".chatbot__submit" );
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRFToken': $("#hd_csrf").val(),
+            }
+        });
 
-$chatbotHeader.addEventListener( "click", () => {
-    toggle( $chatbot, "chatbot--closed" );
-    $chatbotInput.focus();
-}, false );
+        const accessToken = "2af13bcd195349aba75a1c003d0dd75b";
+        const baseUrl = "https://api.api.ai/api/query?v=20150910";
+        const sessionId = "1234567890";
+        const loadingMarkups = "<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>";
+        const errorMessage = "Stay around while we repling..";
+        const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+        const loadingDelay = 700;
+        const aiReplyDelay = 1800;
+        const $document = document;
+        const $chatbot = $document.querySelector(".chatbot");
+        const $chatbotMessageWindow = $document.querySelector(".chatbot__message-window");
+        const $chatbotHeader = $document.querySelector(".chatbot__header");
+        const $chatbotMessages = $document.querySelector(".chatbot__messages");
+        const $chatbotInput = $document.querySelector(".chatbot__input");
+        const $chatbotSubmit = $document.querySelector(".chatbot__submit");
 
-document.addEventListener( "keypress", event => {
-    if ( event.which === 13 ) {
-        validateMessage();
-    }
-}, false );
+        $chatbotHeader.addEventListener("click", () => {
+            toggle($chatbot, "chatbot--closed");
+            $chatbotInput.focus();
+        }, false);
 
-$chatbotSubmit.addEventListener( "click", () => {
-    validateMessage();
-}, false );
+        document.addEventListener("keypress", event => {
+            if (event.which === 13) {
+                validateMessage();
+            }
+        }, false);
 
-let toggle = ( element, klass ) => {
-    let classes = element.className.match( /\S+/g ) || [],
-        index = classes.indexOf( klass );
-    if( index >= 0 ) {
-        classes.splice( index, 1 ); 
-    } else {
-        classes.push( klass );  
-    }
-    element.className = classes.join( " " );
-};
+        $chatbotSubmit.addEventListener("click", () => {
+            validateMessage();
+        }, false);
 
-let userMessage = content => {
-    $chatbotMessages.innerHTML += `
+        let toggle = (element, klass) => {
+            let classes = element.className.match(/\S+/g) || [],
+                index = classes.indexOf(klass);
+            if (index >= 0) {
+                classes.splice(index, 1);
+            } else {
+                classes.push(klass);
+            }
+            element.className = classes.join(" ");
+        };
+
+        let userMessage = content => {
+            $chatbotMessages.innerHTML += `
           <li class='is-user animation'>          
 
         <p class='chatbot__message'>
@@ -1434,12 +1422,12 @@ let userMessage = content => {
         <img src="../../assets/img/man.jpg' %}" style="border:2px solid grey;margin-left:5px;width:40px;float:right;height:40px;border-radius:50%" />
 
       </li>`;
-};
+        };
 
-let aiMessage = ( content, isLoading = false, delay = 0 ) => {
-    setTimeout( () => {
-        removeLoader();
-        $chatbotMessages.innerHTML += `<li 
+        let aiMessage = (content, isLoading = false, delay = 0) => {
+            setTimeout(() => {
+                removeLoader();
+                $chatbotMessages.innerHTML += `<li 
             class='is-ai animation' 
             id='${isLoading ? "is-loading" : ""}'>
               <div class="is-ai__profile-picture">
@@ -1454,169 +1442,167 @@ let aiMessage = ( content, isLoading = false, delay = 0 ) => {
             </li>
    
             `;
-        scrollDown();
-    }, delay );
-};
+                scrollDown();
+            }, delay);
+        };
 
-let removeLoader = () => {
-    let loadingElem = document.getElementById( "is-loading" );
-    if ( loadingElem ) {
-        $chatbotMessages.removeChild( loadingElem );
-    }
-};
-
-let escapeScript = unsafe => {
-    let safeString = unsafe.replace( /</g, " " )
-        .replace( />/g, " " )
-        .replace( /&/g, " " )
-        .replace( /"/g, " " )
-        .replace( /\\/, " " )
-        .replace( /\s+/g, " " );
-    return safeString.trim();
-};
-
-let linkify = inputText => {
-    return inputText.replace( urlPattern, '<a href="$1" target="_blank">$1</a>' );
-};
-
-let validateMessage = () => {
-    let text = $chatbotInput.value;
-    let safeText = text ? escapeScript( text ) : "";
-    if ( safeText.length && safeText !== " " ) {
-        resetInputField();
-        userMessage( safeText );
-        send( safeText );
-    }
-    scrollDown();
-    return;
-};
-
-let multiChoiceAnswer = text => {
-    let decodedText = text.replace( /zzz/g, "'" );
-    userMessage( decodedText );
-    send( decodedText );
-    scrollDown();
-    return;
-};
-
-let processResponse = val => {
-    removeLoader();
-    if ( val.fulfillment ) {
-        let output = "";
-        let messagesLength = val.fulfillment.messages.length;
-        for ( let i = 0; i < messagesLength; i++ ) {
-            let message = val.fulfillment.messages[ i ];
-            let type = message.type;
-            switch ( type ) {
-                // 0 fulfillment is text
-                case 0:
-                    let parsedText = linkify( message.speech );
-                    output += `<p>${parsedText}</p>`;
-                    break;
-                // 1 fulfillment is card
-                case 1:
-                    // let imageUrl = message.imageUrl
-                    // let imageTitle = message.title
-                    // let imageSubtitle = message.subtitle
-                    // output += `<img src="${imageUrl}" alt="${imageTitle}${imageSubtitle}" />`
-                    break;
-                // 2 fulfillment is button list
-                case 2:
-                    let title = message.title;
-                    let replies = message.replies;
-                    let repliesLength = replies.length;
-                    output += `<p>${title}</p>`;
-                    for ( let i = 0; i < repliesLength; i++ ) {
-                        let reply = replies[ i ];
-                        let encodedText = reply.replace( /'/g, "zzz" );
-                        output += `<button onclick='multiChoiceAnswer("${encodedText}")'>${reply}</button>`;
-                    }
-                    break;
-                // 3 fulfillment is image
-                case 3:
-                    // console.log("Fulfillment is image - TODO")
-                    break;
+        let removeLoader = () => {
+            let loadingElem = document.getElementById("is-loading");
+            if (loadingElem) {
+                $chatbotMessages.removeChild(loadingElem);
             }
-        }
-        return output;
-    } else {
-        return val;
-    }
-};
+        };
 
-let setResponse = ( val, delay = 0 ) => {
-    setTimeout( () => {
-        aiMessage( processResponse( val ) );
-    }, delay );
-};
+        let escapeScript = unsafe => {
+            let safeString = unsafe.replace(/</g, " ")
+                .replace(/>/g, " ")
+                .replace(/&/g, " ")
+                .replace(/"/g, " ")
+                .replace(/\\/, " ")
+                .replace(/\s+/g, " ");
+            return safeString.trim();
+        };
 
-let resetInputField = () => {
-    $chatbotInput.value = "";
-};
+        let linkify = inputText => {
+            return inputText.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
+        };
 
-let scrollDown = () => {
-    let distanceToScroll = $chatbotMessageWindow.scrollHeight - ( $chatbotMessages.lastChild.offsetHeight + 60 );
-    $chatbotMessageWindow.scrollTop = distanceToScroll;
-    return false;
-};
+        let validateMessage = () => {
+            let text = $chatbotInput.value;
+            let safeText = text ? escapeScript(text) : "";
+            if (safeText.length && safeText !== " ") {
+                resetInputField();
+                userMessage(safeText);
+                send(safeText);
+            }
+            scrollDown();
+            return;
+        };
 
-let send = ( text ) => {
-    fetch( `${baseUrl}&query=${text}&lang=en&sessionId=${sessionId}`, {
-        method: "GET",
-        dataType: "json",
-        headers: {
-            Authorization: "Bearer " + accessToken,
-            "Content-Type": "application/json; charset=utf-8"
-        }
-    } )
-    .then( response => response.json())
-    .then( res => {
-        if ( res.status < 200 || res.status >= 300 ) {
-        let error = new Error( res.statusText );
-        throw error;
-    }
-    return res;
-    }).then( res => {
-        // console.log(JSON.stringify(response.result, undefined, 2))
-        setResponse( res.result, loadingDelay + aiReplyDelay );
-    }).catch( error => {
-        setResponse( errorMessage, loadingDelay + aiReplyDelay );
-        resetInputField();
-        //console.log( error );
-    });
-    aiMessage( loadingMarkups, true, loadingDelay );
-};
+        let multiChoiceAnswer = text => {
+            let decodedText = text.replace(/zzz/g, "'");
+            userMessage(decodedText);
+            send(decodedText);
+            scrollDown();
+            return;
+        };
 
-</script>
-<script>
-    var Botkit = require('botkit');
+        let processResponse = val => {
+            removeLoader();
+            if (val.fulfillment) {
+                let output = "";
+                let messagesLength = val.fulfillment.messages.length;
+                for (let i = 0; i < messagesLength; i++) {
+                    let message = val.fulfillment.messages[i];
+                    let type = message.type;
+                    switch (type) {
+                        // 0 fulfillment is text
+                        case 0:
+                            let parsedText = linkify(message.speech);
+                            output += `<p>${parsedText}</p>`;
+                            break;
+                            // 1 fulfillment is card
+                        case 1:
+                            // let imageUrl = message.imageUrl
+                            // let imageTitle = message.title
+                            // let imageSubtitle = message.subtitle
+                            // output += `<img src="${imageUrl}" alt="${imageTitle}${imageSubtitle}" />`
+                            break;
+                            // 2 fulfillment is button list
+                        case 2:
+                            let title = message.title;
+                            let replies = message.replies;
+                            let repliesLength = replies.length;
+                            output += `<p>${title}</p>`;
+                            for (let i = 0; i < repliesLength; i++) {
+                                let reply = replies[i];
+                                let encodedText = reply.replace(/'/g, "zzz");
+                                output += `<button onclick='multiChoiceAnswer("${encodedText}")'>${reply}</button>`;
+                            }
+                            break;
+                            // 3 fulfillment is image
+                        case 3:
+                            // console.log("Fulfillment is image - TODO")
+                            break;
+                    }
+                }
+                return output;
+            } else {
+                return val;
+            }
+        };
 
-var controller = new Botkit({
-});
+        let setResponse = (val, delay = 0) => {
+            setTimeout(() => {
+                aiMessage(processResponse(val));
+            }, delay);
+        };
+
+        let resetInputField = () => {
+            $chatbotInput.value = "";
+        };
+
+        let scrollDown = () => {
+            let distanceToScroll = $chatbotMessageWindow.scrollHeight - ($chatbotMessages.lastChild.offsetHeight + 60);
+            $chatbotMessageWindow.scrollTop = distanceToScroll;
+            return false;
+        };
+
+        let send = (text) => {
+            fetch(`${baseUrl}&query=${text}&lang=en&sessionId=${sessionId}`, {
+                    method: "GET",
+                    dataType: "json",
+                    headers: {
+                        Authorization: "Bearer " + accessToken,
+                        "Content-Type": "application/json; charset=utf-8"
+                    }
+                })
+                .then(response => response.json())
+                .then(res => {
+                    if (res.status < 200 || res.status >= 300) {
+                        let error = new Error(res.statusText);
+                        throw error;
+                    }
+                    return res;
+                }).then(res => {
+                    // console.log(JSON.stringify(response.result, undefined, 2))
+                    setResponse(res.result, loadingDelay + aiReplyDelay);
+                }).catch(error => {
+                    setResponse(errorMessage, loadingDelay + aiReplyDelay);
+                    resetInputField();
+                    //console.log( error );
+                });
+            aiMessage(loadingMarkups, true, loadingDelay);
+        };
+    </script>
+    <script>
+        var Botkit = require('botkit');
+
+        var controller = new Botkit({});
 
 
-controller.hears('hello','message', async (bot, message) => {
+        controller.hears('hello', 'message', async(bot, message) => {
 
-await bot.reply(message,'Howdy!');
+            await bot.reply(message, 'Howdy!');
 
-});
-// Tell the bot to listen for users saying "hello," and use `bot.reply` to send an immediate response.
+        });
+        // Tell the bot to listen for users saying "hello," and use `bot.reply` to send an immediate response.
 
 
-const tacos = new BotkitConversation('tacos', controller);
-tacos.say('Oh boy, taco time!');
-tacos.ask('What type of taco do you want?', async(answer, convo, bot) => {
+        const tacos = new BotkitConversation('tacos', controller);
+        tacos.say('Oh boy, taco time!');
+        tacos.ask('What type of taco do you want?', async(answer, convo, bot) => {
 
-// do something with the answer!
+            // do something with the answer!
 
-}, 'type_of_taco');
-tacos.say('Yum!!');
-controller.addDialog(tacos);
+        }, 'type_of_taco');
+        tacos.say('Yum!!');
+        controller.addDialog(tacos);
 
-controller.hears('tacos','message', async (bot, message) => {
-await bot.beginDialog('tacos');
-});
-</script>
+        controller.hears('tacos', 'message', async(bot, message) => {
+            await bot.beginDialog('tacos');
+        });
+    </script>
 
 
 

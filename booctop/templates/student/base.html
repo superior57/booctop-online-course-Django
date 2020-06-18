@@ -9,8 +9,7 @@
     <title>Student - Account</title>
 
     <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
-    {% load static %}
+    <meta name="robots" content="noindex"> {% load static %}
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
 
@@ -44,8 +43,6 @@
     <link type="text/css" href="{%static 'student/assets/vendor/toastr.min.css' %}" rel="stylesheet">
     <link type="text/css" href="{%static 'student/assets/css/toastr.css' %}" rel="stylesheet">
 
-
-
 </head>
 
 
@@ -65,17 +62,15 @@
             <!-- Header -->
 
             <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-                
-                {% block headercontent %}
 
-                {% endblock %}
+                {% block headercontent %} {% endblock %}
                 <a href="../../teacher.0/dist/dashboard.html"><b style="position: absolute;top: 25px;right: 95px;color: rgb(63, 62, 62);">Teacher
         
                     <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons" style="font-size: 18px">swap_horiz</i>
                 </b></a>
 
 
-                
+
 
 
                 <div class="flex"></div>
@@ -88,7 +83,7 @@
 
 
 
-                    
+
 
 
                     <div class="nav-item dropdown">
@@ -97,7 +92,7 @@
                             <span class="avatar avatar-sm mr-8pt2">
 
                                 <span class="avatar-title rounded-circle" style="background-color: gray;">
-                                    <img src="/static/{{user.image}}" alt="" style="border-radius: 50%;height: 42px;">
+                                    <img src="/static{{user.image}}" alt="" style="border-radius: 50%;height: 43px; width: 43px;">
                                 </span>
 
                             </span>
@@ -113,9 +108,7 @@
                 </div>
             </div>
 
-            {% block content %}
-
-            {%  endblock %}
+            {% block content %} {% endblock %}
 
         </div>
         <!-- // END drawer-layout__content -->
@@ -164,9 +157,9 @@
                         </ul>
                     </div>
 
-                    
+
                     <ul class="nav flex-column sidebar-menu align-items-center mb-12pt " role="">
-                        <a class="" href="../../index.html"  data-title="Swip to Booctep">
+                        <a class="" href="../../index.html" data-title="Swip to Booctep">
                             <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">swap_horiz</i>
                             <span class="sidebar-menu-text">swap_horiz</span>
                         </a>
@@ -206,8 +199,7 @@
                             <ul class="sidebar-menu">
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button js-sidebar-collapse" data-toggle="collapse" href="#enterprise_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
-                                        Enterprise
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span> Enterprise
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="enterprise_menu">
@@ -290,8 +282,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#community_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
-                                        Community
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span> Community
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
@@ -319,8 +310,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#productivity_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">access_time</span>
-                                        Productivity
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">access_time</span> Productivity
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="productivity_menu">
@@ -358,8 +348,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#cms_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
-                                        CMS
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span> CMS
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="cms_menu">
@@ -377,8 +366,7 @@
                                 </li>
                                 <li class="sidebar-menu-item">
                                     <a class="sidebar-menu-button" data-toggle="collapse" href="#ecommerce_menu">
-                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">shopping_cart</span>
-                                        eCommerce
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">shopping_cart</span> eCommerce
                                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                                     </a>
                                     <ul class="sidebar-submenu collapse sm-indent" id="ecommerce_menu">
@@ -515,7 +503,7 @@
 
     <!-- App JS -->
     <script src="{%static 'student/assets/js/app.js' %}"></script>
-       <!-- Global Settings -->
+    <!-- Global Settings -->
 
 
 
@@ -524,8 +512,10 @@
 
     <script>
         $.ajaxSetup({
-           headers: {'X-CSRFToken': $("#hd_csrf").val(),}
-         });
+            headers: {
+                'X-CSRFToken': $("#hd_csrf").val(),
+            }
+        });
         (function() {
             'use strict';
 
@@ -541,9 +531,7 @@
             })
         })()
     </script>
-    {% block script %}
-
-    {% endblock %}
+    {% block script %} {% endblock %}
 
 
 </body>
