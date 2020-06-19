@@ -1,16 +1,14 @@
 from django.shortcuts import render
 
 def account(request):
+    print("requesting - ", request)
     return render(request, 'student/account.html', {})
-
-
+    
 def courses(request):
     return render(request, 'student/courses.html', {})
 
-
 def options_settings(request):
     return render(request, 'student/courses.html', {})
-
 
 def security(request):
     return render(request, 'student/security.html', {})

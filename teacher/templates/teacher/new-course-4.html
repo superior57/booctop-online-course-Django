@@ -1,0 +1,275 @@
+{% extends "teacher/base.html" %}
+
+{% block head %}
+    {% load static %}
+    <!-- Quill Theme -->
+    <link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+
+
+    <!-- Select2 -->
+    <link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+
+    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+{% endblock %}
+
+{% block headercontent %}
+    {% with title="Add New Course" %}
+        {% include "./layout/header.html" %}
+    {% endwith %}
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="progress rounded-0" style="height: 4px;">
+        <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- // END Header -->
+    <div class="page__container">
+
+
+        <div class="alert alert-soft-primary alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="d-flex flex-wrap align-items-start">
+                <div class="mr-8pt">
+                    <i class="material-icons">check</i>
+                </div>
+                <div class="flex" style="min-width: 180px">
+                    <small class="text-black-100">
+                        <b style="margin-top: 10px !important;color: blue;" >Congrots!! you have successfuly create a course.</b>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="page-section border-bottom-2">
+        <div class=" page__container">
+
+            
+
+            <div class="row">
+                <div class="col-md-8">
+
+
+                    <div class="card">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" allowfullscreen=""></iframe>
+                        </div>
+                        
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="card-body media" style="height: 50px !important;">
+                            <div class="media-left mr-3">
+                                <div class="avatar">
+                                    <img src="assets/images/256_rsz_nicolas-horn-689011-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <p>
+                                    <strong>Elzubair Mohammed Saleh.</strong><br>
+                                    <span class="text-muted">Founder and CEO</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4>Learn HTML5 and sass with css
+                                <span class="fa fa-star" style="color: tomato;"></span>
+                                <b>0.0 No one has rated</b>
+                            </h4>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, repellendus? A, dignissimos hic! Laboriosam, animi. Hic soluta sit recusandae itaque delectus voluptate maxime, deleniti, nihil in officia cumque tempora. Aspernatur!
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus minus, minima sapiente debitis, deleniti rerum commodi similique ipsum quae repellat sint accusantium. Sit porro itaque iusto distinctio rem, doloremque saepe?
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, quidem. Quod, velit mollitia eligendi provident, aspernatur consequuntur officiis voluptas odio maxime omnis aliquam vitae. Quasi, perspiciatis? Impedit explicabo similique velit.
+
+                                <br />
+                                <br />
+
+                                <b>
+                                • Sass and css with HTML5 builds. <br />
+                                • Sass and css with HTML5 builds. <br />
+                                • Sass and css with HTML5 builds. <br />
+                                • Sass and css with HTML5 builds. <br />
+                                • Sass and css with HTML5 builds. <br />
+                                • Sass and css with HTML5 builds. <br />
+                            </b>
+                            </p>
+
+                            <h5>What are the requirments to join this course?</h5>
+                            <b>
+                            • Sass and css with HTML5 builds. <br />
+                            • Sass and css with HTML5 builds. <br />
+                            • Sass and css with HTML5 builds. <br />
+                            • Sass and css with HTML5 builds. <br />
+                            • Sass and css with HTML5 builds. <br />
+                            • Sass and css with HTML5 builds. <br />
+                        </b>
+
+                        <br /> 
+                        <h5>What you will learn in this course?</h5>
+                        <b>
+                        • Sass and css with HTML5 builds. <br />
+                        • Sass and css with HTML5 builds. <br />
+                        • Sass and css with HTML5 builds. <br />
+                        • Sass and css with HTML5 builds. <br />
+                        • Sass and css with HTML5 builds. <br />
+                        • Sass and css with HTML5 builds. <br />
+                    </b>
+                        </div>
+                        
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <a href="courses.html" class="btn btn-primary mr-4">Go To My Courses</a>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex">
+                                <a class="flex" href="#"><strong>Save Draft</strong></a>
+                                <i class="material-icons text-muted">check</i>
+                            </div>
+                            <div class="list-group-item">
+                                <a href="#" class="text-danger"><strong>Delete Course</strong></a>
+                            </div>
+                            <div class="list-group-item">
+                                <a href="new-course.html" class="text-primary"><strong>
+                                    <i class="fa fa-arrow-left"></i>
+                                    Edit the course</strong></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-lg-0">
+                       
+                        <div class="card-header text-center">
+                            <b style="font-size: medium;">This course include</b>
+                        </div>
+                        
+                    <div class="card-body">
+                        <ul class="list-unstyled list-todo" id="todo">
+                            <li>
+                                <b class="ml-2">
+                                    <span class="fa fa-check mr-2" style="color: green; "></span>
+                                    Certificate</b>
+                                </li>
+                            <li>
+                                <b class="ml-2">
+                                    <span class="fa fa-check mr-2" style="color: green; "></span>
+                                    Quizzes</b>
+                                </li>
+                            <li>
+                                <b class="ml-2">
+                                    <span class="fa fa-check mr-2" style="color: green; "></span>
+                                    Lifetime Access</b>
+                                </li>
+                            <li>
+                                <b class="ml-2">
+                                    <span class="fa fa-check mr-2" style="color: green; "></span>
+                                    Money Back.</b>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="card mb-lg-0 mt-4">
+                   
+                    <div class="card-header text-center">
+                        <b style="font-size: medium;">Course curriulum</b>
+                    </div>
+                    
+                    <ul class="accordion accordion--boxed js-accordion mb-0" style="border-radius: 0 !important;" id="toc-1">
+                        <li class="accordion__item open">
+                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
+                                <span class="flex">Introduction to HTML5</span>
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </a>
+                            <div class="accordion__menu">
+                                <ul class="list-unstyled collapse show" id="toc-content-1">
+                                    <li class="accordion__menu-link">
+                                        <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
+                                        <a class="flex" href="mini-student-take-lesson.html">Introduction</a>
+                                        <span class="text-muted">8m 42s</span>
+                                    </li>
+                                    <li class="accordion__menu-link">
+                                        <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
+                                        <a class="flex" href="mini-student-take-lesson.html">Introduction to TypeScript</a>
+                                        <span class="text-muted">50m 13s</span>
+                                    </li>
+                                    <li class="accordion__menu-link">
+                                        <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
+                                        <a class="flex" href="mini-student-take-lesson.html">Comparing Angular to AngularJS</a>
+                                        <span class="text-muted">12m 10s</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+
+            </div>
+
+
+            <div class="card mb-lg-0 mt-4">
+               
+                <div class="card-header text-center">
+                    <b style="font-size: medium;">Course Quiz</b>
+                </div>
+                
+                <ul class="accordion accordion--boxed js-accordion mb-0" style="border-radius: 0 !important;" id="toc-1">
+                    <li class="accordion__item open">
+                        <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
+                            <span class="flex">Learn HTML5 and css Quiz</span>
+                            <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                        </a>
+                        <div class="accordion__menu">
+                            <ul class="list-unstyled collapse show" id="toc-content-1">
+                                <li class="accordion__menu-link">
+                                    <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
+                                    <a class="flex" href="mini-student-take-lesson.html">How to add commednts in Css?</a>
+                                </li>
+                                <li class="accordion__menu-link">
+                                    <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
+                                    <a class="flex" href="mini-student-take-lesson.html">How to add commednts in Css?</a>
+                                </li>
+                                <li class="accordion__menu-link">
+                                    <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
+                                    <a class="flex" href="mini-student-take-lesson.html">How to add commednts in Css?</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+        </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
+{% endblock %}

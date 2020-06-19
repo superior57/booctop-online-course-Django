@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Student - Account</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex"> {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{%static 'student/assets/vendor/perfect-scrollbar.css' %}" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{%static 'student/assets/vendor/fix-footer.css' %}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{%static 'student/assets/css/material-icons.css' %}" rel="stylesheet">
+
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{%static 'student/assets/css/fontawesome.css' %}" rel="stylesheet">
+
+
+    <!-- Preloader -->
+    <link type="text/css" href="{%static 'student/assets/css/preloader.css' %}" rel="stylesheet">
+
+
+    <!-- App CSS -->
+    <link type="text/css" href="{%static 'student/assets/css/app.css' %}" rel="stylesheet">
+
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{%static 'student/assets/css/sweetalert.css' %}">
+
+
+    <!-- Toastr -->
+    <link type="text/css" href="{%static 'student/assets/vendor/toastr.min.css' %}" rel="stylesheet">
+    <link type="text/css" href="{%static 'student/assets/css/toastr.css' %}" rel="stylesheet">
+
+</head>
+
+
+
+<body class="layout-mini layout-mini">
+    <input type="hidden" id="hd_csrf" value="{{ csrf_token }}">
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+            {% block headercontent %}
+            {% endblock %}
+
+            {% block content %} 
+            {% endblock %}
+
+        </div>
+        <!-- // END drawer-layout__content -->
+        {% include "./layout/left-sidebar.html" %}
+    </div>
+    <!-- // END drawer-layout -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="{%static 'student/assets/vendor/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{%static 'student/assets/vendor/popper.min.js' %}"></script>
+    <script src="{%static 'student/assets/vendor/bootstrap.min.js' %}"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="{%static 'student/assets/vendor/perfect-scrollbar.min.js' %}"></script>
+
+    <!-- DOM Factory -->
+    <script src="{%static 'student/assets/vendor/dom-factory.js' %}"></script>
+
+    <!-- MDK -->
+    <script src="{%static 'student/assets/vendor/material-design-kit.js' %}"></script>
+
+
+    <!-- App JS -->
+    <script src="{%static 'student/assets/js/app.js' %}"></script>
+    <!-- Global Settings -->
+
+
+
+    <!-- Sidebar Mini JS -->
+    <script src="{%static 'student/assets/js/sidebar-mini.js' %}"></script>
+
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRFToken': $("#hd_csrf").val(),
+            }
+        });
+        (function() {
+            'use strict';
+
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function(e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function(e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+    {% block script %} {% endblock %}
+
+
+</body>
+
+</html>

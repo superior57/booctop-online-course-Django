@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from teacher.models import categories
 from home.models import User
+from datetime import datetime
 def teacher_account(request):
     # print("category = ",request.user.id)
     # objU = User.objects.get(email=request.user.email)
@@ -37,7 +38,7 @@ def student_performance(request):
     return render(request, 'teacher/student-performance.html', {})  
     
 def teacher_messages(request):
-    return render(request, 'teacher/messages.html', {})  
+    return render(request, 'teacher/messages.html', {'datetime':datetime})  
       
 
 def dashboard1(request):

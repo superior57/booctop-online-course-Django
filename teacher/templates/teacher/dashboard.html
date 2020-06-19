@@ -1,0 +1,388 @@
+
+{% extends "teacher/base.html" %}
+
+{% block headercontent %}
+    {% include "./layout/header.html" %} 
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+
+    <div class=" page__container page-section">
+
+
+
+
+        <div id="carouselExampleFade" class="carousel carousel-card slide mb-24pt" style="border-radius: 0 !important;">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active" style="background-color: rgb(0, 71, 153);height: 230px;border-radius: 7px;">
+
+                    <div class="card border-0 mb-0" href="" style="margin-top: 100px;">
+                        <div class="fullbleed bg-primary" style="opacity: .5;"></div>
+                        <span class="card-body d-flex flex-column align-items-center justify-content-center fullbleed">
+                            <h4 style="color: white;">Are you ready to teach?</h4>
+                            <p style="color: white;width: 70%;text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas hic ipsa facere vero magnam quo beatae, itaque facilis ea illum repellat ratione sequi saepe obcaecati praesentium explicabo ut culpa nulla.</p>
+                            <a href="new-course.html" class="btn btn-secondary mb-16pt" style="background-color: white;color: darkblue;">Add caourse</a>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item " style="background-color: rgb(0, 71, 153);height: 230px;border-radius: 7px;">
+
+                    <div class="card border-0 mb-0" href="" style="margin-top: 100px;">
+                        <div class="fullbleed bg-primary" style="opacity: .5;"></div>
+                        <span class="card-body d-flex flex-column align-items-center justify-content-center fullbleed">
+                            <h4 style="color: white;">Not sure yet?</h4>
+                            <p style="color: white;width: 70%;text-align: center;">Add Test course to see our suggetions and recommandation to you.</p>
+                            <button href="" class="btn btn-secondary mb-16pt" style="background-color: white;color: darkblue;">Add test caourse</button>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+<span class="carousel-control-icon material-icons" aria-hidden="true">keyboard_arrow_left</span>
+<span class="sr-only">Previous</span>
+</a> -->
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-icon material-icons" aria-hidden="true">keyboard_arrow_right</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+
+        <div class="page-section">
+
+
+
+            <div class="row card-group-row mb-lg-8pt">
+                <div class="col-lg-4 col-md-6 card-group-row__col">
+                    <div class="card card-group-row__card p-relative o-hidden">
+                        <div class="card-body d-flex flex-row align-items-center">
+                            <div class="flex">
+                                <p class="card-title d-flex align-items-center">
+                                    <strong>Total revenue</strong>
+                                </p>
+                                <span class="h2 m-0" style="color: orange;">&dollar;00.00</span>
+                            </div>
+                            <i class="material-icons icon-32pt text-20 ml-8pt">monetization_on</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 card-group-row__col">
+                    <div class="card card-group-row__card p-relative o-hidden">
+                        <div class="card-body d-flex flex-row align-items-center">
+                            <div class="flex">
+                                <p class="card-title d-flex align-items-center">
+                                    <strong>Total students</strong>
+                                </p>
+                                <span class="h2 m-0">00,00</span>
+                            </div>
+                            <i class="material-icons icon-32pt text-20 ml-8pt">people_outline</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 card-group-row__col">
+                    <div class="card card-group-row__card">
+                        <div class="card-body d-flex flex-row align-items-center">
+                            <div class="card-title flex">
+                                <strong>Teacher rating</strong>
+                                <div class="h2 m-0">0.0</div>
+                            </div>
+                            <i class="material-icons icon-32pt text-20">star</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-separator">
+                <div class="page-separator__text">Transactions</div>
+            </div>
+
+            
+
+
+
+            <div class="card mb-0">
+                <div data-toggle="lists" data-lists-values='[
+    "js-lists-values-course", 
+    "js-lists-values-revenue",
+    "js-lists-values-fees"
+]' data-lists-sort-by="js-lists-values-revenue" data-lists-sort-desc="true" class="table-responsive">
+                    <table class="table table-nowrap table-flush">
+                        <thead>
+                            <tr class="text-uppercase small">
+                                <th>
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-course">Course</a>
+                                </th>
+                                <th class="text-center" style="width:130px">
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-fees">Fees</a>
+                                </th>
+                                <th class="text-center" style="width:130px">
+                                    <a href="javascript:void(0)" class="sort" data-sort="js-lists-values-revenue">Revenue</a>
+                                </th>
+                            </tr>
+                        </thead>
+
+
+
+                        <tbody class="list">
+
+                            <tr>
+                                <td>
+                                    <div class="media flex-nowrap align-items-center">
+                                        <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                            <img src="{%static 'teacher/assets/images/paths/angular_routing_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                            <span class="overlay__content"></span>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="text-body js-lists-values-course" href="mini-instructor-edit-course.html"><strong>Angular Routing In-Depth</strong></a>
+                                            <div class="text-muted small">34 Sales</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center text-black-70">
+
+                                    &dollar;<span class="js-lists-values-fees">120</span> USD
+
+                                </td>
+                                <td class="text-center text-black-70">
+                                    &dollar;<span class="js-lists-values-revenue">8,737</span> USD
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="media flex-nowrap align-items-center">
+                                        <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                            <img src="{%static 'teacher/assets/images/paths/angular_testing_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                            <span class="overlay__content"></span>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="text-body js-lists-values-course" href="mini-instructor-edit-course.html"><strong>Angular Unit Testing</strong></a>
+                                            <div class="text-muted small">38 Sales</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center text-black-70">
+
+                            
+                                    &dollar;<span class="js-lists-values-fees">120</span> USD
+
+                                </td>
+                                <td class="text-center text-black-70">
+                                    &dollar;<span class="js-lists-values-revenue">2,521</span> USD
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="media flex-nowrap align-items-center">
+                                        <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                            <img src="{%static 'teacher/assets/images/paths/typescript_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                            <span class="overlay__content"></span>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="text-body js-lists-values-course" href="mini-instructor-edit-course.html"><strong>Introduction to TypeScript</strong></a>
+                                            <div class="text-muted small">8 Sales</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center text-black-70">
+
+                                
+                                    &dollar;<span class="js-lists-values-fees">120</span> USD
+
+                                </td>
+                                <td class="text-center text-black-70">
+                                    &dollar;<span class="js-lists-values-revenue">1,413</span> USD
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="media flex-nowrap align-items-center">
+                                        <a href="mini-instructor-edit-course.html" class="avatar avatar-4by3 overlay overlay--primary mr-12pt">
+                                            <img src="{%static 'teacher/assets/images/paths/angular_200x168.png' %}" alt="course" class="avatar-img rounded">
+                                            <span class="overlay__content"></span>
+                                        </a>
+                                        <div class="media-body">
+                                            <a class="text-body js-lists-values-course" href="mini-instructor-edit-course.html"><strong>Learn Angular Fundamentals</strong></a>
+                                            <div class="text-muted small">31 Sales</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center text-black-70">
+
+                    
+                                    &dollar;<span class="js-lists-values-fees">120</span> USD
+
+                                </td>
+                                <td class="text-center text-black-70">
+                                    &dollar;<span class="js-lists-values-revenue">1,234</span> USD
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    
+                                    <ul class="pagination-list" style="font-size:small;margin-top: 15px !important;">
+                                        <li><a class="pagination-previous">
+                                            <i class="fa fa-arrow-left"></i>
+                                            &nbsp; Previous</a></li>
+                                            <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                                            <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                            <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                                            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page" style="color:white">46</a></li>
+                                            <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                                            <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                            <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                                            <li><a class="pagination-next">Next
+                                            &nbsp; <i class="fa fa-arrow-right"></i>
+                                            </a></li>
+                                        </ul>
+                                        
+                                </td>
+                                <td class="text-center text-black-70">
+
+                                <b></b>     <span class="js-lists-values-revenue"></span> 
+                                
+                                </td>
+                                <td class="text-center text-black-70">
+                                
+
+                                <b>Total:</b>     &dollar;<span class="js-lists-values-revenue">1,234</span> USD
+                                
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+            
+
+
+            <h4 class="" style="font-size: 18px;margin-top: 20px;">Have questions? Here are our most popular instructor resources.</h4>
+
+
+
+
+            <div class="row card-group-row">
+
+            
+
+                <div class="col-md-6 col-lg-3 card-group-row__col">
+
+
+
+                    <div class="card card--elevated card-group-row__card">
+                        <div class="card-body d-flex">
+                            <div class="flex">
+                                <a class="card-title mb-4pt" href="">Do you offer a free trial?</a>
+                                <p class="text-70 mb-0">We offer everyone a 7 day free trial! You can take advantage!</p>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                            <div class="flex text-muted"><strong>Last update on: </strong>
+                                <small>10/03/2020</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-md-6 col-lg-3 card-group-row__col">
+
+
+
+                    <div class="card card--elevated card-group-row__card">
+                        <div class="card-body d-flex">
+                            <div class="flex">
+                                <a class="card-title mb-4pt" href="">Do you offer a free trial?</a>
+                                <p class="text-70 mb-0">We offer everyone a 7 day free trial! You can take advantage!</p>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                            <div class="flex text-muted"><strong>Last update on: </strong>
+                                <small>10/03/2020</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-md-6 col-lg-3 card-group-row__col">
+
+
+
+                    <div class="card card--elevated card-group-row__card">
+                        <div class="card-body d-flex">
+                            <div class="flex">
+                                <a class="card-title mb-4pt" href="">Do you offer a free trial?</a>
+                                <p class="text-70 mb-0">We offer everyone a 7 day free trial! You can take advantage!</p>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                            <div class="flex text-muted"><strong>Last update on: </strong>
+                                <small>10/03/2020</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            
+
+                <div class="col-md-6 col-lg-3 card-group-row__col">
+
+
+
+                    <div class="card card--elevated card-group-row__card">
+                        <div class="card-body d-flex">
+                            <div class="flex">
+                                <a class="card-title mb-4pt" href="">Do you offer a free trial?</a>
+                                <p class="text-70 mb-0">We offer everyone a 7 day free trial! You can take advantage!</p>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex lh-1 px-16pt py-8pt">
+                            <div class="flex text-muted"><strong>Last update on: </strong>
+                                <small>10/03/2020</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+
+
+    
+
+
+        
+
+
+
+
+
+        </div>
+
+        
+
+    </div>
+
+{%  endblock %}

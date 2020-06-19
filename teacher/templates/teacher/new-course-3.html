@@ -1,0 +1,307 @@
+{% extends "teacher/base.html" %}
+
+{% block head %}
+    {% load static %}
+    <!-- Quill Theme -->
+    <link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+
+
+    <!-- Select2 -->
+    <link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+
+    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+{% endblock %}
+
+{% block headercontent %}
+    {% with title="Add New Course" %}
+        {% include "./layout/header.html" %}
+    {% endwith %}
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="progress rounded-0" style="height: 4px;">
+        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <!-- // END Header -->
+    <div class="page-section border-bottom-2">
+        <div class=" page__container" style="height: 100% !important;">
+
+            <div class="row">
+                <div class="col-md-8">
+
+
+
+                    <div class="page-separator">
+                        <div class="page-separator__text">Step 3</div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="card-body media" style="height: 55px !important;">
+                                                       
+                        <b style="font-size: medium;">Course Quiz</b>
+                            
+                        </div>
+                    </div>
+
+
+                    <ul class="accordion accordion--boxed js-accordion mb-0" style="border-radius: 0 !important;" id="toc-1">
+                        <li class="accordion__item open">
+                            <div class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
+                                <span class="flex">HTML5 and CSS3 Quizzes 
+
+                                    <a style="margin-left: 10px !important;" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false" >Edit Quiz name</a>
+                               
+                            
+                                </span>
+
+
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                            </div>
+                            <div class="accordion__menu">
+                                <ul class="list-unstyled collapse show" id="toc-content-1">
+                                    <li class="accordion__menu-link">
+                                        <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
+                                        <a class="flex" href="mini-student-take-lesson.html">Provide 3 tags of html5 semantics!</a>
+                                        <span class="text-muted">Multi answer</span>
+                                    </li>
+                                    <li class="accordion__menu-link">
+                                        <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
+                                        <a class="flex" href="mini-student-take-lesson.html">How to write a paragraph in HTML Language?</a>
+                                        <span class="text-muted">Single answer</span>
+                                    </li>
+                                    <li class="accordion__menu-link">
+                                        <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
+                                        <a class="flex" href="mini-student-take-lesson.html">How to write comments in Css Language?</a>
+                                        <span class="text-muted">Multi answer</span>
+                                    </li>
+                                    <li class="accordion__menu-link" style="padding-left: 40% !important;padding: 25px 0;">             
+                                 
+                                      
+                                        <a style="font-weight: 500;margin-left: 10px !important;" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false" >Add New Quiz Question 
+                                        <i class="fa fa-plus"></i>
+                                        </a>
+
+                        <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                        <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+        
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    
+
+                        <ul class="mt-3 accordion accordion--boxed js-accordion mb-0" id="toc-2">
+                            <li class="accordion__item">
+                                <div class="accordion__toggle" data-toggle="collapse" data-parent="#toc-2" href="#toc-content-2">
+                                    <span class="flex">
+
+                                        <a style="margin-left: 0px !important;" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false" >Add Quiz name</a>
+                                   
+                                
+                                    </span>
+
+
+
+                                    <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                    <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                    
+                                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                </div>
+                                <div class="accordion__menu">
+                                    <ul class="list-unstyled collapse" style="" id="toc-content-2">
+                                      
+                                        <li class="accordion__menu-link" style="border-top: 1px solid rgb(231, 231, 231);padding-left: 40% !important;padding: 25px 0;">
+
+                                            <a style="font-weight: 500;margin-left: 10px !important;" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false" >Add Quiz Question
+                                                <i class="fa fa-plus"></i>
+                                                </a>
+
+                                <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Thanks You!" data-swal-text="You can change your ratings anytime"></div>
+
+                                <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                        
+                    <div class="page-section">
+                        <h4>Add a new question</h4>
+
+                        <div class="card--connect pb-32pt pb-lg-64pt">
+                            <div class="card o-hidden mb-0">
+                                <div class="card-body table--elevated">
+                                    <div class="form-group m-0" role="group" aria-labelledby="label-title">
+                                        <b style="font-size:medium;">Ask your question
+                                        <i class="fa fa-question"></i>
+                                        </b>
+                                        <div class="form-row align-items-center">
+                                            <div class="col-md-12 mt-2">
+                                                <input id="title" type="text" placeholder="Ask Your question ..." class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="form-group m-0" role="group" aria-labelledby="label-topic">
+                                    <div class="form-row align-items-center">
+                                        <label id="label-topic" for="topic" class="col-md-3 col-form-label form-label">Options</label>
+                                        <div class="col-md-9">
+                                            <select id="topic" class="form-control custom-select w-auto">
+                                                <option value="Single Answer">Single Answer</option>
+                                                <option value="Multi Answer">Multi Answer</option>
+                                                <option value="Multi Answer">Dragula Answer</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div role="group" aria-labelledby="label-question" class="m-0 form-group">
+                                    <div class="form-row">
+                                        <label id="label-question" for="question" class="col-md-3 col-form-label form-label">Add Answer</label>
+                                        <div class="col-md-9">
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">Answer num 1</option>
+                                                <option value="Answer num 2">Answer num 2</option>
+                                                <option value="Answer num 3">Answer num 3</option>
+                                                <option value="Answer num 4">Answer num 4</option>
+                                            </select>
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">correct</option>
+                                                <option value="Answer num 2">wrong</option>
+                                            </select>
+                                            <textarea id="question" placeholder="Add your answer here..." rows="4" class="form-control"></textarea>                                                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div role="group" aria-labelledby="label-question" class="m-0 form-group">
+                                    <div class="form-row">
+                                        <label id="label-question" for="question" class="col-md-3 col-form-label form-label">Add Answer</label>
+                                        <div class="col-md-9">
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">Answer num 1</option>
+                                                <option value="Answer num 2">Answer num 2</option>
+                                                <option value="Answer num 3">Answer num 3</option>
+                                                <option value="Answer num 4">Answer num 4</option>
+                                            </select>
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">correct</option>
+                                                <option value="Answer num 2">wrong</option>
+                                            </select>
+                                            <textarea id="question" placeholder="Add your answer here..." rows="4" class="form-control"></textarea>                                                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div role="group" aria-labelledby="label-question" class="m-0 form-group">
+                                    <div class="form-row">
+                                        <label id="label-question" for="question" class="col-md-3 col-form-label form-label">Add Answer</label>
+                                        <div class="col-md-9">
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">Answer num 1</option>
+                                                <option value="Answer num 2">Answer num 2</option>
+                                                <option value="Answer num 3">Answer num 3</option>
+                                                <option value="Answer num 4">Answer num 4</option>
+                                            </select>
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">correct</option>
+                                                <option value="Answer num 2">wrong</option>
+                                            </select>
+                                            <textarea id="question" placeholder="Add your answer here..." rows="4" class="form-control"></textarea>                                                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div role="group" aria-labelledby="label-question" class="m-0 form-group">
+                                    <div class="form-row">
+                                        <label id="label-question" for="question" class="col-md-3 col-form-label form-label">Add Answer</label>
+                                        <div class="col-md-9">
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">Answer num 1</option>
+                                                <option value="Answer num 2">Answer num 2</option>
+                                                <option value="Answer num 3">Answer num 3</option>
+                                                <option value="Answer num 4">Answer num 4</option>
+                                            </select>
+                                            <select id="topic" class="form-control custom-select w-auto mb-2">
+                                                <option value="Answer num 1">correct</option>
+                                                <option value="Answer num 2">wrong</option>
+                                            </select>
+                                            <textarea id="question" placeholder="Add your answer here..." rows="4" class="form-control"></textarea>                                                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <button type="button" class="btn btn-accent">Add Question</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <a href="/new-course-4" class="btn btn-primary mr-4">Add course</a>
+                            <a href="#" class="btn btn-accent">Save for later</a>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex">
+                                <a class="flex" href="#"><strong>Save Draft</strong></a>
+                                <i class="material-icons text-muted">check</i>
+                            </div>
+                            <div class="list-group-item">
+                                <a href="#" class="text-danger"><strong>Delete Course</strong></a>
+                            </div>
+                            <div class="list-group-item">
+                                <a href="#" class="text-primary"><strong>
+                                    <i class="fa fa-arrow-left"></i>
+                                    Edit the course</strong></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="assets/vendor/select2/select2.min.js"></script>
+    <script src="assets/js/select2.js"></script>
+{% endblock %}
