@@ -43,6 +43,8 @@
     <link type="text/css" href="{%static 'teacher/assets/css/flatpickr-airbnb.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'teacher/assets/css/style.css' %}" rel="stylesheet"> {% block head %} {% endblock %}
 
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/dark.css' %}"> -->
+
 
 
 </head>
@@ -71,11 +73,11 @@
         </div>
         <!-- // END drawer-layout__content -->
 
-
-
+        {% block modal %}
+        {% endblock %}
 
         {% include './layout/left-sidebar.html' %}
-
+        
 
     </div>
     <!-- // END drawer-layout -->
@@ -145,6 +147,8 @@
     
     </svg>
 
+    <!-- Axios -->
+    <script src="{% static 'assets/js/axios.min.js' %}"></script>
 
     <!-- jQuery -->
     <script src="{%static 'teacher/assets/vendor/jquery.min.js' %}"></script>
@@ -184,13 +188,7 @@
     <script src="{%static 'teacher/assets/vendor/flatpickr/flatpickr.min.js' %}"></script>
     <script src="{%static 'teacher/assets/js/flatpickr.js' %}"></script>
 
-    <!-- Chart.js -->
-    <script src="{%static 'teacher/assets/vendor/Chart.min.js' %}"></script>
-    <script src="{%static 'teacher/assets/js/chartjs.js' %}"></script>
-    <script src="{%static 'teacher/assets/js/chartjs-rounded-bar.js' %}"></script>
-
-    <!-- Chart.js Samples -->
-    <script src="{%static 'teacher/assets/js/page.ecommerce.js' %}"></script>
+    
 
     <!-- List.js -->
     <script src="{%static 'teacher/assets/vendor/list.min.js' %}"></script>
@@ -220,17 +218,46 @@
             })
         })()
     </script>
-
-
-
     <script>
         $.ajaxSetup({
             headers: {
                 'X-CSRFToken': $("#hd_csrf").val(),
             }
         });
+        let config = {
+            headers: {'X-CSRFToken': $("#hd_csrf").val()},
+        };
+    </script>
+    <script>
+    var Botkit = require('botkit');
 
-        const accessToken = "2af13bcd195349aba75a1c003d0dd75b";
+    var controller = new Botkit({});
+
+
+    controller.hears('hello', 'message', async(bot, message) => {
+
+        await bot.reply(message, 'Howdy!');
+
+    });
+    // Tell the bot to listen for users saying "hello," and use `bot.reply` to send an immediate response.
+
+
+    const tacos = new BotkitConversation('tacos', controller);
+    tacos.say('Oh boy, taco time!');
+    tacos.ask('What type of taco do you want?', async(answer, convo, bot) => {
+
+        // do something with the answer!
+
+    }, 'type_of_taco');
+    tacos.say('Yum!!');
+    controller.addDialog(tacos);
+
+    controller.hears('tacos', 'message', async(bot, message) => {
+        await bot.beginDialog('tacos');
+    });
+</script>
+<script>
+    const accessToken = "2af13bcd195349aba75a1c003d0dd75b";
         const baseUrl = "https://api.api.ai/api/query?v=20150910";
         const sessionId = "1234567890";
         const loadingMarkups = "<span class='loader'><span class='loader__dot'></span><span class='loader__dot'></span><span class='loader__dot'></span></span>";
@@ -435,36 +462,37 @@
                 });
             aiMessage(loadingMarkups, true, loadingDelay);
         };
-    </script>
-    <script>
-        var Botkit = require('botkit');
+</script>
 
-        var controller = new Botkit({});
+<script>
+    $(document).ready(function() {
+        var color = localStorage.getItem('mode');
+        console.log(color);
+        color_mode();
+    });
 
+    let head = document.getElementsByTagName('HEAD')[0];
 
-        controller.hears('hello', 'message', async(bot, message) => {
+        // Create new link Element 
+    let link = document.createElement('link');
 
-            await bot.reply(message, 'Howdy!');
+    // set the attributes for link element  
+    link.rel = 'stylesheet';
 
-        });
-        // Tell the bot to listen for users saying "hello," and use `bot.reply` to send an immediate response.
+    link.type = 'text/css';
 
+    link.href = "{%static 'teacher/assets/css/dark.css' %}";
 
-        const tacos = new BotkitConversation('tacos', controller);
-        tacos.say('Oh boy, taco time!');
-        tacos.ask('What type of taco do you want?', async(answer, convo, bot) => {
+    function color_mode()
+        {
+            if (localStorage.getItem('mode') == 'dark') {
+                head.appendChild(link);
 
-            // do something with the answer!
-
-        }, 'type_of_taco');
-        tacos.say('Yum!!');
-        controller.addDialog(tacos);
-
-        controller.hears('tacos', 'message', async(bot, message) => {
-            await bot.beginDialog('tacos');
-        });
-    </script>
-
+            } else {                
+                head.removeChild(link);
+            }
+        }
+</script>
 
 
 </body>

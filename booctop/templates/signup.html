@@ -117,7 +117,7 @@
                             </div>
                             <div class="buttons">
                                 <a class="button process-button" data-step="step-dot-1">Back</a>
-                                <a class="button process-button is-next" data-step="step-dot-2">Next</a>
+                                <a class="button process-button is-next" data-step="step-dot-2" onclick="checkCategory()">Next</a>
                             </div>
 
 
@@ -192,12 +192,12 @@
                                         <input type="password" class="input" id="confirm_password" name="confirm_password" placeholder="Repeat your password">
                                     </div>
                                 </div>
-                                <div class="field">
+                                <!-- <div class="field">
                                     <label>Phone Number</label>
                                     <div class="control">
                                         <input type="text" class="input" id="phone_number" name="phone_number" placeholder="Enter your phone number">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="buttons">
@@ -500,10 +500,11 @@
         } else if ($("#confirm_password").val() == $("#password").val() == "") {
             $("#div_error").html("password is not match. Please re-enter the correct password.");
             return false
-        } else if ($("#phone_number").val() == "") {
-            $("#div_error").html("Please enter the valid phone number");
-            return false
-        }
+        } 
+        // else if ($("#phone_number").val() == "") {
+        //     $("#div_error").html("Please enter the valid phone number");
+        //     return false
+        // }
 
         console.log('$("#subcategory").val() = ', $("#subcategory").val())
         $('#registernext').addClass(' is-loading');
@@ -514,7 +515,7 @@
         formData.append('last_name', $("#last_name").val());
         formData.append('email', $("#email").val());
         formData.append('password', $("#password").val());
-        formData.append('phone_number', $("#phone_number").val());
+        formData.append('phone_number', 'none');
         formData.append('type', $("#type").val());
         formData.append('subcategory', $("#subcategory").val());
 
@@ -565,6 +566,15 @@
 
 
     }
+
+
+    // check selected categories
+    const checkCategory = (event) => {
+        var selected_cat = $('#selected_categories').find('a');
+        if ( selected_cat < 1) {
+            event.preventDefault();
+        }
+    };
 
 
     // $('.album-wrapper').on('click', function () {

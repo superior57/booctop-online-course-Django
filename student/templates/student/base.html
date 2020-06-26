@@ -123,7 +123,38 @@
             })
         })()
     </script>
-    {% block script %} {% endblock %}
+    <script>
+        $(document).ready(function() {
+            var color = localStorage.getItem('mode');
+            console.log(color);
+            color_mode();
+        });
+
+        let head = document.getElementsByTagName('HEAD')[0];
+
+            // Create new link Element 
+        let link = document.createElement('link');
+
+        // set the attributes for link element  
+        link.rel = 'stylesheet';
+
+        link.type = 'text/css';
+
+        link.href = "{%static 'student/assets/css/dark.css' %}";
+
+        function color_mode()
+            {
+                if (localStorage.getItem('mode') == 'dark') {
+                    head.appendChild(link);
+
+                } else {                
+                    head.removeChild(link);
+                }
+            }
+    </script>
+    
+    {% block script %} 
+    {% endblock %}
 
 
 </body>

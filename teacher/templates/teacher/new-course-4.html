@@ -2,18 +2,18 @@
 
 {% block head %}
     {% load static %}
-    <!-- Quill Theme -->
-    <link type="text/css" href="assets/css/quill.css" rel="stylesheet">
+   <!-- Quill Theme -->
+   <link type="text/css" href="{% static 'teacher/assets/css/quill.css' %}" rel="stylesheet">
 
 
-    <!-- Select2 -->
-    <link type="text/css" href="assets/css/select2.css" rel="stylesheet">
+   <!-- Select2 -->
+   <link type="text/css" href="{% static 'teacher/assets/css/select2.css' %}" rel="stylesheet">
 
-    <link type="text/css" href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+   <link type="text/css" href="{% static 'teacher/assets/vendor/select2/select2.min.css' %}" rel="stylesheet">
 
 
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="assets/css/sweetalert.css">
+   <!-- Sweet Alert -->
+   <link rel="stylesheet" href="{% static 'teacher/assets/css/sweetalert.css' %}">
 {% endblock %}
 
 {% block headercontent %}
@@ -73,7 +73,7 @@
                         <div class="card-body media" style="height: 50px !important;">
                             <div class="media-left mr-3">
                                 <div class="avatar">
-                                    <img src="assets/images/256_rsz_nicolas-horn-689011-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                    <img src="{% static 'teacher/assets/images/256_rsz_nicolas-horn-689011-unsplash.jpg' %}" alt="Avatar" class="avatar-img rounded-circle">
                                 </div>
                             </div>
                             <div class="media-body">
@@ -197,33 +197,32 @@
                         <b style="font-size: medium;">Course curriulum</b>
                     </div>
                     
-                    <ul class="accordion accordion--boxed js-accordion mb-0" style="border-radius: 0 !important;" id="toc-1">
-                        <li class="accordion__item open">
-                            <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
-                                <span class="flex">Introduction to HTML5</span>
-                                <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
-                            </a>
-                            <div class="accordion__menu">
-                                <ul class="list-unstyled collapse show" id="toc-content-1">
-                                    <li class="accordion__menu-link">
-                                        <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
-                                        <a class="flex" href="mini-student-take-lesson.html">Introduction</a>
-                                        <span class="text-muted">8m 42s</span>
-                                    </li>
-                                    <li class="accordion__menu-link">
-                                        <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
-                                        <a class="flex" href="mini-student-take-lesson.html">Introduction to TypeScript</a>
-                                        <span class="text-muted">50m 13s</span>
-                                    </li>
-                                    <li class="accordion__menu-link">
-                                        <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
-                                        <a class="flex" href="mini-student-take-lesson.html">Comparing Angular to AngularJS</a>
-                                        <span class="text-muted">12m 10s</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                    {% for section in section_list %}
+                    {% if section.type == 'video' %}
+                        <ul class="accordion accordion--boxed js-accordion mb-0" style="border-radius: 0 !important;" id="toc-1">
+                            
+                            <li class="accordion__item open">
+                                <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-video-{{section.id}}">
+                                    <span class="flex">{{ section.name }}</span>
+                                    <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
+                                </a>
+                                <div class="accordion__menu">
+                                    <ul class="list-unstyled collapse show" id="toc-video-{{ section.id }}">       
+                                        {% for video in video_list %}
+                                        {% if video.section_id == section.id %}                             
+                                        <li class="accordion__menu-link">
+                                            <span class="material-icons icon-16pt icon--left text-body">play_circle_outline</span>
+                                            <a class="flex" href="mini-student-take-lesson.html">{{video.name}}</a>
+                                            <span class="text-muted">8m 42s</span>
+                                        </li>       
+                                        {% endif %}                                    
+                                        {% endfor %}                                                                    
+                                    </ul>
+                                </div>
+                            </li>                        
+                        </ul>
+                    {% endif %}
+                    {% endfor %}
                     
 
             </div>
@@ -235,30 +234,30 @@
                     <b style="font-size: medium;">Course Quiz</b>
                 </div>
                 
+                {% for section in section_list %}
+                {% if section.type == 'question' %}
                 <ul class="accordion accordion--boxed js-accordion mb-0" style="border-radius: 0 !important;" id="toc-1">
                     <li class="accordion__item open">
-                        <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-content-1">
-                            <span class="flex">Learn HTML5 and css Quiz</span>
+                        <a class="accordion__toggle" data-toggle="collapse" data-parent="#toc-1" href="#toc-question-{{ section.id }}">
+                            <span class="flex">{{ section.name }}</span>
                             <span class="accordion__toggle-icon material-icons">keyboard_arrow_down</span>
                         </a>
                         <div class="accordion__menu">
-                            <ul class="list-unstyled collapse show" id="toc-content-1">
+                            <ul class="list-unstyled collapse show" id="toc-question-{{ section.id }}">
+                                {% for question in question_list %}
+                                {% if question.section_id == section.id %}
                                 <li class="accordion__menu-link">
                                     <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
-                                    <a class="flex" href="mini-student-take-lesson.html">How to add commednts in Css?</a>
+                                    <a class="flex" href="mini-student-take-lesson.html">{{ question.title }}</a>
                                 </li>
-                                <li class="accordion__menu-link">
-                                    <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
-                                    <a class="flex" href="mini-student-take-lesson.html">How to add commednts in Css?</a>
-                                </li>
-                                <li class="accordion__menu-link">
-                                    <span class="material-icons icon-16pt icon--left text-body">hourglass_empty</span>
-                                    <a class="flex" href="mini-student-take-lesson.html">How to add commednts in Css?</a>
-                                </li>
+                                {% endif %}
+                                {% endfor %}
                             </ul>
                         </div>
                     </li>
                 </ul>
+                {% endif %}
+                {% endfor %}
 
         </div>
 
@@ -270,6 +269,43 @@
 {% endblock %}
 
 {% block script %}
-    <script src="assets/vendor/select2/select2.min.js"></script>
-    <script src="assets/js/select2.js"></script>
+<script src="{% static 'teacher/assets/vendor/select2/select2.min.js' %}"></script>
+<script src="{% static 'teacher/assets/js/select2.js' %}"></script>
+
+<!-- Sweet Alert -->
+<script src="{% static 'teacher/assets/vendor/sweetalert.min.js' %}"></script>
+<script src="{% static 'teacher/assets/js/sweetalert.js' %}"></script>
+
+<!-- Quill -->
+<script src="{% static 'teacher/assets/vendor/quill.min.js' %}"></script>
+<script src="{% static 'teacher/assets/js/quill.js' %}"></script>
+<script>
+
+$(document).ready(function() {
+    var course_id = localStorage.getItem('course_id');
+    console.log("course id", course_id);
+    // getVideoListByCourseId(course_id);
+});
+
+// get video list by courseID.
+const getVideoListByCourseId = (course_id) => {
+    let url = "/get-coursedetails";
+
+    jQuery.ajax({
+        url: url,
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            id: course_id,
+        }
+    })
+    .then(response => {
+        var data = response.data;
+        console.log(data);
+
+    })
+    .catch(error => console.error(error));
+};
+
+</script>
 {% endblock %}

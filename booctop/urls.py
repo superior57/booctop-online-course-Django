@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
+from django.conf.urls import include, url
 from django.conf.urls.static import static
 from home.views import saveimg, getsubcategory, changepassword, update_user, home_view, signup, about, faqs, help, terms, become, single_category, single_course, register_user, activation, ajaxlogin, logout_, check_email
 from student.views import account, courses, options_settings, security, payments, privacy, quizes, quizes2, certificates, PurchaseHistory, messages, notifications
@@ -86,6 +87,9 @@ urlpatterns = [
     path('new-course', newcourse, name='teacher new-course'),
     path('no-course-engagement', nocourseengagement, name='teacher no-course-engagement'),
     path('no-course', nocourse, name='teacher no-course'),
+
+    # includes
+    url(r'', include('teacher.urls')),
 
     #Video url
     path('video/playground', playground, name='video playground'),

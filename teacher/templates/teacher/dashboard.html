@@ -23,7 +23,7 @@
                         <span class="card-body d-flex flex-column align-items-center justify-content-center fullbleed">
                             <h4 style="color: white;">Are you ready to teach?</h4>
                             <p style="color: white;width: 70%;text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas hic ipsa facere vero magnam quo beatae, itaque facilis ea illum repellat ratione sequi saepe obcaecati praesentium explicabo ut culpa nulla.</p>
-                            <a href="new-course.html" class="btn btn-secondary mb-16pt" style="background-color: white;color: darkblue;">Add caourse</a>
+                            <a href="/new-course" class="btn btn-secondary mb-16pt" style="background-color: white;color: darkblue;">Add caourse</a>
                         </span>
                     </div>
 
@@ -386,3 +386,34 @@
     </div>
 
 {%  endblock %}
+{% block script %}
+
+<script>
+    var Botkit = require('botkit');
+
+    var controller = new Botkit({});
+
+
+    controller.hears('hello', 'message', async(bot, message) => {
+
+        await bot.reply(message, 'Howdy!');
+
+    });
+    // Tell the bot to listen for users saying "hello," and use `bot.reply` to send an immediate response.
+
+
+    const tacos = new BotkitConversation('tacos', controller);
+    tacos.say('Oh boy, taco time!');
+    tacos.ask('What type of taco do you want?', async(answer, convo, bot) => {
+
+        // do something with the answer!
+
+    }, 'type_of_taco');
+    tacos.say('Yum!!');
+    controller.addDialog(tacos);
+
+    controller.hears('tacos', 'message', async(bot, message) => {
+        await bot.beginDialog('tacos');
+    });
+</script>
+{% endblock %}

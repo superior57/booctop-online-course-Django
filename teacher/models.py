@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 class categories(models.Model):
     id = models.AutoField(primary_key=True)
@@ -15,28 +16,48 @@ class subcategories(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-# class Course(models.Model):
-    # id = models.AutoField(primary_key=True)
-    # title = models.CharField(max_length=127)
-    # sub_title = models.CharField(max_length=127)
-    # category = models.CharField(max_length=127, choices=COURSE_CATEGORY_TYPES, default='General Education')
-    # description = models.TextField(null=True)
-    # start_date = models.DateField(null=True)
-    # finish_date = models.DateField(null=True)
-    # is_official = models.BooleanField(default=False)
-    # status = models.PositiveSmallIntegerField(default=settings.COURSE_UNAVAILABLE_STATUS)
-    # image = models.ImageField(upload_to='uploads', null=True, blank=True)
-    # students = models.ManyToManyField(Student)
-    # teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+class Courses(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
+    requirements = models.TextField(null=True, blank=True)
+    gains = models.TextField(null=True, blank=True)
+    includes = models.CharField(max_length=200)
+    scat_id = models.IntegerField(max_length=111)
+    price = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+    tags = models.CharField(max_length=200)
+    user_id = models.IntegerField(max_length=111, default=0)
 
-    # def delete(self, *args, **kwargs):
-    #     if self.image:
-    #         if os.path.isfile(self.image.path):
-    #             os.remove(self.image.path)
-    #     super(Course, self).delete(*args, **kwargs) # Call the "real" delete() method
+class VideoUploads(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+    section_id = models.IntegerField(max_length=111)
+    url = models.CharField(max_length=200)
 
-    # def __str__(self):
-    #     return self.title
+class Sections(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+    course_id = models.IntegerField(max_length=111)
+    type = models.CharField(max_length=200, default='1')
 
-    # class Meta:
-    #     db_table = 'at_courses'
+class todo(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=200)
+
+class questions(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=1024)
+    type = models.CharField(max_length=200)
+    section_id = models.IntegerField(max_length=111)
+    aw_1_type = models.CharField(max_length=200)
+    aw_1_result = models.CharField(max_length=200)
+    aw_1_data = models.TextField(null=True, blank=True)
+    aw_2_type = models.CharField(max_length=200)
+    aw_2_result = models.CharField(max_length=200)
+    aw_2_data = models.TextField(null=True, blank=True)
+    aw_3_type = models.CharField(max_length=200)
+    aw_3_result = models.CharField(max_length=200)
+    aw_3_data = models.TextField(null=True, blank=True)
+    aw_4_type = models.CharField(max_length=200)
+    aw_4_result = models.CharField(max_length=200)
+    aw_4_data = models.TextField(null=True, blank=True)

@@ -1,13 +1,4 @@
-{% extends "teacher/base.html" %} 
-
-{% block headercontent %}
-    {% with title="Account" %}
-        {% include "./layout/header.html" %}
-    {% endwith %}
-{% endblock %}
-
-{% block content %} 
-{% load static %}
+{% extends "teacher/base.html" %} {% block headercontent %} {% with title="Account" %} {% include "./layout/header.html" %} {% endwith %} {% endblock %} {% block content %} {% load static %}
 
 
 <div class=" page__container " style="margin-bottom: 35px;">
@@ -48,15 +39,19 @@
 
         <div class="form-group">
             <label class="form-label">Bio</label>
-            <textarea rows="3" class="form-control" value="" placeholder="About you ..."></textarea>
+            <textarea id="acc_bio" rows="3" class="form-control" value="" placeholder="About you ...">{{ profile.bio }}</textarea>
         </div>
 
         <div class="form-group">
             <label class="form-label" for="select05">Main category</label>
-            <select id="select05" data-toggle="select" class="form-control form-control">
-                            {% for c in objC %}
-                                <option value="{{c.id}}">{{c.name}}</option>
-                            {% endfor %}
+            <select id="acc_category" data-toggle="select" class="form-control form-control">
+            {% for c in objC %}
+                {% if c.id is profile.cat_id %}
+                <option value="{{c.id}}" selected>{{c.name}}</option>
+                {% else %}
+                <option value="{{c.id}}">{{c.name}}</option>
+                {% endif %}
+            {% endfor %}
                         </select>
         </div>
 
@@ -65,47 +60,48 @@
 
         <div class="form-group">
             <label class="form-label" for="select03">Sub categories</label>
-            <select id="select03" data-toggle="select" multiple class="form-control">
-                            <option selected="">CSS</option>
-                            <option selected="">HTML</option>
-                            <option>JavaScript</option>
-                            <option>Bootstrap</option>
-                        </select>
+            <select id="acc_subcategory" data-toggle="select" multiple class="form-control">
+            </select>
         </div>
 
 
         <div class="form-group " style="margin-top: 15px !important;margin-bottom: 15px;">
             <label class="form-label">Facebook </label>
-            <input type="text" class="form-control" value="www.facebook.com/" placeholder="write your last name...">
+            <input id="acc_facebook" type="text" class="form-control" value="{{ profile.facebook_url }}" placeholder="write your last name...">
             <small class="form-text text-muted">write your facebook account name.</small>
         </div>
 
 
         <div class="form-group " style="margin-top: 15px !important;margin-bottom: 15px;">
             <label class="form-label">Instagram </label>
-            <input type="text" class="form-control" value="www.instagram.com/" placeholder="write your last name...">
+            <input id="acc_instagram" type="text" class="form-control" value="{{ profile.instagram_url }}" placeholder="write your last name...">
             <small class="form-text text-muted">write your instagram account name.</small>
         </div>
 
 
         <div class="form-group " style="margin-top: 15px !important;margin-bottom: 15px;">
             <label class="form-label">Twitter </label>
-            <input type="text" class="form-control" value="www.twitter.com/" placeholder="write your last name...">
+            <input id="acc_twitter" type="text" class="form-control" value="{{ profile.twitter_url }}" placeholder="write your last name...">
             <small class="form-text text-muted">write your twitter account name.</small>
         </div>
 
 
         <div class="form-group " style="margin-top: 15px !important;margin-bottom: 15px;">
             <label class="form-label">Website</label>
-            <input type="text" class="form-control" value="" placeholder="write your website domain...">
+            <input id="acc_website" type="text" class="form-control" value="{{ profile.website_url }}" placeholder="write your website domain...">
             <small class="form-text text-muted">write your website domain.</small>
         </div>
 
 
         <div class="form-group">
             <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" checked id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Send notifications to me!</label>
+                <!-- {{profile.notification}} -->
+                {% if profile.notification == "true" %}
+                <input id="acc_notification" type="checkbox" class="custom-control-input" checked> 
+                {% else %}
+                <input id="acc_notification" type="checkbox" class="custom-control-input" > 
+                {% endif %}
+                <label class="custom-control-label" for="acc_notification">Send notifications to me!</label>
                 <small class="form-text text-muted">send Emails to my email</small>
             </div>
         </div>
@@ -117,6 +113,53 @@
 
 {% endblock %} {% block script %}
 <script>
+    $(document).ready(function() {
+
+        getSubCat('{{ profile.cat_id }}');
+        $('#acc_category').on('change', function() {
+            let cat_id = $('#acc_category').val();
+            getSubCat(cat_id);
+        });
+    });
+
+    const getSubCat = (cat_id) => {
+        let url = "/getsubcategory";
+        var subCategories = '{{ profile.subcat_ids }}'.split(',');
+        //Ajax Start
+        $.ajax({
+                url: url,
+                type: 'POST',
+                dataType: 'json',
+                // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                data: {
+                    category_id: cat_id
+                },
+
+                beforeSend: function() {},
+                success: function(data) {
+                    let sub_cat = data.subcat_list;
+                    let html_subCat = '';
+                    sub_cat.forEach(cat => {
+                        if (subCategories.includes(cat.id.toString())) {
+                            html_subCat += '<option value="' + cat.id + '" selected>' + cat.name + '</option>';
+                        } else {
+                            html_subCat += '<option value="' + cat.id + '">' + cat.name + '</option>';
+                        }
+
+                    });
+                    console.log("html", html_subCat);
+                    $('#acc_subcategory').empty();
+                    $('#acc_subcategory').append(html_subCat);
+                },
+                error: function(err) {
+                    return false
+                }
+            })
+            // Ajax end
+        return false
+    }
+
     function updateUser() {
         $("#div_error").html("");
 
@@ -132,11 +175,27 @@
         }
         var formData = new FormData();
 
+
+        var arr_subcat = $('#acc_subcategory').val();
+        var sub_cats = '';
+        arr_subcat.forEach(cat => {
+            sub_cats += ",";
+            sub_cats += cat;
+        });
+        var is_notification = document.getElementById('acc_notification').checked;
+
         formData.append('file', $("#inputGroupFile01")[0].files[0]);
         formData.append('first_name', $("#first_name").val());
         formData.append('last_name', $("#last_name").val());
         formData.append('email', $("#email").val());
-
+        formData.append('acc_bio', $('#acc_bio').val());
+        formData.append('cat_id', $('#acc_category').val());
+        formData.append('subcat_ids', sub_cats);
+        formData.append('facebook_url', $('#acc_facebook').val());
+        formData.append('instagram_url', $('#acc_instagram').val());
+        formData.append('twitter_url', $('#acc_twitter').val());
+        formData.append('website_url', $('#acc_website').val());
+        formData.append('is_notification', is_notification);
         // Ajax start
         var action = "/update-user";
         $.ajax({

@@ -18,21 +18,10 @@
                     <a href="#" data-toggle="tab" role="tab" aria-selected="false">Archiev</a>
                 </div>
             </div>    
-
-
-
-
-
-
-
             <div class=" page__container ">
-
-                
-
-
-    
-    
             <div class="row card-group-row">
+                
+                {% for course in course_list %}
                 <div class="col-lg-3 col-sm-6 card-group-row__col">
 
                     <div class="card card-group-row__card text-center o-hidden card--raised mb-lg-10">
@@ -42,7 +31,7 @@
 
                         <div class="card-body d-flex flex-column">
                             <div class="flex-grow mb-0pt">
-                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">Learn HTML5 and sass with css and js</h4>
+                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">{{ course.name }}</h4>
                             </div>
                             <p class="d-flex justify-content-center align-items-center m-0">
                                 <span class=" m-0 font-weight-normal" style="font-size: medium;">No Price yet</span>
@@ -60,141 +49,7 @@
                     </div>
 
                 </div>
-                <div class="col-lg-3 col-sm-6 card-group-row__col">
-
-                    <div class="card card-group-row__card text-center o-hidden card--raised mb-lg-10">
-
-                        <img style="height: 180px;" src="{% static 'teacher/assets/images/1280_work-station-straight-on-view.jpg' %}" alt="">
-                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-primary text-white">Publish</span>
-
-                        <div class="card-body d-flex flex-column">
-                            <div class="flex-grow mb-0pt">
-                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">Learn HTML5 and sass with css and js</h4>
-                            </div>
-                            <p class="d-flex justify-content-center align-items-center m-0">
-                                <span class=" m-0 font-weight-normal" style="font-size: medium;">No Price yet</span>
-                            </p>
-                        </div>
-
-
-                        <div class="progress " style="height: 4px;position: absolute;bottom: 40px;left: 0;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 37%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        <div class="card-footer" style="border: 0px !important;">
-                            <a href="mini-signup.html" class="btn btn-accent">Edit course</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 col-sm-6 card-group-row__col">
-
-                    <div class="card card-group-row__card text-center o-hidden card--raised mb-lg-10">
-
-                        <img style="height: 180px;" src="{% static 'teacher/assets/images/1280_work-station-straight-on-view.jpg' %}" alt="">
-                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-primary text-white">Publish</span>
-
-                        <div class="card-body d-flex flex-column">
-                            <div class="flex-grow mb-0pt">
-                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">Learn HTML5 and sass with css and js</h4>
-                            </div>
-                            <p class="d-flex justify-content-center align-items-center m-0">
-                                <span class=" m-0 font-weight-normal" style="font-size: medium;">No Price yet</span>
-                            </p>
-                        </div>
-
-
-                        <div class="progress " style="height: 4px;position: absolute;bottom: 40px;left: 0;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 37%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        <div class="card-footer" style="border: 0px !important;">
-                            <a href="mini-signup.html" class="btn btn-accent">Edit course</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 col-sm-6 card-group-row__col">
-
-                    <div class="card card-group-row__card text-center o-hidden card--raised mb-lg-10">
-
-                        <img style="height: 180px;" src="{% static 'teacher/assets/images/1280_work-station-straight-on-view.jpg' %}" alt="">
-                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-primary text-white">Publish</span>
-
-                        <div class="card-body d-flex flex-column">
-                            <div class="flex-grow mb-0pt">
-                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">Learn HTML5 and sass with css and js</h4>
-                            </div>
-                            <p class="d-flex justify-content-center align-items-center m-0">
-                                <span class=" m-0 font-weight-normal" style="font-size: medium;">No Price yet</span>
-                            </p>
-                        </div>
-
-
-                        <div class="progress " style="height: 4px;position: absolute;bottom: 40px;left: 0;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 37%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        <div class="card-footer" style="border: 0px !important;">
-                            <a href="mini-signup.html" class="btn btn-accent">Edit course</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 col-sm-6 card-group-row__col">
-
-                    <div class="card card-group-row__card text-center o-hidden card--raised mb-lg-10">
-
-                        <img style="height: 180px;" src="{% static 'teacher/assets/images/1280_work-station-straight-on-view.jpg' %}" alt="">
-                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-primary text-white">Publish</span>
-
-                        <div class="card-body d-flex flex-column">
-                            <div class="flex-grow mb-0pt">
-                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">Learn HTML5 and sass with css and js</h4>
-                            </div>
-                            <p class="d-flex justify-content-center align-items-center m-0">
-                                <span class=" m-0 font-weight-normal" style="font-size: medium;">No Price yet</span>
-                            </p>
-                        </div>
-
-
-                        <div class="progress " style="height: 4px;position: absolute;bottom: 40px;left: 0;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 37%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        <div class="card-footer" style="border: 0px !important;">
-                            <a href="mini-signup.html" class="btn btn-accent">Edit course</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-lg-3 col-sm-6 card-group-row__col">
-
-                    <div class="card card-group-row__card text-center o-hidden card--raised mb-lg-10">
-
-                        <img style="height: 180px;" src="{% static 'teacher/assets/images/1280_work-station-straight-on-view.jpg' %}" alt="">
-                        <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-primary text-white">Publish</span>
-
-                        <div class="card-body d-flex flex-column">
-                            <div class="flex-grow mb-0pt">
-                                <h4 class="mb-8pt" style="margin-top: 0px;font-size: large;">Learn HTML5 and sass with css and js</h4>
-                            </div>
-                            <p class="d-flex justify-content-center align-items-center m-0">
-                                <span class=" m-0 font-weight-normal" style="font-size: medium;">No Price yet</span>
-                            </p>
-                        </div>
-
-
-                        <div class="progress " style="height: 4px;position: absolute;bottom: 40px;left: 0;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 37%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        <div class="card-footer" style="border: 0px !important;">
-                            <a href="mini-signup.html" class="btn btn-accent">Edit course</a>
-                        </div>
-                    </div>
-
-                </div>
+                {% endfor %}
                 <div class="col-lg-3 col-sm-6 card-group-row__col">
 
                     <a href="/new-course" class="card card-group-row__card text-center o-hidden card--raised mb-lg-10" style="background-color: rgb(241, 241, 241);">

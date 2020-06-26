@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 
 
-    <!-- CSS Style -->
+    <!-- CSS Style -->    
     <link rel="stylesheet" href="{% static 'assets/css/bulma.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/core.css' %}">
@@ -312,11 +312,12 @@
     <script src="{% static 'assets/vendor/bootstrap.min.js' %}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            console.log("local storage mode", localStorage.getItem('mode'));
-            if(localStorage.getItem('mode') == 'dark') {
-                document.getElementById("toggler").click();
-            }
-            color_mode();
+            localStorage.setItem('mode', 'light');
+            // console.log("local storage mode", localStorage.getItem('mode'));
+            // if(localStorage.getItem('mode') == 'dark') {
+            //     document.getElementById("toggler").click();
+            // }
+            // color_mode();
         });
         
         $.ajaxSetup({
