@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Messages</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+
+
+    <!-- Preloader -->
+    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="layout-mini app-messages">
+
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+
+            <!-- Header -->
+
+
+
+
+
+            <!-- // END Header -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div data-push data-responsive-width="768px" data-has-scrollable-region data-fullbleed class="mdk-drawer-layout js-mdk-drawer-layout">
+                <div class="mdk-drawer-layout__content" data-perfect-scrollbar>
+
+
+                    <div class="app-messages__container d-flex flex-column h-100 pb-4">
+                        <div class="navbar navbar-light bg-white navbar-expand-sm navbar-shadow z-1" id="messages-navbar">
+                            <div class="container-fluid flex-wrap px-sm-0">
+                                <div class="nav py-2">
+                                    <div class="nav-item d-flex align-items-center mr-3">
+                                        <div class="mr-3">
+                                            <div class="avatar avatar-online avatar-sm">
+                                                <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column" style="max-width: 200px; font-size: 15px">
+                                            <strong class="text-body">Michelle Smith</strong>
+                                            <span class="text-50 text-ellipsis">Personal Development Teacher since 2014</span>
+                                        </div>
+
+                                        <div class="" style="position: absolute;top: 15px;right: 25px;">
+                                            <a href="#" class="btn btn-sm btn-light ml-8pt" data-toggle="swal" data-swal-title="Leave your rating here!" data-swal-text="*****" data-swal-type="warning" data-swal-show-cancel-button="true" data-swal-confirm-button-text="Add rating" data-swal-confirm-cb="#swal-confirm-delete" data-swal-close-on-confirm="false"><i class="material-icons icon--left">add</i> New Messages</a>
+                                      
+
+
+
+                                            <div id="swal-confirm-delete" class="d-none" data-swal-type="success" data-swal-title="Great!" data-swal-text="Your message has sent successfuly!"></div>
+
+                                            <div id="swal-cancel-delete" class="d-none" data-swal-type="error" data-swal-title="Cancelled" data-swal-text="Your imaginary file is safe :)"></div>
+                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex pt-4" style="position: relative;" data-perfect-scrollbar>
+                            <div class="container page__container page__container">
+                               
+                                <ul class="d-flex flex-column list-unstyled" id="messages">
+
+
+                                    <li class="message d-inline-flex">
+                                        <div class="message__aside">
+                                            <a href="mini-profile.html" class="avatar avatar-sm">
+                                                <img src="assets/images/people/110/guy-6.jpg" alt="people" class="avatar-img rounded-circle">
+                                            </a>
+                                        </div>
+                                        <div class="message__body card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex mr-3">
+                                                        <a href="mini-profile.html" class="text-body"><strong>Laza Bogdan</strong></a>
+                                                    </div>
+                                                    <div>
+                                                        <small class="text-50">1 hour ago</small>
+                                                    </div>
+                                                </div>
+                                                <span class="text-70">Coming along nicely, we&#39;ve got a draft for the client design completed, take a look! 🤓</span>
+
+                                                <a href="#" class="media align-items-center mt-2 text-decoration-0 px-3">
+                                                    <span class="avatar mr-12pt">
+                                                        <span class="avatar-title rounded-circle">
+                                                            <i class="material-icons font-size-24pt">attach_file</i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="media-body" style="line-height: 1.5">
+                                                        <span class="text-primary">draft.sketch</span><br>
+                                                        <span class="text-50">5 MB</span>
+                                                    </span>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="message d-inline-flex">
+                                        <div class="message__aside">
+                                            <a href="mini-profile.html" class="avatar avatar-sm">
+                                                <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
+                                            </a>
+                                        </div>
+                                        <div class="message__body card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex mr-3">
+                                                        <a href="mini-profile.html" class="text-body"><strong>Michelle</strong></a>
+                                                    </div>
+                                                    <div>
+                                                        <small class="text-50">5 minutes ago</small>
+                                                    </div>
+                                                </div>
+                                                <span class="text-70">Clients loved the new design.</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="message d-inline-flex">
+                                        <div class="message__aside">
+                                            <a href="mini-profile.html" class="avatar avatar-sm">
+                                                <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
+                                            </a>
+                                        </div>
+                                        <div class="message__body card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex mr-3">
+                                                        <a href="mini-profile.html" class="text-body"><strong>Michelle</strong></a>
+                                                    </div>
+                                                    <div>
+                                                        <small class="text-50">5 minutes ago</small>
+                                                    </div>
+                                                </div>
+                                                <span class="text-70">🔥 Superb job..</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="message d-inline-flex">
+                                        <div class="message__aside">
+                                            <a href="mini-profile.html" class="avatar avatar-sm">
+                                                <img src="assets/images/people/110/guy-6.jpg" alt="people" class="avatar-img rounded-circle">
+                                            </a>
+                                        </div>
+                                        <div class="message__body card">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="flex mr-3">
+                                                        <a href="mini-profile.html" class="text-body"><strong>Laza Bogdan</strong></a>
+                                                    </div>
+                                                    <div>
+                                                        <small class="text-50">just now</small>
+                                                    </div>
+                                                </div>
+                                                <span class="text-70">Glad it all worked out 😉</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="container page__container page__container">
+                            <form action="#" id="message-reply">
+                                <div class="input-group input-group-merge">
+                                    <input type="text" class="form-control form-control-appended" autofocus="" required="" placeholder="Type message">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text pr-2">
+                                            <button class="btn btn-flush" type="button"><i class="material-icons">tag_faces</i></button>
+                                        </div>
+                                        <div class="input-group-text pl-0">
+                                            <div class="custom-file custom-file-naked d-flex" style="width: 24px; overflow: hidden;">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" style="color: inherit;" for="customFile">
+                                                    <i class="material-icons">attach_file</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="mdk-drawer js-mdk-drawer" data-align="end" id="messages-drawer">
+                    <div class="mdk-drawer__content top-0">
+                        <div class="sidebar sidebar-right sidebar-light bg-white o-hidden">
+                            <div class="d-flex flex-column h-100">
+                              
+                                
+                                <div class="sidebar-heading" style="height: 40px;padding-top: 10px;">170 Messages</div>
+
+
+
+
+
+
+                                <div class="flex" data-perfect-scrollbar>
+                                    <ul class="list-group list-group-flush mb-3">
+
+
+                                        <li class="list-group-item px-3 py-12pt bg-light">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/woman-5.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Michelle Smith</strong>
+
+                                                    <span class="text-muted text-ellipsis">Personal Development Teacher Since 2014</span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                    <span class="avatar-title rounded-circle">AD</span>
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Andrew Brain</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/guy-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Jimmy Carter</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-online mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/woman-2.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Samantha Doe</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+                                        <li class="list-group-item px-3 py-12pt bg-light">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-offline mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/guy-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Jarrod Forrest</strong>
+
+                                                    <span class="text-muted text-ellipsis">Arts Teacher</span>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-offline mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/guy-3.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Ziva Ochoa</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-offline mr-3 flex-shrink-0">
+
+                                                    <span class="avatar-title rounded-circle">XD</span>
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Xander Dale</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-offline mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/woman-1.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Beatriz Summers</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="list-group-item px-3 py-12pt">
+                                            <a href="#" class="d-flex align-items-center position-relative">
+                                                <span class="avatar avatar-xs avatar-offline mr-3 flex-shrink-0">
+
+                                                    <img src="assets/images/people/50/woman-3.jpg" alt="Avatar" class="avatar-img rounded-circle">
+
+                                                </span>
+                                                <span class="flex d-flex flex-column" style="max-width: 175px;">
+                                                    <strong class="text-body">Cassie Wills</strong>
+
+                                                </span>
+                                            </a>
+                                        </li>
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- // END drawer-layout__content -->
+
+
+
+
+
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer layout-mini__drawer" id="default-drawer">
+            <div class="mdk-drawer__content js-sidebar-mini" data-responsive-width="992px" data-layout="mini">
+
+                <div class="sidebar sidebar-mini sidebar-light-dodger-blue sidebar-left d-flex flex-column">
+
+                    <!-- Brand -->
+                    <a href="index.html" class="sidebar-brand p-0 navbar-height d-flex justify-content-center">
+
+                        <span class="avatar avatar-sm ">
+
+                            <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/teacher/128/white.svg" class="img-fluid" alt="logo" /></span>
+
+                        </span>
+
+                    </a>
+
+                    <div class="flex d-flex flex-column justify-content-start" data-perfect-scrollbar>
+                        <ul class="nav flex-shrink-0 flex-nowrap flex-column sidebar-menu mb-0 js-sidebar-mini-tabs" role="tablist">
+                            <li class="sidebar-menu-item active" data-toggle="tooltip" data-title="" data-placement="right" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#supervised_user_circle" data-toggle="tab" role="tab" aria-controls="sm_student" aria-selected="true">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">supervised_user_circle</i>
+                                    <span class="sidebar-menu-text">Profile</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item " data-toggle="tooltip" data-title="" data-placement="right" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#sm_student" data-toggle="tab" role="tab" aria-controls="sm_student" aria-selected="true">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i>
+                                    <span class="sidebar-menu-text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item " data-toggle="tooltip" data-title="" data-placement="right" data-container="body" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#sm_messaging" data-toggle="tab" role="tab" aria-controls="sm_messaging">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">people_outline</i>
+                                    <span class="sidebar-menu-text">Community</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-menu-item " data-toggle="tooltip" data-title="" data-placement="right" data-container="body" data-boundary="window">
+                                <a class="sidebar-menu-button" href="#sm_help" data-toggle="tab" role="tab" aria-controls="sm_messaging">
+                                    <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">help</i>
+                                    <span class="sidebar-menu-text">Help</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                    <ul class="nav flex-column sidebar-menu align-items-center mb-12pt js-sidebar-mini-tabs" role="tablist">
+                        <a class="sidebar-menu-button" href="../../index.html"  data-toggle="tooltip" data-title="Swip to Booctep" role="tab" aria-controls="sm_student" aria-selected="true">
+                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">swap_horiz</i>
+                            <span class="sidebar-menu-text">swap_horiz</span>
+                        </a>
+                    </ul>
+
+                </div>
+
+                <div class="sidebar sidebar-light sidebar-left flex sidebar-secondary pt-16pt" data-perfect-scrollbar>
+
+
+
+
+                    <div class="tab-content">
+
+                        <div class="tab-pane" id="sm_account_1">
+                            <div class="sidebar-heading">Account</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-edit-account.html">
+                                        <span class="sidebar-menu-text">Edit Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing.html">Billing</a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing-history.html">Payments</a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-login.html">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane " id="sm_apps">
+                            <div class="sidebar-heading">Apps</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button js-sidebar-collapse" data-toggle="collapse" href="#enterprise_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">donut_large</span>
+                                        Enterprise
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="enterprise_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-erp-dashboard.html">
+                                                <span class="sidebar-menu-text">ERP Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-crm-dashboard.html">
+                                                <span class="sidebar-menu-text">CRM Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-hr-dashboard.html">
+                                                <span class="sidebar-menu-text">HR Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-employees.html">
+                                                <span class="sidebar-menu-text">Employees</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-staff.html">
+                                                <span class="sidebar-menu-text">Staff</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-leaves.html">
+                                                <span class="sidebar-menu-text">Leaves</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="mini-departments.html">
+                                                <span class="sidebar-menu-text">Departments</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-documents.html">
+    <span class="sidebar-menu-text">Documents</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-attendance.html">
+    <span class="sidebar-menu-text">Attendance</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-recruitment.html">
+    <span class="sidebar-menu-text">Recruitment</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-payroll.html">
+    <span class="sidebar-menu-text">Payroll</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-training.html">
+    <span class="sidebar-menu-text">Training</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-employee-profile.html">
+    <span class="sidebar-menu-text">Employee Profile</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-accounting.html">
+    <span class="sidebar-menu-text">Accounting</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-inventory.html">
+    <span class="sidebar-menu-text">Inventory</span>
+  </a>
+</li> -->
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#community_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">people_outline</span>
+                                        Community
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-faq.html">
+                                                <span class="sidebar-menu-text">FAQ</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-discussions.html">
+                                                <span class="sidebar-menu-text">Discussions</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-discussion.html">
+                                                <span class="sidebar-menu-text">Discussion Details</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-discussions-ask.html">
+                                                <span class="sidebar-menu-text">Ask Question</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#productivity_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">access_time</span>
+                                        Productivity
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="productivity_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-projects.html">
+                                                <span class="sidebar-menu-text">Projects</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-tasks-board.html">
+                                                <span class="sidebar-menu-text">Tasks Board</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-tasks-list.html">
+                                                <span class="sidebar-menu-text">Tasks List</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="mini-kanban.html">
+                                                <span class="sidebar-menu-text">Kanban</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-task-details.html">
+    <span class="sidebar-menu-text">Task Details</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-team-members.html">
+    <span class="sidebar-menu-text">Team Members</span>
+  </a>
+</li> -->
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#cms_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">content_copy</span>
+                                        CMS
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="cms_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-cms-dashboard.html">
+                                                <span class="sidebar-menu-text">CMS Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-posts.html">
+                                                <span class="sidebar-menu-text">Posts</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#ecommerce_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">shopping_cart</span>
+                                        eCommerce
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="ecommerce_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ecommerce.html">
+                                                <span class="sidebar-menu-text">Shop Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="mini-edit-product.html">
+                                                <span class="sidebar-menu-text">Edit Product</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-pane  fade active show " id="sm_student">
+                            <div class="sidebar-heading">Dashboard</div>
+                            <ul class="sidebar-menu">
+
+
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="dashboard.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">home</span>
+                                        <span class="sidebar-menu-text">Teacher Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="courses.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">dvr</span>
+                                        <span class="sidebar-menu-text">Courses </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="course-engagement.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">local_library</span>
+                                        <span class="sidebar-menu-text">Course engagement</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="tab-pane  fade  show " id="supervised_user_circle">
+                            <div class="sidebar-heading">Profile </div>
+                            <ul class="sidebar-menu">
+
+
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="Account.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">contacts</span>
+                                        <span class="sidebar-menu-text">Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="Security.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">lock</span>
+                                        <span class="sidebar-menu-text">Security</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="payments.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">payment</span>
+                                        <span class="sidebar-menu-text">Payments Method</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="privacy.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">verified_user</span>
+                                        <span class="sidebar-menu-text">Privacy</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="tab-pane " id="sm_instructor">
+                            <div class="sidebar-heading">Instructor</div>
+                            <ul class="sidebar-menu">
+
+
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-dashboard.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
+                                        <span class="sidebar-menu-text">Instructor Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-courses.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
+                                        <span class="sidebar-menu-text">Manage Courses</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-quizzes.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+                                        <span class="sidebar-menu-text">Manage Quizzes</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-earnings.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">trending_up</span>
+                                        <span class="sidebar-menu-text">Earnings</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-statement.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">receipt</span>
+                                        <span class="sidebar-menu-text">Statement</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-edit-course.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">post_add</span>
+                                        <span class="sidebar-menu-text">Edit Course</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-edit-quiz.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">format_shapes</span>
+                                        <span class="sidebar-menu-text">Edit Quiz</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-instructor-profile.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">android</span>
+                                        <span class="sidebar-menu-text">Instructor Profile</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane " id="sm_account">
+                            <div class="sidebar-heading">Account</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-pricing.html">
+                                        <span class="sidebar-menu-text">Pricing</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-login.html">
+                                        <span class="sidebar-menu-text">Login</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-signup.html">
+                                        <span class="sidebar-menu-text">Signup</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-signup-payment.html">
+                                        <span class="sidebar-menu-text">Payment</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-reset-password.html">
+                                        <span class="sidebar-menu-text">Reset Password</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-change-password.html">
+                                        <span class="sidebar-menu-text">Change Password</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-edit-account.html">
+                                        <span class="sidebar-menu-text">Edit Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-edit-account-profile.html">
+                                        <span class="sidebar-menu-text">Profile &amp; Privacy</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-edit-account-notifications.html">
+                                        <span class="sidebar-menu-text">Email Notifications</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-edit-account-password.html">
+                                        <span class="sidebar-menu-text">Account Password</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing.html">
+                                        <span class="sidebar-menu-text">Subscription</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing-upgrade.html">
+                                        <span class="sidebar-menu-text">Upgrade Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing-payment.html">
+                                        <span class="sidebar-menu-text">Payment Information</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing-history.html">
+                                        <span class="sidebar-menu-text">Payment History</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-billing-invoice.html">
+                                        <span class="sidebar-menu-text">Invoice</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane " id="sm_messaging">
+                            <div class="sidebar-heading">Communicate</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="student-performance.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">face</span>
+                                        <span class="sidebar-menu-text">Students Performance</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="messages.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">mail</span>
+                                        <span class="sidebar-menu-text">Messages</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="notifications.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">notifications_none</span>
+                                        <span class="sidebar-menu-text">Notifications</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane " id="sm_help">
+                            <div class="sidebar-heading">Help center</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="Faqs.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">live_help</span>
+                                        <span class="sidebar-menu-text">FAQs</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="guidline.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">class</span>
+                                        <span class="sidebar-menu-text">Guidline</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="help.html">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">live_help</span>
+                                        <span class="sidebar-menu-text">Help</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="sm_components">
+                            <div class="sidebar-heading">UI Components</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">tune</span>
+                                        Components
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-buttons.html">
+                                                <span class="sidebar-menu-text">Buttons</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-avatars.html">
+                                                <span class="sidebar-menu-text">Avatars</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-forms.html">
+                                                <span class="sidebar-menu-text">Forms</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-loaders.html">
+                                                <span class="sidebar-menu-text">Loaders</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-tables.html">
+                                                <span class="sidebar-menu-text">Tables</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-cards.html">
+                                                <span class="sidebar-menu-text">Cards</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-icons.html">
+                                                <span class="sidebar-menu-text">Icons</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-tabs.html">
+                                                <span class="sidebar-menu-text">Tabs</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-alerts.html">
+                                                <span class="sidebar-menu-text">Alerts</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-badges.html">
+                                                <span class="sidebar-menu-text">Badges</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-progress.html">
+                                                <span class="sidebar-menu-text">Progress</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-pagination.html">
+                                                <span class="sidebar-menu-text">Pagination</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-ui-typography.html">
+    <span class="sidebar-menu-text">Typography</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-ui-colors.html">
+    <span class="sidebar-menu-text">Colors</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-ui-breadcrumb.html">
+    <span class="sidebar-menu-text">Breadcrumb</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-ui-accordions.html">
+    <span class="sidebar-menu-text">Accordions</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-ui-modals.html">
+    <span class="sidebar-menu-text">Modals</span>
+  </a>
+</li>
+<li class="sidebar-menu-item">
+  <a class="sidebar-menu-button disabled" href="mini-ui-chips.html">
+    <span class="sidebar-menu-text">Chips</span>
+  </a>
+</li> -->
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="">
+                                                <span class="sidebar-menu-text">Disabled</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#plugins_menu">
+                                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">folder</span>
+                                        Plugins
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse sm-indent" id="plugins_menu">
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-charts.html">
+                                                <span class="sidebar-menu-text">Charts</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-flatpickr.html">
+                                                <span class="sidebar-menu-text">Flatpickr</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-daterangepicker.html">
+                                                <span class="sidebar-menu-text">Date Range Picker</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-dragula.html">
+                                                <span class="sidebar-menu-text">Dragula</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-dropzone.html">
+                                                <span class="sidebar-menu-text">Dropzone</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-range-sliders.html">
+                                                <span class="sidebar-menu-text">Range Sliders</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-quill.html">
+                                                <span class="sidebar-menu-text">Quill</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-select2.html">
+                                                <span class="sidebar-menu-text">Select2</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-nestable.html">
+                                                <span class="sidebar-menu-text">Nestable</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-fancytree.html">
+                                                <span class="sidebar-menu-text">Fancy Tree</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-maps-vector.html">
+                                                <span class="sidebar-menu-text">Vector Maps</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-sweet-alert.html">
+                                                <span class="sidebar-menu-text">Sweet Alert</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="mini-ui-plugin-toastr.html">
+                                                <span class="sidebar-menu-text">Toastr</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button disabled" href="">
+                                                <span class="sidebar-menu-text">Disabled</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="sm_layouts">
+                            <div class="sidebar-heading">Layouts</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="compact-student-paths.html">
+                                        <span class="sidebar-menu-text">Compact</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item active">
+                                    <a class="sidebar-menu-button" href="mini-student-paths.html">
+                                        <span class="sidebar-menu-text">Mini</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="mini-secondary-student-paths.html">
+                                        <span class="sidebar-menu-text">Mini + Secondary</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="student-paths.html">
+                                        <span class="sidebar-menu-text">App</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="boxed-student-paths.html">
+                                        <span class="sidebar-menu-text">Boxed</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="sticky-student-paths.html">
+                                        <span class="sidebar-menu-text">Sticky</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button" href="fixed-student-paths.html">
+                                        <span class="sidebar-menu-text">Fixed</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- // END drawer -->
+
+
+    </div>
+    <!-- // END drawer-layout -->
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Perfect Scrollbar -->
+    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- Fix Footer -->
+    <script src="assets/vendor/fix-footer.js"></script>
+
+    <!-- App JS -->
+    <script src="assets/js/app.js"></script>
+
+
+
+    <script id="template-message" type="text/x-jsrender">
+        <li class="message d-inline-flex">
+    <div class="message__aside">
+      <a href="mini-profile.html" class="avatar avatar-sm">
+        <img src="{{:avatar}}" alt="people" class="avatar-img rounded-circle">
+      </a>
+    </div>
+    <div class="message__body card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex mr-3">
+            <a href="mini-profile.html" class="text-body"><strong>{{:name}}</strong></a>
+          </div>
+          <div>
+            <small class="text-muted">{{:date}}</small>
+          </div>
+        </div>
+        <span class="text-black-70">{{:message}}</span>
+        {{if file}}
+        <a href="#" class="media align-items-center mt-2 text-decoration-0 bg-white px-3">
+          <span class="avatar mr-2">
+            <span class="avatar-title rounded-circle">
+              <i class="material-icons font-size-24pt">attach_file</i>
+            </span>
+          </span>
+          <span class="media-body" style="line-height: 1.5">
+            <span class="text-primary">{{:file.name}}</span><br>
+            <span class="text-muted">{{:file.size}}</span>
+          </span>
+        </a>
+        {{/if}}
+      </div>
+    </div>
+  </li>
+</script>
+
+    <!-- Messages App -->
+    <script src="assets/js/messages.js"></script>
+
+    <!-- Sidebar Mini JS -->
+    <script src="assets/js/sidebar-mini.js"></script>
+
+
+
+       <!-- Bootstrap -->
+       <script src="assets/vendor/popper.min.js"></script>
+       <script src="assets/vendor/bootstrap.min.js"></script>
+   
+       <!-- Perfect Scrollbar -->
+       <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+   
+       <!-- DOM Factory -->
+       <script src="assets/vendor/dom-factory.js"></script>
+   
+       <!-- MDK -->
+       <script src="assets/vendor/material-design-kit.js"></script>
+   
+       <!-- Fix Footer -->
+       <script src="assets/vendor/fix-footer.js"></script>
+   
+       <!-- App JS -->
+       <script src="assets/js/app.js"></script>
+   
+   
+   
+       <!-- Global Settings -->
+       <script src="assets/js/settings.js"></script>
+   
+           <!-- Sweet Alert -->
+       <script src="assets/vendor/sweetalert.min.js"></script>
+       <script src="assets/js/sweetalert.js"></script>
+   
+       <!-- Highlight.js -->
+       <script src="assets/js/hljs.js"></script>
+
+
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ENABLE sidebar menu tabs
+            $('.js-sidebar-mini-tabs [data-toggle="tab"]').on('click', function(e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
+
+            $('.js-sidebar-mini-tabs').on('show.bs.tab', function(e) {
+                $('.js-sidebar-mini-tabs > .active').removeClass('active')
+                $(e.target).parent().addClass('active')
+            })
+        })()
+    </script>
+
+</body>
+
+</html>

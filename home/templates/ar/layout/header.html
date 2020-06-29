@@ -1,0 +1,220 @@
+{% load static %}
+<!-- Main Navbar -->
+<div id="main-navbar" class="navbar navbar-dark is-inline-flex no-shadow is-hidden-mobile">
+    <div class="container ">
+        <div class="navbar-brand">
+            <a href="/ar" class="navbar-item logo">
+               <img src="/static/ar/assets/img/logo/booctepl.png" alt=""  />
+            </a>
+        </div>
+         
+            
+        <div id="mobile-explorer-trigger" class="navbar-item is-icon is-dark-icon">
+            <a class="icon-link is-primary">
+                <i class="mdi mdi-apps"></i>
+            </a>
+        </div>
+        
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start"> 
+                 <div class="navbar-item">
+                        <div id="global-search" class="control control-is-dark">
+                            <input id="tipue_drop_input" class="input" type="text" placeholder="أبحث عن دورة" required>
+                            <span id="clear-search" class="reset-search">
+                                <i data-feather="x"></i>
+                            </span>
+                            <span class="search-icon">
+                                <i data-feather="search"></i>
+                            </span>      
+                    
+                        </div>
+                    
+                    </div>
+
+
+              
+                    <div class="navbar-item"> 
+                        <a href="/ar/become" class="button-become-a-teacher button-become-a-teacher-dark button is-light" data-lang="about">أصبح معلم</a>
+                   </div>
+
+
+                    <label class="animated-toggle animated-toggle-is-dark">
+                        <input type="checkbox">
+                        <span class="toggler">
+                            <span class="dark">
+                                <i data-feather="moon"></i>
+                            </span>
+                            <span class="light">
+                                <i data-feather="sun"></i>
+                            </span>
+                        </span>
+                    </label>
+              
+              </div>
+        </div>
+          
+        <div class="navbar-end">
+
+
+              
+              <div class="navbar-item is-cart is-dark-cart">
+                  <div class="cart-button">
+                      <i class="fa fa-shopping-cart"></i>
+                      <div class="cart-count">
+                          <span style="font-weight: 600;">٣</span>
+                      </div>
+                  </div>
+              
+                  <!-- Cart dropdown -->
+                  <div class="shopping-cart">
+                      <div class="cart-inner">
+              
+                          <!--Loader-->
+                          <div class="navbar-cart-loader is-active">
+                              <div class="loader is-loading"></div>
+                          </div>
+              
+                          <div class="shopping-cart-header">
+                              <a href="cart.html"><u >افتح الكارت</u></a>
+                              <div class="shopping-cart-total">
+                                  <span class="lighter-text">المجموع:</span>
+                                  <span class="main-color-text">$١٩٣.٠٠</span>
+                              </div>
+                          </div>
+                          <!--end shopping-cart-header -->
+                  
+                          <ul class="shopping-cart-items">
+                              <li class="cart-row">
+                                  <img src="/static/ar/assets/img/products/pg.jpg" alt="" />
+                                  <span class="item-meta">
+                                      <span class="item-name"><a href="single_course.html">دورة html5 كاملة بسعر رمزي</a></span>
+                                      <span class="meta-info">
+                                          <span class="item-price">$٢٩.٠٠</span>
+                                      </span>
+                                  </span>
+                              </li>
+                  
+                              <li class="cart-row">
+                                  <img src="/static/ar/assets/img/products/pg.jpg" alt="" />
+                                  <span class="item-meta">
+                                    <span class="item-name"><a href="single_course.html">دورة html5 كاملة بسعر رمزي</a></span>
+                                    <span class="meta-info">
+                                          <span class="item-price">$٢٩.٠٠</span>
+                                      </span>
+                                  </span>
+                              </li>
+                  
+                              <li class="cart-row">
+                                  <img src="/static/ar/assets/img/products/pg.jpg" alt="" />
+                                  <span class="item-meta">
+                                    <span class="item-name"><a href="single_course.html">دورة html5 كاملة بسعر رمزي</a></span>
+                                    <span class="meta-info">
+                                          <span class="item-price">$١٢٥.٠٠</span>
+                                      </span>
+                                  </span>
+                              </li>
+                          </ul>
+                  
+                          <a href="checkout.html" class="button primary-button is-raised">ادفع</a>
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="navbar-item" >
+                <div class="buttons sign-up-in">
+                  <a href="signup.html" class="sig-up button second-button">
+                    <p>تسجيل جديد</p>
+                  </a>
+                  <a class="log-in button primary-button raised quickview-trigger process-button">
+                    <p>تسجيل دخول</p>
+                  </a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>        
+<!-- Main Navbar -->
+
+
+<!-- Mobile Navbar -->
+<nav class="navbar mobile-navbar is-hidden-desktop" aria-label="main navigation">
+    <!-- Brand -->
+    <div class="navbar-brand">
+        <a class="navbar-item2" href="/">
+            <img class="mobile-logo" src="/static/ar/assets/img/favicon.png" alt="">
+        </a>
+
+
+        <div id="mobile-explorer-trigger" class="navbar-item is-icon">
+            <a class="icon-link is-primary">
+                <i class="mdi mdi-apps"></i>
+            </a>
+        </div>
+
+        <!-- Mobile menu toggler icon -->
+        <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Navbar mobile menu -->
+    <div class="navbar-menu">
+        <!-- Account -->
+        <div class="navbar-item has-dropdown ">
+            <div class="navbar-link">
+                <img src="/static/ar/assets/img/man.jpg" data-demo-src="/static/ar/assets/img/avatars/jenna.png" alt="">
+                <span class="is-heading">Elzubair Mohammed</span>
+            </div>
+
+            <div class="navbar-item">
+                <div id="global-search" class="control">
+                    <input id="tipue_drop_input" class="input " type="text" placeholder="Search" required>
+                    <span id="clear-search" class="reset-search">
+                        <i data-feather="x"></i>
+                    </span>
+                    <span class="search-icon">
+                        <i data-feather="search"></i>
+                    </span>
+            
+            
+                </div>
+            
+            </div>
+            
+            <!-- Mobile Dropdown -->
+            <div class="navbar-dropdown">
+                <a href="#" class="navbar-item is-flex is-mobile-icon">
+                    <span><i data-feather="user"></i>Profile</span>
+                </a>
+                <a href="#" class="navbar-item is-flex is-mobile-icon">
+                    <span><i data-feather="shopping-cart"></i>Cart</span>
+                    <span class="menu-badge">3</span>
+                </a>
+                <a href="#" class="navbar-item is-flex is-mobile-icon">
+                    <span><i data-feather="activity"></i>Feed</span>
+                    <span class="menu-badge">87</span>
+                </a>
+                <a href="#" class="navbar-item is-flex is-mobile-icon">
+                    <span><i data-feather="settings"></i>Settings</span>
+                </a>
+                <a href="#" class="navbar-item is-flex is-mobile-icon">
+                    <span><i data-feather="hexagon"></i>Logout</span>
+                </a>
+                
+                    <div class="buttons">
+                      <a class="button second-button">
+                        <p>Sign up</p>
+                      </a>
+                      <a class="button primary-button raised quickview-trigger process-button">
+                        <p>Log in</p>
+                      </a>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Mobile Navbar -->

@@ -21,12 +21,11 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'booctop.settings'
 application = get_wsgi_application()
 def home_view(request):
     course_list = getAllCourseList()
-    return render(request, 'index.html', {'course_list': course_list})
+    return render(request, 'index.html', {'course_list': course_list, 'lang': getLanguage(request)})
 
 def signup(request):
     objC = categories.objects.all()
-    print(objC)
-    return render(request, 'signup.html', {"objC":objC})    
+    return render(request, 'signup.html', {"objC":objC, 'lang': getLanguage(request)})    
 
 def about(request):
     return render(request, 'about.html', {})  
@@ -402,4 +401,13 @@ def changepassword(request):
 def logout_(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+def getLanguage(request):
+    path = request.path
+    language = path.split('/')[1]
+    if language == "ar":
+        language = language + '/'
+    else:
+        language = ""
+    return language
         

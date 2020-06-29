@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+{% if lang == "ar/" %}
+<html lang="en" dir="rtl">
+{% else %}
+<html lang="en" dir="ltr">
+{% endif %}
+<head>
+
+    <!-- head -->
+
+    {% with lang|add:"layout/head/head.html" as template %}
+        {% include template %}
+    {% endwith %}
+
+    {% block head %}
+    {%  endblock %}
+</head>
+
+<body>
+    <!-- Pageloader -->
+    <!-- <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+    <div class="app-overlay"></div> -->
+
+    <!-- Header Navbar -->
+    <input type="hidden" id="hd_csrf" value="{{ csrf_token }}">
+
+    {% if request.path == '/become' %}
+        {% include "layout/header-2.html" %}
+    {% else %}
+        {% with lang|add:"layout/header.html" as template %}
+            {% include template %}
+        {% endwith %}
+    {% endif %}
+    <!-- end Header navbar -->
+
+    
+    <!-- MAIN WRAPPER -CONTENT -->
+    {% block content %}
+    {% endblock %}
+    <!-- END MAIN WRAPPER -CONTENT -->
+
+    <!-- DIALOGS -->
+    {% with lang|add:"layout/dialogs.html" as template %}
+        {% include template %}
+    {% endwith %}
+    <!-- END DIALOGS -->
+
+    <!-- FOOTER -->
+    {% with lang|add:"layout/footer.html" as template %}
+    {% include template %}
+    {% endwith %}
+    <!-- END FOOTER -->
+
+    {% with lang|add:"layout/scripts/scripts.html" as template %}
+        {% include template %}
+    {% endwith %}
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            localStorage.setItem('mode', 'light');
+            // console.log("local storage mode", localStorage.getItem('mode'));
+            // if(localStorage.getItem('mode') == 'dark') {
+            //     document.getElementById("toggler").click();
+            // }
+            // color_mode();
+        });
+        
+        $.ajaxSetup({
+            headers: { 'X-CSRFToken': $("#hd_csrf").val(), }
+        });
+
+
+        function login() {
+            console.log("logging in");
+            $("#login_div_error").html("");
+            if ($("#login_email").val() == "") {
+                $("#login_div_error").html("Please enter the valid email");
+                return false
+            } else if ($("#login_password").val() == "") {
+                $("#login_div_error").html("Please enter the password");
+                return false
+            }
+
+            // Ajax start
+            var action = "/login";
+            $.ajax({
+                url: action,
+                type: 'POST',
+                dataType: 'json',
+                // headers: {'X-CSRFToken': $("#hd_csrf").val(),},
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                data: {
+                    email: $("#login_email").val(),
+                    password: $("#login_password").val(),
+                },
+
+                beforeSend: function () {
+
+                    console.log("Beforesend")
+                },
+                success: function (data) {
+                    console.log(data)
+                    if (data.msg == "success") {
+                        window.location.href = "/"
+                    } else {
+                        $("#login_div_error").html("Please enter the correct email and password.");
+                        return false
+                    }
+                    return false
+                },
+                error: function (err) {
+                    return false
+                }
+            })
+            // Ajax end
+            return false
+        }
+
+        var lang = "{{ lang }}"
+        
+        let head = document.getElementsByTagName('HEAD')[0];
+
+        // Create new link Element 
+        let link = document.createElement('link');
+
+        // set the attributes for link element  
+        link.rel = 'stylesheet';
+
+        link.type = 'text/css';
+
+        link.href = "{%static 'assets/css/dark.css' %}";
+
+        if( lang == "ar/" ) {
+            link.href = "{%static 'ar/assets/css/dark.css' %}";
+        }        
+
+        $('.toggler').on('click', function () {
+            if(localStorage.getItem('mode') == 'light') {
+                localStorage.setItem('mode', 'dark');
+            } else {
+                localStorage.setItem('mode', 'light');
+            }
+            color_mode();
+        });
+        function color_mode()
+        {
+            if (localStorage.getItem('mode') == 'dark') {
+                $("body").addClass('body_bg');
+
+                
+                $(".button-become-a-teacher").removeClass('is-light');
+                $(".is-cart").addClass('is-dark-cart');
+                $(".second-button").addClass('signup-button-is-dark');
+                $(".primary-button").addClass('login-button-is-dark');
+                $(".shop-header").addClass('shop-header-is-dark');
+                $(".is-combo").addClass('is-combo-dark');
+                $(".product-card").addClass('product-card-dark');
+                $(".categories-bg").addClass('categories-dark-bg');
+                $(".categories-header").addClass('categories-dark-header');
+                $(".category-box").addClass('category-dark-box');
+                $(".product-quickview").addClass('product-quickview-dark');
+                $(".card").addClass('card-dark');
+                $(".Loginmodal-img").addClass('Loginmodal-img-dark');
+                $(".user-meta-span").addClass('user-meta-span-dark');
+                $(".footer-column").addClass('footer-column-dark');
+                $(".hero-homepage").addClass('dark-homepage');
+                $(".footer").addClass('dark-footer');
+                $(".mode_images").attr('src', "{%static 'assets/img/dark-logo.png' %}");
+                $(".primary__title").attr('style', 'color: #1a1c20;font-weight: 500;font-size: large');
+                $(".secondary__title").attr('style', 'color: #222831;');
+                $(".fa-users").attr('style', 'color: #e2e2e4;');
+                $(".fa-video").attr('style', 'color: #e2e2e4;');
+                $(".footer-columns:first-child").attr('style', 'border-bottom: 1px solid #222831;');
+                head.appendChild(link);
+
+            } else {                
+                $("body").removeClass('body_bg');
+                $("body").css('background', 'white');
+                
+                
+                $(".button-become-a-teacher").addClass('is-light');
+                $(".is-cart").removeClass('is-dark-cart');
+                $(".second-button").removeClass('signup-button-is-dark');
+                $(".primary-button").removeClass('login-button-is-dark');
+                $(".shop-header").removeClass('shop-header-is-dark');
+                $(".is-combo").removeClass('is-combo-dark');
+                $(".product-card").removeClass('product-card-dark');
+                $(".categories-bg").removeClass('categories-dark-bg');
+                $(".categories-header").removeClass('categories-dark-header');
+                $(".category-box").removeClass('category-dark-box');
+                $(".product-quickview").removeClass('product-quickview-dark');
+                $(".card").removeClass('card-dark');
+                $(".Loginmodal-img").removeClass('Loginmodal-img-dark');
+                $(".user-meta-span").removeClass('user-meta-span-dark');
+                $(".footer-column").removeClass('footer-column-dark');
+                $(".hero-homepage").removeClass('dark-homepage');
+                $(".footer").removeClass('dark-footer');
+                $(".mode_images").attr('src', "{%static 'assets/img/logo/booctep-tran.png' %}");
+                $(".primary__title").attr('style', 'color: #fff;font-weight: 500;font-size: large');
+                $(".secondary__title").attr('style', '');
+                $(".fa-users").attr('style', '');
+                $(".fa-video").attr('style', '');
+                $(".footer-columns:first-child").attr('style', 'border-bottom: 1px solid rgb(226, 226, 226);');
+                head.removeChild(link);
+            }
+        }
+    </script>
+    {% block script %}
+    {%  endblock %}
+</body>
+
+</html>

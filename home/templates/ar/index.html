@@ -1,0 +1,1316 @@
+{% load static %}
+<!-- Filters and courses -->       
+<div id="shop-page" class="shop-wrapper">
+
+               
+    <div class="shop-header">
+        <div class="container ">
+
+            <div class="store-tabs">
+                <a data-tab="products-tab" class="tab-control is-active">الكل</a>
+                <a data-tab="brands-tab" class="tab-control">مدفوعة</a>
+                <a data-tab="followers-tab" class="tab-control">مجانية  </a>
+           
+                <div class="store-naver"></div>
+            </div>
+
+        <div class="control-filter is-combo filter-panel" >
+            <div class="combo-box">
+                <div class="box-inner">
+                    <div class="combo-item">
+                        <span class="selected-item">البحث عن طريق</span>
+                    </div>
+                </div>
+                <div class="box-chevron">
+                    <i data-feather="chevron-down"></i>
+                </div>
+                <div class="box-dropdown">
+                    <div class="dropdown-inner has-slimscroll">
+                        <ul>
+                            <li>
+                                <span class="item-name">الدورات الجديدة</span>
+                                <span class="checkmark">
+                                    <i data-feather="check"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="item-name">الأعلى شراءاً</span>
+                                <span class="checkmark">
+                                    <i data-feather="check"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="item-name">الأعلى تقييماً</span>
+                                <span class="checkmark">
+                                    <i data-feather="check"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+
+        <div class="store-sections">
+                <div class="container">
+        
+                    
+                    <!--Products-->
+                    <div id="products-tab" class="store-tab-pane is-active" id="demo">
+                        <div class="columns  is-multiline">
+                            <!-- /partials/commerce/products/products-list.html -->
+                            {% for course in course_list %}
+                                <!--Product-->
+                                <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                    <div class="product-card  product-card-dark " data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="{% static 'assets/img/products/1' %}">
+                                       
+                                        <a href="/single_course?id={{course.id}}" class="product-image"> 
+
+                                            <div class="image-grid-wrap">
+                                                <div class="image-grid">
+                                            
+                                                    <!--Grid Row-->
+                                                    <div class="image-row">
+                                                        <!--Photo-->
+                                                        <div class="flex-1 has-background-image" data-background="{%static 'assets/img/courses/pc.jpg' %}"
+                                                            data-demo-background="{%static 'assets/img/courses/pc.jpg' %}">
+                                                            <div class="overlay"></div>
+                                                            <div class="image-owner">
+                                                                <div class="name">                
+                                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                                  <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                                  <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                                  <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                                </div>
+                                                            </div>
+                                                            <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                                <a href="#" class="inner">
+                                                                    <i class="inactive-icon" data-feather="heart"></i>
+                                                                </a>
+                                                            </div>
+                                                            <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                                <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                            </a>
+                                            
+                                                        </div>
+                                
+                                                    </div>
+                                                </div>    
+                                        </div>   
+                                        
+                                    </a>
+
+                                        <div class="product-info">
+                                            
+                                            <h3>
+                                                <a href="#" style="display: block;
+                                                width: 230px;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;">{{ course.name }}</a>
+                                            </h3>
+                                            <p>أفضل دورة لتعلم لغة الـ HTML5 اشترك بها وبدون تردد بسعر مميز ومزايا حصرية فقط في بوستيب.</p>
+
+                                            
+                                            <i class="fa fa-users"></i>
+                                            <span style="font-size: small;">١٧،٩٩٩ مشترك &nbsp;</span>
+                                            <i class="fa fa-video"></i>
+                                            <span style="font-size: small;">٢٣٩ فيديو</span>
+                                            <div class="product-actions">
+                                                <div class="left">
+                                                    <b style="color:red">${{course.price}}</b>
+                                                </div>
+                                                <div class="right"> 
+                                                    <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                        فيديو تجريبي
+                                                        <i class="fa fa-play"></i>
+                                                       
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                {% endfor %}
+                        </div>
+                        
+
+                        <center>
+                            <nav class="pagination is-centered" role="navigation" aria-label="pagination" style="margin-bottom: 20px;">
+                                
+                                <ul class="pagination-list">
+                                  <li>
+                                    <a class="pagination-previous" style="background-color: white;"><span class="fa fa-arrow-right"></span>&nbsp; <p>التالي</p> 
+                                    
+                                    </a>
+                                  </li>
+                                  <li><a class="pagination-link" aria-label="Goto page 1" style="background-color: white;">٣٨</a></li>
+                                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                  <li><a class="pagination-link" aria-label="Goto page 45" style="background-color: white;">١٦</a></li>
+                                  <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">١٥</a></li>
+                                  <li><a class="pagination-link" aria-label="Goto page 47" style="background-color: white;">١٤</a></li>
+                                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                  <li><a class="pagination-link" aria-label="Goto page 86" style="background-color: white;">١</a></li>
+                                  <li>
+                                    <a class="pagination-next" style="background-color: white;"><p>السابق  <span class="fa fa-arrow-left"></span></p>&nbsp;
+                                        
+                                    </a></li>
+                                </ul>
+                              </nav>
+                            </center>
+                            
+                    </div>   
+
+                    <!-- Brands -->
+                    <div id="brands-tab" class="store-tab-pane">
+                       
+                        <div class="columns  is-multiline">
+                            <!-- /partials/commerce/products/products-list.html -->
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            <div class="column is-one-fifth-fullhd is-one-quarter-widescreen is-one-third-desktop is-half-tablet is-full-mobile" >
+                                <div class="product-card" data-name="Spring Red Dress" data-price="44.00" data-colors="true" data-variants="true" data-path="/static/ar/assets/img/products/1">
+                                   
+                                    <a href="single_course.html" class="product-image"> 
+
+                                        <div class="image-grid-wrap">
+                                            <div class="image-grid">
+                                        
+                                                <!--Grid Row-->
+                                                <div class="image-row">
+                                                    <!--Photo-->
+                                                    <div class="flex-1 has-background-image" data-background="/static/ar/assets/img/courses/pc.jpg"
+                                                        data-demo-background="/static/ar/assets/img/courses/pc.jpg">
+                                                        <div class="overlay"></div>
+                                                        <div class="image-owner">
+                                                            <div class="name">                
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 238, 80);"></span>
+                                                              <span class="fa fa-star" style="color: rgb(255, 255, 255);"></span>
+                                                              <span style="font-size: medium; color: rgb(255, 238, 80);font-weight: 700;margin-left: 5px;">4.7</span>
+                                                            </div>
+                                                        </div>
+                                                        <div id="invite-pop" class="photo-like pop-button has-tooltip" data-title="Relationship">
+                                                            <a href="#" class="inner">
+                                                                <i class="inactive-icon" data-feather="heart"></i>
+                                                            </a>
+                                                        </div>
+                                                        <a id="follow-pop" class="photo-time pop-button has-tooltip" data-title="Relationship">
+                                                            <i class="fa fa-shopping-cart" style="font-size: 22px;color: #fff;"></i>
+                                                        </a>
+                                        
+                                                    </div>
+                            
+                                                </div>
+                                            </div>    
+                                    </div>   
+                                    
+                                </a>
+
+                                    <div class="product-info">
+                                        
+                                        <h3>
+                                            <a href="#">Spring Red Dress</a>
+                                        </h3>
+                                        <p>A beautiful dress for you best evenings and important dates...</p>
+
+                                        
+                                        <i class="fa fa-users"></i>
+                                        <span style="font-size: small;">147,122 &nbsp;</span>
+                                        <i class="fa fa-video"></i>
+                                        <span style="font-size: small;">127 Videos</span>
+                                        <div class="product-actions">
+                                            <div class="left">
+                                                <del>$12</del>
+                                                <span >Free</span>
+                                            </div>
+                                            <div class="right"> 
+                                                <a class="button primary-button is-solid raised story modal-trigger" data-modal="videos-modal">
+                                                    <i class="fa fa-play"></i>
+                                                   Promo
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product-->
+                            
+
+                        </div>
+                        
+
+                        <center>
+                            <nav class="pagination is-centered" role="navigation" aria-label="pagination" style="margin-bottom: 20px;">
+                                
+                                <ul class="pagination-list">
+                                  <li>
+                                    <a class="pagination-previous" style="background-color: white;"><span class="fa fa-arrow-left"></span>&nbsp; <p>Previous</p> 
+                                    
+                                    </a>
+                                  </li>
+                                  <li><a class="pagination-link" aria-label="Goto page 1" style="background-color: white;">1</a></li>
+                                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                  <li><a class="pagination-link" aria-label="Goto page 45" style="background-color: white;">45</a></li>
+                                  <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                                  <li><a class="pagination-link" aria-label="Goto page 47" style="background-color: white;">47</a></li>
+                                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                                  <li><a class="pagination-link" aria-label="Goto page 86" style="background-color: white;">86</a></li>
+                                  <li>
+                                    <a class="pagination-next" style="background-color: white;"><p>Next page  </p>&nbsp;
+                                        <span class="fa fa-arrow-right"></span>
+                                    </a></li>
+                                </ul>
+                              </nav>
+                            </center>
+                            
+                    </div>                        
+        
+        
+        
+                </div>
+            </div>
+</div>
+<!-- Filters and courses --> 
